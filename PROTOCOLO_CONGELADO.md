@@ -345,7 +345,9 @@ figura que va a pedir un revisor.
 ### 11.3 Controles preespecificados
 
 **a. Barrido de margen en vez de margen fijo.** Todo el análisis se repite con márgenes
-desde costa de **0, 20, 40, 60 y 100 m**. La persistencia de cada sitio en función del
+desde costa de **0, 20, 40, 60, 100, 200 y 400 m**. El rango se amplió el 16/09/2026: el
+piloto midió longitudes de decaimiento de hasta 386 m, así que un barrido que se detenía
+en 100 m no habría llegado a cubrir el artefacto que pretende acotar. La persistencia de cada sitio en función del
 margen se reporta como resultado. Una fuente real sobrevive al aumento del margen,
 desplazándose hacia fuera a lo largo del eje de la pluma; un artefacto de orilla
 desaparece. La sensibilidad al margen deja de ser una elección de parámetro y pasa a ser
@@ -423,6 +425,26 @@ aquí:
 | 2026-09-16 | Ventana ampliada de 5,5 × 5,1 km a 12,2 × 12,3 km | La ventana ceñida a la bahía no dejaba dentro mar abierto (el control negativo de la sección 11.3e) y limitaba la distancia a costa a 588 m, sin campo lejano: el ajuste de ρ_SWIR(d) medía la caída de píxel mixto de la orilla (L ≈ 17–21 m) y no la adyacencia atmosférica, que es de cientos de metros | No — ninguna anomalía calculada |
 | 2026-09-16 | Control de calidad por píxel con B12 (~2200 nm), umbral 0,010 | 8 de 13 escenas del piloto tenían ρ_SWIR mediana de 0,05–0,11 sobre agua, es decir corrección atmosférica no convergida, y daban turbidez de 350–490 FNU. B12 separa agua turbia de atmósfera sucia porque a 2200 nm el agua absorbe por completo y ρ_w ≈ 0 sea cual sea la carga de sedimento; la bruma, gris, sí eleva la señal. El umbral es físico, no ajustado a los datos | No — ninguna anomalía calculada |
 | 2026-09-16 | El veredicto del piloto puede declararse NO CONCLUYENTE | La primera versión dictaminó «seguir» sobre turbideces de −1614 FNU, físicamente imposibles, porque su criterio no comprobaba el rango. Un criterio de decisión que no puede abstenerse no es un criterio | No — ninguna anomalía calculada |
+| 2026-09-16 | Barrido de márgenes ampliado de 0–100 m a 0–400 m | El piloto midió L de hasta 386 m; un barrido hasta 100 m no cubre el artefacto | No — ninguna anomalía calculada |
+| 2026-09-16 | El veredicto exige ≥20 observaciones por píxel antes de pronunciarse sobre estructuras | Con 4 observaciones z_c es ruido, y el síntoma es que el 64 % de las estructuras caían a más de 500 m de la costa | No — ninguna anomalía calculada |
+
+## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
+
+Primera medida de las cantidades de las que depende el método. **No es un resultado sobre
+vertidos**: es la caracterización del instrumento.
+
+| Cantidad | Valor medido |
+|---|---|
+| Agua en la ventana | 76,9 km²; distancia máxima a costa 6747 m |
+| Escenas utilizables | 5 de 13 (38 %), dentro del 30–40 % esperado |
+| Turbidez, bahía interior | mediana 3,01 FNU (p25 2,23; p75 3,92; p95 5,64) |
+| Turbidez, mar abierto | mediana 1,40 FNU (p25 1,22; p75 1,69; p95 2,28) |
+| Contraste bahía/mar | **2,1×** |
+| Adyacencia: amplitud A | 0,0031–0,0046 en ρ(1610 nm) |
+| Adyacencia: longitud L | 55, 94 y 386 m en los tres ajustes con r² > 0,85 |
+
+Extrapolando el 38 % a los 664 productos de R097: **~250 escenas utilizables, ~125 por
+estación**, holgadamente por encima del mínimo de 20 observaciones por píxel.
 
 ## 15. Validación previa del método
 

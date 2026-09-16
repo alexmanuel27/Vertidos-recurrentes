@@ -207,25 +207,43 @@ def main():
     sin_campo_lejano = dist.max() < 1500
     ajustes_buenos = [x for x in ajustes if x["r2"] > 0.8 and x["A"] < 0.9]
 
+    n_med = float(np.median(n_obs[evaluable])) if evaluable.any() else 0
+    d_est = np.array([dist[int(g["centroide"][0]), int(g["centroide"][1])] for g in gp]) \
+            if gp else np.array([])
+    frac_costera = float((d_est < 500).mean()) if d_est.size else 0.0
+
     if sin_campo_lejano:
-        print("  NO CONCLUYENTE. La ventana no tiene campo lejano, asi que la longitud")
-        print(f"  de adyacencia ajustada ({Lm:.0f} m) mide la caida de pixel mixto de la")
-        print("  orilla, no la adyacencia atmosferica, que es de cientos de metros.")
-        print("  Sin esa medida no se puede decidir si las estructuras son separables")
-        print("  del artefacto. Ampliar la ventana y repetir.")
-    elif len(ajustes_buenos) < 3:
-        print(f"  NO CONCLUYENTE. Solo {len(ajustes_buenos)} ajustes de adyacencia fiables")
-        print("  (r2 > 0,8 y sin pegarse a los limites). Hacen falta mas escenas limpias.")
-    elif not gp:
-        print("  NO hay estructura costera coherente. Replantear antes de gastar semanas.")
-    elif escala < Lm * 0.5:
-        print(f"  {len(gp)} estructuras, pero su escala (~{escala:.0f} m) queda por debajo")
-        print(f"  de la longitud de adyacencia ({Lm:.0f} m): NO son separables del")
-        print("  artefacto de orilla. Replantear.")
+        print("  NO CONCLUYENTE sobre adyacencia: la ventana no tiene campo lejano, asi")
+        print(f"  que la L ajustada ({Lm:.0f} m) mide el pixel mixto de la orilla y no la")
+        print("  adyacencia atmosferica. Ampliar la ventana y repetir.")
+    elif len(ajustes_buenos) >= 3:
+        LL = sorted(x["L"] for x in ajustes_buenos)
+        AA = sorted(x["A"] for x in ajustes_buenos)
+        print(f"  ADYACENCIA MEDIDA: L entre {LL[0]:.0f} y {LL[-1]:.0f} m "
+              f"(mediana {np.median(LL):.0f} m),")
+        print(f"  amplitud A entre {AA[0]:.4f} y {AA[-1]:.4f} en rho(1610 nm),")
+        print(f"  sobre {len(ajustes_buenos)} ajustes con r2 > 0,8.")
     else:
-        print(f"  {len(gp)} estructuras costeras coherentes, escala ~{escala:.0f} m")
-        print(f"  frente a una adyacencia de L ~ {Lm:.0f} m. Son separables.")
-        print("  SEGUIR con el archivo completo.")
+        print(f"  Adyacencia NO medida con fiabilidad: solo {len(ajustes_buenos)} ajustes")
+        print("  con r2 > 0,8.")
+
+    print()
+    if n_med < 20:
+        print(f"  NO CONCLUYENTE sobre estructuras: la mediana climatologica se apoya en")
+        print(f"  {n_med:.0f} observaciones por pixel y el protocolo exige 20 (seccion 7).")
+        print(f"  Con tan pocas, z_c es ruido. Sintoma: {100*(1-frac_costera):.0f} % de las")
+        print(f"  {len(gp)} estructuras caen a mas de 500 m de la costa, donde no puede")
+        print("  haber un vertido costero. Esta pregunta necesita el archivo completo")
+        print("  POR CONSTRUCCION: diez escenas nunca iban a responderla.")
+    elif not gp:
+        print("  NO hay estructura costera coherente. Replantear.")
+    elif escala < Lm:
+        print(f"  {len(gp)} estructuras de escala ~{escala:.0f} m frente a una adyacencia")
+        print(f"  de L ~ {Lm:.0f} m: NO separables del artefacto de orilla. Replantear.")
+    else:
+        print(f"  {len(gp)} estructuras coherentes de escala ~{escala:.0f} m, el "
+              f"{100*frac_costera:.0f} % a menos de 500 m de costa,")
+        print(f"  frente a una adyacencia de L ~ {Lm:.0f} m. Son separables. SEGUIR.")
     print(f"\nresultados en {a.salida}/piloto.json y piloto.npz")
 
 
