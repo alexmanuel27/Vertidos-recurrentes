@@ -13,26 +13,33 @@ import geo
 
 # Patrones con los que se reconocen los productos, por orden de preferencia.
 PATRONES = {
-    # Nombres VERIFICADOS contra el codigo fuente de ACOLITE (acolite_l2w.py y
-    # config/parameter_labels.txt), no supuestos. El producto de Dogliotti es el
-    # de 2015 con conmutacion rojo/NIR, y su salida mezclada se llama
-    # TUR_Dogliotti2015 (existen ademas las variantes _red y _nir).
+    # Nombres COMPROBADOS sobre salidas reales de ACOLITE. Ojo: S2A y S2B tienen
+    # centros de banda distintos (1614/1610, 560/559, 865/864), por eso van por rango.
     "turbidez_dogliotti": [r"^TUR_Dogliotti2015$", r"^TUR_Dogliotti"],
     "turbidez_nechad":    [r"^TUR_Nechad"],
     "spm":                [r"^SPM_Nechad"],
-    "swir":               [r"^rhos_(1[5-9]\d{2}|2[0-4]\d{2})$"],   # B11 ~1610, B12 ~2200
-    "verde":              [r"^rhos_(5[3-6]\d{2})$"],                # B3 ~560
-    "nir":                [r"^rhos_(8[0-9]\d{2})$"],                # B8 ~833 / B8A ~865
+    "swir":               [r"^rhos_16\d{2}$", r"^rhos_2[12]\d{2}$"],  # B11 preferida a B12
+    "verde":              [r"^rhos_5[56]\d$"],                        # B3
+    "nir":                [r"^rhos_83\d$"],                           # B8
+    "banderas":           [r"^l2_flags$"],
 }
 
 AJUSTES = {
     "atmospheric_correction": "dark_spectrum",
-    "s2_target_res": 20,        # protocolo seccion 1. El defecto de ACOLITE es 10.
-    "dsf_aot_estimate": "fixed",        # por escena, no por baldosa: 5 km es poco
+    "s2_target_res": 20,             # protocolo seccion 1. El defecto de ACOLITE es 10.
+    "dsf_aot_estimate": "fixed",     # por escena: 5 km es poco para estimar por baldosa
     "dsf_residual_glint_correction": True,
-    "l2w_mask_wave": False,
-    "l2w_parameters": "tur_dogliotti2015,tur_nechad2009_*,spm_nechad2010_*,rhos_*",
+    # OJO: tiene que ser una LISTA. ACOLITE hace `for par in l2w_parameters`, asi que
+    # una cadena se recorre LETRA A LETRA y no calcula ningun producto.
+    "l2w_parameters": ["tur_dogliotti2015", "tur_nechad2009_*",
+                       "spm_nechad2010_*", "rhos_*"],
+    # ACOLITE calcula sus banderas y las guarda en l2_flags, pero NO las aplica a los
+    # productos: su mascara por SWIR (umbral 0.0215 a 1600 nm) borraria el agua muy
+    # turbia, que es justo lo que buscamos. El enmascarado lo hacemos nosotros, de
+    # forma auditable (protocolo secciones 6 y 9).
+    "l2w_mask_water_parameters": False,
     "output_geolocation": True,
+    "output_xy": True,
 }
 
 
@@ -56,13 +63,17 @@ def variables(nc):
 
 
 def mapear(nombres):
-    """Empareja los nombres reales del NetCDF con los productos que necesita el pipeline."""
+    """Empareja los nombres reales del NetCDF con los productos del pipeline.
+
+    Recorre los patrones EN ORDEN y se queda con el primero que acierte, de modo que
+    la preferencia (B11 antes que B12, por ejemplo) queda explicita en PATRONES.
+    """
     salida = {}
     for clave, pats in PATRONES.items():
-        for p in pats:
-            hit = [n for n in nombres if re.search(p, n, re.IGNORECASE)]
+        for pat in pats:
+            hit = sorted(n for n in nombres if re.search(pat, n, re.IGNORECASE))
             if hit:
-                salida[clave] = sorted(hit)[0] if clave != "swir" else sorted(hit)[-1]
+                salida[clave] = hit[0]
                 break
     return salida
 

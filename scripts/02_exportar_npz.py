@@ -17,7 +17,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "..", "src"))
 import acolite_io
 
-CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "verde", "nir")
+CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "verde",
+          "nir", "banderas")
 
 
 def main():
@@ -45,8 +46,17 @@ def main():
         d = acolite_io.leer(nc, tuple(claves))
         fecha = acolite_io.fecha_de(nc)
         destino = os.path.join(a.salida, nombre.replace(".nc", ".npz"))
+        extra = {}
+        try:   # coordenadas UTM de la rejilla real, para no suponer su tamanio
+            import netCDF4
+            with netCDF4.Dataset(nc) as ds:
+                for c in ("x", "y", "lat", "lon"):
+                    if c in ds.variables:
+                        extra[c] = np.array(ds.variables[c][:], dtype=np.float64)
+        except Exception:
+            pass
         np.savez_compressed(destino, fecha=np.array(fecha.isoformat()),
-                            **{c: d[c].astype(np.float32) for c in claves})
+                            **{c: d[c].astype(np.float32) for c in claves}, **extra)
         forma = d[claves[0]].shape
         print(f"  OK {nombre[:44]}  {forma}  {fecha:%Y-%m-%d}  -> {os.path.basename(destino)}")
         manifiesto.append({"escena": nombre, "ok": True, "fecha": fecha.isoformat(),
