@@ -96,12 +96,21 @@ def leer(nc, claves=("turbidez_dogliotti", "swir")):
 
 
 def fecha_de(nombre):
-    """Fecha de adquisicion a partir del nombre del producto Sentinel-2."""
+    """Fecha de adquisicion a partir del nombre del fichero.
+
+    ACOLITE RENOMBRA su salida: el producto L1C llega como
+    'S2A_MSIL1C_20201129T160621_...' y el fichero que escribe es
+    'S2A_MSI_2020_11_29_16_16_59_T17QLF_L2W.nc'. Se aceptan los dos formatos.
+    """
     from datetime import datetime
-    m = re.search(r"_(\d{8})T(\d{6})_", os.path.basename(nombre))
-    if not m:
-        raise ValueError(f"sin fecha en {nombre}")
-    return datetime.strptime(m.group(1) + m.group(2), "%Y%m%d%H%M%S")
+    base = os.path.basename(nombre)
+    m = re.search(r"_(\d{4})_(\d{2})_(\d{2})_(\d{2})_(\d{2})_(\d{2})_", base)
+    if m:
+        return datetime(*(int(g) for g in m.groups()))
+    m = re.search(r"_(\d{8})T(\d{6})_", base)
+    if m:
+        return datetime.strptime(m.group(1) + m.group(2), "%Y%m%d%H%M%S")
+    raise ValueError(f"sin fecha reconocible en {base}")
 
 
 def limite_bahia():

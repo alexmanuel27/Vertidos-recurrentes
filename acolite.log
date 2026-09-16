@@ -1,0 +1,4065 @@
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+14 productos | limite (S,O,N,E) = (23.1085, -82.3575, 23.1575, -82.3085)
+ajustes congelados: {'atmospheric_correction': 'dark_spectrum', 's2_target_res': 20, 'dsf_aot_estimate': 'fixed', 'dsf_residual_glint_correction': True, 'l2w_parameters': ['tur_dogliotti2015', 'tur_nechad2009_*', 'spm_nechad2010_*', 'rhos_*'], 'l2w_mask_water_parameters': False, 'output_geolocation': True, 'output_xy': True}
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_20231027T180111.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_20231027T180111.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_20231027T180111.SAFE
+Identified datos/crudo/S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_20231027T180111.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_20231027T180111.SAFE
+Importing metadata from L1C_T17QLF_A002954_20160115T160616
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 9
+Detector 10
+Detector 11
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_443 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_560 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_740 ((274, 255))
+Converting bands: Wrote rhot_783 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_865 ((274, 255))
+Converting bands: Wrote rhot_945 ((274, 255))
+Converting bands: Wrote rhot_1373 ((274, 255))
+Converting bands: Wrote rhot_1614 ((274, 255))
+Converting bands: Wrote rhot_2202 ((274, 255))
+Conversion took 1.2 seconds
+Created datos/acolite/S2A_MSI_2016_01_15_16_16_47_T17QLF_L1R.nc
+Wrote datos/acolite/S2A_MSI_2016_01_15_16_16_47_T17QLF_L1R_rgb_rhot.png
+Skipping scene as crop is 100% blackfill
+[1/14] S2A_MSIL1C_20160115T160622_N0500_R097_T17QLF_2 -> 0 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE
+Identified datos/crudo/S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE
+Importing metadata from L1C_T17QLF_A028408_20201129T161326
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_443 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_560 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_740 ((274, 255))
+Converting bands: Wrote rhot_783 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_865 ((274, 255))
+Converting bands: Wrote rhot_945 ((274, 255))
+Converting bands: Wrote rhot_1373 ((274, 255))
+Converting bands: Wrote rhot_1614 ((274, 255))
+Converting bands: Wrote rhot_2202 ((274, 255))
+Conversion took 2.3 seconds
+Created datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L1R.nc
+Wrote datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L1R.nc
+Getting ancillary data for 2020-11-29T16:16:59.456142+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20201129T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20201129T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20201129T160000.MET.nc
+Downloading file GMAO_MERRA2.20201129T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20201129T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20201129T170000.MET.nc
+No ozone file found for 2020-11-29T16:16:59.456142+00:00
+No NCEP files found for 2020-11-29T16:16:59.456142+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.0 s
+Running AOT estimation for band 1 (rhot_443)
+1 intercept 0.106
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.068
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_560)
+3 intercept 0.044
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.022
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.021
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_740)
+6 intercept 0.018
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_783)
+7 intercept 0.016
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.009
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_865)
+8A intercept 0.012
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 1.5112e-03
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 1.8711e-03
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.050, RMSD 1.51e-03
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_443 (274, 255)
+Computing surface reflectance 1 443 0.998
+Wrote rhos_443 (274, 255)
+S2A_MSI/B1 took 0.5s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.980
+Wrote rhos_492 (274, 255)
+S2A_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_560 (274, 255)
+Computing surface reflectance 3 560 0.922
+Wrote rhos_560 (274, 255)
+S2A_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.954
+Wrote rhos_665 (274, 255)
+S2A_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.947
+Wrote rhos_704 (274, 255)
+S2A_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_740 (274, 255)
+Computing surface reflectance 6 740 0.957
+Wrote rhos_740 (274, 255)
+S2A_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_783 (274, 255)
+Computing surface reflectance 7 783 0.983
+Wrote rhos_783 (274, 255)
+S2A_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.937
+Wrote rhos_833 (274, 255)
+S2A_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_865 (274, 255)
+Computing surface reflectance 8A 865 0.997
+Wrote rhos_865 (274, 255)
+S2A_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_945 (274, 255)
+Band 9 at 945 nm has tgas < min_tgas_rho (0.27 < 0.70)
+Wrote rhot_1373 (274, 255)
+Band 10 at 1373 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1614 (274, 255)
+Computing surface reflectance 11 1614 0.959
+Wrote rhos_1614 (274, 255)
+S2A_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2202 (274, 255)
+Computing surface reflectance 12 2202 0.912
+Wrote rhos_2202 (274, 255)
+S2A_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (443 nm)
+Wrote rhos_443 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (560 nm)
+Wrote rhos_560 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (740 nm)
+Wrote rhos_740 (274, 255)
+Performing glint correction for band 7 (783 nm)
+Wrote rhos_783 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (865 nm)
+Wrote rhos_865 (274, 255)
+Performing glint correction for band 11 (1614 nm)
+Wrote rhos_1614 (274, 255)
+Performing glint correction for band 12 (2202 nm)
+Wrote rhos_2202 (274, 255)
+Wrote datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2R.nc
+Wrote datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_443', 'rhot_492', 'rhot_560', 'rhot_665', 'rhot_704', 'rhot_740', 'rhot_783', 'rhot_833', 'rhot_865', 'rhot_945', 'rhot_1373', 'rhot_1614', 'rhot_2202']
+rhot wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 945, 1373, 1614, 2202]
+rhos datasets:  ['rhos_443', 'rhos_492', 'rhos_560', 'rhos_665', 'rhos_704', 'rhos_740', 'rhos_783', 'rhos_833', 'rhos_865', 'rhos_1614', 'rhos_2202']
+rhos wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 1614, 2202]
+Running ACOLITE flagging function for datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1614 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1373 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_443 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_560 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_740 > 0.3.
+Computing TOA limit mask from rhot_783 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_865 > 0.3.
+Computing TOA limit mask from rhot_945 > 0.3.
+Computing TOA limit mask from rhot_1373 > 0.3.
+Computing TOA limit mask from rhot_1614 > 0.3.
+Computing TOA limit mask from rhot_2202 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_443.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_560.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_740.
+Computing negative reflectance mask from rhos_783.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_865.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_443, base dataset rhos_443
+Writing rhos_443
+Wrote rhos_443 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_560, base dataset rhos_560
+Writing rhos_560
+Wrote rhos_560 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_740, base dataset rhos_740
+Writing rhos_740
+Wrote rhos_740 (274, 255)
+Copying rhos_783, base dataset rhos_783
+Writing rhos_783
+Wrote rhos_783 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_865, base dataset rhos_865
+Writing rhos_865
+Wrote rhos_865 (274, 255)
+Copying rhos_1614, base dataset rhos_1614
+Writing rhos_1614
+Wrote rhos_1614 (274, 255)
+Copying rhos_2202, base dataset rhos_2202
+Writing rhos_2202
+Wrote rhos_2202 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_740
+Wrote TUR_Nechad2009_740 (274, 255)
+Writing TUR_Nechad2009_783
+Wrote TUR_Nechad2009_783 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_865
+Wrote TUR_Nechad2009_865 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_740
+Wrote SPM_Nechad2010_740 (274, 255)
+Writing SPM_Nechad2010_783
+Wrote SPM_Nechad2010_783 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_865
+Wrote SPM_Nechad2010_865 (274, 255)
+Wrote datos/acolite/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2W.nc
+[2/14] S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_2 -> 1 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 77 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE.zip to datos/acolite/
+Extraction of 77 files completed to datos/acolite/
+datos/acolite/S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE
+Identified datos/crudo/S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE
+Importing metadata from L1C_T17QLF_A032984_20211015T160450
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_443 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_560 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_740 ((274, 255))
+Converting bands: Wrote rhot_783 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_865 ((274, 255))
+Converting bands: Wrote rhot_945 ((274, 255))
+Converting bands: Wrote rhot_1373 ((274, 255))
+Converting bands: Wrote rhot_1614 ((274, 255))
+Converting bands: Wrote rhot_2202 ((274, 255))
+Conversion took 2.4 seconds
+Created datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L1R.nc
+Wrote datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L1R.nc
+Getting ancillary data for 2021-10-15T16:17:04.723986+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20211015T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20211015T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20211015T160000.MET.nc
+Downloading file GMAO_MERRA2.20211015T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20211015T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20211015T170000.MET.nc
+No ozone file found for 2021-10-15T16:17:04.723986+00:00
+No NCEP files found for 2021-10-15T16:17:04.723986+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.0 s
+Running AOT estimation for band 1 (rhot_443)
+1 intercept 0.111
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.078
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_560)
+3 intercept 0.053
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.028
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.024
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_740)
+6 intercept 0.022
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_783)
+7 intercept 0.021
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.015
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_865)
+8A intercept 0.016
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 3.4763e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 5.1588e-04
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.249, RMSD 3.48e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_443 (274, 255)
+Computing surface reflectance 1 443 0.998
+Wrote rhos_443 (274, 255)
+S2A_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.982
+Wrote rhos_492 (274, 255)
+S2A_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_560 (274, 255)
+Computing surface reflectance 3 560 0.930
+Wrote rhos_560 (274, 255)
+S2A_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.959
+Wrote rhos_665 (274, 255)
+S2A_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.952
+Wrote rhos_704 (274, 255)
+S2A_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_740 (274, 255)
+Computing surface reflectance 6 740 0.962
+Wrote rhos_740 (274, 255)
+S2A_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_783 (274, 255)
+Computing surface reflectance 7 783 0.985
+Wrote rhos_783 (274, 255)
+S2A_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.942
+Wrote rhos_833 (274, 255)
+S2A_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_865 (274, 255)
+Computing surface reflectance 8A 865 0.997
+Wrote rhos_865 (274, 255)
+S2A_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_945 (274, 255)
+Band 9 at 945 nm has tgas < min_tgas_rho (0.29 < 0.70)
+Wrote rhot_1373 (274, 255)
+Band 10 at 1373 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1614 (274, 255)
+Computing surface reflectance 11 1614 0.962
+Wrote rhos_1614 (274, 255)
+S2A_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2202 (274, 255)
+Computing surface reflectance 12 2202 0.919
+Wrote rhos_2202 (274, 255)
+S2A_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (443 nm)
+Wrote rhos_443 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (560 nm)
+Wrote rhos_560 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (740 nm)
+Wrote rhos_740 (274, 255)
+Performing glint correction for band 7 (783 nm)
+Wrote rhos_783 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (865 nm)
+Wrote rhos_865 (274, 255)
+Performing glint correction for band 11 (1614 nm)
+Wrote rhos_1614 (274, 255)
+Performing glint correction for band 12 (2202 nm)
+Wrote rhos_2202 (274, 255)
+Wrote datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L2R.nc
+Wrote datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_443', 'rhot_492', 'rhot_560', 'rhot_665', 'rhot_704', 'rhot_740', 'rhot_783', 'rhot_833', 'rhot_865', 'rhot_945', 'rhot_1373', 'rhot_1614', 'rhot_2202']
+rhot wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 945, 1373, 1614, 2202]
+rhos datasets:  ['rhos_443', 'rhos_492', 'rhos_560', 'rhos_665', 'rhos_704', 'rhos_740', 'rhos_783', 'rhos_833', 'rhos_865', 'rhos_1614', 'rhos_2202']
+rhos wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 1614, 2202]
+Running ACOLITE flagging function for datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1614 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1373 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_443 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_560 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_740 > 0.3.
+Computing TOA limit mask from rhot_783 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_865 > 0.3.
+Computing TOA limit mask from rhot_945 > 0.3.
+Computing TOA limit mask from rhot_1373 > 0.3.
+Computing TOA limit mask from rhot_1614 > 0.3.
+Computing TOA limit mask from rhot_2202 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_443.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_560.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_740.
+Computing negative reflectance mask from rhos_783.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_865.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_443, base dataset rhos_443
+Writing rhos_443
+Wrote rhos_443 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_560, base dataset rhos_560
+Writing rhos_560
+Wrote rhos_560 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_740, base dataset rhos_740
+Writing rhos_740
+Wrote rhos_740 (274, 255)
+Copying rhos_783, base dataset rhos_783
+Writing rhos_783
+Wrote rhos_783 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_865, base dataset rhos_865
+Writing rhos_865
+Wrote rhos_865 (274, 255)
+Copying rhos_1614, base dataset rhos_1614
+Writing rhos_1614
+Wrote rhos_1614 (274, 255)
+Copying rhos_2202, base dataset rhos_2202
+Writing rhos_2202
+Wrote rhos_2202 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_740
+Wrote TUR_Nechad2009_740 (274, 255)
+Writing TUR_Nechad2009_783
+Wrote TUR_Nechad2009_783 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_865
+Wrote TUR_Nechad2009_865 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_740
+Wrote SPM_Nechad2010_740 (274, 255)
+Writing SPM_Nechad2010_783
+Wrote SPM_Nechad2010_783 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_865
+Wrote SPM_Nechad2010_865 (274, 255)
+Wrote datos/acolite/S2A_MSI_2021_10_15_16_17_04_T17QLF_L2W.nc
+[3/14] S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_2 -> 2 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE
+Identified datos/crudo/S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE
+Importing metadata from L1C_T17QLF_A037417_20220821T160810
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_443 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_560 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_740 ((274, 255))
+Converting bands: Wrote rhot_783 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_865 ((274, 255))
+Converting bands: Wrote rhot_945 ((274, 255))
+Converting bands: Wrote rhot_1373 ((274, 255))
+Converting bands: Wrote rhot_1614 ((274, 255))
+Converting bands: Wrote rhot_2202 ((274, 255))
+Conversion took 2.1 seconds
+Created datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L1R.nc
+Wrote datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L1R.nc
+Getting ancillary data for 2022-08-21T16:17:11.974540+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20220821T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20220821T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20220821T160000.MET.nc
+Downloading file GMAO_MERRA2.20220821T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20220821T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20220821T170000.MET.nc
+No ozone file found for 2022-08-21T16:17:11.974540+00:00
+No NCEP files found for 2022-08-21T16:17:11.974540+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_443)
+1 intercept 0.112
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.075
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.002s (StdLUT)
+Running AOT estimation for band 3 (rhot_560)
+3 intercept 0.054
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.033
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.031
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_740)
+6 intercept 0.030
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_783)
+7 intercept 0.030
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.023
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_865)
+8A intercept 0.027
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.002s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 3.2958e-03
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 7.1062e-04
+Selected model ACOLITE-LUT-202110-MOD2: aot 0.250, RMSD 7.11e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_443 (274, 255)
+Computing surface reflectance 1 443 0.998
+Wrote rhos_443 (274, 255)
+S2A_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.983
+Wrote rhos_492 (274, 255)
+S2A_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_560 (274, 255)
+Computing surface reflectance 3 560 0.934
+Wrote rhos_560 (274, 255)
+S2A_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.961
+Wrote rhos_665 (274, 255)
+S2A_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2A_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_740 (274, 255)
+Computing surface reflectance 6 740 0.964
+Wrote rhos_740 (274, 255)
+S2A_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_783 (274, 255)
+Computing surface reflectance 7 783 0.986
+Wrote rhos_783 (274, 255)
+S2A_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.944
+Wrote rhos_833 (274, 255)
+S2A_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_865 (274, 255)
+Computing surface reflectance 8A 865 0.997
+Wrote rhos_865 (274, 255)
+S2A_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_945 (274, 255)
+Band 9 at 945 nm has tgas < min_tgas_rho (0.31 < 0.70)
+Wrote rhot_1373 (274, 255)
+Band 10 at 1373 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1614 (274, 255)
+Computing surface reflectance 11 1614 0.964
+Wrote rhos_1614 (274, 255)
+S2A_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2202 (274, 255)
+Computing surface reflectance 12 2202 0.923
+Wrote rhos_2202 (274, 255)
+S2A_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (443 nm)
+Wrote rhos_443 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (560 nm)
+Wrote rhos_560 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (740 nm)
+Wrote rhos_740 (274, 255)
+Performing glint correction for band 7 (783 nm)
+Wrote rhos_783 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (865 nm)
+Wrote rhos_865 (274, 255)
+Performing glint correction for band 11 (1614 nm)
+Wrote rhos_1614 (274, 255)
+Performing glint correction for band 12 (2202 nm)
+Wrote rhos_2202 (274, 255)
+Wrote datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L2R.nc
+Wrote datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_443', 'rhot_492', 'rhot_560', 'rhot_665', 'rhot_704', 'rhot_740', 'rhot_783', 'rhot_833', 'rhot_865', 'rhot_945', 'rhot_1373', 'rhot_1614', 'rhot_2202']
+rhot wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 945, 1373, 1614, 2202]
+rhos datasets:  ['rhos_443', 'rhos_492', 'rhos_560', 'rhos_665', 'rhos_704', 'rhos_740', 'rhos_783', 'rhos_833', 'rhos_865', 'rhos_1614', 'rhos_2202']
+rhos wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 1614, 2202]
+Running ACOLITE flagging function for datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1614 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1373 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_443 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_560 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_740 > 0.3.
+Computing TOA limit mask from rhot_783 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_865 > 0.3.
+Computing TOA limit mask from rhot_945 > 0.3.
+Computing TOA limit mask from rhot_1373 > 0.3.
+Computing TOA limit mask from rhot_1614 > 0.3.
+Computing TOA limit mask from rhot_2202 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_443.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_560.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_740.
+Computing negative reflectance mask from rhos_783.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_865.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_443, base dataset rhos_443
+Writing rhos_443
+Wrote rhos_443 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_560, base dataset rhos_560
+Writing rhos_560
+Wrote rhos_560 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_740, base dataset rhos_740
+Writing rhos_740
+Wrote rhos_740 (274, 255)
+Copying rhos_783, base dataset rhos_783
+Writing rhos_783
+Wrote rhos_783 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_865, base dataset rhos_865
+Writing rhos_865
+Wrote rhos_865 (274, 255)
+Copying rhos_1614, base dataset rhos_1614
+Writing rhos_1614
+Wrote rhos_1614 (274, 255)
+Copying rhos_2202, base dataset rhos_2202
+Writing rhos_2202
+Wrote rhos_2202 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_740
+Wrote TUR_Nechad2009_740 (274, 255)
+Writing TUR_Nechad2009_783
+Wrote TUR_Nechad2009_783 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_865
+Wrote TUR_Nechad2009_865 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_740
+Wrote SPM_Nechad2010_740 (274, 255)
+Writing SPM_Nechad2010_783
+Wrote SPM_Nechad2010_783 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_865
+Wrote SPM_Nechad2010_865 (274, 255)
+Wrote datos/acolite/S2A_MSI_2022_08_21_16_17_11_T17QLF_L2W.nc
+[4/14] S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_2 -> 3 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE
+Identified datos/crudo/S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE
+Importing metadata from L1C_T17QLF_A037560_20220831T160600
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_443 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_560 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_740 ((274, 255))
+Converting bands: Wrote rhot_783 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_865 ((274, 255))
+Converting bands: Wrote rhot_945 ((274, 255))
+Converting bands: Wrote rhot_1373 ((274, 255))
+Converting bands: Wrote rhot_1614 ((274, 255))
+Converting bands: Wrote rhot_2202 ((274, 255))
+Conversion took 2.3 seconds
+Created datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L1R.nc
+Wrote datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L1R.nc
+Getting ancillary data for 2022-08-31T16:17:11.579245+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20220831T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20220831T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20220831T160000.MET.nc
+Downloading file GMAO_MERRA2.20220831T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20220831T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20220831T170000.MET.nc
+No ozone file found for 2022-08-31T16:17:11.579245+00:00
+No NCEP files found for 2022-08-31T16:17:11.579245+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.2 s
+Running AOT estimation for band 1 (rhot_443)
+1 intercept 0.114
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.003s (StdLUT)
+S2A_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.078
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2A_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_560)
+3 intercept 0.052
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.031
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.026
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_740)
+6 intercept 0.025
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_783)
+7 intercept 0.024
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.017
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_865)
+8A intercept 0.020
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2A_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 2.0112e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 1.5916e-03
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.323, RMSD 2.01e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_443 (274, 255)
+Computing surface reflectance 1 443 0.998
+Wrote rhos_443 (274, 255)
+S2A_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.983
+Wrote rhos_492 (274, 255)
+S2A_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_560 (274, 255)
+Computing surface reflectance 3 560 0.934
+Wrote rhos_560 (274, 255)
+S2A_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.961
+Wrote rhos_665 (274, 255)
+S2A_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2A_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_740 (274, 255)
+Computing surface reflectance 6 740 0.964
+Wrote rhos_740 (274, 255)
+S2A_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_783 (274, 255)
+Computing surface reflectance 7 783 0.986
+Wrote rhos_783 (274, 255)
+S2A_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.944
+Wrote rhos_833 (274, 255)
+S2A_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_865 (274, 255)
+Computing surface reflectance 8A 865 0.997
+Wrote rhos_865 (274, 255)
+S2A_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_945 (274, 255)
+Band 9 at 945 nm has tgas < min_tgas_rho (0.31 < 0.70)
+Wrote rhot_1373 (274, 255)
+Band 10 at 1373 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1614 (274, 255)
+Computing surface reflectance 11 1614 0.964
+Wrote rhos_1614 (274, 255)
+S2A_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2202 (274, 255)
+Computing surface reflectance 12 2202 0.923
+Wrote rhos_2202 (274, 255)
+S2A_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (443 nm)
+Wrote rhos_443 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (560 nm)
+Wrote rhos_560 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (740 nm)
+Wrote rhos_740 (274, 255)
+Performing glint correction for band 7 (783 nm)
+Wrote rhos_783 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (865 nm)
+Wrote rhos_865 (274, 255)
+Performing glint correction for band 11 (1614 nm)
+Wrote rhos_1614 (274, 255)
+Performing glint correction for band 12 (2202 nm)
+Wrote rhos_2202 (274, 255)
+Wrote datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L2R.nc
+Wrote datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_443', 'rhot_492', 'rhot_560', 'rhot_665', 'rhot_704', 'rhot_740', 'rhot_783', 'rhot_833', 'rhot_865', 'rhot_945', 'rhot_1373', 'rhot_1614', 'rhot_2202']
+rhot wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 945, 1373, 1614, 2202]
+rhos datasets:  ['rhos_443', 'rhos_492', 'rhos_560', 'rhos_665', 'rhos_704', 'rhos_740', 'rhos_783', 'rhos_833', 'rhos_865', 'rhos_1614', 'rhos_2202']
+rhos wavelengths:  [443, 492, 560, 665, 704, 740, 783, 833, 865, 1614, 2202]
+Running ACOLITE flagging function for datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1614 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1373 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_443 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_560 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_740 > 0.3.
+Computing TOA limit mask from rhot_783 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_865 > 0.3.
+Computing TOA limit mask from rhot_945 > 0.3.
+Computing TOA limit mask from rhot_1373 > 0.3.
+Computing TOA limit mask from rhot_1614 > 0.3.
+Computing TOA limit mask from rhot_2202 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_443.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_560.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_740.
+Computing negative reflectance mask from rhos_783.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_865.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_443, base dataset rhos_443
+Writing rhos_443
+Wrote rhos_443 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_560, base dataset rhos_560
+Writing rhos_560
+Wrote rhos_560 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_740, base dataset rhos_740
+Writing rhos_740
+Wrote rhos_740 (274, 255)
+Copying rhos_783, base dataset rhos_783
+Writing rhos_783
+Wrote rhos_783 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_865, base dataset rhos_865
+Writing rhos_865
+Wrote rhos_865 (274, 255)
+Copying rhos_1614, base dataset rhos_1614
+Writing rhos_1614
+Wrote rhos_1614 (274, 255)
+Copying rhos_2202, base dataset rhos_2202
+Writing rhos_2202
+Wrote rhos_2202 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_740
+Wrote TUR_Nechad2009_740 (274, 255)
+Writing TUR_Nechad2009_783
+Wrote TUR_Nechad2009_783 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_865
+Wrote TUR_Nechad2009_865 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_740
+Wrote SPM_Nechad2010_740 (274, 255)
+Writing SPM_Nechad2010_783
+Wrote SPM_Nechad2010_783 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_865
+Wrote SPM_Nechad2010_865 (274, 255)
+Wrote datos/acolite/S2A_MSI_2022_08_31_16_17_11_T17QLF_L2W.nc
+[5/14] S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_2 -> 4 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE
+Identified datos/crudo/S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE
+Importing metadata from L1C_T17QLF_A005700_20180409T161514
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.5 seconds
+Created datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L1R.nc
+Getting ancillary data for 2018-04-09T16:16:56.657666+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20180409T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20180409T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20180409T160000.MET.nc
+Downloading file GMAO_MERRA2.20180409T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20180409T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20180409T170000.MET.nc
+No ozone file found for 2018-04-09T16:16:56.657666+00:00
+No NCEP files found for 2018-04-09T16:16:56.657666+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.105
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.073
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.050
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.030
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.027
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.025
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.025
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.017
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.021
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 4.8738e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 2.1013e-03
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.252, RMSD 4.87e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.984
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.935
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.962
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.954
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.955
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.987
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.5s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.945
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.964
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.926
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2018_04_09_16_16_56_T17QLF_L2W.nc
+[6/14] S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_2 -> 5 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE
+Identified datos/crudo/S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE
+Importing metadata from L1C_T17QLF_A010419_20190305T161408
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 6
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.4 seconds
+Created datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L1R.nc
+Getting ancillary data for 2019-03-05T16:16:56.977780+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20190305T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20190305T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20190305T160000.MET.nc
+Downloading file GMAO_MERRA2.20190305T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20190305T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20190305T170000.MET.nc
+No ozone file found for 2019-03-05T16:16:56.977780+00:00
+No NCEP files found for 2019-03-05T16:16:56.977780+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.0 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.128
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.091
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.064
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.041
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.038
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.037
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.038
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.029
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.032
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 7.1582e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 4.6721e-05
+Selected model ACOLITE-LUT-202110-MOD2: aot 0.461, RMSD 4.67e-05
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.982
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.930
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.959
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.951
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.952
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.987
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.943
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.29 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.962
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.922
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2019_03_05_16_16_56_T17QLF_L2W.nc
+[7/14] S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_2 -> 6 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE
+Identified datos/crudo/S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE
+Importing metadata from L1C_T17QLF_A014995_20200119T161630
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 6
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.2 seconds
+Created datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L1R.nc
+Getting ancillary data for 2020-01-19T16:16:53.036649+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20200119T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20200119T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20200119T160000.MET.nc
+Downloading file GMAO_MERRA2.20200119T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20200119T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20200119T170000.MET.nc
+No ozone file found for 2020-01-19T16:16:53.036649+00:00
+No NCEP files found for 2020-01-19T16:16:53.036649+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.110
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.071
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.047
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.024
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.023
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.020
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.019
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.012
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.014
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 1.9185e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 9.5678e-04
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.126, RMSD 1.92e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.980
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.922
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.955
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.8s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.946
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.947
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.985
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.938
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.27 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.958
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.915
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2020_01_19_16_16_53_T17QLF_L2W.nc
+[8/14] S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_2 -> 7 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE
+Identified datos/crudo/S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE
+Importing metadata from L1C_T17QLF_A023861_20210930T161357
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.1 seconds
+Created datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L1R.nc
+Getting ancillary data for 2021-09-30T16:16:58.730999+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20210930T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20210930T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20210930T160000.MET.nc
+Downloading file GMAO_MERRA2.20210930T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20210930T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20210930T170000.MET.nc
+No ozone file found for 2021-09-30T16:16:58.730999+00:00
+No NCEP files found for 2021-09-30T16:16:58.730999+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.122
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.003s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.086
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.064
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.037
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.036
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.035
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.036
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.027
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.030
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 7.8242e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 5.5809e-04
+Selected model ACOLITE-LUT-202110-MOD2: aot 0.370, RMSD 5.58e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.983
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.933
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.961
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.953
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.5s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.954
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.5s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.987
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.944
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.29 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.963
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.924
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2021_09_30_16_16_58_T17QLF_L2W.nc
+[9/14] S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_2 -> 8 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE
+Identified datos/crudo/S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE
+Importing metadata from L1C_T17QLF_A033156_20230712T160941
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.4 seconds
+Created datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L1R.nc
+Getting ancillary data for 2023-07-12T16:17:04.085886+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20230712T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20230712T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20230712T160000.MET.nc
+Downloading file GMAO_MERRA2.20230712T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20230712T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20230712T170000.MET.nc
+No ozone file found for 2023-07-12T16:17:04.085886+00:00
+No NCEP files found for 2023-07-12T16:17:04.085886+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.0 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.124
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.090
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.073
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.049
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.052
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.053
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.056
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.047
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.052
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 7.1547e-04
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 1.9915e-03
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.521, RMSD 7.15e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.984
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.936
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.963
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.956
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.988
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.5s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.946
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.5s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.964
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.927
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2023_07_12_16_17_04_T17QLF_L2W.nc
+[10/14] S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_2 -> 9 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE
+Identified datos/crudo/S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE
+Importing metadata from L1C_T17QLF_A033299_20230722T160925
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.1 seconds
+Created datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L1R.nc
+Getting ancillary data for 2023-07-22T16:17:05.308752+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20230722T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20230722T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20230722T160000.MET.nc
+Downloading file GMAO_MERRA2.20230722T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20230722T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20230722T170000.MET.nc
+No ozone file found for 2023-07-22T16:17:05.308752+00:00
+No NCEP files found for 2023-07-22T16:17:05.308752+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.0 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.126
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.094
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.083
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.058
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.066
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.067
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.071
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.061
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.066
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 1.7317e-03
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 4.0140e-04
+Selected model ACOLITE-LUT-202110-MOD2: aot 0.523, RMSD 4.01e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.984
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.936
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.5s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.963
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.956
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.988
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.946
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.964
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.927
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L2R.nc.
+Computing non water threshold mask./Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:398: RuntimeWarning: Mean of empty slice
+  ave_vza = np.nanmean(ave_vza, axis=2)
+/Users/alex/Nube /repos/publication plan/series-Sentinel-2/externo/acolite/acolite/sentinel2/l1_convert.py:399: RuntimeWarning: Mean of empty slice
+  ave_vaa = np.nanmean(ave_vaa, axis=2)
+
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2023_07_22_16_17_05_T17QLF_L2W.nc
+[11/14] S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_2 -> 10 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE
+Identified datos/crudo/S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE
+Importing metadata from L1C_T17QLF_A037732_20240527T161150
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.2 seconds
+Created datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L1R.nc
+Getting ancillary data for 2024-05-27T16:16:59.184390+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20240527T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20240527T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20240527T160000.MET.nc
+Downloading file GMAO_MERRA2.20240527T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20240527T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20240527T170000.MET.nc
+No ozone file found for 2024-05-27T16:16:59.184390+00:00
+No NCEP files found for 2024-05-27T16:16:59.184390+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.112
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.079
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.054
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.035
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.030
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.029
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.030
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.022
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.024
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 7.6375e-05
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 4.3005e-04
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.351, RMSD 7.64e-05
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.984
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.936
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.963
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.956
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.988
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.946
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.8s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.964
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.928
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2024_05_27_16_16_59_T17QLF_L2W.nc
+[12/14] S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_2 -> 11 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE
+Identified datos/crudo/S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE
+Importing metadata from L1C_T17QLF_A037875_20240606T160443
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.1 seconds
+Created datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L1R.nc
+Getting ancillary data for 2024-06-06T16:17:01.994000+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20240606T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20240606T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20240606T160000.MET.nc
+Downloading file GMAO_MERRA2.20240606T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20240606T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20240606T170000.MET.nc
+No ozone file found for 2024-06-06T16:17:01.994000+00:00
+No NCEP files found for 2024-06-06T16:17:01.994000+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.3 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.119
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.002s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.084
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.059
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.037
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.038
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.038
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.040
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.029
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.033
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 1.0863e-03
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 2.1472e-03
+Selected model ACOLITE-LUT-202110-MOD1: aot 0.431, RMSD 1.09e-03
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.984
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.936
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.963
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.955
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.956
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.988
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.946
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.6s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.964
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.928
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2024_06_06_16_17_01_T17QLF_L2W.nc
+[13/14] S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_2 -> 12 fichero(s) L2W
+Running ACOLITE processing - Generic GitHub Clone c2026-09-16T13:09:05
+Python - darwin - 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+Platform - Darwin 25.6.0 - arm64 - Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:29 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8122
+Run ID - S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE.zip
+Extraction error file could not be opened successfully:
+- method gz: ReadError('not a gzip file')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method zst: ReadError('not a zstd file')
+- method tar: ReadError('invalid header'), <class 'tarfile.ReadError'>
+Extracting 66 files from /Users/alex/Nube /repos/publication plan/series-Sentinel-2/datos/crudo/S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE.zip to datos/acolite/
+Extraction of 66 files completed to datos/acolite/
+datos/acolite/S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE
+Identified datos/crudo/S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE.zip as Sentinel-2 .SAFE type
+Starting conversion of 1 scenes
+Starting conversion of datos/acolite/S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE
+Importing metadata from L1C_T17QLF_A042165_20250402T160831
+Reading per pixel geometry
+Computing band average per detector geometry
+Detector 6
+Detector 7
+Detector 8
+Detector 9
+Detector 10
+Detector 11
+Detector 12
+Wrote raa (274, 255)
+Wrote vza (274, 255)
+Wrote sza (274, 255)
+Writing geolocation lon/lat
+Wrote lon (274, 255)
+Wrote lat (274, 255)
+Writing geolocation x/y
+Wrote xm (274, 255)
+Wrote ym (274, 255)
+Converting bands
+Converting bands: Wrote rhot_442 ((274, 255))
+Converting bands: Wrote rhot_492 ((274, 255))
+Converting bands: Wrote rhot_559 ((274, 255))
+Converting bands: Wrote rhot_665 ((274, 255))
+Converting bands: Wrote rhot_704 ((274, 255))
+Converting bands: Wrote rhot_739 ((274, 255))
+Converting bands: Wrote rhot_780 ((274, 255))
+Converting bands: Wrote rhot_833 ((274, 255))
+Converting bands: Wrote rhot_864 ((274, 255))
+Converting bands: Wrote rhot_943 ((274, 255))
+Converting bands: Wrote rhot_1377 ((274, 255))
+Converting bands: Wrote rhot_1610 ((274, 255))
+Converting bands: Wrote rhot_2186 ((274, 255))
+Conversion took 2.2 seconds
+Created datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L1R.nc
+Wrote datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L1R_rgb_rhot.png
+Running acolite for datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L1R.nc
+Getting ancillary data for 2025-04-02T16:16:58.318245+00:00 -82.333E 23.133N
+Downloading file GMAO_MERRA2.20250402T160000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20250402T160000.MET.nc
+Finished downloading file GMAO_MERRA2.20250402T160000.MET.nc
+Downloading file GMAO_MERRA2.20250402T170000.MET.nc
+Could not determine earthdata credentials. Please add them to your .netrc file or ACOLITE credentials file.
+EARTHDATA user name and password required for download of https://oceandata.sci.gsfc.nasa.gov/getfile/GMAO_MERRA2.20250402T170000.MET.nc
+Finished downloading file GMAO_MERRA2.20250402T170000.MET.nc
+No ozone file found for 2025-04-02T16:16:58.318245+00:00
+No NCEP files found for 2025-04-02T16:16:58.318245+00:00
+default uoz: 0.30 uwv: 1.50 pressure: 1013.25
+current uoz: 0.30 uwv: 1.50 pressure: 1013.25
+Using DSF atmospheric correction
+Writing lon
+Wrote lon (274, 255)
+Writing lat
+Wrote lat (274, 255)
+Writing sza
+Wrote sza (274, 255)
+Writing vza
+Wrote vza (274, 255)
+Writing raa
+Wrote raa (274, 255)
+Writing x
+Wrote x (255,)
+Writing y
+Wrote y (274,)
+Loading LUTs ['ACOLITE-LUT-202110-MOD1', 'ACOLITE-LUT-202110-MOD2']
+Loading LUTs took 2.1 s
+Running AOT estimation for band 1 (rhot_442)
+1 intercept 0.113
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B1 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 2 (rhot_492)
+2 intercept 0.078
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B2 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 3 (rhot_559)
+3 intercept 0.055
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B3 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 4 (rhot_665)
+4 intercept 0.033
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B4 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 5 (rhot_704)
+5 intercept 0.031
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B5 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 6 (rhot_739)
+6 intercept 0.028
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B6 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 7 (rhot_780)
+7 intercept 0.029
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B7 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8 (rhot_833)
+8 intercept 0.022
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8 ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Running AOT estimation for band 8A (rhot_864)
+8A intercept 0.024
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD1 took 0.001s (StdLUT)
+S2B_MSI/B8A ACOLITE-LUT-202110-MOD2 took 0.001s (StdLUT)
+Choosing best fitting model: min_drmsd (2 bands)
+Computing RMSD for model ACOLITE-LUT-202110-MOD1
+Computing RMSD for model ACOLITE-LUT-202110-MOD1: 1.0382e-03
+Computing RMSD for model ACOLITE-LUT-202110-MOD2
+Computing RMSD for model ACOLITE-LUT-202110-MOD2: 3.4838e-04
+Selected model ACOLITE-LUT-202110-MOD2: aot 0.277, RMSD 3.48e-04
+Reshaping pressure to 274x255
+Reshaping wind to 274x255
+use_revlut True
+Wrote rhot_442 (274, 255)
+Computing surface reflectance 1 442 0.998
+Wrote rhos_442 (274, 255)
+S2B_MSI/B1 took 0.6s (RevLUT)
+Wrote rhot_492 (274, 255)
+Computing surface reflectance 2 492 0.983
+Wrote rhos_492 (274, 255)
+S2B_MSI/B2 took 0.6s (RevLUT)
+Wrote rhot_559 (274, 255)
+Computing surface reflectance 3 559 0.934
+Wrote rhos_559 (274, 255)
+S2B_MSI/B3 took 0.6s (RevLUT)
+Wrote rhot_665 (274, 255)
+Computing surface reflectance 4 665 0.962
+Wrote rhos_665 (274, 255)
+S2B_MSI/B4 took 0.6s (RevLUT)
+Wrote rhot_704 (274, 255)
+Computing surface reflectance 5 704 0.954
+Wrote rhos_704 (274, 255)
+S2B_MSI/B5 took 0.6s (RevLUT)
+Wrote rhot_739 (274, 255)
+Computing surface reflectance 6 739 0.955
+Wrote rhos_739 (274, 255)
+S2B_MSI/B6 took 0.6s (RevLUT)
+Wrote rhot_780 (274, 255)
+Computing surface reflectance 7 780 0.987
+Wrote rhos_780 (274, 255)
+S2B_MSI/B7 took 0.6s (RevLUT)
+Wrote rhot_833 (274, 255)
+Computing surface reflectance 8 833 0.944
+Wrote rhos_833 (274, 255)
+S2B_MSI/B8 took 0.6s (RevLUT)
+Wrote rhot_864 (274, 255)
+Computing surface reflectance 8A 864 0.997
+Wrote rhos_864 (274, 255)
+S2B_MSI/B8A took 0.5s (RevLUT)
+Wrote rhot_943 (274, 255)
+Band 9 at 943 nm has tgas < min_tgas_rho (0.30 < 0.70)
+Wrote rhot_1377 (274, 255)
+Band 10 at 1377 nm has tgas < min_tgas_rho (0.01 < 0.70)
+Wrote rhot_1610 (274, 255)
+Computing surface reflectance 11 1610 0.963
+Wrote rhos_1610 (274, 255)
+S2B_MSI/B11 took 0.6s (RevLUT)
+Wrote rhot_2186 (274, 255)
+Computing surface reflectance 12 2186 0.926
+Wrote rhos_2186 (274, 255)
+S2B_MSI/B12 took 0.6s (RevLUT)
+Starting glint correction
+Performing glint correction for band 1 (442 nm)
+Wrote rhos_442 (274, 255)
+Performing glint correction for band 2 (492 nm)
+Wrote rhos_492 (274, 255)
+Performing glint correction for band 3 (559 nm)
+Wrote rhos_559 (274, 255)
+Performing glint correction for band 4 (665 nm)
+Wrote rhos_665 (274, 255)
+Performing glint correction for band 5 (704 nm)
+Wrote rhos_704 (274, 255)
+Performing glint correction for band 6 (739 nm)
+Wrote rhos_739 (274, 255)
+Performing glint correction for band 7 (780 nm)
+Wrote rhos_780 (274, 255)
+Performing glint correction for band 8 (833 nm)
+Wrote rhos_833 (274, 255)
+Performing glint correction for band 8A (864 nm)
+Wrote rhos_864 (274, 255)
+Performing glint correction for band 11 (1610 nm)
+Wrote rhos_1610 (274, 255)
+Performing glint correction for band 12 (2186 nm)
+Wrote rhos_2186 (274, 255)
+Wrote datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L2R.nc
+Wrote datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L2R_rgb_rhot.png
+Wrote datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L2R_rgb_rhos.png
+L2W keeping data in memory: False
+rhot datasets:  ['rhot_442', 'rhot_492', 'rhot_559', 'rhot_665', 'rhot_704', 'rhot_739', 'rhot_780', 'rhot_833', 'rhot_864', 'rhot_943', 'rhot_1377', 'rhot_1610', 'rhot_2186']
+rhot wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 943, 1377, 1610, 2186]
+rhos datasets:  ['rhos_442', 'rhos_492', 'rhos_559', 'rhos_665', 'rhos_704', 'rhos_739', 'rhos_780', 'rhos_833', 'rhos_864', 'rhos_1610', 'rhos_2186']
+rhos wavelengths:  [442, 492, 559, 665, 704, 739, 780, 833, 864, 1610, 2186]
+Running ACOLITE flagging function for datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L2R.nc.
+Computing non water threshold mask.
+Computing non water threshold mask from rhot_1610 > 0.0215.
+Computing cirrus mask.
+Computing cirrus mask from rhot_1377 > 0.005.
+Computing TOA limit mask.
+Computing TOA limit mask from rhot_442 > 0.3.
+Computing TOA limit mask from rhot_492 > 0.3.
+Computing TOA limit mask from rhot_559 > 0.3.
+Computing TOA limit mask from rhot_665 > 0.3.
+Computing TOA limit mask from rhot_704 > 0.3.
+Computing TOA limit mask from rhot_739 > 0.3.
+Computing TOA limit mask from rhot_780 > 0.3.
+Computing TOA limit mask from rhot_833 > 0.3.
+Computing TOA limit mask from rhot_864 > 0.3.
+Computing TOA limit mask from rhot_943 > 0.3.
+Computing TOA limit mask from rhot_1377 > 0.3.
+Computing TOA limit mask from rhot_1610 > 0.3.
+Computing TOA limit mask from rhot_2186 > 0.3.
+Computing negative reflectance mask.
+Computing negative reflectance mask from rhos_442.
+Computing negative reflectance mask from rhos_492.
+Computing negative reflectance mask from rhos_559.
+Computing negative reflectance mask from rhos_665.
+Computing negative reflectance mask from rhos_704.
+Computing negative reflectance mask from rhos_739.
+Computing negative reflectance mask from rhos_780.
+Computing negative reflectance mask from rhos_833.
+Computing negative reflectance mask from rhos_864.
+Copying datasets from L2R.
+Copying lon, base dataset lon
+Writing lon
+Wrote lon (274, 255)
+Copying lat, base dataset lat
+Writing lat
+Wrote lat (274, 255)
+Copying rhos_442, base dataset rhos_442
+Writing rhos_442
+Wrote rhos_442 (274, 255)
+Copying rhos_492, base dataset rhos_492
+Writing rhos_492
+Wrote rhos_492 (274, 255)
+Copying rhos_559, base dataset rhos_559
+Writing rhos_559
+Wrote rhos_559 (274, 255)
+Copying rhos_665, base dataset rhos_665
+Writing rhos_665
+Wrote rhos_665 (274, 255)
+Copying rhos_704, base dataset rhos_704
+Writing rhos_704
+Wrote rhos_704 (274, 255)
+Copying rhos_739, base dataset rhos_739
+Writing rhos_739
+Wrote rhos_739 (274, 255)
+Copying rhos_780, base dataset rhos_780
+Writing rhos_780
+Wrote rhos_780 (274, 255)
+Copying rhos_833, base dataset rhos_833
+Writing rhos_833
+Wrote rhos_833 (274, 255)
+Copying rhos_864, base dataset rhos_864
+Writing rhos_864
+Wrote rhos_864 (274, 255)
+Copying rhos_1610, base dataset rhos_1610
+Writing rhos_1610
+Wrote rhos_1610 (274, 255)
+Copying rhos_2186, base dataset rhos_2186
+Writing rhos_2186
+Wrote rhos_2186 (274, 255)
+Wrote l2_flags (274, 255)
+Writing TUR_Dogliotti2015
+Wrote TUR_Dogliotti2015 (274, 255)
+Writing TUR_Nechad2009_665
+Wrote TUR_Nechad2009_665 (274, 255)
+Writing TUR_Nechad2009_704
+Wrote TUR_Nechad2009_704 (274, 255)
+Writing TUR_Nechad2009_739
+Wrote TUR_Nechad2009_739 (274, 255)
+Writing TUR_Nechad2009_780
+Wrote TUR_Nechad2009_780 (274, 255)
+Writing TUR_Nechad2009_833
+Wrote TUR_Nechad2009_833 (274, 255)
+Writing TUR_Nechad2009_864
+Wrote TUR_Nechad2009_864 (274, 255)
+Writing SPM_Nechad2010_665
+Wrote SPM_Nechad2010_665 (274, 255)
+Writing SPM_Nechad2010_704
+Wrote SPM_Nechad2010_704 (274, 255)
+Writing SPM_Nechad2010_739
+Wrote SPM_Nechad2010_739 (274, 255)
+Writing SPM_Nechad2010_780
+Wrote SPM_Nechad2010_780 (274, 255)
+Writing SPM_Nechad2010_833
+Wrote SPM_Nechad2010_833 (274, 255)
+Writing SPM_Nechad2010_864
+Wrote SPM_Nechad2010_864 (274, 255)
+Wrote datos/acolite/S2B_MSI_2025_04_02_16_16_58_T17QLF_L2W.nc
+[14/14] S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_2 -> 13 fichero(s) L2W
+
+14/14 procesados
