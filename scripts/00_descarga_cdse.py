@@ -101,10 +101,32 @@ def descargar(pid, nombre, destino, tk, reintentos=3):
             time.sleep(20 * (intento + 1))
 
 
+def probar(prods, tk):
+    """Pide solo los primeros bytes de un producto: confirma la autorizacion en segundos
+    en vez de esperar a que fallen descargas de 700 MB."""
+    p = prods[0]
+    ses = SesionCDSE()
+    ses.headers["Authorization"] = f"Bearer {tk}"
+    with ses.get(DESCARGA.format(id=p["Id"]), stream=True, timeout=120,
+                 allow_redirects=True) as r:
+        print(f"  producto : {p['Name'][:52]}")
+        print(f"  host final: {urlparse(r.url).hostname}")
+        print(f"  HTTP      : {r.status_code}")
+        if r.status_code >= 400:
+            print(f"  cuerpo    : {r.text[:200]}")
+            return False
+        trozo = next(r.iter_content(chunk_size=1 << 20), b"")
+        print(f"  recibidos : {len(trozo)/1e6:.1f} MB de prueba")
+        print(f"  tamano    : {int(r.headers.get('Content-Length', 0))/1e6:.0f} MB")
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--destino", default="datos/crudo")
     ap.add_argument("--solo-catalogo", action="store_true")
+    ap.add_argument("--probar", action="store_true",
+                    help="comprobar la autorizacion sin descargar nada entero")
     ap.add_argument("--n", type=int, default=0,
                     help="descargar solo N productos repartidos por el periodo (piloto)")
     a = ap.parse_args()
@@ -114,6 +136,12 @@ def main():
     print(f"{len(prods)} productos {NIVEL} de {TILE} entre {DESDE} y {HASTA}")
     Path(a.destino, "catalogo.json").write_text(json.dumps(prods, indent=1))
     if a.solo_catalogo:
+        return
+
+    if a.probar:
+        print("\n--- prueba de autorizacion ---")
+        ok = probar(prods, token())
+        print("\nAUTORIZACION OK: lanza --n 10" if ok else "\nSIGUE FALLANDO: pasame lo de arriba")
         return
 
     if a.n:   # reparto uniforme por el periodo, no los N primeros
