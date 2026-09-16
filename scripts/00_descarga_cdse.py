@@ -24,10 +24,20 @@ def token():
     u, c = os.environ.get("CDSE_USUARIO"), os.environ.get("CDSE_CLAVE")
     if not u or not c:
         sys.exit("Faltan CDSE_USUARIO / CDSE_CLAVE en el entorno.")
-    r = requests.post(TOKEN_URL, data={"grant_type": "password", "username": u,
-                                       "password": c, "client_id": "cdse-public"},
-                      timeout=60)
-    r.raise_for_status()
+    datos = {"grant_type": "password", "username": u, "password": c,
+             "client_id": "cdse-public"}
+    totp = os.environ.get("CDSE_TOTP")      # codigo de 6 digitos si tienes 2FA activo
+    if totp:
+        datos["totp"] = totp
+    r = requests.post(TOKEN_URL, data=datos, timeout=60)
+    if r.status_code >= 400:
+        # Keycloak explica el motivo en el cuerpo; sin esto el 400 no dice nada.
+        try:
+            j = r.json()
+            sys.exit(f"CDSE rechazo las credenciales ({r.status_code}): "
+                     f"{j.get('error')} - {j.get('error_description')}")
+        except ValueError:
+            sys.exit(f"CDSE devolvio {r.status_code}: {r.text[:300]}")
     return r.json()["access_token"]
 
 
