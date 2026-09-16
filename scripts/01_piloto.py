@@ -35,6 +35,18 @@ BITS_QC = (1 << 1) | (1 << 2) | (1 << 3) | (1 << 4)
 N_MIN_PILOTO = 4        # relajado SOLO para el piloto; el protocolo exige 20. Se declara.
 PIXEL_M = 20.0
 
+# Contaminacion atmosferica por pixel, medida en B12 (~2200 nm). A esa longitud de onda
+# el agua absorbe tanto que rho_w ~ 0 por turbia que este; una reflectancia apreciable
+# solo puede venir de la atmosfera (bruma, nube fina) o de una superficie emergida.
+# Umbral fisico, no ajustado a los datos.
+UMBRAL_SWIR2 = 0.010
+
+# Rango fisicamente admisible de la turbidez de Dogliotti. Fuera de el, el algoritmo ha
+# salido de su dominio de validez (rho supera la constante C y la formula cambia de signo).
+TURB_MIN, TURB_MAX = 0.0, 1000.0
+
+FRAC_MIN_ESCENA = 0.40  # fraccion minima de agua valida para usar la escena en el piloto
+
 
 def cargar(carpeta):
     escenas = []
@@ -47,6 +59,7 @@ def cargar(carpeta):
             "fecha": datetime.fromisoformat(str(d["fecha"])),
             "turb": d["turbidez_dogliotti"].astype(np.float32),
             "swir": d["swir"].astype(np.float32) if "swir" in d else None,
+            "swir2": d["swir2"].astype(np.float32) if "swir2" in d else None,
             "verde": d["verde"].astype(np.float32) if "verde" in d else None,
             "nir": d["nir"].astype(np.float32) if "nir" in d else None,
             "flags": d["banderas"] if "banderas" in d else None,
@@ -74,17 +87,7 @@ def main():
           f"({forma[0]*PIXEL_M/1000:.2f} x {forma[1]*PIXEL_M/1000:.2f} km)")
     print("    fechas:", ", ".join(e["fecha"].strftime("%Y-%m-%d") for e in esc))
 
-    # --- validez por bandera ---
-    val = []
-    for e in esc:
-        v = np.isfinite(e["turb"])
-        if e["flags"] is not None:
-            v &= (e["flags"].astype(np.int64) & BITS_QC) == 0
-        val.append(v)
-        print(f"    {e['fecha']:%Y-%m-%d}  validos {100*v.mean():5.1f} %  "
-              f"turbidez mediana {np.nanmedian(e['turb'][v]) if v.any() else np.nan:6.2f} FNU")
-
-    # --- mascara de agua del propio archivo (protocolo seccion 5) ---
+    # --- mascara de agua primero: todo lo demas se mide SOBRE AGUA ---
     if esc[0]["verde"] is None or esc[0]["nir"] is None:
         sys.exit("Faltan rhos verde/NIR: no se puede derivar la mascara de agua.")
     cubo_ndwi = np.stack([mascara.ndwi(e["verde"], e["nir"]) for e in esc])
@@ -93,6 +96,45 @@ def main():
     f_tierra = mascara.fraccion_tierra(agua, 500.0, PIXEL_M)
     print(f"[2] agua: {int(agua.sum())} px = {agua.sum()*PIXEL_M**2/1e6:.2f} km2 "
           f"| distancia a costa maxima {dist.max():.0f} m")
+    if dist.max() < 1500:
+        print("    AVISO: sin campo lejano (<1,5 km). El perfil rho_SWIR(d) no puede")
+        print("    identificar una longitud de adyacencia atmosferica con esta ventana.")
+
+    # --- validez por pixel ---
+    print(f"\n[3] control de calidad, SOBRE AGUA "
+          f"(B12 > {UMBRAL_SWIR2} = contaminacion atmosferica):")
+    print(f"    {'escena':12s} {'agua val':>9s} {'contam':>7s} {'fuera rango':>11s} "
+          f"{'T p50':>8s} {'T p95':>8s}")
+    val, usable = [], []
+    for e in esc:
+        t = e["turb"].astype(np.float64)
+        v = agua & np.isfinite(t)
+        if e["flags"] is not None:
+            v &= (e["flags"].astype(np.int64) & BITS_QC) == 0
+        contam = np.zeros_like(v)
+        if e["swir2"] is not None:
+            contam = agua & np.isfinite(e["swir2"]) & (e["swir2"] > UMBRAL_SWIR2)
+            v &= ~contam
+        rango = (t >= TURB_MIN) & (t <= TURB_MAX)
+        fuera = v & ~rango
+        v &= rango
+        val.append(v)
+        frac = v.sum() / max(agua.sum(), 1)
+        ok = frac >= FRAC_MIN_ESCENA
+        usable.append(ok)
+        tv = t[v]
+        p50 = np.median(tv) if tv.size else np.nan
+        p95 = np.percentile(tv, 95) if tv.size else np.nan
+        print(f"    {e['fecha']:%Y-%m-%d} {frac:8.1%} {contam.sum()/max(agua.sum(),1):6.1%} "
+              f"{fuera.sum()/max(agua.sum(),1):10.1%} {p50:8.2f} {p95:8.2f}"
+              + ("" if ok else "   DESCARTADA"))
+    n_ok = sum(usable)
+    print(f"    -> {n_ok} de {len(esc)} escenas utilizables "
+          f"({n_ok/len(esc):.0%}; el protocolo esperaba 30-40 %)")
+    esc = [e for e, u in zip(esc, usable) if u]
+    val = [v for v, u in zip(val, usable) if u]
+    if n_ok < 3:
+        sys.exit(f"\nSolo {n_ok} escenas utilizables: el piloto no puede concluir nada.")
 
     # --- (2) la adyacencia, medida ---
     ajustes = []
@@ -162,9 +204,21 @@ def main():
     print("\n=== VEREDICTO ===")
     Lm = float(np.nanmedian(L))
     escala = float(np.sqrt(np.median([g["tam"] for g in gp])) * PIXEL_M) if gp else 0.0
-    if not gp:
+    sin_campo_lejano = dist.max() < 1500
+    ajustes_buenos = [x for x in ajustes if x["r2"] > 0.8 and x["A"] < 0.9]
+
+    if sin_campo_lejano:
+        print("  NO CONCLUYENTE. La ventana no tiene campo lejano, asi que la longitud")
+        print(f"  de adyacencia ajustada ({Lm:.0f} m) mide la caida de pixel mixto de la")
+        print("  orilla, no la adyacencia atmosferica, que es de cientos de metros.")
+        print("  Sin esa medida no se puede decidir si las estructuras son separables")
+        print("  del artefacto. Ampliar la ventana y repetir.")
+    elif len(ajustes_buenos) < 3:
+        print(f"  NO CONCLUYENTE. Solo {len(ajustes_buenos)} ajustes de adyacencia fiables")
+        print("  (r2 > 0,8 y sin pegarse a los limites). Hacen falta mas escenas limpias.")
+    elif not gp:
         print("  NO hay estructura costera coherente. Replantear antes de gastar semanas.")
-    elif np.isfinite(Lm) and escala < Lm * 0.5:
+    elif escala < Lm * 0.5:
         print(f"  {len(gp)} estructuras, pero su escala (~{escala:.0f} m) queda por debajo")
         print(f"  de la longitud de adyacencia ({Lm:.0f} m): NO son separables del")
         print("  artefacto de orilla. Replantear.")

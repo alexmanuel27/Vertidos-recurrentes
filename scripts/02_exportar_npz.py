@@ -17,8 +17,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "..", "src"))
 import acolite_io
 
-CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "verde",
-          "nir", "banderas")
+CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "swir2",
+          "verde", "nir", "banderas")
 
 
 def main():
@@ -39,7 +39,7 @@ def main():
         disponibles = acolite_io.variables(nc)
         mapa = acolite_io.mapear(disponibles)
         claves = [c for c in CLAVES if c in mapa]
-        if "turbidez_dogliotti" not in claves or "swir" not in claves:
+        if not {"turbidez_dogliotti", "swir", "swir2"} <= set(claves):
             print(f"  SALTADA {nombre}: faltan productos. Hay: {sorted(disponibles)[:12]}")
             manifiesto.append({"escena": nombre, "ok": False, "variables": disponibles})
             continue

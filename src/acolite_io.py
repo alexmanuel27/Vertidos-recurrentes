@@ -18,7 +18,11 @@ PATRONES = {
     "turbidez_dogliotti": [r"^TUR_Dogliotti2015$", r"^TUR_Dogliotti"],
     "turbidez_nechad":    [r"^TUR_Nechad"],
     "spm":                [r"^SPM_Nechad"],
-    "swir":               [r"^rhos_16\d{2}$", r"^rhos_2[12]\d{2}$"],  # B11 preferida a B12
+    "swir":               [r"^rhos_16\d{2}$"],                      # B11: perfil de adyacencia
+    # B12 (~2200 nm): a esa longitud de onda la absorcion del agua es tan fuerte que ni
+    # el sedimento mas extremo levanta la reflectancia. La bruma, que es gris, si la
+    # sube. Es lo que separa agua turbia de atmosfera sucia; B11 no lo hace.
+    "swir2":              [r"^rhos_2[12]\d{2}$"],
     "verde":              [r"^rhos_5[56]\d$"],                        # B3
     "nir":                [r"^rhos_83\d$"],                           # B8
     "banderas":           [r"^l2_flags$"],
@@ -114,9 +118,19 @@ def fecha_de(nombre):
 
 
 def limite_bahia():
-    """Ventana de trabajo en (S, O, N, E) WGS84, que es lo que espera ACOLITE."""
-    import math
-    # inversa aproximada suficiente para un limite de recorte (ACOLITE reproyecta)
-    lats = [23.1085, 23.1575]
-    lons = [-82.3575, -82.3085]
-    return (min(lats), min(lons), max(lats), max(lons))
+    """Ventana de trabajo en (S, O, N, E) WGS84, que es lo que espera ACOLITE.
+
+    AMPLIADA el 2026-09-16. La ventana inicial ce\u00f1ida a la bah\u00eda (5,5 x 5,1 km) tenia
+    dos defectos que solo se vieron al procesar datos reales:
+
+      - no dejaba dentro NADA de mar abierto, y el protocolo (seccion 11.3e) necesita
+        una referencia de agua limpia como control negativo del procesado entero;
+      - la distancia maxima a costa era de 588 m, asi que el perfil rho_SWIR(d) no tenia
+        campo lejano: el ajuste exponencial se comia la caida de pixel mixto de la orilla
+        y metia todo lo demas en la constante. Con eso NO se puede medir una longitud de
+        adyacencia atmosferica, que es de cientos de metros.
+
+    La nueva ventana llega hasta 23,21 N, unos 6,7 km al norte del centro de la bahia y
+    5,5 km al norte de la bocana, mar adentro en el estrecho de Florida.
+    """
+    return (23.100, -82.400, 23.210, -82.280)
