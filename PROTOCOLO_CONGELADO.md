@@ -53,10 +53,22 @@ los sitios candidatos, no para la detección.
 - Sentinel-2 MSI, niveles L1C, misiones S2A y S2B (y S2C cuando corresponda al periodo).
 - Periodo: **1 de enero de 2016 a 31 de diciembre de 2025** (diez años completos).
 - Fuente: Copernicus Data Space Ecosystem.
-- Se descargan **todos** los productos del tile en el periodo. El descarte por nubosidad
-  se hace con el criterio de la sección 6, calculado sobre la bahía, **no** con el campo
-  de nubosidad del metadato, que se refiere al tile entero de 110 km y no dice nada útil
-  sobre 5 km² de agua.
+- **Solo la órbita relativa R097.** El tile T17QLF lo adquieren dos órbitas, R054 y R097,
+  a partes casi iguales (668 y 664 productos). En R054 la bahía cae fuera de la franja
+  útil: ACOLITE aborta las seis escenas R054 del piloto con *«crop is 100% blackfill»*,
+  frente a las cuatro R097 que se procesan sin incidencia. La exclusión es un hecho
+  geométrico verificado, no una selección: se documenta aquí y el filtro está en
+  `scripts/00_descarga_cdse.py`.
+- Quedan por tanto **664 productos**. Con la fracción de escenas utilizables esperada
+  (30–40 %) son del orden de **200 escenas en diez años, ~100 por estación**, holgadamente
+  por encima del mínimo de 20 observaciones por píxel y estación de la sección 7. El
+  reparto por año es desigual —19 en 2016 y 31 en 2017, porque S2B entró en servicio a
+  mitad de 2017, frente a 70–88 de 2018 en adelante—, lo que se tiene en cuenta al exigir
+  detecciones en 5 años distintos (sección 10).
+- Dentro de esa órbita se descargan **todos** los productos del periodo. El descarte por
+  nubosidad se hace con el criterio de la sección 6, calculado sobre la bahía, **no** con
+  el campo de nubosidad del metadato, que se refiere al tile entero de 110 km y no dice
+  nada útil sobre 5 km² de agua.
 
 ---
 
@@ -75,6 +87,19 @@ Configuración fijada:
 - Corrección de sun glint activada.
 - Sin corrección de adyacencia interna: el tratamiento de la adyacencia es explícito y
   se hace aguas abajo (sección 11), donde puede medirse y auditarse.
+- Resolución de salida **20 m** (`s2_target_res`). El valor por defecto de ACOLITE para
+  Sentinel-2 es 10 m.
+- **Las banderas de ACOLITE se calculan pero no se aplican** a los productos de agua
+  (`l2w_mask_water_parameters=False`). Su máscara por defecto anula el píxel cuando
+  ρ(1600 nm) supera 0,0215, lo que eliminaría el agua muy turbia — es decir, el objeto de
+  estudio. Las banderas se conservan en `l2_flags` y el enmascarado se aplica aguas abajo,
+  donde es auditable (secciones 6 y 9).
+- Datos auxiliares (ozono, vapor de agua, presión): ACOLITE no encuentra credenciales de
+  EARTHDATA y usa sus valores por defecto (uoz 0,30; uwv 1,50; 1013,25 hPa) en **todas**
+  las escenas. Se deja así a propósito: un tratamiento uniforme a lo largo de diez años es
+  preferible a tener unas escenas con auxiliares reales y otras con valores por defecto,
+  que introduciría un salto artificial en la serie. DSF estima el aerosol por su cuenta, y
+  es el término dominante.
 
 **No se procesa ninguna escena hasta que ACOLITE esté instalado.** No se sustituye por
 productos L2A (Sen2Cor) ni por una reimplementación propia de DSF, tampoco "solo para el
@@ -393,6 +418,8 @@ aquí:
 | 2026-09-15 | Añadida familia de anomalía climatológica (sección 8.1) | La conjunción temporal+espacial es ciega a una fuente permanente, que queda dentro de su propia línea base. Detectado al validar la cadena sobre una bahía sintética | No — cero escenas reales procesadas |
 | 2026-09-15 | Test SWIR sobre residuo de adyacencia en vez de reflectancia bruta (sección 9) | Un umbral absoluto de mar abierto enmascaraba la franja costera legítima | No — cero escenas reales procesadas |
 | 2026-09-15 | Localización de grupos por pico de z_t en vez de centroide, con fusión y supresión de no-máximos (sección 10) | El centroide de una pluma de orientación variable reparte las detecciones de un mismo emisario entre celdas vecinas. Verificado sobre bahía sintética: con centroide, 0 sitios recurrentes; con pico, 1 y correcto | No — cero escenas reales procesadas |
+
+| 2026-09-16 | Solo órbita R097; salida a 20 m; banderas de ACOLITE sin aplicar | Verificado sobre las 10 escenas del piloto: R054 da 100 % blackfill; 10 m no casa con la rejilla del protocolo; la máscara SWIR de ACOLITE borraría las plumas | No — ninguna anomalía calculada todavía |
 
 ## 15. Validación previa del método
 

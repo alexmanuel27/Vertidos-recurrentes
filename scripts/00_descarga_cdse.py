@@ -35,6 +35,7 @@ class SesionCDSE(requests.Session):
 TILE = "T17QLF"
 NIVEL = "MSIL1C"          # protocolo seccion 2: L1C, la correccion la hace ACOLITE
 DESDE, HASTA = "2016-01-01", "2025-12-31"
+ORBITA = "R097"   # la R054 cubre el tile pero NO la bahia: 100% blackfill
 
 
 def token():
@@ -125,6 +126,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--destino", default="datos/crudo")
     ap.add_argument("--solo-catalogo", action="store_true")
+    ap.add_argument("--orbita", default=ORBITA,
+                    help="orbita relativa a conservar; 'todas' para no filtrar")
     ap.add_argument("--probar", action="store_true",
                     help="comprobar la autorizacion sin descargar nada entero")
     ap.add_argument("--n", type=int, default=0,
@@ -134,6 +137,11 @@ def main():
 
     prods = catalogo()
     print(f"{len(prods)} productos {NIVEL} de {TILE} entre {DESDE} y {HASTA}")
+    if a.orbita and a.orbita.lower() != "todas":
+        antes = len(prods)
+        prods = [p for p in prods if f"_{a.orbita}_" in p["Name"]]
+        print(f"filtrado a orbita {a.orbita}: {len(prods)} de {antes} "
+              f"(la otra orbita ve el tile pero no la bahia)")
     Path(a.destino, "catalogo.json").write_text(json.dumps(prods, indent=1))
     if a.solo_catalogo:
         return
