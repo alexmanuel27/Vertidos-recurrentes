@@ -103,12 +103,19 @@ def main():
         prods = prods[::paso][:a.n]
         print(f"piloto: {len(prods)} productos repartidos por los diez años")
 
-    tk = token()
+    tk, tk_t = token(), time.time()
     for i, p in enumerate(prods, 1):
+        # El token caduca a los 30 min y una sola descarga puede tardar varios:
+        # se renueva por TIEMPO, no cada N productos.
+        if time.time() - tk_t > 1200:
+            tk, tk_t = token(), time.time()
+            print("    (token renovado)")
+        t0 = time.time()
         ruta, estado = descargar(p["Id"], p["Name"], a.destino, tk)
-        print(f"[{i}/{len(prods)}] {p['Name'][:44]} ... {estado}")
-        if i % 20 == 0:
-            tk = token()    # el token caduca a los ~10 min
+        mb = ruta.stat().st_size / 1e6 if ruta else 0
+        seg = time.time() - t0
+        print(f"[{i}/{len(prods)}] {p['Name'][:44]} ... {estado}"
+              + (f"  {mb:.0f} MB en {seg:.0f} s" if ruta and estado == "descargado" else ""))
 
 
 if __name__ == "__main__":
