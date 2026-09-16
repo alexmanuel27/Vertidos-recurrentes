@@ -420,6 +420,9 @@ aquí:
 | 2026-09-15 | Localización de grupos por pico de z_t en vez de centroide, con fusión y supresión de no-máximos (sección 10) | El centroide de una pluma de orientación variable reparte las detecciones de un mismo emisario entre celdas vecinas. Verificado sobre bahía sintética: con centroide, 0 sitios recurrentes; con pico, 1 y correcto | No — cero escenas reales procesadas |
 
 | 2026-09-16 | Solo órbita R097; salida a 20 m; banderas de ACOLITE sin aplicar | Verificado sobre las 10 escenas del piloto: R054 da 100 % blackfill; 10 m no casa con la rejilla del protocolo; la máscara SWIR de ACOLITE borraría las plumas | No — ninguna anomalía calculada todavía |
+| 2026-09-16 | Ventana ampliada de 5,5 × 5,1 km a 12,2 × 12,3 km | La ventana ceñida a la bahía no dejaba dentro mar abierto (el control negativo de la sección 11.3e) y limitaba la distancia a costa a 588 m, sin campo lejano: el ajuste de ρ_SWIR(d) medía la caída de píxel mixto de la orilla (L ≈ 17–21 m) y no la adyacencia atmosférica, que es de cientos de metros | No — ninguna anomalía calculada |
+| 2026-09-16 | Control de calidad por píxel con B12 (~2200 nm), umbral 0,010 | 8 de 13 escenas del piloto tenían ρ_SWIR mediana de 0,05–0,11 sobre agua, es decir corrección atmosférica no convergida, y daban turbidez de 350–490 FNU. B12 separa agua turbia de atmósfera sucia porque a 2200 nm el agua absorbe por completo y ρ_w ≈ 0 sea cual sea la carga de sedimento; la bruma, gris, sí eleva la señal. El umbral es físico, no ajustado a los datos | No — ninguna anomalía calculada |
+| 2026-09-16 | El veredicto del piloto puede declararse NO CONCLUYENTE | La primera versión dictaminó «seguir» sobre turbideces de −1614 FNU, físicamente imposibles, porque su criterio no comprobaba el rango. Un criterio de decisión que no puede abstenerse no es un criterio | No — ninguna anomalía calculada |
 
 ## 15. Validación previa del método
 
