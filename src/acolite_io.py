@@ -27,6 +27,7 @@ PATRONES = {
 
 AJUSTES = {
     "atmospheric_correction": "dark_spectrum",
+    "s2_target_res": 20,        # protocolo seccion 1. El defecto de ACOLITE es 10.
     "dsf_aot_estimate": "fixed",        # por escena, no por baldosa: 5 km es poco
     "dsf_residual_glint_correction": True,
     "l2w_mask_wave": False,

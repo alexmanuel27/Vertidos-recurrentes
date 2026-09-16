@@ -27,9 +27,10 @@ def main():
     a = ap.parse_args()
     os.makedirs(a.salida, exist_ok=True)
 
-    ncs = sorted(f for f in os.listdir(a.acolite) if f.endswith(".nc"))
+    ncs = sorted(f for f in os.listdir(a.acolite) if f.endswith("_L2W.nc"))
     if not ncs:
-        sys.exit(f"No hay .nc en {a.acolite}")
+        sys.exit(f"No hay *_L2W.nc en {a.acolite}. Si solo hay L1R, ACOLITE no\n"
+                 f"llego a producto de agua: corre scripts/97_inspeccionar.py.")
 
     manifiesto = []
     for nombre in ncs:
