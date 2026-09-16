@@ -9,11 +9,28 @@ Credenciales por variables de entorno CDSE_USUARIO y CDSE_CLAVE (registro gratui
 import os, sys, json, time, argparse
 from pathlib import Path
 import requests
+from urllib.parse import urlparse
 
 TOKEN_URL = ("https://identity.dataspace.copernicus.eu/auth/realms/CDSE/"
              "protocol/openid-connect/token")
 ODATA = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
 DESCARGA = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products({id})/$value"
+DOMINIO = "dataspace.copernicus.eu"
+
+class SesionCDSE(requests.Session):
+    """requests borra la cabecera Authorization al redirigir a OTRO host, por seguridad.
+
+    CDSE redirige catalogue.dataspace... -> download.dataspace..., asi que el Bearer se
+    perdia por el camino y el servidor respondia 401 aunque el token fuese valido.
+    Aqui se conserva solo dentro del propio dominio de Copernicus.
+    """
+
+    def rebuild_auth(self, prepared_request, response):
+        destino = urlparse(prepared_request.url).hostname or ""
+        if destino == DOMINIO or destino.endswith("." + DOMINIO):
+            return
+        return super().rebuild_auth(prepared_request, response)
+
 
 TILE = "T17QLF"
 NIVEL = "MSIL1C"          # protocolo seccion 2: L1C, la correccion la hace ACOLITE
@@ -67,9 +84,10 @@ def descargar(pid, nombre, destino, tk, reintentos=3):
         return salida, "ya estaba"
     for intento in range(reintentos):
         try:
-            with requests.get(DESCARGA.format(id=pid),
-                              headers={"Authorization": f"Bearer {tk}"},
-                              stream=True, timeout=1800, allow_redirects=True) as r:
+            ses = SesionCDSE()
+            ses.headers["Authorization"] = f"Bearer {tk}"
+            with ses.get(DESCARGA.format(id=pid), stream=True, timeout=1800,
+                         allow_redirects=True) as r:
                 r.raise_for_status()
                 tmp = salida.with_suffix(".parcial")
                 with open(tmp, "wb") as f:
