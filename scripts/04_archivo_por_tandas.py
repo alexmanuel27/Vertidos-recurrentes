@@ -159,11 +159,17 @@ def procesar(zipruta, nombre, a, limite):
     os.makedirs(trabajo)
     r = {"producto": nombre}
     t0 = time.time()
+    # ACOLITE sustituye sys.stdout por un 'tee' a su log y solo lo restaura si termina
+    # bien. Si lanza una excepcion, el siguiente print escribe en el log de una carpeta
+    # que ya hemos borrado y el bucle entero muere. Se restaura aqui siempre.
+    salida, errores = sys.stdout, sys.stderr
     try:
         l2w = acolite_io.lanzar_acolite(zipruta, trabajo, limite, a.acolite_src)
     except (Exception, SystemExit) as e:
         r.update(estado="fallo", etapa="acolite", motivo=f"{type(e).__name__}: {e}"[:300])
         l2w = None
+    finally:
+        sys.stdout, sys.stderr = salida, errores
     r["t_acolite_s"] = round(time.time() - t0)
 
     if l2w is not None:
@@ -344,7 +350,8 @@ def ejecutar(a):
                 continue
             mb = os.path.getsize(ruta) / 1e6
             print(f"  bajado {nombre[:52]}  {mb:.0f} MB en {time.time()-t0:.0f} s", flush=True)
-            listos.append((nombre, ruta, round(time.time() - t0)))
+            # descargar() devuelve un Path y ACOLITE hace len() de la entrada: str.
+            listos.append((nombre, str(ruta), round(time.time() - t0)))
 
         # 2. ACOLITE -> .npz -> borrar, producto a producto.
         for nombre, z, t_bajada in listos:
