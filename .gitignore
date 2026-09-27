@@ -1,6 +1,8 @@
-__pycache__/
+*.log
 *.pyc
-datos/
-resultados/*.npz
 .DS_Store
+Claude outputs/
+__pycache__/
+datos/
 externo/
+resultados/*.npz
