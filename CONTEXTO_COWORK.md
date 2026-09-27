@@ -64,7 +64,9 @@ como argumentos y aborta el bloque entero).
 ## 5. Estado actual
 
 **Datos.** Tile T17QLF, **solo órbita R097** (en R054 la bahía cae fuera de la franja:
-ACOLITE devuelve *100 % blackfill*). Catálogo: 664 productos L1C R097, 2016–2025.
+ACOLITE devuelve *100 % blackfill*). Catálogo: 664 productos L1C R097, 2016–2025, que son
+**637 adquisiciones**: en 26 fechas el tile viene partido en 2–3 productos (registro del
+protocolo, 27/09/2026). Todos se procesan; cómo combinarlos está pendiente.
 En disco: `datos/crudo` 9,3 GB (15 productos), `datos/acolite` 10 GB, `datos/productos`
 13 escenas `.npz` de 614 × 621 px a 20 m. Libres en el disco: ~94 GB.
 
@@ -104,14 +106,17 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
 
 ## 7. Pendiente, por orden
 
-1. **Bucle por tandas para el archivo completo** (`scripts/04_archivo_por_tandas.py`):
-   bajar ~20 productos → ACOLITE → `.npz` → **borrar crudo y SAFE** → siguiente tanda.
-   Reanudable (saltar lo ya exportado) y con registro de qué se procesó y qué falló. Sin
-   borrar no cabe: son ~465 GB de crudo frente a 94 GB libres; los `.npz` finales ocupan
-   unos 5 GB.
-2. **Exportar el AOT de cada escena** al `.npz`: lo necesita el test de covariable
-   atmosférica (protocolo 11.3c). Mirar en un L2R/L2W real cómo lo guarda ACOLITE
-   (atributo global) antes de escribir el lector; no suponer el nombre.
+1. ~~Bucle por tandas~~ **HECHO 27/09/2026** (`scripts/04_archivo_por_tandas.py`),
+   probado en local sin red. **Falta lanzarlo** sobre el archivo, con red y credenciales
+   CDSE, desde la Terminal de Alex: primero una tanda de 2 (`--tanda 2 --max-tandas 1`) para
+   probar la descarga, y luego sin límite. Registro en `datos/productos/registro_tandas.jsonl`.
+2. ~~Exportar el AOT~~ **HECHO 27/09/2026**: ACOLITE lo guarda como atributo global
+   `ac_aot_550` (comprobado en un L2W real). `src/exportar.py` lo escribe en cada `.npz`
+   como `aot_550`, junto con `producto_l1c` y todos los atributos globales en JSON
+   (`atributos_acolite`). Los 13 `.npz` del piloto se reexportaron: arrays idénticos al byte.
+2b. **Regla para las fechas con varios productos** (26 fechas): fijarla y registrarla en
+   la sección 14 **antes** de la climatología. Hoy cada trozo es un `.npz` aparte y un
+   `glob("*.npz")` los contaría como escenas distintas.
 3. **Actualizar la sección 1 del protocolo**: sigue describiendo la ventana antigua
    (238 × 253 px). El cambio ya está en el registro (sección 14), pero el texto no.
    Decidir si el umbral de escena es 60 % (protocolo) o 40 % (piloto) y registrarlo

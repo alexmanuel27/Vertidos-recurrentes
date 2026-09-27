@@ -26,7 +26,8 @@ figuras finales y las cifras.
 | Piloto | 13 escenas procesadas, 5 utilizables (38 %) |
 | Adyacencia medida | A = 0,003–0,005 en ρ(1610 nm); L = 55, 94 y 386 m |
 | Turbidez | bahía 3,01 FNU, mar abierto 1,40 FNU (2,1×) |
-| Pendiente | procesar el archivo completo por tandas; climatología; detección |
+| Archivo completo | `scripts/04_archivo_por_tandas.py` listo y probado; falta lanzarlo con red |
+| Pendiente | climatología; detección |
 
 ## Flujo
 
@@ -37,6 +38,7 @@ análisis sobre `.npz` solo necesita numpy y scipy.
 python scripts/00_descarga_cdse.py --n 10            # descarga (filtra R097)
 python scripts/03_correr_acolite.py --acolite-src externo/acolite > acolite.log 2>&1
 python scripts/02_exportar_npz.py                    # L2W -> datos/productos/*.npz
+python scripts/04_archivo_por_tandas.py --tanda 20   # archivo entero: bajar, ACOLITE, npz, borrar
 python scripts/01_piloto.py                          # QC, adyacencia, veredicto
 python scripts/figura_piloto.py                      # resultados/piloto.png
 python tests/test_cadena.py                          # validación sobre bahía sintética
@@ -48,6 +50,7 @@ python tests/test_cadena.py                          # validación sobre bahía 
 PROTOCOLO_CONGELADO.md    método preregistrado y registro de cambios
 INSTALACION.md            entorno y credenciales
 src/acolite_io.py         ajustes congelados de ACOLITE, ventana, lectura de productos
+src/exportar.py           L2W -> .npz (productos, AOT, L1C de origen, atributos de ACOLITE)
 src/mascara.py            máscara de agua por NDWI mediano, distancia a costa
 src/climatologia.py       mediana y MAD por píxel y estación
 src/anomalias.py          anomalía temporal, espacial y climatológica; máscara de buques
@@ -55,7 +58,7 @@ src/adyacencia.py         ajuste del decaimiento, controles emparejados
 src/persistencia.py       agrupación por pico y ranking por persistencia
 src/prisma_mareal.py      tiempo de renovación (entradas POR CONFIRMAR)
 src/geo.py                UTM/MGRS
-scripts/00..03, 97..99    descarga, ACOLITE, exportación, piloto, diagnósticos
+scripts/00..04, 97..99    descarga, ACOLITE, exportación, piloto, archivo por tandas, diagnósticos
 tests/                    bahía sintética y validación extremo a extremo
 resultados/               figuras y resúmenes (los .npz no se versionan)
 datos/, externo/          NO versionados: crudo (~20 GB), ACOLITE clonado

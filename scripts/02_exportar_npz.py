@@ -1,24 +1,20 @@
 """Exporta los productos de ACOLITE a .npz, para que el analisis no necesite netCDF4.
 
-SE EJECUTA EN TU macOS, dentro del entorno conda 'bahia' (el que tiene netCDF4).
-A partir de aqui el resto del pipeline solo necesita numpy y scipy, y puedo correrlo yo
-sin tocar la red.
+SE EJECUTA EN TU macOS, en un entorno con netCDF4 ('acolite' o 'bahia').
+A partir de aqui el resto del pipeline solo necesita numpy y scipy.
 
-    conda activate bahia
+    conda activate acolite
     python scripts/02_exportar_npz.py
 
 Escribe un .npz por escena en datos/productos/ y un manifiesto con los nombres de
-variable que ACOLITE uso realmente en cada una.
+variable que ACOLITE uso realmente en cada una. La logica de exportacion vive en
+src/exportar.py y es la misma que usa el bucle por tandas (04_archivo_por_tandas.py).
 """
 import os, sys, json, argparse
-import numpy as np
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "..", "src"))
-import acolite_io
-
-CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "swir2",
-          "verde", "nir", "banderas")
+import exportar
 
 
 def main():
@@ -35,32 +31,13 @@ def main():
 
     manifiesto = []
     for nombre in ncs:
-        nc = os.path.join(a.acolite, nombre)
-        disponibles = acolite_io.variables(nc)
-        mapa = acolite_io.mapear(disponibles)
-        claves = [c for c in CLAVES if c in mapa]
-        if not {"turbidez_dogliotti", "swir", "swir2"} <= set(claves):
-            print(f"  SALTADA {nombre}: faltan productos. Hay: {sorted(disponibles)[:12]}")
-            manifiesto.append({"escena": nombre, "ok": False, "variables": disponibles})
-            continue
-        d = acolite_io.leer(nc, tuple(claves))
-        fecha = acolite_io.fecha_de(nc)
-        destino = os.path.join(a.salida, nombre.replace(".nc", ".npz"))
-        extra = {}
-        try:   # coordenadas UTM de la rejilla real, para no suponer su tamanio
-            import netCDF4
-            with netCDF4.Dataset(nc) as ds:
-                for c in ("x", "y", "lat", "lon"):
-                    if c in ds.variables:
-                        extra[c] = np.array(ds.variables[c][:], dtype=np.float64)
-        except Exception:
-            pass
-        np.savez_compressed(destino, fecha=np.array(fecha.isoformat()),
-                            **{c: d[c].astype(np.float32) for c in claves}, **extra)
-        forma = d[claves[0]].shape
-        print(f"  OK {nombre[:44]}  {forma}  {fecha:%Y-%m-%d}  -> {os.path.basename(destino)}")
-        manifiesto.append({"escena": nombre, "ok": True, "fecha": fecha.isoformat(),
-                           "forma": list(forma), "mapa": d["_mapa"]})
+        m = exportar.exportar(os.path.join(a.acolite, nombre), a.salida)
+        if m["ok"]:
+            print(f"  OK {nombre[:44]}  {tuple(m['forma'])}  {m['fecha'][:10]}  "
+                  f"AOT550={m['aot_550']:.3f}  -> {m['npz']}")
+        else:
+            print(f"  SALTADA {nombre}: {m['motivo']}. Hay: {sorted(m['variables'])[:12]}")
+        manifiesto.append(m)
 
     with open(os.path.join(a.salida, "manifiesto.json"), "w") as f:
         json.dump(manifiesto, f, indent=1)

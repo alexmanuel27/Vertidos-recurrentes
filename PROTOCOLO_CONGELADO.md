@@ -427,6 +427,7 @@ aquí:
 | 2026-09-16 | El veredicto del piloto puede declararse NO CONCLUYENTE | La primera versión dictaminó «seguir» sobre turbideces de −1614 FNU, físicamente imposibles, porque su criterio no comprobaba el rango. Un criterio de decisión que no puede abstenerse no es un criterio | No — ninguna anomalía calculada |
 | 2026-09-16 | Barrido de márgenes ampliado de 0–100 m a 0–400 m | El piloto midió L de hasta 386 m; un barrido hasta 100 m no cubre el artefacto | No — ninguna anomalía calculada |
 | 2026-09-16 | El veredicto exige ≥20 observaciones por píxel antes de pronunciarse sobre estructuras | Con 4 observaciones z_c es ruido, y el síntoma es que el 64 % de las estructuras caían a más de 500 m de la costa | No — ninguna anomalía calculada |
+| 2026-09-27 | Hallazgo, sin cambio de método todavía: en 26 fechas el catálogo R097 trae 2 o 3 productos L1C del mismo paso (tile partido entre datastrips), de modo que los 664 productos son **637 adquisiciones**. El bucle por tandas (`scripts/04_archivo_por_tandas.py`) procesa y exporta **todos**, cada uno a su `.npz`, que guarda el nombre del L1C de origen (`producto_l1c`). La regla para combinar los trozos de una misma fecha se fijará y se registrará aquí **antes de calcular la climatología** | El crudo se borra al exportar: descartar un trozo dentro del bucle sería perder datos sin haberlo decidido. Comprobado en 2016-01-15: el trozo de 34 MB da «100 % blackfill» y la bahía cae en el de 728 MB | No — ninguna anomalía calculada |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
