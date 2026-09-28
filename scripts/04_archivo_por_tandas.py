@@ -114,8 +114,11 @@ def motivo_acolite(carpeta):
     if not logs:
         return "ACOLITE no escribio log"
     lineas = [l.strip() for l in open(logs[0], errors="replace") if l.strip()]
-    utiles = [l for l in lineas if re.search(r"blackfill|error|fail|no |not ", l, re.I)]
-    return (utiles or lineas or ["log vacio"])[-1][:300]
+    # ACOLITE no siempre vuelca al fichero las ultimas lineas; si no esta el blackfill,
+    # no se inventa un motivo (las lineas 'ReadError' del log son su tanteo de formatos
+    # de compresion, no un error).
+    blackfill = [l for l in lineas if "blackfill" in l]
+    return blackfill[-1][:300] if blackfill else "ver log en datos/acolite_logs"
 
 
 class Token:
@@ -123,8 +126,8 @@ class Token:
     def __init__(self, mod):
         self.mod, self.tk, self.t = mod, None, 0.0
 
-    def __call__(self):
-        if self.tk is None or time.time() - self.t > 1200:
+    def __call__(self, forzar=False):
+        if forzar or self.tk is None or time.time() - self.t > 1200:
             self.tk, self.t = self.mod.token(), time.time()
             print("    (token CDSE nuevo)", flush=True)
         return self.tk
@@ -278,7 +281,9 @@ def ejecutar(a):
     for p in prods:
         if p["Name"] in hechos:
             n_hechos += 1
-        elif registro.get(p["Name"], {}).get("estado") == "fallo" and not a.reintentar_fallos:
+        elif (registro.get(p["Name"], {}).get("estado") == "fallo"
+              and registro[p["Name"]].get("etapa") != "descarga"   # la red se reintenta sola
+              and not a.reintentar_fallos):
             n_fallidos += 1
         else:
             pendientes.append(p)
@@ -337,6 +342,9 @@ def ejecutar(a):
             borrar(z)   # uno truncado de un corte: descargar() lo daria por bueno
             t0 = time.time()
             ruta, est = desc.descargar(p["Id"], nombre, a.crudo, token())
+            if ruta is None and "401" in str(est):
+                # Token caducado (p. ej. el Mac se durmio a mitad de descarga): uno nuevo.
+                ruta, est = desc.descargar(p["Id"], nombre, a.crudo, token(forzar=True))
             if ruta is None or not zip_valido(ruta, p):
                 if ruta is not None:
                     est = (f"zip incompleto o corrupto: {os.path.getsize(ruta)} bytes de "
