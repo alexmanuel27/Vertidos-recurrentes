@@ -127,8 +127,19 @@ class Token:
         self.mod, self.tk, self.t = mod, None, 0.0
 
     def __call__(self, forzar=False):
-        if forzar or self.tk is None or time.time() - self.t > 1200:
-            self.tk, self.t = self.mod.token(), time.time()
+        # 480 s y no 1200: con 1200 hubo 401 a mitad de tanda, asi que caduca antes.
+        if forzar or self.tk is None or time.time() - self.t > 480:
+            # Un corte de red (wifi, DNS) no debe matar el bucle: se espera y se reintenta.
+            for _ in range(30):
+                try:
+                    self.tk, self.t = self.mod.token(), time.time()
+                    break
+                except self.mod.requests.exceptions.RequestException as e:
+                    print(f"    sin red para pedir el token ({type(e).__name__}); "
+                          f"reintento en 60 s", flush=True)
+                    time.sleep(60)
+            else:
+                sys.exit("\nPARADA: 30 min sin red para hablar con CDSE. Relanza cuando vuelva.")
             print("    (token CDSE nuevo)", flush=True)
         return self.tk
 

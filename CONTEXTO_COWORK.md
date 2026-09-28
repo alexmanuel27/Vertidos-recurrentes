@@ -102,7 +102,7 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
 - ACOLITE renombra la salida a `S2A_MSI_AAAA_MM_DD_HH_MM_SS_T17QLF_L2W.nc`.
 - `requests` borra la cabecera `Authorization` al redirigir de `catalogue.dataspace` a
   `download.dataspace`: por eso existe `SesionCDSE`.
-- El token de CDSE caduca a los 30 min: se renueva por tiempo, no por número de productos.
+- El token de CDSE caduca antes de lo que parecía (renovándolo a los 20 min hubo 401): el bucle lo renueva a los 8 min, pide otro ante un 401 y espera si se cae la red.
 
 ## 7. Pendiente, por orden
 
