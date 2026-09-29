@@ -79,7 +79,7 @@ def catalogo(desde=DESDE, hasta=HASTA, tile=TILE, nivel=NIVEL):
     return productos
 
 
-def descargar(pid, nombre, destino, tk, reintentos=3):
+def descargar(pid, nombre, destino, tk, reintentos=3, limite_s=1200):
     salida = Path(destino) / f"{nombre}.zip"
     if salida.exists() and salida.stat().st_size > 1_000_000:
         return salida, "ya estaba"
@@ -87,13 +87,20 @@ def descargar(pid, nombre, destino, tk, reintentos=3):
         try:
             ses = SesionCDSE()
             ses.headers["Authorization"] = f"Bearer {tk}"
-            with ses.get(DESCARGA.format(id=pid), stream=True, timeout=1800,
+            # timeout=(conexion, lectura): un socket muerto falla en 2 min, no en 30.
+            with ses.get(DESCARGA.format(id=pid), stream=True, timeout=(30, 120),
                          allow_redirects=True) as r:
                 r.raise_for_status()
                 tmp = salida.with_suffix(".parcial")
+                t0 = time.time()
                 with open(tmp, "wb") as f:
                     for trozo in r.iter_content(chunk_size=1 << 20):
                         f.write(trozo)
+                        # Una conexion que gotea unos bytes cada poco no dispara el
+                        # timeout de lectura y puede tener el bucle horas (visto: 297 MB
+                        # en 16116 s). Se corta y se reintenta desde cero.
+                        if time.time() - t0 > limite_s:
+                            raise TimeoutError(f"mas de {limite_s} s bajando; se reintenta")
                 tmp.rename(salida)
             return salida, "descargado"
         except Exception as e:
