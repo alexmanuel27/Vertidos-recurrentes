@@ -319,14 +319,25 @@ def ejecutar(a):
 
     limite = acolite_io.limite_bahia()
     token = Token(desc)
-    seguidos, t_ini, n_ok, n_fallo = 0, time.time(), 0, 0
+    seguidos, t_ini, n_ok, n_fallo, pausas = 0, time.time(), 0, 0, 0
 
     def contar(r):
-        nonlocal seguidos, n_ok, n_fallo
+        nonlocal seguidos, n_ok, n_fallo, pausas
         if r["estado"] == "ok":
-            seguidos, n_ok = 0, n_ok + 1
+            seguidos, n_ok, pausas = 0, n_ok + 1, 0
         else:
             seguidos, n_fallo = seguidos + 1, n_fallo + 1
+            # Si lo que falla seguido son DESCARGAS, lo normal es una caida de CDSE (visto:
+            # 503 Service Unavailable de madrugada): se espera y se sigue, hasta 2 h. Los
+            # productos fallidos se reintentan en la siguiente ejecucion.
+            if (seguidos >= a.max_fallos_seguidos and r.get("etapa") == "descarga"
+                    and pausas < 8):
+                pausas += 1
+                print(f"\n  {seguidos} descargas fallidas seguidas: CDSE parece caido. "
+                      f"Pausa de 15 min ({pausas}/8) y se sigue.", flush=True)
+                time.sleep(900)
+                seguidos = 0
+                return
             if seguidos >= a.max_fallos_seguidos:
                 sys.exit(f"\nPARADA: {seguidos} fallos seguidos. Eso es algo sistematico "
                          f"(credenciales, red, ACOLITE), no una escena mala. Mira el "
