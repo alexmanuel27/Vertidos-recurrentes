@@ -106,10 +106,15 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
 
 ## 7. Pendiente, por orden
 
-1. ~~Bucle por tandas~~ **HECHO 27/09/2026** (`scripts/04_archivo_por_tandas.py`),
-   probado en local sin red. **Falta lanzarlo** sobre el archivo, con red y credenciales
-   CDSE, desde la Terminal de Alex: primero una tanda de 2 (`--tanda 2 --max-tandas 1`) para
-   probar la descarga, y luego sin límite. Registro en `datos/productos/registro_tandas.jsonl`.
+1. ~~Bucle por tandas~~ **HECHO y EJECUTADO** (27/09–03/10/2026). Archivo completo:
+   **644 `.npz` que cubren las 637 adquisiciones R097** (S2A 301, S2B 300, S2C 36); ninguna
+   fecha sin escena. 19 trozos de fechas partidas dieron «100 % blackfill» (su otro trozo
+   sí está) y 1 producto S2C de baseline N9906 (2024-12-18, puesta en servicio) da 404 en
+   CDSE (su fecha también tiene escena). **7 fechas tienen 2 escenas exportadas** (los dos
+   trozos ven parte de la ventana): las afecta la regla 2b. Registro en
+   `datos/productos/registro_tandas.jsonl`. Se lanza con `scripts/archivo_sin_parar.sh`
+   (vigilante que relanza si el sistema mata el proceso). Quedan en disco, prescindibles,
+   el crudo y los productos ACOLITE del piloto (`datos/crudo` 9,4 GB, `datos/acolite` 11 GB).
 2. ~~Exportar el AOT~~ **HECHO 27/09/2026**: ACOLITE lo guarda como atributo global
    `ac_aot_550` (comprobado en un L2W real). `src/exportar.py` lo escribe en cada `.npz`
    como `aot_550`, junto con `producto_l1c` y todos los atributos globales en JSON

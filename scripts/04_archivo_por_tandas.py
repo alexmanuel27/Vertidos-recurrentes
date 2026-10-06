@@ -293,7 +293,9 @@ def ejecutar(a):
         if p["Name"] in hechos:
             n_hechos += 1
         elif (registro.get(p["Name"], {}).get("estado") == "fallo"
-              and registro[p["Name"]].get("etapa") != "descarga"   # la red se reintenta sola
+              # la red se reintenta sola; un 404 no (el producto ya no existe en CDSE)
+              and (registro[p["Name"]].get("etapa") != "descarga"
+                   or "404" in str(registro[p["Name"]].get("motivo", "")))
               and not a.reintentar_fallos):
             n_fallidos += 1
         else:
