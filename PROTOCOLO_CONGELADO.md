@@ -440,6 +440,7 @@ aquí:
 | 2026-10-13 | Detalles de implementación de la máscara, el control de calidad y la climatología, que el texto no fijaba, decididos **antes de calcularla** (`src/escenas.py`, `scripts/05_climatologia.py`): (a) el NDWI de la máscara (secc. 5) usa en cada escena los píxeles sin bits 1, 2 ni 4 de `l2_flags` (cirros, TOA alto, fuera de escena): «escena válida» se aplica por píxel porque la validez de escena (secc. 6) necesita la propia máscara; (b) semillas de las componentes conexas: el punto «centro» de `geo.PUNTOS_CONTROL` (23,133 N, 82,333 O) y mar abierto en 23,200 N, 82,333 O; si alguna no cae en agua el cálculo se detiene, no se ajusta a mano; (c) píxel válido (secc. 6): agua, turbidez finita, bits 1–4 sin activar (el 3, ρ negativa en 400–900 nm, cubre la condición de rojo no negativo), ρ(2200) ≤ 0,010 y fuera de la máscara de buques; (d) la máscara de buques es la de la secc. 9 tal como quedó el 15/09 (residuo del perfil de adyacencia ajustado hasta 600 m, umbral mediana + 6·MAD por escena, dilatación 2 px), y se aplica antes de la climatología; la secc. 13 aún lo da por pendiente, pero lo fija la 9; (e) «DSF convergido» = AOT de la escena finito; (f) no se filtra la turbidez por rango, porque el protocolo no lo prevé: se informa cuántos píxeles válidos quedan fuera de 0–1000 FNU; (g) estación por el mes de la fecha de adquisición (UTC) | Sin estas concreciones la climatología no es reproducible, y fijarlas después de verla sería elegirlas mirando el resultado | No — ninguna anomalía ni climatología calculada. Para comprobar el formato de los datos se miró en 26 escenas (una de cada 25) la frecuencia de cada bit de `l2_flags` y de ρ(2200) > 0,010: muchas escenas tienen bruma en casi toda la ventana, como ya vio el piloto. No cambió ninguna regla |
 | 2026-10-13 | Controles y pruebas de falsación, fijados **antes de calcular anomalías**: (a) emparejamiento (11.3b, pendiente en la secc. 13): misma distancia a costa ±20 m, `f_tierra(500 m)` ±0,05, a más de 200 m del candidato y de cualquier otro candidato; se usan **todos** los píxeles que cumplan (el código tomaba 5 al azar); la persistencia de un control es la de su celda de 40 m; (b) un candidato se distingue de sus controles si p = (1 + controles con persistencia ≥ la suya) / (1 + nº de controles) < 0,05; sin controles = no distinguible; el criterio 12.1 se cumple (método fracasado) si se distinguen **menos de la mitad** de los candidatos; (c) barrido de márgenes 0, 20, 40, 60, 100, 200 y 400 m (el código se quedaba en 100); un candidato sobrevive al margen m si a ese margen hay un sitio recurrente a menos de 80 m + m de él (80 m es la incertidumbre de localización del pico, secc. 10); (d) covariable de aerosoles (11.3c): correlación de Pearson entre el máximo de z_t a menos de 80 m del sitio y el AOT, sobre las escenas aceptadas; se marca el sitio si r > 0 con p < 0,05; el criterio 12.3 se cumple si se marca más de la mitad de los candidatos; (e) criterio 12.4: superficie costera = agua de la ventana a ≤ 400 m de costa; no evaluada = no evaluable en la climatología de la estación; se cumple si pasa del 50 % en cualquiera de las dos; (f) z_s usa la mediana y la MAD de los píxeles válidos **de la bahía**, y la detección se evalúa en toda el agua de la ventana: lo que salga en mar abierto es el control negativo de 11.3e; (g) candidato = sitio recurrente con margen 0 | La secc. 12 da los criterios de fracaso pero no cómo se decide cada uno; sin fijarlo antes, «indistinguible» o «se explica por» se podrían interpretar después de ver los sitios. Los umbrales son convenciones (p < 0,05, mayoría simple) o salen del propio protocolo (20 m de anillo, 80 m de localización, 400 m de margen máximo) | No — ninguna anomalía calculada. La climatología (secc. 17) sí estaba calculada |
 | 2026-10-13 | **Análisis exploratorios**, declarados todos antes de ejecutar ninguno (`scripts/07_exploratorio.py`): E1, mapa de la frecuencia de detección por píxel (detecciones / ocasiones evaluables), sin agrupar ni umbral de persistencia; E2, tabla del número de sitios recurrentes con persistencia mínima 0,05 / 0,075 / 0,10, años mínimos 3 / 4 / 5 y los siete márgenes, dentro y fuera de la bahía; E3, familia climatológica (8.1) recalculada con bandas formadas solo por agua de la bahía; E4, supresión de no-máximos con desempate (gana la celda con más detecciones), solo para lo exploratorio: la función conserva por defecto el comportamiento preregistrado | Entender por qué el método no pasa el criterio 12.2 y si hay señal dentro de la bahía que el diseño no capta. E3 corrige la mezcla de bahía y mar abierto en las bandas de distancia; E4, el duplicado de sitio. **Nada de esto cambia el veredicto de la sección 18**, y en el artículo se presenta como exploratorio | **Sí** — después de ver la detección (secc. 18) |
+| 2026-10-13 | **Versión 2.0 (sección 20)**: repetición a 10 m de las 186 fechas con ≥ 40 % de la bahía válida a 20 m, mismos umbrales con conversión píxel→metros, desempate y z_c con bandas de la bahía en el análisis principal, umbrales laxos de E2 como secundario preregistrado; test de lluvia (ERA5, P72, Spearman frente a controles); verificación de campo a ciegas con 5 sitios y 5 controles; mapa de turbidez crónica | Responder si el fracaso a 20 m es de resolución o de atmósfera, y verificar los sitios con datos independientes del satélite, en un solo artículo | **Sí** — después de ver las secciones 18 y 19. Ninguna anomalía a 10 m, ningún dato de lluvia ni de campo. Para fijar el 40 % se contó cuántas fechas pasan cada umbral a 20 m (113 / 153 / 186 / 231 con 60 / 50 / 40 / 30 %), y para la turbidez se contó la fracción de agua válida de la bahía sobre 16,4 FNU a 20 m |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
@@ -571,3 +572,212 @@ la misma geometría. Esto es una **hipótesis para verificar en campo**, no un r
 umbrales relajados se eligieron después de ver datos. A los sitios laxos no se les han pasado
 los controles emparejados. Y los fondos de los brazos son estrechos, con mucha tierra
 alrededor, que es justo donde la adyacencia pesa más.
+
+## 20. Versión 2.0 — segunda fase, para un solo artículo (BORRADOR, 13/10/2026)
+
+**Estado: borrador para revisar. No se ha procesado nada a 10 m, no se han descargado datos
+de lluvia y no se ha calculado ningún punto de control de campo.** Entra en vigor con el
+commit que lo introduce; desde ese momento, todo lo que sigue vale como preregistro y
+cualquier cambio va a la sección 14.
+
+### 20.1 Qué se sabe al escribirla y qué no cambia
+
+Se escribe **después** de ver la detección a 20 m (secc. 18) y los exploratorios (secc. 19).
+Por eso no es un preregistro limpio frente a las adquisiciones: a 10 m se reprocesan las
+**mismas** escenas. Lo que sí es ciego es el producto a 10 m, que no existe todavía, la lluvia
+y el campo.
+
+Nada de las secciones 1–19 cambia. El veredicto a 20 m (MÉTODO FRACASADO, criterio 12.2) es
+definitivo y se publica como tal. La climatología y la detección a 20 m se quedan en
+`resultados/` sin tocar; la fase 2 escribe en `datos/productos_10m/` y `resultados_10m/`.
+
+**Pregunta del artículo:** ¿puede Sentinel-2 localizar los puntos de vertido de una bahía
+tropical pequeña, y qué lo limita? Entran cinco piezas: el resultado preregistrado a 20 m,
+la repetición a 10 m (20.2), el test de lluvia (20.4), la verificación de campo (20.5) y el
+mapa de turbidez crónica (20.6). Nada más.
+
+### 20.2 Repetición a 10 m
+
+**Hipótesis, escritas antes del resultado.** El fracaso a 20 m (ningún sitio aguanta el
+margen de 40 m) tiene dos explicaciones posibles:
+
+- **H-píxel:** el píxel mixto de la orilla, de unos 20 m, se come la señal. Si es esto, a
+  10 m debe aparecer **algún sitio recurrente que sobreviva al margen de 40 m**.
+- **H-atmósfera:** la adyacencia atmosférica, medida con L mediana de 45 m (p90 96 m, secc. 17),
+  no depende de la resolución. Si es esto, a 10 m el criterio 12.2 vuelve a cumplirse.
+
+Las dos salidas son resultado del artículo. Las adquisiciones son las mismas, así que esto
+prueba la **resolución**, no si los sitios existen. Eso lo prueba el campo (20.5).
+
+**Escenas.** Se reprocesan solo las fechas que a 20 m tuvieron **al menos el 40 %** del agua
+de la bahía válida: 186 de 637, frente a las 113 que pasaron el 60 %. El margen de 20 puntos
+cubre las escenas que a 10 m podrían cruzar el umbral. Las otras 451 fechas cuentan como
+rechazadas. En cada fecha se usa el mismo producto L1C que a 20 m: la regla del 13/10 es
+geométrica y no depende de la resolución. El criterio de escena (secc. 6) se aplica de nuevo
+a 10 m, sin heredar la decisión de 20 m.
+
+**Corrección atmosférica.** Los AJUSTES de la sección 3, cambiando solo `s2_target_res` de 20 a
+10. ACOLITE remuestrea a 10 m las bandas de 20 m (B5–B7, B8A, B11, B12). El control de calidad
+(ρ(2200) ≤ 0,010) y la máscara de buques siguen leyendo SWIR, que conserva su resolución
+efectiva de 20 m. Se declara así y no se corrige.
+
+**Turbidez.** Dogliotti 2015 «blended» de ACOLITE usa solo el rojo (B4, 665 nm, nativa a
+10 m) mientras ρ_rojo < 0,05, equivalente a T < 16,4 FNU. Por encima mezcla el NIR (B8A, 20 m).
+Comprobado sobre el archivo a 20 m, en las 113 escenas aceptadas: el 0,20 % de las
+observaciones válidas de la bahía supera 16,4 FNU, y solo 4 escenas superan el 1 %. Dentro de
+la bahía, el producto es en la práctica de 10 m nativo. **Comprobación a 10 m:** en las dos
+primeras escenas procesadas se lee `rhos_665` del L2W antes de borrarlo y se cuenta la
+fracción de agua válida de la bahía con ρ_rojo ≥ 0,05. Si en alguna pasa del 1 %, la
+detección a 10 m usa `tur_dogliotti2015_red`, que da lo mismo por debajo del umbral. Se
+decide aquí y no se vuelve a decidir.
+
+**Umbrales.** Los mismos: z_t ≥ 3,5, z_s ≥ 3,0, z_c ≥ 3,5, n ≥ 20 observaciones, persistencia
+≥ 0,10, ≥ 5 años, rejilla de sitio de 40 m, fusión de 80 m, márgenes 0–400 m, tolerancias de
+los controles (±20 m, ±0,05) y criterios de la sección 12 con sus reglas de decisión
+(secc. 14, 13/10). **Regla de conversión:** lo que el protocolo fija en metros se queda en
+metros, y lo que el código fija en píxeles se pasa a los mismos metros:
+
+| Parámetro | 20 m | 10 m |
+|---|---|---|
+| Dilatación de la máscara de buques | 2 px | 4 px (40 m) |
+| Tamaño mínimo de grupo | 4 px | 16 px (1600 m²) |
+| Distancia mínima control–candidato | 10 px | 20 px (200 m) |
+| Radio del test de aerosoles y de lluvia | 4 px | 8 px (80 m) |
+| Rejilla de sitio | 2 × 2 px | 4 × 4 px (40 m) |
+
+Ventana igual (secc. 1): 1242 × 1228 píxeles. Bahía: 476 × 505.
+
+**Dos correcciones que entran en el análisis principal**, ambas vistas en la fase 1 y
+declaradas antes de tener datos a 10 m:
+
+- **(a) Desempate** en la supresión de no-máximos (E4, `desempate=True`). Corrige el sitio
+  duplicado de la sección 18.
+- **(b) La familia climatológica (8.1) usa bandas de distancia formadas solo por agua de la
+  bahía** (E3). La versión de la sección 8.1 mezclaba bahía y mar abierto (secc. 18). El mar
+  abierto se evalúa con sus propias bandas, por separado.
+
+**Análisis secundario, preregistrado aquí:** los umbrales laxos de E2 (persistencia ≥ 0,05 y
+≥ 3 años), **con** controles emparejados, test de aerosoles y barrido de márgenes. Se
+informa siempre, pero el veredicto 10 m lo dan solo los umbrales principales. También se
+repite el mapa E1.
+
+**Salida a 10 m.** La versión que corresponda de este texto:
+
+- «Criterios 12.1–12.4 no cumplidos: H-píxel compatible.»
+- «Criterio 12.2 cumplido otra vez: la resolución no era el límite.»
+
+### 20.3 Código
+
+`s2_target_res` y los parámetros en píxeles pasan a depender de la resolución. A 20 m los
+valores por defecto quedan igual, y se comprueba que la cadena a 20 m reproduce
+`resultados/deteccion.json` byte a byte. `tests/test_cadena.py` tiene que pasar a las dos
+resoluciones. Nada de esto se hace antes del commit de esta sección.
+
+### 20.4 Test de lluvia (mecanismo)
+
+Un vertido de escorrentía o de alcantarillado unitario debería encenderse más después de
+llover. La adyacencia no tiene por qué.
+
+- **Dato.** Precipitación total horaria de ERA5 en la celda que contiene el centro de la
+  bahía (23,133 N, 82,333 O). Se anotan versión y fecha de descarga.
+- **Variable.** P72, la precipitación acumulada en las 72 h que acaban en la hora de
+  adquisición de cada escena aceptada.
+- **Estadístico por sitio.** El máximo de z_t a menos de 80 m, igual que en el test de
+  aerosoles.
+- **Prueba.** Para cada sitio, Spearman ρ entre P72 y ese estadístico sobre las escenas
+  aceptadas. La misma ρ se calcula en **todos** sus controles emparejados. Se calcula
+  p = (1 + controles con ρ ≥ la del sitio) / (1 + nº de controles), con
+  `adyacencia.p_controles`. Un sitio queda «ligado a la lluvia» si ρ > 0 y p < 0,05.
+- **Sitios.** Los candidatos a 10 m (principales y secundarios) y los cinco sitios de campo
+  (20.5), a 10 m y también a 20 m.
+- **Abstención.** Si menos de 10 escenas aceptadas tienen P72 ≥ 1 mm, el test se declara
+  **no evaluable** y no se reinterpreta.
+- **Confusión.** Se informa también la Spearman entre P72 y AOT.
+
+No es un criterio de falsación. Es evidencia de mecanismo y se presenta así.
+
+### 20.5 Verificación de campo, a ciegas
+
+**Sitios predichos, fijados ahora:**
+
+| Sitio | Lat (N) | Lon (O) | Origen |
+|---|---|---|---|
+| S1, costa al este de la bahía | 23,1730 | 82,2821 | preregistrado (secc. 18) |
+| S2, bocana | 23,1562 | 82,3499 | preregistrado (secc. 18); también E3 |
+| S3, cabecera del brazo sur | 23,1135 | 82,3401 | E1 + E3 (pico en seca) |
+| S4, brazo suroeste | 23,1220 | 82,3560 | E1 + E3 (las dos estaciones) |
+| S5, orilla oeste al arrancar el brazo sur | 23,1217 | 82,3455 | E3 (pico de z_c 11,9) |
+
+**Controles: uno por sitio, cinco en total.** Se calculan con la rejilla y la climatología a
+20 m, con semilla fija 20261013. Cada control:
+
+- empareja a su sitio en distancia a costa (±20 m) y `f_tierra(500 m)` (±0,05);
+- está en la misma zona (bahía o fuera);
+- queda a más de 200 m de los cinco sitios y de cualquier grupo E3;
+- es negativo predicho: frecuencia E1 ≤ la mediana de su zona.
+
+Si un punto, sitio o control, no es accesible ni desde tierra ni desde el agua, Alex lo
+decide sobre el mapa **antes** de la visita, mirando solo la accesibilidad. Un control
+inaccesible se sustituye por el siguiente sorteado; un sitio inaccesible se informa como no
+visitado. La clave sitio/control se commitea antes de la primera visita. A la persona de campo
+se le dan los diez puntos barajados y numerados P01–P10, sin decirle cuáles son cuáles.
+
+**Antes de la visita, revisión de fuentes conocidas.** Sobre OpenStreetMap, con la fecha de
+la instantánea anotada, se buscan cauces que desembocan (`waterway` = river, stream, canal,
+drain) y `man_made` = outfall o pipeline. También cartografía publicada, con su DOI
+comprobado. Cada uno de los diez puntos se clasifica como «fuente conocida a ≤ 150 m» o no.
+Así se puede decir después si el método encuentra solo lo ya conocido.
+
+**Qué cuenta como positivo**, dentro de 150 m del punto (80 m de localización, más la
+distancia a costa, más el GPS):
+
+- **P-infraestructura (criterio principal).** Una estructura que vierte al agua: tubo,
+  colector, alcantarilla, canal o desembocadura de cauce. Basta observarla una vez.
+- **P-actividad (secundario).** En alguna visita hay flujo entrando al agua, o una pluma,
+  cambio de color, espuma o película visible.
+
+**Evaluación.** Fisher exacto unilateral sobre P-infraestructura: sitios frente a controles.
+El campo **apoya** el método si p < 0,05. Con 5 frente a 5 eso exige, por ejemplo, 4 de 5
+frente a 0 de 5, o 5 de 5 frente a 1 de 5. Se informa igual P-actividad. Los puntos no
+visitados se excluyen y se dicen.
+
+**Visitas.** Al menos tres:
+
+- una en estación lluviosa (mayo–octubre);
+- una en seca (noviembre–abril);
+- una en las 48 h siguientes a un día con ≥ 20 mm de lluvia en La Habana.
+
+Lo ideal es hacerlas cerca del paso del satélite: 16:17 UTC, es decir hacia las 11:15 hora
+local en invierno y las 12:15 en verano. En cada punto:
+
+- coordenadas GPS y hora;
+- fotos de la orilla y del agua, con posición;
+- ¿hay estructura de vertido? ¿de qué tipo? ¿está activa?;
+- color del agua, espuma, olor, película;
+- lluvia de las 48 h previas;
+- notas de acceso.
+
+Si una visita a 10 m dejara sitios nuevos, se añadirían en otra visita con sus propios
+controles, sorteados igual, y se marcarían como añadidos después.
+
+### 20.6 Mapa de turbidez crónica (producto)
+
+Con la climatología a 10 m, para cada estación:
+
+- la mediana estacional de turbidez;
+- la máscara de evaluable;
+- el z_c con bandas de la bahía.
+
+Va al artículo como figura, y al repositorio como `resultados_10m/climatologia.npz` con su
+sha256. Es descriptivo y no lleva criterio de éxito.
+
+### 20.7 Orden
+
+1. Commit de esta sección.
+2. Puntos de control de campo y revisión de fuentes, con su commit.
+3. Código a 10 m y tests.
+4. Prueba con dos escenas y comprobación del rojo.
+5. Bucle sobre las 186 fechas.
+6. Climatología a 10 m y su commit.
+7. Detección, lluvia y mapa.
+8. El campo va en paralelo, desde el paso 2.
