@@ -1,0 +1,923 @@
+{
+ "advertencia": "EXPLORATORIO: no cambia el veredicto preregistrado (secc. 18)",
+ "E1_frecuencia_deteccion": {
+  "bahia_p50_p90_p99": [
+   0.01,
+   0.0349,
+   0.069
+  ],
+  "fuera_p50_p90_p99": [
+   0.0,
+   0.0128,
+   0.033
+  ],
+  "pixeles_freq_ge_0.10": {
+   "bahia": 20,
+   "fuera": 50
+  }
+ },
+ "E2_sensibilidad": {
+  "margen 0 m | pers >= 0.05 | anios >= 3": {
+   "total": 27,
+   "bahia": 14
+  },
+  "margen 0 m | pers >= 0.05 | anios >= 4": {
+   "total": 22,
+   "bahia": 12
+  },
+  "margen 0 m | pers >= 0.05 | anios >= 5": {
+   "total": 11,
+   "bahia": 4
+  },
+  "margen 0 m | pers >= 0.075 | anios >= 3": {
+   "total": 6,
+   "bahia": 2
+  },
+  "margen 0 m | pers >= 0.075 | anios >= 4": {
+   "total": 6,
+   "bahia": 2
+  },
+  "margen 0 m | pers >= 0.075 | anios >= 5": {
+   "total": 4,
+   "bahia": 0
+  },
+  "margen 0 m | pers >= 0.1 | anios >= 3": {
+   "total": 2,
+   "bahia": 0
+  },
+  "margen 0 m | pers >= 0.1 | anios >= 4": {
+   "total": 2,
+   "bahia": 0
+  },
+  "margen 0 m | pers >= 0.1 | anios >= 5": {
+   "total": 2,
+   "bahia": 0
+  },
+  "margen 20 m | pers >= 0.05 | anios >= 3": {
+   "total": 24,
+   "bahia": 11
+  },
+  "margen 20 m | pers >= 0.05 | anios >= 4": {
+   "total": 18,
+   "bahia": 9
+  },
+  "margen 20 m | pers >= 0.05 | anios >= 5": {
+   "total": 10,
+   "bahia": 4
+  },
+  "margen 20 m | pers >= 0.075 | anios >= 3": {
+   "total": 6,
+   "bahia": 2
+  },
+  "margen 20 m | pers >= 0.075 | anios >= 4": {
+   "total": 5,
+   "bahia": 2
+  },
+  "margen 20 m | pers >= 0.075 | anios >= 5": {
+   "total": 4,
+   "bahia": 1
+  },
+  "margen 20 m | pers >= 0.1 | anios >= 3": {
+   "total": 1,
+   "bahia": 0
+  },
+  "margen 20 m | pers >= 0.1 | anios >= 4": {
+   "total": 1,
+   "bahia": 0
+  },
+  "margen 20 m | pers >= 0.1 | anios >= 5": {
+   "total": 1,
+   "bahia": 0
+  },
+  "margen 40 m | pers >= 0.05 | anios >= 3": {
+   "total": 20,
+   "bahia": 13
+  },
+  "margen 40 m | pers >= 0.05 | anios >= 4": {
+   "total": 16,
+   "bahia": 10
+  },
+  "margen 40 m | pers >= 0.05 | anios >= 5": {
+   "total": 8,
+   "bahia": 6
+  },
+  "margen 40 m | pers >= 0.075 | anios >= 3": {
+   "total": 3,
+   "bahia": 3
+  },
+  "margen 40 m | pers >= 0.075 | anios >= 4": {
+   "total": 3,
+   "bahia": 3
+  },
+  "margen 40 m | pers >= 0.075 | anios >= 5": {
+   "total": 2,
+   "bahia": 2
+  },
+  "margen 40 m | pers >= 0.1 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 40 m | pers >= 0.1 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 40 m | pers >= 0.1 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 60 m | pers >= 0.05 | anios >= 3": {
+   "total": 16,
+   "bahia": 10
+  },
+  "margen 60 m | pers >= 0.05 | anios >= 4": {
+   "total": 13,
+   "bahia": 8
+  },
+  "margen 60 m | pers >= 0.05 | anios >= 5": {
+   "total": 5,
+   "bahia": 2
+  },
+  "margen 60 m | pers >= 0.075 | anios >= 3": {
+   "total": 3,
+   "bahia": 3
+  },
+  "margen 60 m | pers >= 0.075 | anios >= 4": {
+   "total": 3,
+   "bahia": 3
+  },
+  "margen 60 m | pers >= 0.075 | anios >= 5": {
+   "total": 1,
+   "bahia": 1
+  },
+  "margen 60 m | pers >= 0.1 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 60 m | pers >= 0.1 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 60 m | pers >= 0.1 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 100 m | pers >= 0.05 | anios >= 3": {
+   "total": 15,
+   "bahia": 9
+  },
+  "margen 100 m | pers >= 0.05 | anios >= 4": {
+   "total": 11,
+   "bahia": 6
+  },
+  "margen 100 m | pers >= 0.05 | anios >= 5": {
+   "total": 5,
+   "bahia": 3
+  },
+  "margen 100 m | pers >= 0.075 | anios >= 3": {
+   "total": 3,
+   "bahia": 3
+  },
+  "margen 100 m | pers >= 0.075 | anios >= 4": {
+   "total": 2,
+   "bahia": 2
+  },
+  "margen 100 m | pers >= 0.075 | anios >= 5": {
+   "total": 1,
+   "bahia": 1
+  },
+  "margen 100 m | pers >= 0.1 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 100 m | pers >= 0.1 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 100 m | pers >= 0.1 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.05 | anios >= 3": {
+   "total": 8,
+   "bahia": 4
+  },
+  "margen 200 m | pers >= 0.05 | anios >= 4": {
+   "total": 6,
+   "bahia": 3
+  },
+  "margen 200 m | pers >= 0.05 | anios >= 5": {
+   "total": 1,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.075 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.075 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.075 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.1 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.1 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 200 m | pers >= 0.1 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.05 | anios >= 3": {
+   "total": 4,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.05 | anios >= 4": {
+   "total": 3,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.05 | anios >= 5": {
+   "total": 1,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.075 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.075 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.075 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.1 | anios >= 3": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.1 | anios >= 4": {
+   "total": 0,
+   "bahia": 0
+  },
+  "margen 400 m | pers >= 0.1 | anios >= 5": {
+   "total": 0,
+   "bahia": 0
+  }
+ },
+ "E4_sitios_laxos_margen0": [
+  {
+   "lat": 23.17301,
+   "lon": -82.28209,
+   "este_utm": 368760.0,
+   "norte_utm": 2563260.0,
+   "en_bahia": false,
+   "d_costa_m": 0.0,
+   "persistencia": 0.12643678160919541,
+   "n_detecciones": 11,
+   "n_ocasiones": 87,
+   "n_anios": 5,
+   "anios": [
+    2018,
+    2019,
+    2021,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.15619,
+   "lon": -82.34991,
+   "este_utm": 361800.0,
+   "norte_utm": 2561460.0,
+   "en_bahia": false,
+   "d_costa_m": 60.0,
+   "persistencia": 0.12264150943396226,
+   "n_detecciones": 13,
+   "n_ocasiones": 106,
+   "n_anios": 7,
+   "anios": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.16963,
+   "lon": -82.29729,
+   "este_utm": 367200.0,
+   "norte_utm": 2562900.0,
+   "en_bahia": false,
+   "d_costa_m": 56.56854248046875,
+   "persistencia": 0.08602150537634409,
+   "n_detecciones": 8,
+   "n_ocasiones": 93,
+   "n_anios": 6,
+   "anios": [
+    2017,
+    2019,
+    2020,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.1169,
+   "lon": -82.33936,
+   "este_utm": 362840.0,
+   "norte_utm": 2557100.0,
+   "en_bahia": true,
+   "d_costa_m": 164.92422485351562,
+   "persistencia": 0.08490566037735849,
+   "n_detecciones": 9,
+   "n_ocasiones": 106,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2022,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.17375,
+   "lon": -82.28053,
+   "este_utm": 368920.0,
+   "norte_utm": 2563340.0,
+   "en_bahia": false,
+   "d_costa_m": 40.0,
+   "persistencia": 0.08235294117647059,
+   "n_detecciones": 7,
+   "n_ocasiones": 85,
+   "n_anios": 5,
+   "anios": [
+    2018,
+    2019,
+    2020,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.1229,
+   "lon": -82.35544,
+   "este_utm": 361200.0,
+   "norte_utm": 2557780.0,
+   "en_bahia": true,
+   "d_costa_m": 120.0,
+   "persistencia": 0.07547169811320754,
+   "n_detecciones": 8,
+   "n_ocasiones": 106,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "lat": 23.16821,
+   "lon": -82.29416,
+   "este_utm": 367520.0,
+   "norte_utm": 2562740.0,
+   "en_bahia": false,
+   "d_costa_m": 82.46211242675781,
+   "persistencia": 0.07142857142857142,
+   "n_detecciones": 7,
+   "n_ocasiones": 98,
+   "n_anios": 6,
+   "anios": [
+    2018,
+    2019,
+    2020,
+    2022,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.11546,
+   "lon": -82.33856,
+   "este_utm": 362920.0,
+   "norte_utm": 2556940.0,
+   "en_bahia": true,
+   "d_costa_m": 140.0,
+   "persistencia": 0.06666666666666667,
+   "n_detecciones": 7,
+   "n_ocasiones": 105,
+   "n_anios": 3,
+   "anios": [
+    2022,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.13242,
+   "lon": -82.34147,
+   "este_utm": 362640.0,
+   "norte_utm": 2558820.0,
+   "en_bahia": true,
+   "d_costa_m": 384.7076721191406,
+   "persistencia": 0.06363636363636363,
+   "n_detecciones": 7,
+   "n_ocasiones": 110,
+   "n_anios": 4,
+   "anios": [
+    2019,
+    2020,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.13168,
+   "lon": -82.34341,
+   "este_utm": 362440.0,
+   "norte_utm": 2558740.0,
+   "en_bahia": true,
+   "d_costa_m": 360.55511474609375,
+   "persistencia": 0.06306306306306306,
+   "n_detecciones": 7,
+   "n_ocasiones": 111,
+   "n_anios": 3,
+   "anios": [
+    2019,
+    2022,
+    2023
+   ]
+  },
+  {
+   "lat": 23.19697,
+   "lon": -82.39565,
+   "este_utm": 357160.0,
+   "norte_utm": 2566020.0,
+   "en_bahia": false,
+   "d_costa_m": 5586.16162109375,
+   "persistencia": 0.061855670103092786,
+   "n_detecciones": 6,
+   "n_ocasiones": 97,
+   "n_anios": 5,
+   "anios": [
+    2017,
+    2018,
+    2019,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.16787,
+   "lon": -82.29259,
+   "este_utm": 367680.0,
+   "norte_utm": 2562700.0,
+   "en_bahia": false,
+   "d_costa_m": 100.0,
+   "persistencia": 0.061855670103092786,
+   "n_detecciones": 6,
+   "n_ocasiones": 97,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2019,
+    2020,
+    2025
+   ]
+  },
+  {
+   "lat": 23.12005,
+   "lon": -82.35111,
+   "este_utm": 361640.0,
+   "norte_utm": 2557460.0,
+   "en_bahia": true,
+   "d_costa_m": 0.0,
+   "persistencia": 0.06,
+   "n_detecciones": 6,
+   "n_ocasiones": 100,
+   "n_anios": 6,
+   "anios": [
+    2019,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.11292,
+   "lon": -82.3401,
+   "este_utm": 362760.0,
+   "norte_utm": 2556660.0,
+   "en_bahia": true,
+   "d_costa_m": 40.0,
+   "persistencia": 0.058823529411764705,
+   "n_detecciones": 6,
+   "n_ocasiones": 102,
+   "n_anios": 5,
+   "anios": [
+    2018,
+    2019,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
+   "lat": 23.11436,
+   "lon": -82.3409,
+   "este_utm": 362680.0,
+   "norte_utm": 2556820.0,
+   "en_bahia": true,
+   "d_costa_m": 40.0,
+   "persistencia": 0.05825242718446602,
+   "n_detecciones": 6,
+   "n_ocasiones": 103,
+   "n_anios": 4,
+   "anios": [
+    2020,
+    2022,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.11904,
+   "lon": -82.34251,
+   "este_utm": 362520.0,
+   "norte_utm": 2557340.0,
+   "en_bahia": true,
+   "d_costa_m": 116.6190414428711,
+   "persistencia": 0.057692307692307696,
+   "n_detecciones": 6,
+   "n_ocasiones": 104,
+   "n_anios": 4,
+   "anios": [
+    2019,
+    2020,
+    2022,
+    2023
+   ]
+  },
+  {
+   "lat": 23.12072,
+   "lon": -82.35698,
+   "este_utm": 361040.0,
+   "norte_utm": 2557540.0,
+   "en_bahia": false,
+   "d_costa_m": 82.46211242675781,
+   "persistencia": 0.05714285714285714,
+   "n_detecciones": 6,
+   "n_ocasiones": 105,
+   "n_anios": 6,
+   "anios": [
+    2017,
+    2019,
+    2021,
+    2022,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.14049,
+   "lon": -82.3271,
+   "este_utm": 364120.0,
+   "norte_utm": 2559700.0,
+   "en_bahia": true,
+   "d_costa_m": 100.0,
+   "persistencia": 0.05660377358490566,
+   "n_detecciones": 6,
+   "n_ocasiones": 106,
+   "n_anios": 5,
+   "anios": [
+    2018,
+    2019,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "lat": 23.17154,
+   "lon": -82.2852,
+   "este_utm": 368440.0,
+   "norte_utm": 2563100.0,
+   "en_bahia": false,
+   "d_costa_m": 0.0,
+   "persistencia": 0.056338028169014086,
+   "n_detecciones": 4,
+   "n_ocasiones": 71,
+   "n_anios": 3,
+   "anios": [
+    2019,
+    2020,
+    2024
+   ]
+  },
+  {
+   "lat": 23.12365,
+   "lon": -82.3531,
+   "este_utm": 361440.0,
+   "norte_utm": 2557860.0,
+   "en_bahia": true,
+   "d_costa_m": 56.56854248046875,
+   "persistencia": 0.056074766355140186,
+   "n_detecciones": 6,
+   "n_ocasiones": 107,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2019,
+    2021,
+    2023
+   ]
+  },
+  {
+   "lat": 23.13711,
+   "lon": -82.34151,
+   "este_utm": 362640.0,
+   "norte_utm": 2559340.0,
+   "en_bahia": true,
+   "d_costa_m": 401.9950256347656,
+   "persistencia": 0.05555555555555555,
+   "n_detecciones": 6,
+   "n_ocasiones": 108,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2019,
+    2022,
+    2023
+   ]
+  },
+  {
+   "lat": 23.14036,
+   "lon": -82.34155,
+   "este_utm": 362640.0,
+   "norte_utm": 2559700.0,
+   "en_bahia": true,
+   "d_costa_m": 126.49110412597656,
+   "persistencia": 0.05504587155963303,
+   "n_detecciones": 6,
+   "n_ocasiones": 109,
+   "n_anios": 6,
+   "anios": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2023,
+    2024
+   ]
+  },
+  {
+   "lat": 23.13721,
+   "lon": -82.33058,
+   "este_utm": 363760.0,
+   "norte_utm": 2559340.0,
+   "en_bahia": true,
+   "d_costa_m": 145.60220336914062,
+   "persistencia": 0.05454545454545454,
+   "n_detecciones": 6,
+   "n_ocasiones": 110,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2019,
+    2023,
+    2024
+   ]
+  },
+  {
+   "lat": 23.20838,
+   "lon": -82.37154,
+   "este_utm": 359640.0,
+   "norte_utm": 2567260.0,
+   "en_bahia": false,
+   "d_costa_m": 6171.48291015625,
+   "persistencia": 0.05154639175257732,
+   "n_detecciones": 5,
+   "n_ocasiones": 97,
+   "n_anios": 4,
+   "anios": [
+    2018,
+    2019,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.20909,
+   "lon": -82.37311,
+   "este_utm": 359480.0,
+   "norte_utm": 2567340.0,
+   "en_bahia": false,
+   "d_costa_m": 6309.67529296875,
+   "persistencia": 0.05102040816326531,
+   "n_detecciones": 5,
+   "n_ocasiones": 98,
+   "n_anios": 4,
+   "anios": [
+    2017,
+    2018,
+    2023,
+    2025
+   ]
+  },
+  {
+   "lat": 23.15563,
+   "lon": -82.37296,
+   "este_utm": 359440.0,
+   "norte_utm": 2561420.0,
+   "en_bahia": false,
+   "d_costa_m": 1361.910400390625,
+   "persistencia": 0.05102040816326531,
+   "n_detecciones": 5,
+   "n_ocasiones": 98,
+   "n_anios": 3,
+   "anios": [
+    2018,
+    2019,
+    2023
+   ]
+  },
+  {
+   "lat": 23.16389,
+   "lon": -82.29295,
+   "este_utm": 367640.0,
+   "norte_utm": 2562260.0,
+   "en_bahia": false,
+   "d_costa_m": 82.46211242675781,
+   "persistencia": 0.05,
+   "n_detecciones": 5,
+   "n_ocasiones": 100,
+   "n_anios": 3,
+   "anios": [
+    2020,
+    2024,
+    2025
+   ]
+  }
+ ],
+ "E3_permanentes_bahia": {
+  "seca": [
+   {
+    "fila_px": 490.5,
+    "col_px": 280.5,
+    "tam_px": 105,
+    "z_c_max": 11.93,
+    "d_costa_m": 40.0,
+    "este_utm": 362230.0,
+    "norte_utm": 2557630.0,
+    "lat": 23.12173,
+    "lon": -82.34547
+   },
+   {
+    "fila_px": 536.5,
+    "col_px": 307.5,
+    "tam_px": 31,
+    "z_c_max": 7.06,
+    "d_costa_m": 100.0,
+    "este_utm": 362770.0,
+    "norte_utm": 2556710.0,
+    "lat": 23.11346,
+    "lon": -82.34011
+   },
+   {
+    "fila_px": 302.5,
+    "col_px": 259.5,
+    "tam_px": 10,
+    "z_c_max": 6.61,
+    "d_costa_m": 60.0,
+    "este_utm": 361810.0,
+    "norte_utm": 2561390.0,
+    "lat": 23.15565,
+    "lon": -82.34991
+   },
+   {
+    "fila_px": 488.5,
+    "col_px": 226.5,
+    "tam_px": 27,
+    "z_c_max": 6.24,
+    "d_costa_m": 44.7,
+    "este_utm": 361150.0,
+    "norte_utm": 2557670.0,
+    "lat": 23.122,
+    "lon": -82.35601
+   },
+   {
+    "fila_px": 480.5,
+    "col_px": 229.5,
+    "tam_px": 17,
+    "z_c_max": 5.73,
+    "d_costa_m": 180.0,
+    "este_utm": 361210.0,
+    "norte_utm": 2557830.0,
+    "lat": 23.12345,
+    "lon": -82.35544
+   },
+   {
+    "fila_px": 475.5,
+    "col_px": 289.5,
+    "tam_px": 5,
+    "z_c_max": 4.6,
+    "d_costa_m": 144.2,
+    "este_utm": 362410.0,
+    "norte_utm": 2557930.0,
+    "lat": 23.12445,
+    "lon": -82.34373
+   },
+   {
+    "fila_px": 477.5,
+    "col_px": 227.5,
+    "tam_px": 4,
+    "z_c_max": 4.39,
+    "d_costa_m": 116.6,
+    "este_utm": 361170.0,
+    "norte_utm": 2557890.0,
+    "lat": 23.12398,
+    "lon": -82.35583
+   }
+  ],
+  "lluviosa": [
+   {
+    "fila_px": 489.5,
+    "col_px": 280.5,
+    "tam_px": 80,
+    "z_c_max": 9.26,
+    "d_costa_m": 44.7,
+    "este_utm": 362230.0,
+    "norte_utm": 2557650.0,
+    "lat": 23.1219,
+    "lon": -82.34547
+   },
+   {
+    "fila_px": 303.5,
+    "col_px": 258.5,
+    "tam_px": 9,
+    "z_c_max": 8.32,
+    "d_costa_m": 72.1,
+    "este_utm": 361790.0,
+    "norte_utm": 2561370.0,
+    "lat": 23.15546,
+    "lon": -82.3501
+   },
+   {
+    "fila_px": 488.5,
+    "col_px": 226.5,
+    "tam_px": 17,
+    "z_c_max": 6.2,
+    "d_costa_m": 44.7,
+    "este_utm": 361150.0,
+    "norte_utm": 2557670.0,
+    "lat": 23.122,
+    "lon": -82.35601
+   },
+   {
+    "fila_px": 535.5,
+    "col_px": 322.5,
+    "tam_px": 6,
+    "z_c_max": 4.96,
+    "d_costa_m": 63.2,
+    "este_utm": 363070.0,
+    "norte_utm": 2556730.0,
+    "lat": 23.11367,
+    "lon": -82.33718
+   },
+   {
+    "fila_px": 521.5,
+    "col_px": 302.5,
+    "tam_px": 8,
+    "z_c_max": 4.39,
+    "d_costa_m": 140.0,
+    "este_utm": 362670.0,
+    "norte_utm": 2557010.0,
+    "lat": 23.11616,
+    "lon": -82.34111
+   },
+   {
+    "fila_px": 514.5,
+    "col_px": 297.5,
+    "tam_px": 7,
+    "z_c_max": 3.9,
+    "d_costa_m": 82.5,
+    "este_utm": 362570.0,
+    "norte_utm": 2557150.0,
+    "lat": 23.11742,
+    "lon": -82.3421
+   }
+  ]
+ }
+}

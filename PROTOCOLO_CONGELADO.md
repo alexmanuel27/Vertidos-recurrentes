@@ -540,3 +540,34 @@ detección.
 
 Pendiente, sin efecto en el veredicto: anisotropía (11.3d) y anotación de atracaderos
 (secc. 9).
+
+## 19. Resultados EXPLORATORIOS (13/10/2026)
+
+Declarados en la sección 14 antes de ejecutarlos y **después** de ver la sección 18, cuyo
+veredicto no cambian. Ficheros: `resultados/exploratorio.json` y `resultados/exploratorio.png`.
+
+- **E1, frecuencia de detección por píxel.** Mayor en la bahía que fuera: mediana 0,010
+  frente a 0,000, y percentil 90 de 0,035 frente a 0,013. Dentro de la bahía se concentra en
+  la cabecera del brazo sur, en torno al punto de control de Atarés (23,118 N, 82,338 O), y
+  en el brazo suroeste (≈ 23,120 N, 82,351–82,356 O).
+- **E2, sensibilidad.** Con el criterio preregistrado (persistencia ≥ 0,10 y ≥ 5 años) hay 2
+  sitios con margen 0 (los de la secc. 18, ya sin duplicado) y 0 en la bahía. Si se relaja,
+  aparecen sitios dentro de la bahía que sí aguantan el margen: con ≥ 0,05 y ≥ 3 años, 14 de 27
+  con margen 0 y **13 de 20 con margen 40 m** están en la bahía (9 con 100 m); con ≥ 0,075 y
+  ≥ 3 años, 2 en la bahía con margen 0 y 3 con 40–100 m. Con ≥ 0,10 no queda ninguno a partir
+  de 40 m.
+- **E3, familia climatológica con bandas solo de la bahía.** 7 grupos en la estación seca y
+  6 en la lluviosa. Dos coinciden con las zonas de E1: la cabecera del brazo sur (z_c hasta
+  7,1 en seca y 5,0 en lluviosa) y el brazo suroeste (hasta 6,2 en las dos). El más intenso
+  está en otro sitio, una franja en la orilla oeste donde arranca el brazo sur (23,122 N,
+  82,345 O; z_c 11,9 en seca y 9,3 en lluviosa, a 40–45 m de costa), que E1 apenas marca. La
+  boca del canal (≈ 23,156 N, 82,350 O) sale en las dos estaciones.
+- **E4, desempate.** Elimina el duplicado de la secc. 18: los candidatos preregistrados son 2
+  sitios distintos, no 3.
+
+**Lectura.** Dos detectores que miden cosas distintas coinciden en dos rincones de la bahía
+(cabecera del brazo sur y brazo suroeste): E1 compara cada píxel con su propia historia y E3 compara medianas entre píxeles con
+la misma geometría. Esto es una **hipótesis para verificar en campo**, no un resultado. Los
+umbrales relajados se eligieron después de ver datos. A los sitios laxos no se les han pasado
+los controles emparejados. Y los fondos de los brazos son estrechos, con mucha tierra
+alrededor, que es justo donde la adyacencia pesa más.

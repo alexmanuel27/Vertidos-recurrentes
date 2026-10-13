@@ -140,6 +140,10 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
    de aquí es **exploratorio** y va al registro con «¿después de ver anomalías? Sí».
    Conocido: duplicado de sitio por empate en la supresión de no-máximos; la familia z_c
    marca la bahía entera (bandas de distancia que mezclan bahía y mar).
+4c. **Exploratorio HECHO 13/10/2026** (`scripts/07_exploratorio.py`, sección 19): la
+   frecuencia de detección y la z_c solo-bahía coinciden en la cabecera del brazo sur
+   (Atarés) y en el brazo suroeste. Con umbrales relajados, los sitios de la bahía sí
+   aguantan 40–100 m de margen. Es una hipótesis para verificar en campo, no un resultado.
 5. **Figuras para el artículo en inglés**, sin título incrustado (lo lleva el pie), PDF
    vectorial, a `manuscript/figuras/` del repo del artículo. Las actuales
    (`validacion_sintetica`, `piloto`) están en español con título: rehacerlas.

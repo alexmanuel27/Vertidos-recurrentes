@@ -104,9 +104,12 @@ def main():
                         interpolation="nearest")
         fig.colorbar(im, ax=eje, shrink=0.8)
         eje.set_title(tit, fontsize=10); eje.set_xticks([]); eje.set_yticks([])
-    for x in laxos:
-        ax[0].plot(x["col_px"] - zcl.start, x["fila_px"] - zf.start, "o", mfc="none",
-                   mec="#eb6834", ms=10, mew=1.5)
+    alto, ancho = tierra[zf, zcl].shape
+    for x in laxos:          # solo los que caen dentro del recorte de la bahia
+        fx, cx = x["fila_px"] - zf.start, x["col_px"] - zcl.start
+        if 0 <= fx < alto and 0 <= cx < ancho:
+            ax[0].plot(cx, fx, "o", mfc="none", mec="#eb6834", ms=10, mew=1.5)
+    ax[0].set_xlim(-0.5, ancho - 0.5); ax[0].set_ylim(alto - 0.5, -0.5)
     fig.suptitle("EXPLORATORIO (registro 13/10/2026). Circulos: sitios con persistencia "
                  ">= 0,05 y >= 3 anios, margen 0", fontsize=9)
     fig.tight_layout()
