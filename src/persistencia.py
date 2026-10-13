@@ -51,7 +51,8 @@ def _disco(radio):
 
 def agregar_sitios(detecciones, fechas, evaluable_por_escena, pixel_m, z_por_escena,
                    rejilla_m=REJILLA_SITIO_M, min_px=MIN_PX_GRUPO,
-                   radio_fusion=RADIO_FUSION_CELDAS, devolver_mapa=False):
+                   radio_fusion=RADIO_FUSION_CELDAS, devolver_mapa=False,
+                   desempate=False):
     """Agrega los picos de todas las escenas sobre una rejilla de sitios.
 
     Cada escena aporta como mucho UNA deteccion por sitio, de modo que la persistencia es
@@ -95,8 +96,18 @@ def agregar_sitios(detecciones, fechas, evaluable_por_escena, pixel_m, z_por_esc
     # supresion de no-maximos: un emisario es un sitio, no un cumulo de celdas vecinas
     pico_local = (pers == ndimage.maximum_filter(np.nan_to_num(pers, nan=-1),
                                                  footprint=_disco(radio_fusion + 1)))
+    celdas = list(zip(*np.where((n_det > 0) & pico_local)))
+    if desempate:
+        # Exploratorio (registro, despues de ver la secc. 18): dos celdas vecinas que
+        # empatan en persistencia pasaban las dos. Gana la de mas detecciones.
+        celdas.sort(key=lambda t: (-pers[t], -n_det[t], t))
+        elegidas = []
+        for t in celdas:
+            if all(np.hypot(t[0] - u[0], t[1] - u[1]) > radio_fusion + 1 for u in elegidas):
+                elegidas.append(t)
+        celdas = elegidas
     sitios = []
-    for cf, cc in zip(*np.where((n_det > 0) & pico_local)):
+    for cf, cc in celdas:
         cf, cc = int(cf), int(cc)
         a = sorted(anios[(cf, cc)])
         p = float(pers[cf, cc])

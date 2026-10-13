@@ -30,20 +30,17 @@ def cargar_clim(ruta):
     return d, clim
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--productos", default="datos/productos")
-    ap.add_argument("--resultados", default="resultados")
-    a = ap.parse_args()
-
-    d, clim = cargar_clim(os.path.join(a.resultados, "climatologia.npz"))
+def anomalias_por_escena(productos, resultados):
+    """Anomalias de cada escena aceptada, con la climatologia congelada. Lo reutiliza
+    07_exploratorio.py: lo exploratorio parte exactamente de las mismas detecciones."""
+    d, clim = cargar_clim(os.path.join(resultados, "climatologia.npz"))
     agua, bahia, dist = d["agua"], d["bahia"], d["distancia_costa_m"]
     ft500 = d["f_tierra_500m"]
     aceptados = set(str(p) for p in d["productos_l1c"])
 
     # --- las mismas escenas aceptadas de la climatologia ---
     rutas = {}
-    for r in escenas.listar(a.productos):
+    for r in escenas.listar(productos):
         with np.load(r) as z:
             l1c = str(z["producto_l1c"])
         if l1c in aceptados:
@@ -69,6 +66,19 @@ def main():
             & (zs >= anomalias.Z_S_MIN)                     # solo excesos positivos
         det.append(m); evs.append(ev); zts.append(zt)
         fechas.append(e["fecha"]); aots.append(e["aot"])
+    return d, clim, det, evs, zts, fechas, aots, lat, lon
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--productos", default="datos/productos")
+    ap.add_argument("--resultados", default="resultados")
+    a = ap.parse_args()
+
+    d, clim, det, evs, zts, fechas, aots, lat, lon = anomalias_por_escena(a.productos,
+                                                                          a.resultados)
+    agua, bahia, dist = d["agua"], d["bahia"], d["distancia_costa_m"]
+    ft500 = d["f_tierra_500m"]
     n = len(det)
     print(f"[1] {n} escenas | pixeles anomalos por escena: mediana "
           f"{np.median([x.sum() for x in det]):.0f}", flush=True)
