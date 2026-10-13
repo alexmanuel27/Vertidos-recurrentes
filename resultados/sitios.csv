@@ -1,0 +1,4 @@
+rango,lat,lon,este_utm,norte_utm,en_bahia,d_costa_m,f_tierra_500m,persistencia,n_detecciones,n_ocasiones,n_anios,anios,tam_medio_px,sobrevive_0m,sobrevive_20m,sobrevive_40m,sobrevive_60m,sobrevive_100m,sobrevive_200m,sobrevive_400m,n_controles,persistencia_controles_mediana,p_controles,distinguible,r_aerosol,p_aerosol,marcado_aerosol,atracadero
+1,23.173,-82.2821,368760.0,2563260.0,False,0.0,0.4972,0.1264,11,87,5,2018 2019 2021 2024 2025,8.0,True,False,False,False,False,False,False,87,0.0092,0.0114,True,-0.0381,0.6886,False,sin verificar
+2,23.1562,-82.3499,361800.0,2561460.0,False,60.0,0.4396,0.1226,13,106,7,2018 2019 2020 2021 2022 2023 2025,14.3333,True,True,False,False,False,False,False,803,0.0,0.0012,True,0.0616,0.5168,False,sin verificar
+3,23.1558,-82.3499,361800.0,2561420.0,False,60.0,0.4844,0.1226,13,106,6,2019 2020 2021 2022 2023 2025,6.6667,True,True,False,False,False,False,False,602,0.0092,0.0017,True,-0.0241,0.8004,False,sin verificar

@@ -503,3 +503,39 @@ La fracción de escenas aceptadas (18 %) queda **por debajo** de lo esperado en 
 se reporta y **no se reajusta el umbral**. Consecuencias: el criterio de 5 años distintos
 (sección 10) se evalúa sobre 9 años con datos, no 10; y la estación lluviosa, con 42
 escenas, queda más justa frente al mínimo de 20 observaciones por píxel.
+
+## 18. Resultado de la detección (13/10/2026)
+
+Primera ejecución de `scripts/06_deteccion.py` sobre la climatología congelada (secc. 17),
+con las reglas fijadas en la sección 14 antes de calcular ninguna anomalía. Ficheros:
+`resultados/deteccion.json` y `resultados/sitios.csv`. Se transcribe tal cual salió.
+
+| Cantidad | Valor |
+|---|---|
+| Escenas | 113 |
+| Celdas con alguna detección | 1833 |
+| Sitios recurrentes (persistencia ≥ 0,10 y ≥ 5 años), margen 0 | **3**, los tres **fuera de la bahía** |
+| Sitios recurrentes por margen (0/20/40/60/100/200/400 m) | 3 / 2 / **0** / 0 / 0 / 0 / 0 |
+| Candidatos distinguibles de sus controles (p < 0,05) | 3 de 3 |
+| Candidatos marcados por aerosoles | 0 de 3 |
+| Superficie costera (≤ 400 m) no evaluada | 7,4 % (seca), 10,9 % (lluviosa) |
+
+**Veredicto, según la sección 12: MÉTODO FRACASADO por el criterio 2** (ningún candidato
+sobrevive al margen de 40 m). Los criterios 1, 3 y 4 no se cumplen.
+
+Los tres candidatos: uno en la costa al este de la bahía (23,173 N, 82,282 O; persistencia
+0,126; 5 años) y dos a 40 m uno del otro junto a la bocana (23,156 N, 82,350 O; 0,123;
+6–7 años), a 60 m de costa. Estos dos son el mismo punto: la supresión de no-máximos de la
+sección 10 deja pasar dos celdas vecinas cuando empatan en persistencia. Es un fallo del
+código que no se corrige aquí; si se corrige, irá al registro como cambio hecho después de
+ver anomalías.
+
+Familia climatológica (8.1), que se reporta aparte y no tiene criterio de fracaso: 43 grupos
+en la estación seca (5 en la bahía) y 17 en la lluviosa (2 en la bahía). El mayor (1980 px,
+z_c 10,7, dentro de la bahía) es la bahía entera más turbia que el mar abierto a la misma
+distancia de costa: con la ventana ampliada, las bandas de distancia mezclan bahía y mar, y
+esta familia deja de aislar fuentes puntuales. Queda anotado como limitación, no como
+detección.
+
+Pendiente, sin efecto en el veredicto: anisotropía (11.3d) y anotación de atracaderos
+(secc. 9).

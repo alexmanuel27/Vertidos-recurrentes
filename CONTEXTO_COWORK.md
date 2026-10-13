@@ -134,6 +134,12 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
    barrido de márgenes (0–400 m), controles emparejados, covariable de aerosoles,
    anisotropía. Cargar escenas SIEMPRE con `src/escenas.py` (misma validez que la
    climatología).
+4b. **Detección EJECUTADA 13/10/2026** (`scripts/06_deteccion.py`, sección 18 del protocolo):
+   3 sitios recurrentes, todos fuera de la bahía; **ninguno sobrevive al margen de 40 m →
+   MÉTODO FRACASADO según el criterio 12.2** del preregistro. Todo lo que se haga a partir
+   de aquí es **exploratorio** y va al registro con «¿después de ver anomalías? Sí».
+   Conocido: duplicado de sitio por empate en la supresión de no-máximos; la familia z_c
+   marca la bahía entera (bandas de distancia que mezclan bahía y mar).
 5. **Figuras para el artículo en inglés**, sin título incrustado (lo lleva el pie), PDF
    vectorial, a `manuscript/figuras/` del repo del artículo. Las actuales
    (`validacion_sintetica`, `piloto`) están en español con título: rehacerlas.
