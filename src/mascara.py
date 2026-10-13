@@ -12,12 +12,17 @@ def ndwi(b3, b8):
 def mascara_agua(cubo_ndwi, umbral=0.0, semillas=None):
     """Agua = mediana temporal de NDWI > umbral (0 = convencion estandar)."""
     med = np.nanmedian(cubo_ndwi, axis=0)
+    return agua_desde_mediana(med, umbral, semillas), med
+
+
+def agua_desde_mediana(med, umbral=0.0, semillas=None):
+    """Lo mismo a partir de la mediana ya calculada (el archivo no cabe entero en RAM)."""
     agua = np.isfinite(med) & (med > umbral)
     if semillas:
         etiq, _ = ndimage.label(agua)
         conservar = {etiq[f, c] for f, c in semillas if etiq[f, c] > 0}
         agua = np.isin(etiq, list(conservar)) if conservar else np.zeros_like(agua)
-    return agua, med
+    return agua
 
 
 def distancia_a_costa(agua, pixel_m):

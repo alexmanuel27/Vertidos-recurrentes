@@ -6,3 +6,4 @@ __pycache__/
 datos/
 externo/
 resultados/*.npz
+!resultados/climatologia.npz
