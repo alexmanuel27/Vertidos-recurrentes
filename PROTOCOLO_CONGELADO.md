@@ -29,16 +29,23 @@ el canal de entrada y una franja de mar abierto frente a la bocana, cae dentro d
 (bocana, centro, las tres ensenadas y las dos esquinas del bbox) caen todos en `17QLF`,
 holgadamente en el interior del cuadrado de 100 km, no en su borde.
 
-**Ventana de trabajo (EPSG:32617, UTM 17N / WGS84):**
+**Bahía (EPSG:32617, UTM 17N / WGS84)** — era la ventana de trabajo de la versión 1.0; desde
+el 13/10/2026 es la zona sobre la que se calculan el criterio de escena (sección 6) y las
+estadísticas «de la bahía» del día (z_s, sección 8):
 
 | | mínimo | máximo | extensión |
 |---|---|---|---|
 | Este (m) | 361 139 | 365 896 | 4,76 km |
 | Norte (m) | 2 556 342 | 2 561 392 | 5,05 km |
 
-A 20 m son 238 × 253 píxeles; a 10 m, 476 × 505. La ventana incluye deliberadamente una
-franja de mar abierto al norte de la bocana, que se usa como referencia de agua limpia
-(sección 11).
+A 20 m son 238 × 253 píxeles; a 10 m, 476 × 505.
+
+**Ventana de procesado (ampliada el 16/09/2026, sección 14):** 23,10–23,21 N,
+82,40–82,28 W; en UTM 17N, E 356 620–369 040 y N 2 555 160–2 567 440 (12,4 × 12,3 km),
+614 × 621 píxeles a 20 m. Contiene la bahía y 6,7 km de mar abierto, que son la
+referencia de agua limpia y el campo lejano para medir la adyacencia (sección 11). Es la
+rejilla de todas las escenas exportadas; la máscara de agua, la distancia a costa y la
+climatología se calculan sobre ella entera.
 
 **Resolución de trabajo: 20 m.** Es la resolución nativa de las bandas SWIR (B11, B12),
 necesarias tanto para la corrección atmosférica como para el diagnóstico de adyacencia y
@@ -159,7 +166,7 @@ Estos tres campos son la base del tratamiento de adyacencia.
 ## 6. Control de calidad de escena
 
 Una escena entra en el análisis si y solo si:
-- al menos el **60 %** de los píxeles de agua de la ventana son válidos (sin nube, sin
+- al menos el **60 %** de los píxeles de agua **de la bahía** (sección 1) son válidos (sin nube, sin
   sombra de nube, sin saturación, con recuperación atmosférica convergida);
 - ACOLITE converge en la estimación DSF.
 
@@ -428,6 +435,8 @@ aquí:
 | 2026-09-16 | Barrido de márgenes ampliado de 0–100 m a 0–400 m | El piloto midió L de hasta 386 m; un barrido hasta 100 m no cubre el artefacto | No — ninguna anomalía calculada |
 | 2026-09-16 | El veredicto exige ≥20 observaciones por píxel antes de pronunciarse sobre estructuras | Con 4 observaciones z_c es ruido, y el síntoma es que el 64 % de las estructuras caían a más de 500 m de la costa | No — ninguna anomalía calculada |
 | 2026-09-27 | Hallazgo, sin cambio de método todavía: en 26 fechas el catálogo R097 trae 2 o 3 productos L1C del mismo paso (tile partido entre datastrips), de modo que los 664 productos son **637 adquisiciones**. El bucle por tandas (`scripts/04_archivo_por_tandas.py`) procesa y exporta **todos**, cada uno a su `.npz`, que guarda el nombre del L1C de origen (`producto_l1c`). La regla para combinar los trozos de una misma fecha se fijará y se registrará aquí **antes de calcular la climatología** | El crudo se borra al exportar: descartar un trozo dentro del bucle sería perder datos sin haberlo decidido. Comprobado en 2016-01-15: el trozo de 34 MB da «100 % blackfill» y la bahía cae en el de 728 MB | No — ninguna anomalía calculada |
+| 2026-10-13 | Fechas con varios productos L1C: se usa **un solo producto por fecha**, el que tenga más píxeles dentro de su huella dentro de la ventana (bit 4 de `l2_flags`, «fuera de escena», sin activar); a igualdad, el de procesado más reciente. Criterio solo geométrico: no mira nubes, calidad ni turbidez. Resuelve el hallazgo del 27/09: de las 26 fechas partidas, solo 7 tienen dos escenas exportadas | Cada trozo lleva su propia corrección DSF (su propio AOT). Un mosaico juntaría dos radiometrías en la misma escena: una costura que la anomalía espacial del día (z_s) podría tomar por estructura, y dos AOT para el test de covariable (11.3c). Contar los dos trozos duplicaría una misma observación. La pérdida es parte de la ventana en 7 de 637 fechas | No — ninguna anomalía calculada. Se sabía: el archivo tiene 644 escenas de 637 fechas, y qué 7 fechas tienen dos escenas. No se miró el contenido de esas escenas |
+| 2026-10-13 | El umbral de escena (sección 6) **sigue siendo el 60 %**, pero se cuenta sobre el agua **de la bahía** (la ventana de la versión 1.0, sección 1), no sobre toda la ventana de procesado. La misma zona es la «bahía» sobre la que se calculan mediana y MAD del día para z_s (sección 8). Se descarta el 40 % usado en el piloto | El 60 % se escribió cuando la ventana era la bahía. Con la ventana ampliada (16/09), la mayor parte del agua es mar abierto y el criterio mediría sobre todo el mar: rechazaría días con la bahía despejada y aceptaría días con la bahía cubierta. Así se mantiene el número preregistrado y se recupera la zona para la que se escribió, que es además la «bahía» de z_s (sección 8). El 40 % salió del piloto, después de ver datos | No — ninguna anomalía calculada. Se sabía: en el piloto pasaron 5 de 13 escenas con el 40 % sobre la ventana ampliada. **No** se calculó cuántas escenas del archivo pasan con cada opción antes de decidir |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 

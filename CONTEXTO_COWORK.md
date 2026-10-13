@@ -119,13 +119,13 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
    `ac_aot_550` (comprobado en un L2W real). `src/exportar.py` lo escribe en cada `.npz`
    como `aot_550`, junto con `producto_l1c` y todos los atributos globales en JSON
    (`atributos_acolite`). Los 13 `.npz` del piloto se reexportaron: arrays idénticos al byte.
-2b. **Regla para las fechas con varios productos** (26 fechas): fijarla y registrarla en
-   la sección 14 **antes** de la climatología. Hoy cada trozo es un `.npz` aparte y un
-   `glob("*.npz")` los contaría como escenas distintas.
-3. **Actualizar la sección 1 del protocolo**: sigue describiendo la ventana antigua
-   (238 × 253 px). El cambio ya está en el registro (sección 14), pero el texto no.
-   Decidir si el umbral de escena es 60 % (protocolo) o 40 % (piloto) y registrarlo
-   **antes** de calcular anomalías.
+2b. ~~Regla para fechas con varios productos~~ **FIJADA 13/10/2026** (sección 14): un
+   solo producto por fecha, el que más ventana cubre (bit 4 de `l2_flags` sin activar);
+   empate → procesado más reciente. **Falta implementarla** en la carga de escenas de la
+   climatología: hoy un `glob("*.npz")` aún cuenta como dos escenas las 7 fechas partidas.
+3. ~~Sección 1 y umbral de escena~~ **HECHO 13/10/2026**: la ventana de la v1.0 pasa a
+   ser «la bahía»; el umbral sigue en **60 %, contado sobre el agua de la bahía** (no sobre
+   la ventana ampliada). Registrado en la sección 14.
 4. **Climatología** sobre el archivo completo → **commit** → solo entonces anomalías,
    persistencia, barrido de márgenes (0–400 m), controles emparejados, covariable de
    aerosoles, anisotropía.
