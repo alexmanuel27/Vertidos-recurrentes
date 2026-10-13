@@ -6,7 +6,7 @@ objeto de estudio): se mide, y se somete a controles que pueden falsar el result
 import numpy as np
 from scipy.optimize import curve_fit
 
-MARGENES_M = (0, 20, 40, 60, 100)
+MARGENES_M = (0, 20, 40, 60, 100, 200, 400)   # 11.3a, ampliado el 16/09
 
 
 def _modelo(d, A, L, c):
@@ -66,34 +66,35 @@ def umbral_robusto(residuo, agua, k=6.0):
 
 
 def controles_emparejados(candidatos, dist, f_tierra, agua, evaluable,
-                          tol_d=20.0, tol_f=0.05, n_por_candidato=5, semilla=0):
-    """Test de falsacion principal (protocolo 11.3b).
+                          tol_d=20.0, tol_f=0.05, dist_min_px=10):
+    """Test de falsacion principal (protocolo 11.3b; tolerancias del registro 13/10).
 
-    Para cada candidato busca pixeles con la MISMA distancia a costa y la MISMA fraccion
-    de tierra, pero lejos de el. Si el metodo midiese adyacencia, los controles se
-    encenderian igual. El emparejamiento usa solo geometria, conocida antes de ver
-    ninguna anomalia.
+    Para cada candidato, TODOS los pixeles evaluables con la misma distancia a costa
+    (+-tol_d) y la misma fraccion de tierra (+-tol_f), a mas de dist_min_px de cualquier
+    candidato. Si el metodo midiese adyacencia, se encenderian igual que el candidato.
+    El emparejamiento usa solo geometria, conocida antes de ver ninguna anomalia.
     """
-    rng = np.random.default_rng(semilla)
     fs, cs = np.where(agua & evaluable)
+    lejos = np.ones(fs.size, bool)
+    for cand in candidatos:
+        lejos &= np.hypot(fs - cand["fila_px"], cs - cand["col_px"]) > dist_min_px
     salida = []
     for cand in candidatos:
         f0, c0 = int(cand["fila_px"]), int(cand["col_px"])
-        if not (0 <= f0 < agua.shape[0] and 0 <= c0 < agua.shape[1]):
-            continue
-        d0, ft0 = dist[f0, c0], f_tierra[f0, c0]
-        ok = ((np.abs(dist[fs, cs] - d0) <= tol_d)
-              & (np.abs(f_tierra[fs, cs] - ft0) <= tol_f)
-              & (np.hypot(fs - f0, cs - c0) > 10))
-        idx = np.where(ok)[0]
-        if idx.size == 0:
-            salida.append({"candidato": cand["celda"], "controles": [], "n": 0})
-            continue
-        eleg = rng.choice(idx, size=min(n_por_candidato, idx.size), replace=False)
-        salida.append({"candidato": cand["celda"], "d": float(d0), "f_tierra": float(ft0),
-                       "controles": [(int(fs[i]), int(cs[i])) for i in eleg],
-                       "n": int(idx.size)})
+        d0, ft0 = float(dist[f0, c0]), float(f_tierra[f0, c0])
+        ok = (lejos & (np.abs(dist[fs, cs] - d0) <= tol_d)
+              & (np.abs(f_tierra[fs, cs] - ft0) <= tol_f))
+        salida.append({"candidato": cand["celda"], "d": d0, "f_tierra": ft0,
+                       "controles": list(zip(fs[ok].tolist(), cs[ok].tolist())),
+                       "n": int(ok.sum())})
     return salida
+
+
+def p_controles(p_candidato, p_controles):
+    """p empirico: (1 + controles con persistencia >= la del candidato) / (1 + n).
+    Sin controles -> 1 (no distinguible)."""
+    v = np.asarray([x for x in p_controles if np.isfinite(x)], float)
+    return float((1 + np.sum(v >= p_candidato)) / (1 + v.size))
 
 
 def correlacion_aerosol(serie_zt, serie_aot):

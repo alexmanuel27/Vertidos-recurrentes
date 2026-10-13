@@ -51,7 +51,7 @@ def _disco(radio):
 
 def agregar_sitios(detecciones, fechas, evaluable_por_escena, pixel_m, z_por_escena,
                    rejilla_m=REJILLA_SITIO_M, min_px=MIN_PX_GRUPO,
-                   radio_fusion=RADIO_FUSION_CELDAS):
+                   radio_fusion=RADIO_FUSION_CELDAS, devolver_mapa=False):
     """Agrega los picos de todas las escenas sobre una rejilla de sitios.
 
     Cada escena aporta como mucho UNA deteccion por sitio, de modo que la persistencia es
@@ -111,6 +111,8 @@ def agregar_sitios(detecciones, fechas, evaluable_por_escena, pixel_m, z_por_esc
                                           and len(a) >= ANIOS_MIN)})
     sitios.sort(key=lambda s: (-(s["persistencia"] if np.isfinite(s["persistencia"]) else -1),
                                -s["n_anios"]))
+    if devolver_mapa:     # la persistencia de cualquier celda: la piden los controles
+        return sitios, pers, k
     return sitios
 
 
@@ -118,9 +120,13 @@ def ranking(sitios, solo_recurrentes=True):
     return [s for s in sitios if s["recurrente"]] if solo_recurrentes else sitios
 
 
-def a_coordenadas(sitios, pixel_m, geo_mod):
-    """Anade este/norte UTM y lat/lon a cada sitio, para el briefing de campo."""
+def a_coordenadas(sitios, x, y, lat=None, lon=None):
+    """Este/norte UTM (y lat/lon si se dan) de cada sitio, desde la rejilla real."""
     for s in sitios:
-        e, n = geo_mod.indice_a_utm(s["fila_px"], s["col_px"], pixel_m)
-        s["este_utm"], s["norte_utm"] = round(e, 1), round(n, 1)
+        f, c = s["fila_px"], s["col_px"]
+        s["este_utm"] = round(float(np.interp(c - 0.5, np.arange(len(x)), x)), 1)
+        s["norte_utm"] = round(float(np.interp(f - 0.5, np.arange(len(y)), y)), 1)
+        if lat is not None:
+            fi, ci = min(int(f), lat.shape[0] - 1), min(int(c), lat.shape[1] - 1)
+            s["lat"], s["lon"] = round(float(lat[fi, ci]), 5), round(float(lon[fi, ci]), 5)
     return sitios

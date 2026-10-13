@@ -41,7 +41,7 @@ for s in sitios:
 mapa[~agua] = np.nan
 aj0 = adyacencia.ajustar_decaimiento(swir[0], dist, agua)
 ctrl = adyacencia.controles_emparejados(rec[:1], dist, f_tierra, agua,
-                                        clim["lluviosa"]["evaluable"], n_por_candidato=8)
+                                        clim["lluviosa"]["evaluable"])
 mp = {s["celda"]: s["persistencia"] for s in sitios}
 p_ctrl = [mp.get((int(f//k), int(c//k)), 0.0) for f, c in ctrl[0]["controles"]]
 p_cand = rec[0]["persistencia"]
