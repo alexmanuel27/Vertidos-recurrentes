@@ -126,9 +126,14 @@ Validación sintética (`tests/test_cadena.py`): las cinco comprobaciones pasan.
 3. ~~Sección 1 y umbral de escena~~ **HECHO 13/10/2026**: la ventana de la v1.0 pasa a
    ser «la bahía»; el umbral sigue en **60 %, contado sobre el agua de la bahía** (no sobre
    la ventana ampliada). Registrado en la sección 14.
-4. **Climatología** sobre el archivo completo → **commit** → solo entonces anomalías,
-   persistencia, barrido de márgenes (0–400 m), controles emparejados, covariable de
-   aerosoles, anisotropía.
+4. ~~Climatología~~ **HECHA y COMMITEADA 13/10/2026** (`scripts/05_climatologia.py`,
+   resumen en la sección 17 del protocolo): 113 escenas aceptadas de 637 (18 %), ninguna
+   de 2016. **Siguiente:** antes de calcular anomalías, fijar en la sección 14 la
+   tolerancia del emparejamiento candidato/control (sección 13, aún pendiente; el código
+   tiene por defecto 20 m y 0,05 en `f_tierra`). Después: anomalías, persistencia,
+   barrido de márgenes (0–400 m), controles emparejados, covariable de aerosoles,
+   anisotropía. Cargar escenas SIEMPRE con `src/escenas.py` (misma validez que la
+   climatología).
 5. **Figuras para el artículo en inglés**, sin título incrustado (lo lleva el pie), PDF
    vectorial, a `manuscript/figuras/` del repo del artículo. Las actuales
    (`validacion_sintetica`, `piloto`) están en español con título: rehacerlas.

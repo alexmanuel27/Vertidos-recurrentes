@@ -1,0 +1,46 @@
+{
+ "fechas": 637,
+ "aceptadas": 113,
+ "aceptadas_por_estacion": {
+  "seca": 71,
+  "lluviosa": 42
+ },
+ "agua_km2": 76.817,
+ "agua_bahia_km2": 4.515,
+ "distancia_max_costa_m": 7060.2,
+ "semillas_px": {
+  "bahia": [
+   428,
+   344
+  ],
+  "mar": [
+   57,
+   348
+  ]
+ },
+ "evaluable": {
+  "seca": {
+   "agua": 0.9902,
+   "bahia": 0.9147
+  },
+  "lluviosa": {
+   "agua": 0.9784,
+   "bahia": 0.8996
+  }
+ },
+ "adyacencia_r2_mayor_085": {
+  "n": 89,
+  "A_p10_p50_p90": [
+   0.0031,
+   0.0055,
+   0.0161
+  ],
+  "L_m_p10_p50_p90": [
+   18.1,
+   45.2,
+   96.06
+  ]
+ },
+ "validos_fuera_0_1000_FNU": 29,
+ "sha256_climatologia_npz": "1a52d548abf907ed4f19bfa3f61930b4507c4c84c8a033a92864e975e1d1f870"
+}

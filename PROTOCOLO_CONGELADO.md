@@ -479,3 +479,26 @@ Resultado (`tests/test_cadena.py`, figura en `resultados/validacion_sintetica.pn
 
 Esta validación **no sustituye** al piloto sobre datos reales: demuestra que la cadena
 hace lo que dice cuando la verdad es conocida, no que la bahía real contenga nada.
+
+## 17. Climatología del archivo completo (13/10/2026)
+
+Calculada con `scripts/05_climatologia.py` y commiteada **antes de calcular ninguna
+anomalía**. Ficheros: `resultados/climatologia.npz` (sha256 en `climatologia.json`) y
+`resultados/escenas_qc.csv` (qué escena entra y por qué).
+
+| Cantidad | Valor |
+|---|---|
+| Fechas de paso (un producto por fecha) | 637 |
+| Escenas aceptadas (≥ 60 % del agua de la bahía válida) | **113 (18 %)**: seca 71, lluviosa 42 |
+| Años con escenas aceptadas | 2017–2025; **ninguna de 2016** |
+| Agua | 76,8 km² en la ventana, 4,5 km² en la bahía; distancia máxima a costa 7,06 km |
+| Píxeles evaluables (≥ 20 obs. y MAD > 0) | seca: 99 % del agua, 91 % de la bahía; lluviosa: 98 % y 90 % |
+| Adyacencia (89 ajustes con r² > 0,85) | A = 0,0031 / 0,0055 / 0,0161; L = 18 / 45 / 96 m (p10 / p50 / p90) |
+| Turbidez mediana climatológica | bahía 2,1 FNU (seca) y 2,6 (lluviosa); mar a más de 2 km 1,3 y 1,8 |
+| Píxeles válidos fuera de 0–1000 FNU | 29 en todo el archivo |
+
+La fracción de escenas aceptadas (18 %) queda **por debajo** de lo esperado en la sección 6
+(30–40 %) y del piloto (38 %, con el 40 % sobre la ventana ampliada). Como dice la sección 6,
+se reporta y **no se reajusta el umbral**. Consecuencias: el criterio de 5 años distintos
+(sección 10) se evalúa sobre 9 años con datos, no 10; y la estación lluviosa, con 42
+escenas, queda más justa frente al mínimo de 20 observaciones por píxel.
