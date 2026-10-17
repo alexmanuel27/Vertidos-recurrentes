@@ -1,0 +1,11 @@
+punto,fuente_conocida_150m,distancia_m,osm_id,tipo,nombre
+P01,no,3302,way/1408396833,drain,
+P02,no,454,way/291229412,ditch,
+P03,no,1085,way/513489274,drain,
+P04,no,872,way/291229412,ditch,
+P05,no,329,way/38812313,river,Río Martín Pérez
+P06,no,918,way/429007706,river,Río Luyanó
+P07,no,1023,way/393249644,river,Río Cojímar
+P08,si,118,way/429007706,river,Río Luyanó
+P09,no,1785,way/291229412,ditch,
+P10,no,2032,way/291229412,ditch,

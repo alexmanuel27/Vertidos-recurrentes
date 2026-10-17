@@ -1,0 +1,132 @@
+{
+ "semilla": 20261013,
+ "tolerancias": {
+  "d_costa_m": 20.0,
+  "f_tierra_500m": 0.05
+ },
+ "dist_min_m": 200,
+ "mediana_freq_E1": {
+  "bahia": 0.01,
+  "fuera": 0.0
+ },
+ "pixeles_E3": 243,
+ "sitios": [
+  {
+   "codigo": "S1",
+   "nombre": "costa al este de la bahia",
+   "lat": 23.173,
+   "lon": -82.2821,
+   "f": 208,
+   "c": 607,
+   "error_pixel_m": 21.2,
+   "en_bahia": false,
+   "d_costa_m": 20.0,
+   "f_tierra_500m": 0.47322794795036316,
+   "freq_E1": NaN
+  },
+  {
+   "codigo": "S2",
+   "nombre": "bocana",
+   "lat": 23.1562,
+   "lon": -82.3499,
+   "f": 299,
+   "c": 259,
+   "error_pixel_m": 1.6,
+   "en_bahia": false,
+   "d_costa_m": 60.0,
+   "f_tierra_500m": 0.43957164883613586,
+   "freq_E1": 0.18181818181818182
+  },
+  {
+   "codigo": "S3",
+   "nombre": "cabecera del brazo sur",
+   "lat": 23.1135,
+   "lon": -82.3401,
+   "f": 536,
+   "c": 307,
+   "error_pixel_m": 4.5,
+   "en_bahia": true,
+   "d_costa_m": 100.0,
+   "f_tierra_500m": 0.6415094137191772,
+   "freq_E1": 0.024390243902439025
+  },
+  {
+   "codigo": "S4",
+   "nombre": "brazo suroeste",
+   "lat": 23.122,
+   "lon": -82.356,
+   "f": 488,
+   "c": 226,
+   "error_pixel_m": 1.2,
+   "en_bahia": true,
+   "d_costa_m": 44.72135925292969,
+   "f_tierra_500m": 0.5782763957977295,
+   "freq_E1": 0.031578947368421054
+  },
+  {
+   "codigo": "S5",
+   "nombre": "orilla oeste al arrancar el brazo sur",
+   "lat": 23.1217,
+   "lon": -82.3455,
+   "f": 490,
+   "c": 280,
+   "error_pixel_m": 4.4,
+   "en_bahia": true,
+   "d_costa_m": 40.0,
+   "f_tierra_500m": 0.5772565007209778,
+   "freq_E1": 0.010638297872340425
+  }
+ ],
+ "controles": [
+  {
+   "sitio": "S1",
+   "orden": 0,
+   "lat": 23.14698,
+   "lon": -82.39084,
+   "d_costa_m": 40.0,
+   "f_tierra_500m": 0.4248,
+   "freq_E1": 0.0,
+   "n_elegibles": 185
+  },
+  {
+   "sitio": "S2",
+   "orden": 0,
+   "lat": 23.15802,
+   "lon": -82.34641,
+   "d_costa_m": 40.0,
+   "f_tierra_500m": 0.4253,
+   "freq_E1": 0.0,
+   "n_elegibles": 789
+  },
+  {
+   "sitio": "S3",
+   "orden": 0,
+   "lat": 23.14712,
+   "lon": -82.35451,
+   "d_costa_m": 82.46211242675781,
+   "f_tierra_500m": 0.6089,
+   "freq_E1": 0.0,
+   "n_elegibles": 134
+  },
+  {
+   "sitio": "S4",
+   "orden": 0,
+   "lat": 23.14171,
+   "lon": -82.3316,
+   "d_costa_m": 28.284271240234375,
+   "f_tierra_500m": 0.5283,
+   "freq_E1": 0.0,
+   "n_elegibles": 142
+  },
+  {
+   "sitio": "S5",
+   "orden": 0,
+   "lat": 23.14266,
+   "lon": -82.34724,
+   "d_costa_m": 40.0,
+   "f_tierra_500m": 0.5982,
+   "freq_E1": 0.0,
+   "n_elegibles": 157
+  }
+ ]
+}
