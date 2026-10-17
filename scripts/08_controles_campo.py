@@ -112,7 +112,8 @@ def main():
     with open(os.path.join(out, "puntos.csv"), "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["punto", "lat", "lon"])
         for i, j in enumerate(orden):
-            w.writerow([f"P{i + 1:02d}", f"{puntos[j][2]:.5f}", f"{puntos[j][3]:.5f}"])
+            # 4 decimales para todos (~11 m): con 5, los ceros finales de los sitios los delatarian
+            w.writerow([f"P{i + 1:02d}", f"{puntos[j][2]:.4f}", f"{puntos[j][3]:.4f}"])
     with open(os.path.join(out, "reservas.csv"), "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(reservas[0])); w.writeheader(); w.writerows(reservas)
     json.dump({"semilla": SEMILLA, "tolerancias": {"d_costa_m": TOL_D, "f_tierra_500m": TOL_F},

@@ -7,3 +7,4 @@ datos/
 externo/
 resultados/*.npz
 !resultados/climatologia.npz
+resultados/campo/hoja_campo.html
