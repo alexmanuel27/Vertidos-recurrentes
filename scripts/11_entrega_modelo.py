@@ -49,6 +49,17 @@ DEFINICION = (
     "40 m), que se define distinto.")
 
 
+def ensenada(E, N):
+    """Ensenada con la definicion del modelo SCHISM (UTM 17N, m); nomenclatura del 21/10/2026."""
+    if N < 2558800 and E < 363300:
+        return "Atarés" if E < 362350 - 0.25 * (2558800 - N) else "Guasabacoa"
+    return "Marimelena" if E > 363600 else ""
+
+
+assert ensenada(361150, 2557670) == "Atarés" and ensenada(362770, 2556710) == "Guasabacoa"
+assert ensenada(365063, 2559849) == "Marimelena"
+
+
 def ventana(bahia):
     f = np.where(bahia.any(1))[0]; c = np.where(bahia.any(0))[0]
     return slice(f[0], f[-1] + 1), slice(c[0], c[-1] + 1)
@@ -173,10 +184,11 @@ def focos_csv(ruta, x, y, agua, pers_full, nval_full, bordes, url_sitios, url_ex
                                     f"evaluables de su celda de 40 m, {r['n_anios']} años ({r['anios']}); "
                                     f"verificación de campo pendiente; {url_sitios}")})
     e3 = json.load(open("resultados/exploratorio.json"))["E3_permanentes_bahia"]
-    expl = [("Cabecera del brazo sur (Atarés)", 362770.0, 2556710.0),
-            ("Brazo suroeste", 361150.0, 2557670.0),
-            ("Orilla oeste al arrancar el brazo sur", 362230.0, 2557630.0)]
+    expl = [("Cabecera del brazo sur (Guasabacoa)", 362770.0, 2556710.0),
+            ("Brazo suroeste (Atarés)", 361150.0, 2557670.0),
+            ("Orilla oeste al arrancar el brazo sur (Guasabacoa)", 362230.0, 2557630.0)]
     for nom, E, N in expl:
+        assert f"({ensenada(E, N)})" in nom, (nom, ensenada(E, N))
         zc = []
         for est in ("seca", "lluviosa"):
             g = min(e3[est], key=lambda g: np.hypot(g["este_utm"] - E, g["norte_utm"] - N))

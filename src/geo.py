@@ -65,9 +65,10 @@ PIXEL_M = 20.0
 PUNTOS_CONTROL = {
     "bocana": (23.1500, -82.3490),
     "centro": (23.1330, -82.3330),
+    # nombres corregidos el 21/10/2026 (protocolo secc. 14); las coordenadas no cambian
     "marimelena": (23.1420, -82.3180),
-    "guasabacoa": (23.1250, -82.3180),
-    "atares": (23.1180, -82.3380),
+    "marimelena_sur": (23.1250, -82.3180),     # antes "guasabacoa": cae en el brazo este
+    "guasabacoa": (23.1180, -82.3380),         # antes "atares": cabecera del brazo sur
 }
 
 

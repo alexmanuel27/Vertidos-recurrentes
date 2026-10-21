@@ -20,13 +20,14 @@ posterior no invalida el trabajo; ocultarlo sí.
 ## 1. Zona de estudio y footprint
 
 La Bahía de La Habana es una bahía de bolsa unida al mar abierto por un canal de entrada
-estrecho, con tres ensenadas interiores (Marimelena al noreste, Guasabacoa al este,
-Atarés al sur).
+estrecho, con tres ensenadas interiores (Marimelena al este, Guasabacoa al sur y Atarés al
+suroeste; nomenclatura corregida el 21/10/2026, sección 14).
 
 **Tile Sentinel-2:** `T17QLF` (UTM zona 17N, banda MGRS Q). La bahía completa, incluido
 el canal de entrada y una franja de mar abierto frente a la bocana, cae dentro de este
 único tile. No se mosaica nada. Los siete puntos de control usados para comprobarlo
-(bocana, centro, las tres ensenadas y las dos esquinas del bbox) caen todos en `17QLF`,
+(bocana, centro, dos en Marimelena, uno en la cabecera de Guasabacoa y las dos esquinas
+del bbox) caen todos en `17QLF`,
 holgadamente en el interior del cuadrado de 100 km, no en su borde.
 
 **Bahía (EPSG:32617, UTM 17N / WGS84)** — era la ventana de trabajo de la versión 1.0; desde
@@ -442,6 +443,7 @@ aquí:
 | 2026-10-13 | **Análisis exploratorios**, declarados todos antes de ejecutar ninguno (`scripts/07_exploratorio.py`): E1, mapa de la frecuencia de detección por píxel (detecciones / ocasiones evaluables), sin agrupar ni umbral de persistencia; E2, tabla del número de sitios recurrentes con persistencia mínima 0,05 / 0,075 / 0,10, años mínimos 3 / 4 / 5 y los siete márgenes, dentro y fuera de la bahía; E3, familia climatológica (8.1) recalculada con bandas formadas solo por agua de la bahía; E4, supresión de no-máximos con desempate (gana la celda con más detecciones), solo para lo exploratorio: la función conserva por defecto el comportamiento preregistrado | Entender por qué el método no pasa el criterio 12.2 y si hay señal dentro de la bahía que el diseño no capta. E3 corrige la mezcla de bahía y mar abierto en las bandas de distancia; E4, el duplicado de sitio. **Nada de esto cambia el veredicto de la sección 18**, y en el artículo se presenta como exploratorio | **Sí** — después de ver la detección (secc. 18) |
 | 2026-10-17 | **Versión 2.0 (sección 20)**: repetición a 10 m de las 186 fechas con ≥ 40 % de la bahía válida a 20 m, mismos umbrales con conversión píxel→metros, desempate y z_c con bandas de la bahía en el análisis principal, umbrales laxos de E2 como secundario preregistrado; test de lluvia (ERA5, P72, Spearman frente a controles); verificación de campo a ciegas con 5 sitios y 5 controles; mapa de turbidez crónica | Responder si el fracaso a 20 m es de resolución o de atmósfera, y verificar los sitios con datos independientes del satélite, en un solo artículo | **Sí** — después de ver las secciones 18 y 19. Ninguna anomalía a 10 m, ningún dato de lluvia ni de campo. Para fijar el 40 % se contó cuántas fechas pasan cada umbral a 20 m (113 / 153 / 186 / 231 con 60 / 50 / 40 / 30 %), y para la turbidez se contó la fracción de agua válida de la bahía sobre 16,4 FNU a 20 m |
 | 2026-10-17 | **Puntos de campo calculados** (20.5), con `scripts/08_controles_campo.py` y `scripts/09_fuentes_osm.py`; salida en `resultados/campo/` (`clave.csv`, `puntos.csv` para la persona de campo, `reservas.csv`, `campo.json`, `fuentes_osm.csv`, `osm_overpass.json`). Detalles que 20.5 no fijaba: (a) cada sitio se sitúa en el píxel de agua más cercano a su coordenada (a 1–21 m); (b) la mediana de E1 se toma sobre los píxeles de su zona con frecuencia definida (≥ 20 ocasiones): 0,010 en la bahía, 0 fuera; (c) los grupos E3 de las dos estaciones se excluyen con su extensión completa (243 px), no solo su pico; (d) un control no puede repetir el píxel de otro; (e) sorteo en el orden S1–S5 y después barajado de los diez puntos, todo con la semilla 20261013; (f) la revisión OSM consulta `waterway` = river/stream/canal/drain/ditch/outfall y `man_made` = outfall/pipeline en 23,09–23,22 N, 82,41–82,26 O (instantánea 2026-10-17T18:14:50Z) y mide la distancia a la geometría completa de cada elemento. Resultado OSM: solo S5 tiene una fuente conocida a ≤ 150 m (río Luyanó, 118 m); S3 queda a 329 m del Martín Pérez; ningún control tiene fuente a ≤ 150 m. Falta la cartografía publicada. Advertencia: los tres controles de la bahía caen en su mitad norte, porque la frecuencia E1 alta está en la sur; la persona de campo podría intuir los roles por la geografía, y las coordenadas de los sitios ya son públicas en 20.5. El ciego depende de no darle ni el repositorio ni este documento. El criterio principal (hay estructura o no) es objetivo Corregido el mismo día, antes de entregar nada: `puntos.csv` daba 5 decimales y los sitios, escritos con 4, salían con un cero final que los delataba; ahora todos van con 4 (~11 m). Hoja de campo imprimible y GPX con `scripts/10_hoja_campo.py`, que solo lee `puntos.csv` | Fijar la clave antes de la primera visita, como exige 20.5 | **Sí** — usa E1 y E3 tal como dice 20.5. Ningún dato de campo, ni de lluvia, ni a 10 m. Ninguna regla cambió al ver los puntos |
+| 2026-10-21 | **Corrección de nomenclatura de las ensenadas**, sin cambio de método: brazo suroeste = Atarés, brazo sur = Guasabacoa (en su cabecera desemboca el Martín Pérez), brazo este = Marimelena. Es la nomenclatura del modelo hidrodinámico (repo `Modelo-hidrodin-mico`), comprobada allí sobre la carta H.O. 307 de 1879, que sitúa el castillo de Atarés junto al brazo suroeste. Su definición en UTM 17N: al sur de N 2 558 800 y al oeste de E 363 300, Atarés si E < 362 350 − 0,25·(2 558 800 − N) y Guasabacoa en el resto; Marimelena, E > 363 600. Cambian: secc. 1 (texto de las ensenadas y de los puntos de control), secc. 19 (E1), `src/geo.py` (claves de `PUNTOS_CONTROL`: «guasabacoa» → «marimelena_sur», «atares» → «guasabacoa»; las coordenadas no cambian y el código solo usa la clave «centro»), `CONTEXTO_COWORK.md` y los nombres de `focos.csv` en `scripts/11_entrega_modelo.py`, que ahora comprueba cada nombre con la definición del modelo. Las filas anteriores de este registro no se tocan. No cambia ningún dato, umbral, máscara ni resultado | La versión 1.0 llamaba Atarés al brazo sur y Guasabacoa al brazo este | No aplica: solo nombres. Comprobado al regenerar la entrega al modelo: solo cambian `focos.csv` y el README |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
@@ -550,8 +552,8 @@ veredicto no cambian. Ficheros: `resultados/exploratorio.json` y `resultados/exp
 
 - **E1, frecuencia de detección por píxel.** Mayor en la bahía que fuera: mediana 0,010
   frente a 0,000, y percentil 90 de 0,035 frente a 0,013. Dentro de la bahía se concentra en
-  la cabecera del brazo sur, en torno al punto de control de Atarés (23,118 N, 82,338 O), y
-  en el brazo suroeste (≈ 23,120 N, 82,351–82,356 O).
+  la cabecera del brazo sur (Guasabacoa), en torno a su punto de control (23,118 N, 82,338 O),
+  y en el brazo suroeste (Atarés; ≈ 23,120 N, 82,351–82,356 O).
 - **E2, sensibilidad.** Con el criterio preregistrado (persistencia ≥ 0,10 y ≥ 5 años) hay 2
   sitios con margen 0 (los de la secc. 18, ya sin duplicado) y 0 en la bahía. Si se relaja,
   aparecen sitios dentro de la bahía que sí aguantan el margen: con ≥ 0,05 y ≥ 3 años, 14 de 27
