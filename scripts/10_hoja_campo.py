@@ -46,7 +46,8 @@ def mapa(puntos, lat, lon, agua, caja, titulo, marco=None):
 
 FICHA = """
 <div class="ficha"><h3>{p} &nbsp;·&nbsp; {la:.4f}, {lo:.4f}</h3>
-<p>Fecha ________ &nbsp; Hora de llegada ______ &nbsp; Visita nº ___ &nbsp; Nº de la foto de esta hoja ______</p>
+<p>Fecha ________ &nbsp; Hora de llegada ______ &nbsp; Visita nº (1, 2 o 3) ___ &nbsp; Nº de la foto de esta hoja ______</p>
+<p><b>Dónde estoy</b> (GPS del móvil): lat ______________ lon ______________ &nbsp; Captura de Google Maps: foto nº ______</p>
 <p><b>Acceso:</b> □ desde tierra &nbsp; □ desde el agua &nbsp; □ no accesible → ¿por qué? ____________________</p>
 <p><b>¿Llovió en los 2 días anteriores?</b> □ no &nbsp; □ poco &nbsp; □ mucho &nbsp; □ no sé</p>
 <p><b>1. ¿Hay algo que vierta agua a la bahía a menos de unos 150 m?</b> □ sí &nbsp; □ no &nbsp; □ no se puede ver<br>
@@ -54,9 +55,55 @@ Si sí: □ tubo &nbsp; □ alcantarilla o colector &nbsp; □ canal o zanja &nb
 ¿Está saliendo agua ahora? □ sí &nbsp; □ no &nbsp; □ no se ve &nbsp;&nbsp; ¿A cuántos metros del punto? _____</p>
 <p><b>2. El agua:</b> color □ normal &nbsp; □ marrón o turbia &nbsp; □ verde &nbsp; □ gris o negra &nbsp; □ otro ______<br>
 □ mancha o pluma &nbsp; □ espuma &nbsp; □ película o aceite &nbsp; □ basura flotando &nbsp; □ nada de esto<br>
+<b>Basura que tapa el agua de frente</b> (hasta ~50 m): □ ninguna &nbsp; □ poca (menos de 1 de cada 10 partes) &nbsp; □ bastante (1 a 5 de 10) &nbsp; □ mucha (más de 5 de 10)<br>
 Olor: □ ninguno &nbsp; □ a cloaca &nbsp; □ a químico o combustible &nbsp; □ otro ______</p>
 <p><b>3. Fotos</b> de la nº ______ a la nº ______ &nbsp;&nbsp; <b>Notas:</b></p>
 <div class="notas"></div></div>"""
+
+
+FILAS_EXCEL = [  # (campo, opciones de la lista desplegable o None)
+    ("Punto", None), ("Latitud, longitud", None), ("Fecha", None), ("Hora de llegada", None),
+    ("Visita nº", "1,2,3"), ("Dónde estoy: latitud, longitud (GPS del móvil)", None),
+    ("Nº de la foto de la captura de Google Maps", None), ("Nº de la foto de esta hoja", None),
+    ("Acceso", "desde tierra,desde el agua,no accesible"), ("Si no accesible, ¿por qué?", None),
+    ("¿Llovió en los 2 días anteriores?", "no,poco,mucho,no sé"),
+    ("1. ¿Hay algo que vierta agua a la bahía a menos de unos 150 m?", "sí,no,no se puede ver"),
+    ("Si sí: tipo de salida", "tubo,alcantarilla o colector,canal o zanja,río o arroyo,otro"),
+    ("Si «otro», ¿cuál?", None), ("¿Está saliendo agua ahora?", "sí,no,no se ve"),
+    ("¿A cuántos metros del punto?", None),
+    ("2. El agua: color", "normal,marrón o turbia,verde,gris o negra,otro"), ("Si «otro», ¿cuál? (color)", None),
+    ("Mancha o pluma", "☐,☒"), ("Espuma", "☐,☒"), ("Película o aceite", "☐,☒"), ("Basura flotando", "☐,☒"),
+    ("Nada de esto", "☐,☒"),
+    ("Basura que tapa el agua de frente (hasta ~50 m)",
+     "ninguna,poca (menos de 1 de 10),bastante (1 a 5 de 10),mucha (más de 5 de 10)"),
+    ("Olor", "ninguno,a cloaca,a químico o combustible,otro"), ("Si «otro», ¿cuál? (olor)", None),
+    ("3. Fotos de la nº", None), ("Fotos hasta la nº", None), ("Notas", None)]
+
+
+def fichas_excel(puntos, carpeta):
+    """Una ficha .xlsx por punto, con la misma estructura que las que usó la persona de campo
+    en la visita 1 (Campo | Respuesta, listas desplegables) y las dos filas nuevas del 26/10."""
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill
+    from openpyxl.worksheet.datavalidation import DataValidation
+    os.makedirs(carpeta, exist_ok=True)
+    for p, la, lo in puntos:
+        wb = Workbook(); ws = wb.active; ws.title = f"Ficha {p}"
+        ws["A1"] = f"Ficha de campo · {p} · {la:.4f}, {lo:.4f}"; ws["A1"].font = Font(bold=True, size=13)
+        ws.merge_cells("A1:C1")
+        for c, t in (("A4", "Campo"), ("B4", "Respuesta")):
+            ws[c] = t; ws[c].font = Font(bold=True, color="FFFFFF"); ws[c].fill = PatternFill("solid", fgColor="1F4E78")
+        for i, (campo, opciones) in enumerate(FILAS_EXCEL, start=5):
+            ws.cell(i, 1, campo).font = Font(bold=True)
+            ws.cell(i, 1).fill = PatternFill("solid", fgColor="D9E1F2")
+            if opciones:
+                dv = DataValidation(type="list", formula1=f'"{opciones}"', allow_blank=True)
+                ws.add_data_validation(dv); dv.add(ws.cell(i, 2))
+                if opciones == "☐,☒":
+                    ws.cell(i, 2, "☐")
+        ws["B5"], ws["B6"] = p, f"{la:.4f}, {lo:.4f}"
+        ws.column_dimensions["A"].width, ws.column_dimensions["B"].width = 52, 40
+        wb.save(os.path.join(carpeta, f"Ficha_{p}.xlsx"))
 
 
 def main():
@@ -92,7 +139,9 @@ alcantarillas, canales, ríos) y cómo se ve el agua ese día.</p>
 <ul>
 <li>Ve a los diez puntos y haz <b>lo mismo en todos, con el mismo cuidado</b>. Que en un punto no haya nada es un dato tan útil como encontrar algo.</li>
 <li>Mejor entre las <b>11:00 y las 13:00</b>, que es cuando pasa el satélite.</li>
-<li>Activa la ubicación de la cámara del móvil antes de empezar.</li>
+<li>Activa la <b>ubicación precisa</b> del móvil y la ubicación de la cámara antes de empezar.</li>
+<li>En cada punto, abre Google Maps, mantén pulsado el punto azul (donde estás) para ver tus coordenadas, cópialas en «Dónde estoy» y haz una <b>captura de pantalla</b>.</li>
+<li><b>Basura que tapa el agua:</b> mira el agua de frente, desde la orilla hasta unos 50 m (media cuadra). Imagina esa superficie partida en 10 trozos iguales y cuenta cuántos tapa la basura flotante. Ninguno: «ninguna»; menos de uno: «poca»; de 1 a 5: «bastante»; más de 5: «mucha». Es a ojo: no hace falta afinar más.</li>
 <li>Al llegar a cada punto, haz primero una foto de su ficha (para saber a qué punto son las fotos que siguen). Después: la orilla hacia un lado, la orilla hacia el otro, el agua de frente, y de cerca cualquier tubo, salida, mancha o espuma que veas.</li>
 <li>Recorre la orilla <b>unos 150 m a cada lado</b> del punto (una cuadra y media, más o menos). Algunos puntos están en el agua, cerca de la orilla: mira la orilla más cercana.</li>
 <li>Rellena la ficha en el momento, no después.</li>
@@ -123,6 +172,7 @@ alcantarillas, canales, ríos) y cómo se ve el agua ese día.</p>
     open(os.path.join(CAMPO, "puntos.gpx"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Vertidos-recurrentes" '
         'xmlns="http://www.topografix.com/GPX/1/1">\n' + gpx + "</gpx>\n")
+    fichas_excel(puntos, os.path.join(CAMPO, "fichas_excel"))
     pdf = os.path.abspath(os.path.join(CAMPO, "hoja_campo.pdf"))
     subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
                     f"--print-to-pdf={pdf}", pathlib.Path(os.path.abspath(ruta)).as_uri()],

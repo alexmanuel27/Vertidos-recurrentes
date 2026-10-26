@@ -12,6 +12,9 @@ import openpyxl
 from PIL import Image
 
 CAMPOS = {"Punto": "punto", "Fecha": "fecha", "Hora de llegada": "hora", "Visita nº": "visita_n_ficha",
+          "Dónde estoy: latitud, longitud (GPS del móvil)": "donde_estoy",
+          "Nº de la foto de la captura de Google Maps": "foto_captura_maps",
+          "Basura que tapa el agua de frente (hasta ~50 m)": "basura_cobertura",
           "Acceso": "acceso", "Si no accesible, ¿por qué?": "motivo_no_accesible",
           "¿Llovió en los 2 días anteriores?": "lluvia_48h",
           "1. ¿Hay algo que vierta agua a la bahía a menos de unos 150 m?": "estructura_150m",
