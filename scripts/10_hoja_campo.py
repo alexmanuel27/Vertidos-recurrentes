@@ -74,8 +74,11 @@ FILAS_EXCEL = [  # (campo, opciones de la lista desplegable o None)
     ("2. El agua: color", "normal,marrón o turbia,verde,gris o negra,otro"), ("Si «otro», ¿cuál? (color)", None),
     ("Mancha o pluma", "☐,☒"), ("Espuma", "☐,☒"), ("Película o aceite", "☐,☒"), ("Basura flotando", "☐,☒"),
     ("Nada de esto", "☐,☒"),
-    ("Basura que tapa el agua de frente (hasta ~50 m)",
-     "ninguna,poca (menos de 1 de 10),bastante (1 a 5 de 10),mucha (más de 5 de 10)"),
+    # basura que tapa el agua de frente (hasta ~50 m): una casilla por clase, se marca con ☒
+    ("Basura que tapa el agua: ninguna", "☐,☒"),
+    ("Basura que tapa el agua: poca (menos de 1 de cada 10 partes)", "☐,☒"),
+    ("Basura que tapa el agua: bastante (1 a 5 de 10)", "☐,☒"),
+    ("Basura que tapa el agua: mucha (más de 5 de 10)", "☐,☒"),
     ("Olor", "ninguno,a cloaca,a químico o combustible,otro"), ("Si «otro», ¿cuál? (olor)", None),
     ("3. Fotos de la nº", None), ("Fotos hasta la nº", None), ("Notas", None)]
 
