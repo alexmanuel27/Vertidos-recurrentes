@@ -5,6 +5,11 @@ climatologia CONGELADA (resultados/climatologia.npz) y exactamente las mismas es
 misma validez por pixel que la calcularon (src/escenas.py).
 
     python scripts/06_deteccion.py
+    VERTIDOS_PIXEL_M=10 python scripts/06_deteccion.py --v2 --productos datos/productos_10m --resultados resultados_10m
+
+Con --v2 (protocolo secc. 20.2): desempate en la supresion de no-maximos, familia
+climatologica con bandas de la bahia y del mar por separado, y analisis secundario con
+persistencia >= 0,05 y >= 3 anios (sitios_secundario.csv), que no entra en el veredicto.
 
 Escribe resultados/deteccion.json (resumen y veredicto de los criterios de la seccion 12)
 y resultados/sitios.csv (un sitio por fila, con sus pruebas). El veredicto puede ser
@@ -19,7 +24,7 @@ sys.path.insert(0, os.path.join(AQUI, "..", "src"))
 import escenas, climatologia, anomalias, persistencia, adyacencia, mascara
 
 PX = escenas.PIXEL_M
-RADIO_SITIO_PX = 4            # 80 m: incertidumbre de localizacion del pico (secc. 10)
+RADIO_SITIO_PX = int(round(80 / PX))   # 80 m: incertidumbre de localizacion del pico (secc. 10)
 COSTA_M = 400                 # superficie costera del criterio 12.4 (registro 13/10)
 
 
@@ -69,27 +74,14 @@ def anomalias_por_escena(productos, resultados):
     return d, clim, det, evs, zts, fechas, aots, lat, lon
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--productos", default="datos/productos")
-    ap.add_argument("--resultados", default="resultados")
-    a = ap.parse_args()
+SECUNDARIO = (0.05, 3)        # secc. 20.2: persistencia minima y anios minimos
 
-    d, clim, det, evs, zts, fechas, aots, lat, lon = anomalias_por_escena(a.productos,
-                                                                          a.resultados)
-    agua, bahia, dist = d["agua"], d["bahia"], d["distancia_costa_m"]
-    ft500 = d["f_tierra_500m"]
-    n = len(det)
-    print(f"[1] {n} escenas | pixeles anomalos por escena: mediana "
-          f"{np.median([x.sum() for x in det]):.0f}", flush=True)
 
-    # --- secc. 10: sitios con margen 0 -> candidatos ---
-    sitios, pers, k = persistencia.agregar_sitios(det, fechas, evs, PX, zts,
-                                                  devolver_mapa=True)
-    cand = persistencia.ranking(sitios)
-    persistencia.a_coordenadas(cand, d["x"], d["y"], lat, lon)
-    print(f"[2] sitios con alguna deteccion: {len(sitios)} | recurrentes (candidatos): "
-          f"{len(cand)}", flush=True)
+def evaluar(cand, det, evs, zts, fechas, aots, d, clim, pers, k, umbrales, desempate):
+    """Margenes (11.3a), controles (11.3b), aerosoles (11.3c) y criterios de la secc. 12
+    sobre una lista de candidatos. umbrales = None para los principales."""
+    agua, bahia, dist, ft500 = d["agua"], d["bahia"], d["distancia_costa_m"], d["f_tierra_500m"]
+    pmin, amin = umbrales or (None, None)
 
     # --- 11.3a: barrido de margenes ---
     for c in cand:
@@ -98,13 +90,13 @@ def main():
     for mg in adyacencia.MARGENES_M:
         elig = mascara.erosionar_desde_costa(agua, mg, PX)
         rec = persistencia.ranking(persistencia.agregar_sitios(
-            [x & elig for x in det], fechas, [x & elig for x in evs], PX, zts))
+            [x & elig for x in det], fechas, [x & elig for x in evs], PX, zts,
+            desempate=desempate), pmin=pmin, amin=amin)
         rec_por_margen[mg] = len(rec)
         for c in cand:
             c["sobrevive"][mg] = any(
                 np.hypot(r["fila_px"] - c["fila_px"], r["col_px"] - c["col_px"]) * PX
                 <= 80 + mg for r in rec)
-    print(f"[3] recurrentes por margen: {rec_por_margen}", flush=True)
 
     # --- 11.3b: controles emparejados ---
     ev_alguna = clim["seca"]["evaluable"] | clim["lluviosa"]["evaluable"]
@@ -140,25 +132,6 @@ def main():
         c["f_tierra_500m"] = float(ft500[f0, c0])
         c["en_bahia"] = bool(bahia[min(f0, bahia.shape[0] - 1), min(c0, bahia.shape[1] - 1)])
 
-    # --- 8.1: familia climatologica (fuente permanente), aparte ---
-    permanentes = {}
-    for est, ce in clim.items():
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", RuntimeWarning)
-            zc, _ = anomalias.anomalia_climatologica(ce["mediana"], dist, ft500,
-                                                     ce["evaluable"])
-        gr = persistencia.grupos(anomalias.detectar_permanentes(zc, ce["evaluable"]))
-        lista = []
-        for g in gr:
-            pf, pc = persistencia.pico_de_grupo(g, zc)
-            lista.append({"fila_px": pf + 0.5, "col_px": pc + 0.5, "tam_px": g["tam"],
-                          "z_c_max": round(float(zc[pf, pc]), 2),
-                          "d_costa_m": round(float(dist[pf, pc]), 1),
-                          "en_bahia": bool(bahia[pf, pc])})
-        persistencia.a_coordenadas(lista, d["x"], d["y"], lat, lon)
-        permanentes[est] = sorted(lista, key=lambda g: -g["z_c_max"])
-        print(f"[4] permanentes ({est}): {len(lista)} grupos", flush=True)
-
     # --- secc. 12: criterios de falsacion ---
     costa = agua & (dist <= COSTA_M)
     no_eval = {e: float(1 - ce["evaluable"][costa].mean()) for e, ce in clim.items()}
@@ -174,17 +147,19 @@ def main():
     if nc == 0:
         veredicto = "NO CONCLUYENTE: ningun sitio recurrente con margen 0"
     elif any(v for v in crit.values()):
-        veredicto = "METODO FRACASADO segun " + ", ".join(k for k, v in crit.items() if v)
+        veredicto = "METODO FRACASADO segun " + ", ".join(k2 for k2, v in crit.items() if v)
     else:
         veredicto = "NINGUN CRITERIO DE FRACASO SE CUMPLE"
+    return rec_por_margen, no_eval, crit, veredicto
 
-    # --- salida ---
+
+def escribir_sitios(ruta, cand):
     campos = ["rango", "lat", "lon", "este_utm", "norte_utm", "en_bahia", "d_costa_m",
               "f_tierra_500m", "persistencia", "n_detecciones", "n_ocasiones", "n_anios",
               "anios", "tam_medio_px"] + [f"sobrevive_{m}m" for m in adyacencia.MARGENES_M] + \
              ["n_controles", "persistencia_controles_mediana", "p_controles", "distinguible",
               "r_aerosol", "p_aerosol", "marcado_aerosol", "atracadero"]
-    with open(os.path.join(a.resultados, "sitios.csv"), "w", newline="") as fh:
+    with open(ruta, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=campos, extrasaction="ignore")
         w.writeheader()
         for i, c in enumerate(cand, 1):
@@ -194,6 +169,60 @@ def main():
                 fila[f"sobrevive_{m}m"] = c["sobrevive"][m]
             w.writerow({k2: (round(v, 4) if isinstance(v, float) else v)
                         for k2, v in fila.items() if k2 in campos})
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--productos", default="datos/productos")
+    ap.add_argument("--resultados", default="resultados")
+    ap.add_argument("--v2", action="store_true", help="reglas de la fase 2 (secc. 20.2)")
+    a = ap.parse_args()
+
+    d, clim, det, evs, zts, fechas, aots, lat, lon = anomalias_por_escena(a.productos,
+                                                                          a.resultados)
+    agua, bahia, dist = d["agua"], d["bahia"], d["distancia_costa_m"]
+    ft500 = d["f_tierra_500m"]
+    n = len(det)
+    print(f"[1] {n} escenas | pixeles anomalos por escena: mediana "
+          f"{np.median([x.sum() for x in det]):.0f}", flush=True)
+
+    # --- secc. 10: sitios con margen 0 -> candidatos ---
+    sitios, pers, k = persistencia.agregar_sitios(det, fechas, evs, PX, zts,
+                                                  devolver_mapa=True, desempate=a.v2)
+    cand = persistencia.ranking(sitios)
+    persistencia.a_coordenadas(cand, d["x"], d["y"], lat, lon)
+    print(f"[2] sitios con alguna deteccion: {len(sitios)} | recurrentes (candidatos): "
+          f"{len(cand)}", flush=True)
+    rec_por_margen, no_eval, crit, veredicto = evaluar(
+        cand, det, evs, zts, fechas, aots, d, clim, pers, k, None, a.v2)
+    print(f"[3] recurrentes por margen: {rec_por_margen}", flush=True)
+
+    # --- 8.1: familia climatologica (fuente permanente), aparte ---
+    # v2: bandas formadas solo por agua de la bahia, y el mar con las suyas (secc. 20.2b)
+    permanentes = {}
+    for est, ce in clim.items():
+        zonas = ([("bahia", ce["evaluable"] & bahia), ("mar", ce["evaluable"] & ~bahia)]
+                 if a.v2 else [(None, ce["evaluable"])])
+        lista = []
+        for zona, ev_z in zonas:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", RuntimeWarning)
+                zc, _ = anomalias.anomalia_climatologica(ce["mediana"], dist, ft500, ev_z)
+            for g in persistencia.grupos(anomalias.detectar_permanentes(zc, ev_z)):
+                pf, pc = persistencia.pico_de_grupo(g, zc)
+                lista.append({"fila_px": pf + 0.5, "col_px": pc + 0.5, "tam_px": g["tam"],
+                              "z_c_max": round(float(zc[pf, pc]), 2),
+                              "d_costa_m": round(float(dist[pf, pc]), 1),
+                              "en_bahia": bool(bahia[pf, pc])})
+                if zona:
+                    lista[-1]["zona_bandas"] = zona
+        persistencia.a_coordenadas(lista, d["x"], d["y"], lat, lon)
+        permanentes[est] = sorted(lista, key=lambda g: -g["z_c_max"])
+        print(f"[4] permanentes ({est}): {len(lista)} grupos", flush=True)
+
+    # --- salida ---
+    escribir_sitios(os.path.join(a.resultados, "sitios.csv"), cand)
+    nc = len(cand)
     res = {"escenas": n, "sitios_con_deteccion": len(sitios), "candidatos": nc,
            "recurrentes_por_margen_m": rec_por_margen,
            "candidatos_fuera_de_la_bahia": sum(not c["en_bahia"] for c in cand),
@@ -203,6 +232,22 @@ def main():
            "criterios_fracaso": crit, "veredicto": veredicto,
            "permanentes": permanentes,
            "pendiente": ["anisotropia (11.3d)", "anotacion de atracaderos (secc. 9)"]}
+    if a.v2:
+        # --- secc. 20.2: analisis secundario, fuera del veredicto ---
+        sec = persistencia.ranking(sitios, pmin=SECUNDARIO[0], amin=SECUNDARIO[1])
+        persistencia.a_coordenadas(sec, d["x"], d["y"], lat, lon)
+        rpm2, _, crit2, ver2 = evaluar(sec, det, evs, zts, fechas, aots, d, clim, pers, k,
+                                       SECUNDARIO, True)
+        escribir_sitios(os.path.join(a.resultados, "sitios_secundario.csv"), sec)
+        res["resolucion_m"] = PX
+        res["secundario"] = {
+            "umbrales": {"persistencia_min": SECUNDARIO[0], "anios_min": SECUNDARIO[1]},
+            "candidatos": len(sec), "recurrentes_por_margen_m": rpm2,
+            "candidatos_en_bahia": sum(c["en_bahia"] for c in sec),
+            "distinguibles_de_controles": sum(c["distinguible"] for c in sec),
+            "marcados_aerosol": sum(c["marcado_aerosol"] for c in sec),
+            "criterios_fracaso": crit2, "veredicto_informativo": ver2}
+        print(f"[5] secundario: {len(sec)} candidatos | por margen {rpm2}", flush=True)
     json.dump(res, open(os.path.join(a.resultados, "deteccion.json"), "w"), indent=1,
               default=lambda o: o.item() if hasattr(o, "item") else str(o))
     print(json.dumps({k2: v for k2, v in res.items() if k2 != "permanentes"}, indent=1,

@@ -22,12 +22,12 @@ import netCDF4
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "..", "src"))
-import anomalias
+import anomalias, geo
 
 spec = importlib.util.spec_from_file_location("deteccion", os.path.join(AQUI, "06_deteccion.py"))
 deteccion = importlib.util.module_from_spec(spec); spec.loader.exec_module(deteccion)
 
-EPSG, PX = 32617, 20.0
+EPSG, PX = 32617, geo.PIXEL_M
 REPO = "https://github.com/alexmanuel27/Vertidos-recurrentes/blob"
 ODATA = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products({})"
 OSM_ACCESO = "2026-10-17"

@@ -15,12 +15,12 @@ import matplotlib.pyplot as plt
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "..", "src"))
-import persistencia, anomalias, adyacencia, mascara
+import persistencia, anomalias, adyacencia, mascara, escenas
 
 spec = importlib.util.spec_from_file_location("deteccion", os.path.join(AQUI, "06_deteccion.py"))
 deteccion = importlib.util.module_from_spec(spec); spec.loader.exec_module(deteccion)
 
-PX = 20.0
+PX = escenas.PIXEL_M
 PMIN = (0.05, 0.075, 0.10)
 AMIN = (3, 4, 5)
 N_EV_MIN = 20

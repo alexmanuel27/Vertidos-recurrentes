@@ -1,0 +1,67 @@
+{
+ "resolucion_m": 20.0,
+ "escenas": 113,
+ "escenas_con_P72_ge_1mm": 69,
+ "evaluable": true,
+ "P72_mm_p50_p90_max": [
+  1.5,
+  13.38,
+  30.7
+ ],
+ "spearman_P72_AOT": 0.2779,
+ "era5": {
+  "celda_lat_lon": [
+   23.25,
+   -82.25
+  ],
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=23.133&longitude=-82.333&start_date=2016-01-01&end_date=2025-12-31&hourly=precipitation&models=era5&timezone=GMT&cell_selection=nearest",
+  "fecha_utc": "2026-11-13T20:31:46+00:00"
+ },
+ "sitios": [
+  {
+   "sitio": "S1",
+   "nombre": "costa al este de la bahia",
+   "rho_sitio": 0.3087,
+   "n_controles": 627,
+   "rho_controles_mediana": 0.2006,
+   "p_controles": 0.2166,
+   "ligado_a_lluvia": false
+  },
+  {
+   "sitio": "S2",
+   "nombre": "bocana",
+   "rho_sitio": 0.3009,
+   "n_controles": 1846,
+   "rho_controles_mediana": 0.2353,
+   "p_controles": 0.2929,
+   "ligado_a_lluvia": false
+  },
+  {
+   "sitio": "S3",
+   "nombre": "cabecera del brazo sur",
+   "rho_sitio": 0.0712,
+   "n_controles": 306,
+   "rho_controles_mediana": 0.2087,
+   "p_controles": 0.8893,
+   "ligado_a_lluvia": false
+  },
+  {
+   "sitio": "S4",
+   "nombre": "brazo suroeste",
+   "rho_sitio": 0.3646,
+   "n_controles": 376,
+   "rho_controles_mediana": 0.1842,
+   "p_controles": 0.0265,
+   "ligado_a_lluvia": true
+  },
+  {
+   "sitio": "S5",
+   "nombre": "orilla oeste al arrancar el brazo sur",
+   "rho_sitio": -0.0495,
+   "n_controles": 410,
+   "rho_controles_mediana": 0.175,
+   "p_controles": 0.8662,
+   "ligado_a_lluvia": false
+  }
+ ]
+}

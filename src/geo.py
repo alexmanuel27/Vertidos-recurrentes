@@ -1,4 +1,5 @@
 """Geometría: UTM/MGRS, ventana de trabajo y rejilla. Sin dependencias externas."""
+import os
 import math
 
 A_WGS84 = 6378137.0
@@ -60,7 +61,10 @@ TILE = "T17QLF"
 EPSG = 32617
 ESTE_MIN, ESTE_MAX = 361139.0, 365896.0
 NORTE_MIN, NORTE_MAX = 2556342.0, 2561392.0
-PIXEL_M = 20.0
+# Resolucion de trabajo: 20 m (secc. 1); la fase 2 corre a 10 m con VERTIDOS_PIXEL_M=10 (secc. 20.2).
+# Todo lo que el protocolo fija en metros se queda en metros; lo fijado en pixeles se deriva de aqui.
+PIXEL_M = float(os.environ.get("VERTIDOS_PIXEL_M", "20"))
+assert PIXEL_M in (10.0, 20.0), f"VERTIDOS_PIXEL_M={PIXEL_M}: solo 10 o 20"
 
 PUNTOS_CONTROL = {
     "bocana": (23.1500, -82.3490),

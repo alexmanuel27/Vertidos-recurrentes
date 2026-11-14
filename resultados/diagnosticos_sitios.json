@@ -1,0 +1,105 @@
+{
+ "fecha": "2026-11-13",
+ "resolucion_m": 20.0,
+ "osm_instantanea": "2026-11-13T20:34:28Z",
+ "sitios": [
+  {
+   "sitio": "S1",
+   "nombre": "costa al este de la bahia",
+   "E": 368770.0,
+   "N": 2563270.0,
+   "escenas_con_grupo": 13,
+   "razon_paralela_perpendicular_mediana": 1.61,
+   "razon_p25_p75": [
+    1.36,
+    2.08
+   ],
+   "pixeles": 165,
+   "spearman_zt_ftierra": 0.532,
+   "p": 1.87e-13,
+   "amplitud_escala_con_ftierra": true,
+   "candidato_de_atracadero": false,
+   "elementos_portuarios_a_80m": [],
+   "en_zona_portuaria_osm": false
+  },
+  {
+   "sitio": "S2",
+   "nombre": "bocana",
+   "E": 361810.0,
+   "N": 2561450.0,
+   "escenas_con_grupo": 17,
+   "razon_paralela_perpendicular_mediana": 0.74,
+   "razon_p25_p75": [
+    0.63,
+    1.19
+   ],
+   "pixeles": 148,
+   "spearman_zt_ftierra": -0.265,
+   "p": 0.00116,
+   "amplitud_escala_con_ftierra": false,
+   "candidato_de_atracadero": false,
+   "elementos_portuarios_a_80m": [],
+   "en_zona_portuaria_osm": false
+  },
+  {
+   "sitio": "S3",
+   "nombre": "cabecera del brazo sur",
+   "E": 362770.0,
+   "N": 2556710.0,
+   "escenas_con_grupo": 16,
+   "razon_paralela_perpendicular_mediana": 1.28,
+   "razon_p25_p75": [
+    1.06,
+    1.83
+   ],
+   "pixeles": 2395,
+   "spearman_zt_ftierra": 0.338,
+   "p": 5.54e-65,
+   "amplitud_escala_con_ftierra": true,
+   "candidato_de_atracadero": false,
+   "elementos_portuarios_a_80m": [],
+   "en_zona_portuaria_osm": false
+  },
+  {
+   "sitio": "S4",
+   "nombre": "brazo suroeste",
+   "E": 361150.0,
+   "N": 2557670.0,
+   "escenas_con_grupo": 10,
+   "razon_paralela_perpendicular_mediana": 1.07,
+   "razon_p25_p75": [
+    0.84,
+    1.52
+   ],
+   "pixeles": 1779,
+   "spearman_zt_ftierra": -0.155,
+   "p": 4.35e-11,
+   "amplitud_escala_con_ftierra": false,
+   "candidato_de_atracadero": true,
+   "elementos_portuarios_a_80m": [
+    "way/427319521 pier a 30 m",
+    "way/427319570 pier a 52 m"
+   ],
+   "en_zona_portuaria_osm": false
+  },
+  {
+   "sitio": "S5",
+   "nombre": "orilla oeste al arrancar el brazo sur",
+   "E": 362230.0,
+   "N": 2557630.0,
+   "escenas_con_grupo": 6,
+   "razon_paralela_perpendicular_mediana": 1.22,
+   "razon_p25_p75": [
+    1.01,
+    2.02
+   ],
+   "pixeles": 626,
+   "spearman_zt_ftierra": -0.403,
+   "p": 7.99e-26,
+   "amplitud_escala_con_ftierra": false,
+   "candidato_de_atracadero": false,
+   "elementos_portuarios_a_80m": [],
+   "en_zona_portuaria_osm": false
+  }
+ ]
+}

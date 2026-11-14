@@ -25,12 +25,13 @@ PATRONES = {
     "swir2":              [r"^rhos_2[12]\d{2}$"],
     "verde":              [r"^rhos_5[56]\d$"],                        # B3
     "nir":                [r"^rhos_83\d$"],                           # B8
+    "rojo":               [r"^rhos_66\d$"],                           # B4: comprobacion del rojo (20.2)
     "banderas":           [r"^l2_flags$"],
 }
 
 AJUSTES = {
     "atmospheric_correction": "dark_spectrum",
-    "s2_target_res": 20,             # protocolo seccion 1. El defecto de ACOLITE es 10.
+    "s2_target_res": int(geo.PIXEL_M),  # secc. 1 (20 m) y 20.2 (10 m). El defecto de ACOLITE es 10.
     "dsf_aot_estimate": "fixed",     # por escena: 5 km es poco para estimar por baldosa
     "dsf_residual_glint_correction": True,
     # OJO: tiene que ser una LISTA. ACOLITE hace `for par in l2w_parameters`, asi que

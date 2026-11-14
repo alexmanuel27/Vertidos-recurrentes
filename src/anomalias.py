@@ -7,10 +7,12 @@ tanto se cancelan en la anomalia espacial.
 import numpy as np
 from scipy import ndimage
 
+import geo
+
 Z_T_MIN = 3.5
 Z_S_MIN = 3.0
 Z_C_MIN = 3.5
-DILATACION_BUQUE_PX = 2
+DILATACION_BUQUE_PX = int(round(40 / geo.PIXEL_M))   # 40 m: 2 px a 20 m, 4 a 10 m
 ANCHO_BANDA_M = 20.0
 TOL_F_TIERRA = 0.10
 

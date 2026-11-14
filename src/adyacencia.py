@@ -6,6 +6,8 @@ objeto de estudio): se mide, y se somete a controles que pueden falsar el result
 import numpy as np
 from scipy.optimize import curve_fit
 
+import geo
+
 MARGENES_M = (0, 20, 40, 60, 100, 200, 400)   # 11.3a, ampliado el 16/09
 
 
@@ -66,7 +68,8 @@ def umbral_robusto(residuo, agua, k=6.0):
 
 
 def controles_emparejados(candidatos, dist, f_tierra, agua, evaluable,
-                          tol_d=20.0, tol_f=0.05, dist_min_px=10):
+                          tol_d=20.0, tol_f=0.05,
+                          dist_min_px=int(round(200 / geo.PIXEL_M))):
     """Test de falsacion principal (protocolo 11.3b; tolerancias del registro 13/10).
 
     Para cada candidato, TODOS los pixeles evaluables con la misma distancia a costa

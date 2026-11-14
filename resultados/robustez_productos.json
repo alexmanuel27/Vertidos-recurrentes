@@ -1,0 +1,188 @@
+{
+ "escenas": 113,
+ "productos": {
+  "turbidez_dogliotti": {
+   "recurrentes_margen_0": [
+    {
+     "este_utm": 368760.0,
+     "norte_utm": 2563260.0,
+     "persistencia": 0.1264,
+     "n_anios": 5
+    },
+    {
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "persistencia": 0.1226,
+     "n_anios": 7
+    },
+    {
+     "este_utm": 361800.0,
+     "norte_utm": 2561420.0,
+     "persistencia": 0.1226,
+     "n_anios": 6
+    }
+   ],
+   "candidatos": [
+    {
+     "rango": 1,
+     "este_utm": 368760.0,
+     "norte_utm": 2563260.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1264,
+     "sospechoso_secc4": true
+    },
+    {
+     "rango": 2,
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1226,
+     "sospechoso_secc4": false
+    },
+    {
+     "rango": 3,
+     "este_utm": 361800.0,
+     "norte_utm": 2561420.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1226,
+     "sospechoso_secc4": false
+    }
+   ],
+   "focos": [
+    {
+     "sitio": "S3",
+     "nombre": "cabecera del brazo sur",
+     "frecuencia_E1": 0.0244,
+     "z_c_max_80m_seca": 7.06,
+     "z_c_max_80m_lluviosa": 4.26
+    },
+    {
+     "sitio": "S4",
+     "nombre": "brazo suroeste",
+     "frecuencia_E1": 0.0316,
+     "z_c_max_80m_seca": 6.24,
+     "z_c_max_80m_lluviosa": 6.2
+    },
+    {
+     "sitio": "S5",
+     "nombre": "orilla oeste al arrancar el brazo sur",
+     "frecuencia_E1": 0.0106,
+     "z_c_max_80m_seca": 11.93,
+     "z_c_max_80m_lluviosa": 9.26
+    }
+   ]
+  },
+  "turbidez_nechad": {
+   "recurrentes_margen_0": [
+    {
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "persistencia": 0.1226,
+     "n_anios": 7
+    }
+   ],
+   "candidatos": [
+    {
+     "rango": 1,
+     "este_utm": 368760.0,
+     "norte_utm": 2563260.0,
+     "recurrente_a_80m": false,
+     "persistencia_celda": 0.0116
+    },
+    {
+     "rango": 2,
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1226
+    },
+    {
+     "rango": 3,
+     "este_utm": 361800.0,
+     "norte_utm": 2561420.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1132
+    }
+   ],
+   "focos": [
+    {
+     "sitio": "S3",
+     "nombre": "cabecera del brazo sur",
+     "frecuencia_E1": 0.0244,
+     "z_c_max_80m_seca": 7.08,
+     "z_c_max_80m_lluviosa": 4.29
+    },
+    {
+     "sitio": "S4",
+     "nombre": "brazo suroeste",
+     "frecuencia_E1": 0.0316,
+     "z_c_max_80m_seca": 6.23,
+     "z_c_max_80m_lluviosa": 6.09
+    },
+    {
+     "sitio": "S5",
+     "nombre": "orilla oeste al arrancar el brazo sur",
+     "frecuencia_E1": 0.0106,
+     "z_c_max_80m_seca": 12.13,
+     "z_c_max_80m_lluviosa": 9.1
+    }
+   ]
+  },
+  "spm": {
+   "recurrentes_margen_0": [
+    {
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "persistencia": 0.1226,
+     "n_anios": 7
+    }
+   ],
+   "candidatos": [
+    {
+     "rango": 1,
+     "este_utm": 368760.0,
+     "norte_utm": 2563260.0,
+     "recurrente_a_80m": false,
+     "persistencia_celda": 0.0116
+    },
+    {
+     "rango": 2,
+     "este_utm": 361800.0,
+     "norte_utm": 2561460.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1226
+    },
+    {
+     "rango": 3,
+     "este_utm": 361800.0,
+     "norte_utm": 2561420.0,
+     "recurrente_a_80m": true,
+     "persistencia_celda": 0.1132
+    }
+   ],
+   "focos": [
+    {
+     "sitio": "S3",
+     "nombre": "cabecera del brazo sur",
+     "frecuencia_E1": 0.0244,
+     "z_c_max_80m_seca": 7.06,
+     "z_c_max_80m_lluviosa": 4.23
+    },
+    {
+     "sitio": "S4",
+     "nombre": "brazo suroeste",
+     "frecuencia_E1": 0.0316,
+     "z_c_max_80m_seca": 6.37,
+     "z_c_max_80m_lluviosa": 6.11
+    },
+    {
+     "sitio": "S5",
+     "nombre": "orilla oeste al arrancar el brazo sur",
+     "frecuencia_E1": 0.0106,
+     "z_c_max_80m_seca": 12.08,
+     "z_c_max_80m_lluviosa": 8.98
+    }
+   ]
+  }
+ }
+}

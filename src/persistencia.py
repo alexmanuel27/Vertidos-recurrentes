@@ -6,7 +6,9 @@ import numpy as np
 from collections import defaultdict
 from scipy import ndimage
 
-MIN_PX_GRUPO = 4              # 4 px a 20 m = 1600 m2
+import geo
+
+MIN_PX_GRUPO = int(round(1600 / geo.PIXEL_M ** 2))   # 1600 m2: 4 px a 20 m, 16 a 10 m
 REJILLA_SITIO_M = 40.0
 RADIO_FUSION_CELDAS = 2       # 80 m: incertidumbre de localizacion del pico
 PERSISTENCIA_MIN = 0.10
@@ -127,7 +129,12 @@ def agregar_sitios(detecciones, fechas, evaluable_por_escena, pixel_m, z_por_esc
     return sitios
 
 
-def ranking(sitios, solo_recurrentes=True):
+def ranking(sitios, solo_recurrentes=True, pmin=None, amin=None):
+    """Sitios recurrentes. Con pmin/amin, umbrales distintos de los principales
+    (analisis secundario de la secc. 20.2: 0,05 y 3 anios)."""
+    if pmin is not None:
+        return [s for s in sitios if np.isfinite(s["persistencia"])
+                and s["persistencia"] >= pmin and s["n_anios"] >= amin]
     return [s for s in sitios if s["recurrente"]] if solo_recurrentes else sitios
 
 

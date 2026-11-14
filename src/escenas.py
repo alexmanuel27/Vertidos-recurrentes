@@ -16,7 +16,7 @@ import adyacencia
 import anomalias
 import geo
 
-PIXEL_M = 20.0
+PIXEL_M = geo.PIXEL_M
 # Bits de l2_flags: 0 no-agua SWIR, 1 cirros, 2 TOA alto, 3 rho negativa, 4 fuera de escena,
 # 5 pixel mixto. Nunca 0 ni 5: son la orilla y el agua muy turbia (CONTEXTO, lecciones).
 BITS_QC = (1 << 1) | (1 << 2) | (1 << 3) | (1 << 4)

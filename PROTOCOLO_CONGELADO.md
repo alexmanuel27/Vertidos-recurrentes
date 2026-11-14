@@ -445,6 +445,11 @@ aquí:
 | 2026-10-17 | **Puntos de campo calculados** (20.5), con `scripts/08_controles_campo.py` y `scripts/09_fuentes_osm.py`; salida en `resultados/campo/` (`clave.csv`, `puntos.csv` para la persona de campo, `reservas.csv`, `campo.json`, `fuentes_osm.csv`, `osm_overpass.json`). Detalles que 20.5 no fijaba: (a) cada sitio se sitúa en el píxel de agua más cercano a su coordenada (a 1–21 m); (b) la mediana de E1 se toma sobre los píxeles de su zona con frecuencia definida (≥ 20 ocasiones): 0,010 en la bahía, 0 fuera; (c) los grupos E3 de las dos estaciones se excluyen con su extensión completa (243 px), no solo su pico; (d) un control no puede repetir el píxel de otro; (e) sorteo en el orden S1–S5 y después barajado de los diez puntos, todo con la semilla 20261013; (f) la revisión OSM consulta `waterway` = river/stream/canal/drain/ditch/outfall y `man_made` = outfall/pipeline en 23,09–23,22 N, 82,41–82,26 O (instantánea 2026-10-17T18:14:50Z) y mide la distancia a la geometría completa de cada elemento. Resultado OSM: solo S5 tiene una fuente conocida a ≤ 150 m (río Luyanó, 118 m); S3 queda a 329 m del Martín Pérez; ningún control tiene fuente a ≤ 150 m. Falta la cartografía publicada. Advertencia: los tres controles de la bahía caen en su mitad norte, porque la frecuencia E1 alta está en la sur; la persona de campo podría intuir los roles por la geografía, y las coordenadas de los sitios ya son públicas en 20.5. El ciego depende de no darle ni el repositorio ni este documento. El criterio principal (hay estructura o no) es objetivo Corregido el mismo día, antes de entregar nada: `puntos.csv` daba 5 decimales y los sitios, escritos con 4, salían con un cero final que los delataba; ahora todos van con 4 (~11 m). Hoja de campo imprimible y GPX con `scripts/10_hoja_campo.py`, que solo lee `puntos.csv` | Fijar la clave antes de la primera visita, como exige 20.5 | **Sí** — usa E1 y E3 tal como dice 20.5. Ningún dato de campo, ni de lluvia, ni a 10 m. Ninguna regla cambió al ver los puntos |
 | 2026-10-21 | **Corrección de nomenclatura de las ensenadas**, sin cambio de método: brazo suroeste = Atarés, brazo sur = Guasabacoa (en su cabecera desemboca el Martín Pérez), brazo este = Marimelena. Es la nomenclatura del modelo hidrodinámico (repo `Modelo-hidrodin-mico`), comprobada allí sobre la carta H.O. 307 de 1879, que sitúa el castillo de Atarés junto al brazo suroeste. Su definición en UTM 17N: al sur de N 2 558 800 y al oeste de E 363 300, Atarés si E < 362 350 − 0,25·(2 558 800 − N) y Guasabacoa en el resto; Marimelena, E > 363 600. Cambian: secc. 1 (texto de las ensenadas y de los puntos de control), secc. 19 (E1), `src/geo.py` (claves de `PUNTOS_CONTROL`: «guasabacoa» → «marimelena_sur», «atares» → «guasabacoa»; las coordenadas no cambian y el código solo usa la clave «centro»), `CONTEXTO_COWORK.md` y los nombres de `focos.csv` en `scripts/11_entrega_modelo.py`, que ahora comprueba cada nombre con la definición del modelo. Las filas anteriores de este registro no se tocan. No cambia ningún dato, umbral, máscara ni resultado | La versión 1.0 llamaba Atarés al brazo sur y Guasabacoa al brazo este | No aplica: solo nombres. Comprobado al regenerar la entrega al modelo: solo cambian `focos.csv` y el README |
 | 2026-10-26 | **Ficha de campo ampliada** para las visitas que faltan (20.5), sin tocar el criterio de positivo ni la evaluación: (a) «Dónde estoy», la posición del observador copiada del GPS del móvil, más una captura de Google Maps con el punto azul; (b) «Basura que tapa el agua de frente», estimación visual del agua hasta ~50 m de la orilla en cuatro clases: ninguna, poca (< 1 de cada 10 partes), bastante (1–5 de 10) y mucha (> 5 de 10). Se generan también fichas .xlsx por punto con la estructura que ya usaba la persona de campo (`resultados/campo/fichas_excel/`) | (a) En la visita 1 las fotos llegaron primero sin metadatos y, ya originales, el GPS de P05 resultó inutilizable (posiciones a 1,2–2,8 km del punto que saltan 2 km en 26 s, 6 de 17 en el agua). (b) En P05 y P06 hay grandes acumulaciones de basura flotante, que puede subir la reflectancia y leerse como turbidez: se registra como posible factor de confusión, para describirlo, no para decidir | **Sí** — después de ver la visita 1 (P05, P06 y P08). No cambia qué cuenta como positivo ni cómo se evalúa |
+| 2026-11-13 | **Código de la fase 2 (20.3)**. La resolución se elige con la variable de entorno `VERTIDOS_PIXEL_M` (20 por defecto, 10 para la fase 2), y de ella salen `s2_target_res` y los parámetros fijados en píxeles, con la conversión de la tabla de 20.2: dilatación de buques, tamaño mínimo de grupo, distancia control–candidato y radio de 80 m. `scripts/06_deteccion.py --v2` activa el desempate, la familia climatológica con bandas de la bahía y del mar por separado y el análisis secundario (persistencia ≥ 0,05 y ≥ 3 años, en `sitios_secundario.csv`, fuera del veredicto). Las 186 fechas están en `resultados/fase2_productos_10m.txt`. La exportación guarda además ρ(665) (`rojo`), y `scripts/13_comprobar_rojo.py` hace la comprobación del rojo sobre las primeras escenas. Comprobado: a 20 m, `deteccion.json`, `sitios.csv`, `exploratorio.json` y `exploratorio.png` salen idénticos byte a byte, y también los ficheros de la entrega al modelo salvo `anomalias.nc`, que lleva la fecha en su historial. `tests/test_resolucion.py` comprueba los parámetros a 10 y 20 m y que las detecciones sintéticas duplicadas a 10 m dan los mismos sitios | Preparar la cadena a 10 m sin tocar la de 20 m | No a 10 m: ningún dato a 10 m. Sí a 20 m (secc. 18 y 19) |
+| 2026-11-13 | **Detalles del test de lluvia (20.4)**, fijados en el código antes de ejecutarlo (`scripts/14_lluvia.py`). (a) ERA5 horario bajado de la API de archivo de Open-Meteo (`models=era5`), porque la de Copernicus pide credenciales; con `cell_selection=nearest` da la celda de 23,25 N 82,25 O, la que contiene el centro de la bahía. (b) Cada valor horario es la suma de la hora anterior; P72 es la suma de las 72 horas que terminan en la última hora entera antes de la adquisición. (c) Sitios: los cinco de campo, en el píxel de agua más cercano. (d) Controles: `adyacencia.controles_emparejados`, que excluye 200 m alrededor de los cinco sitios | Hacer reproducible el test | **Sí**, a 20 m: después de ver las secc. 18 y 19. El dato de lluvia es nuevo |
+| 2026-11-13 | **Diagnósticos de sitio pendientes** (`scripts/15_diagnosticos_sitios.py`), definidos antes de calcularlos y solo descriptivos. Anisotropía (11.3d): razón de extensión paralela/perpendicular a la costa de los grupos de detección a ≤ 80 m del sitio (mediana sobre escenas), y Spearman entre z_t y `f_tierra(500 m)` sobre esos píxeles; se marca «escala con f_tierra» si ρ > 0 y p < 0,05. Atracaderos (secc. 9): OpenStreetMap `man_made=pier/quay/breakwater`, `waterway=dock` y `seamark:type=berth/mooring` a ≤ 80 m; `landuse=port` aparte. Fuentes publicadas (20.5): `resultados/campo/fuentes_publicadas.md` | Cerrar los pendientes de la secc. 18 | **Sí**, después de ver las secc. 18 y 19 |
+| 2026-11-13 | **Prueba a 10 m con dos escenas y comprobación del rojo (paso 4 de 20.7)**, con los dos L1C del piloto que seguían en disco y están en la lista de 186 (2020-01-19 y 2020-11-29), por el bucle normal (`VERTIDOS_PIXEL_M=10`, salida en `datos/productos_10m`). (a) Rojo: el 0,04 % y el 0,01 % del agua válida de la bahía tienen ρ(665) ≥ 0,05, por debajo del 1 %, así que **se queda el «blended»**, como fija 20.2. (b) La rejilla real a 10 m es de **1241 × 1229** píxeles (bordes E 356 620–369 030 y N 2 555 160–2 567 450), no 1242 × 1228 como dice 20.2: ACOLITE alinea el recorte a su propia rejilla. No cambia nada, porque todo se calcula sobre las `x`, `y` de cada escena. (c) Hallazgo, sin cambio de método: el AOT de DSF cambia con la resolución (2020-11-29: 0,0045 a 20 m y 0,028 a 10 m), porque los píxeles más oscuros no son los mismos. La repetición a 10 m cambia también la corrección atmosférica, no solo el tamaño del píxel, y así se dirá. (d) ACOLITE tarda unos 4 min por producto a 10 m y cada `.npz` ocupa 31 MB (unos 5,8 GB para las 186 fechas) | Comprobar la cadena a 10 m de extremo a extremo antes del bucle | No a 10 m: no se calculó ninguna anomalía |
+| 2026-11-13 | **Comprobación de robustez entre productos (secc. 4)**, que no se había hecho (`scripts/16_robustez_productos.py`, salida en `resultados/robustez_productos.json`). Para la turbidez y el SPM de Nechad se calcula una climatología propia sobre las mismas 113 escenas y la misma validez por píxel, y se repite la detección. Un candidato preregistrado «aparece» en un producto si en ese producto hay un sitio recurrente a ≤ 80 m. De los focos exploratorios se informan la frecuencia E1 y el z_c (bandas de la bahía) a ≤ 80 m. Autocomprobación superada: con Dogliotti salen la climatología y los sitios congelados. Figuras del artículo en inglés con `scripts/17_figuras_articulo.py` | Cumplir la secc. 4, que el manuscrito prometía | **Sí**, después de ver las secc. 18 y 19 |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
@@ -785,3 +790,50 @@ sha256. Es descriptivo y no lleva criterio de éxito.
 6. Climatología a 10 m y su commit.
 7. Detección, lluvia y mapa.
 8. El campo va en paralelo, desde el paso 2.
+
+## 21. Resultados a 20 m del 13/11/2026: lluvia, anisotropía, atracaderos y fuentes publicadas
+
+Descriptivos: no cambian el veredicto de la secc. 18. Ficheros: `resultados/lluvia_20m.json`,
+`resultados/lluvia_p72_20m.csv` y `resultados/diagnosticos_sitios.json`.
+
+**Lluvia (20.4).** El test es evaluable: 69 de las 113 escenas tienen P72 ≥ 1 mm (mediana 1,5 mm,
+p90 13,4 mm, máximo 30,7 mm). La lluvia se correlaciona con el AOT (Spearman 0,28): después de
+llover la atmósfera cambia. Sitios y controles comparten ese efecto, y por eso se comparan entre sí.
+
+| Sitio | ρ (P72, z_t máx.) | Controles: n y mediana de ρ | p frente a controles | Ligado a la lluvia |
+|---|---|---|---|---|
+| S1, costa al este | 0,31 | 627; 0,20 | 0,22 | no |
+| S2, bocana | 0,30 | 1846; 0,24 | 0,29 | no |
+| S3, cabecera del brazo sur (Guasabacoa) | 0,07 | 306; 0,21 | 0,89 | no |
+| S4, brazo suroeste (Atarés) | 0,36 | 376; 0,18 | **0,027** | **sí** |
+| S5, orilla oeste del brazo sur (Guasabacoa) | −0,05 | 410; 0,18 | 0,87 | no |
+
+Toda la costa se enciende algo más después de llover (ρ de los controles ≈ 0,2). Solo S4 lo hace
+más que sus controles. Con cinco pruebas, uno de cinco con p < 0,05 puede salir por azar
+(se esperan 0,25 falsos positivos).
+
+**Anisotropía (11.3d) y atracaderos (secc. 9).**
+
+| Sitio | Escenas con grupo | Razón paralela/perpendicular (mediana) | ρ(z_t, f_tierra) | Escala con f_tierra | Atracadero (OSM a ≤ 80 m) |
+|---|---|---|---|---|---|
+| S1 | 13 | 1,61 | 0,53 | **sí** | no |
+| S2 | 17 | 0,74 | −0,27 | no | no |
+| S3 | 16 | 1,28 | 0,34 | **sí** | no |
+| S4 | 10 | 1,07 | −0,16 | no | **sí** (dos muelles a 30 y 52 m) |
+| S5 | 6 | 1,22 | −0,40 | no | no |
+
+En S1 y S3 la amplitud crece donde hay más tierra alrededor, que es la firma de la adyacencia. S4
+es candidato de atracadero, igual que en las fotos de campo de P06 (muelles y tuberías a 72–123 m).
+
+**Fuentes publicadas.** Dos fuentes, sin coordenadas ni DOI (`resultados/campo/fuentes_publicadas.md`).
+Ríos Luyanó y Martín Pérez a Guasabacoa (S3, S5), drenes directos a Atarés (S4) y Arroyo
+Tadeo a Marimelena.
+
+**Robustez entre productos (secc. 4).** El candidato de la costa al este (S1) solo es recurrente
+con Dogliotti: con la turbidez y el SPM de Nechad su celda baja a una persistencia de 0,012.
+**Es sospechoso** según la regla de la secc. 4, y además su amplitud crece con la fracción de
+tierra (arriba). El de la bocana (S2) es recurrente con los tres productos. En los focos
+exploratorios de la bahía los tres productos dan la misma frecuencia E1 y z_c con diferencias
+de 0,3 como mucho. Pero eso prueba poco: dentro de la bahía Dogliotti usa solo el rojo, y los
+dos productos de Nechad salen de esa misma banda. La comprobación solo discrimina donde
+Dogliotti pasa al infrarrojo cercano.
