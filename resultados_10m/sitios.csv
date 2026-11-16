@@ -1,0 +1,2 @@
+rango,lat,lon,este_utm,norte_utm,en_bahia,d_costa_m,f_tierra_500m,persistencia,n_detecciones,n_ocasiones,n_anios,anios,tam_medio_px,sobrevive_0m,sobrevive_20m,sobrevive_40m,sobrevive_60m,sobrevive_100m,sobrevive_200m,sobrevive_400m,n_controles,persistencia_controles_mediana,p_controles,distinguible,r_aerosol,p_aerosol,marcado_aerosol,atracadero
+1,23.1731,-82.2829,368680.0,2563270.0,False,28.2843,0.4491,0.1667,12,72,6,2018 2019 2021 2022 2024 2025,147.5,True,False,False,False,False,False,False,661,0.0,0.0015,True,0.1081,0.325,False,sin verificar

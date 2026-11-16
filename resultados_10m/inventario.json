@@ -1,0 +1,211 @@
+{
+ "advertencia": "EXPLORATORIO, definido despues de ver los resultados",
+ "focos_20m_a_10m": {
+  "S1": {
+   "nombre": "costa al este de la bahia",
+   "dist_m": {
+    "recurrente_preregistrado": 91,
+    "recurrente_secundario": 83,
+    "permanente_zc": 43
+   },
+   "reaparece_80m": [
+    "permanente_zc"
+   ]
+  },
+  "S2": {
+   "nombre": "bocana",
+   "dist_m": {
+    "recurrente_preregistrado": 7106,
+    "recurrente_secundario": 52,
+    "permanente_zc": 57
+   },
+   "reaparece_80m": [
+    "recurrente_secundario",
+    "permanente_zc"
+   ]
+  },
+  "S3": {
+   "nombre": "cabecera del brazo sur",
+   "dist_m": {
+    "recurrente_preregistrado": 8826,
+    "recurrente_secundario": 338,
+    "permanente_zc": 12
+   },
+   "reaparece_80m": [
+    "permanente_zc"
+   ]
+  },
+  "S4": {
+   "nombre": "brazo suroeste",
+   "dist_m": {
+    "recurrente_preregistrado": 9383,
+    "recurrente_secundario": 159,
+    "permanente_zc": 56
+   },
+   "reaparece_80m": [
+    "permanente_zc"
+   ]
+  },
+  "S5": {
+   "nombre": "orilla oeste al arrancar el brazo sur",
+   "dist_m": {
+    "recurrente_preregistrado": 8573,
+    "recurrente_secundario": 406,
+    "permanente_zc": 18
+   },
+   "reaparece_80m": [
+    "permanente_zc"
+   ]
+  }
+ },
+ "gradiente_FNU": {
+  "20m": {
+   "seca": {
+    "atares": {
+     "todos": 2.48,
+     "a_100m_o_mas": 2.48,
+     "n_px": 1413
+    },
+    "guasabacoa": {
+     "todos": 2.39,
+     "a_100m_o_mas": 2.4,
+     "n_px": 3092
+    },
+    "marimelena": {
+     "todos": 2.0,
+     "a_100m_o_mas": 2.03,
+     "n_px": 1216
+    },
+    "bahia_centro_y_canal": {
+     "todos": 1.99,
+     "a_100m_o_mas": 2.06,
+     "n_px": 4603
+    },
+    "mar": {
+     "todos": 1.26,
+     "a_100m_o_mas": 1.26,
+     "n_px": 179831
+    }
+   },
+   "lluviosa": {
+    "atares": {
+     "todos": 2.64,
+     "a_100m_o_mas": 2.72,
+     "n_px": 1379
+    },
+    "guasabacoa": {
+     "todos": 2.72,
+     "a_100m_o_mas": 2.73,
+     "n_px": 3029
+    },
+    "marimelena": {
+     "todos": 2.59,
+     "a_100m_o_mas": 2.6,
+     "n_px": 1201
+    },
+    "bahia_centro_y_canal": {
+     "todos": 2.49,
+     "a_100m_o_mas": 2.54,
+     "n_px": 4545
+    },
+    "mar": {
+     "todos": 1.81,
+     "a_100m_o_mas": 1.81,
+     "n_px": 177739
+    }
+   }
+  },
+  "10m": {
+   "seca": {
+    "atares": {
+     "todos": 2.52,
+     "a_100m_o_mas": 2.55,
+     "n_px": 5441
+    },
+    "guasabacoa": {
+     "todos": 2.41,
+     "a_100m_o_mas": 2.43,
+     "n_px": 12000
+    },
+    "marimelena": {
+     "todos": 2.01,
+     "a_100m_o_mas": 2.05,
+     "n_px": 4516
+    },
+    "bahia_centro_y_canal": {
+     "todos": 2.0,
+     "a_100m_o_mas": 2.08,
+     "n_px": 17947
+    },
+    "mar": {
+     "todos": 1.11,
+     "a_100m_o_mas": 1.11,
+     "n_px": 718267
+    }
+   },
+   "lluviosa": {
+    "atares": {
+     "todos": 2.9,
+     "a_100m_o_mas": 2.98,
+     "n_px": 5603
+    },
+    "guasabacoa": {
+     "todos": 3.1,
+     "a_100m_o_mas": 3.11,
+     "n_px": 11901
+    },
+    "marimelena": {
+     "todos": 2.88,
+     "a_100m_o_mas": 2.85,
+     "n_px": 4841
+    },
+    "bahia_centro_y_canal": {
+     "todos": 2.73,
+     "a_100m_o_mas": 2.77,
+     "n_px": 18160
+    },
+    "mar": {
+     "todos": 1.94,
+     "a_100m_o_mas": 1.94,
+     "n_px": 676094
+    }
+   }
+  }
+ },
+ "lluvia_rho_controles_mediana": {
+  "20": {
+   "S1": 0.2006,
+   "S2": 0.2353,
+   "S3": 0.2087,
+   "S4": 0.1842,
+   "S5": 0.175
+  },
+  "10": {
+   "S1": 0.1926,
+   "S2": 0.2228,
+   "S3": 0.2435,
+   "S4": 0.1425,
+   "S5": 0.1383
+  }
+ },
+ "lluvia_sitios_ligados": {
+  "20": [
+   "S4"
+  ],
+  "10": []
+ },
+ "adyacencia_L_mediana": {
+  "20": {
+   "m": 45.2,
+   "px": 2.26
+  },
+  "10": {
+   "m": 28.4,
+   "px": 2.84
+  }
+ },
+ "escenas_aceptadas": {
+  "20": 113,
+  "10": 85
+ }
+}

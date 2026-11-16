@@ -39,7 +39,7 @@ def main(ruta_zip):
     agua = np.load("resultados/climatologia.npz")["agua"]
     with np.load(sorted(glob.glob("datos/productos/*.npz"))[0]) as g:
         lat, lon = g["lat"], g["lon"]
-    punto_de = lambda n: "P" + n.split("Punto")[1].split("/")[0].strip()
+    punto_de = lambda n: "P" + n.split("Punto")[1].split("/")[0].strip().zfill(2)
     fotos = []
     for i in sorted(z.infolist(), key=lambda i: i.filename):
         if not i.filename.lower().endswith((".jpg", ".jpeg")):

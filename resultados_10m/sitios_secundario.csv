@@ -1,0 +1,15 @@
+rango,lat,lon,este_utm,norte_utm,en_bahia,d_costa_m,f_tierra_500m,persistencia,n_detecciones,n_ocasiones,n_anios,anios,tam_medio_px,sobrevive_0m,sobrevive_20m,sobrevive_40m,sobrevive_60m,sobrevive_100m,sobrevive_200m,sobrevive_400m,n_controles,persistencia_controles_mediana,p_controles,distinguible,r_aerosol,p_aerosol,marcado_aerosol,atracadero
+1,23.1731,-82.2829,368680.0,2563270.0,False,28.2843,0.4491,0.1667,12,72,6,2018 2019 2021 2022 2024 2025,147.5,True,False,False,False,False,False,False,569,0.0,0.0018,True,0.1081,0.325,False,sin verificar
+2,23.1563,-82.3504,361760.0,2561470.0,False,90.0,0.4054,0.0988,8,81,3,2019 2020 2025,nan,True,True,True,True,False,False,False,757,0.0122,0.0013,True,0.1037,0.345,False,sin verificar
+3,23.116,-82.3382,362960.0,2556990.0,True,82.4621,0.5331,0.0897,7,78,5,2018 2021 2023 2024 2025,26.0,True,True,True,True,True,False,False,158,0.0,0.0063,True,-0.2163,0.0468,False,sin verificar
+4,23.1167,-82.3402,362760.0,2557070.0,True,231.9483,0.4363,0.0769,6,78,4,2018 2023 2024 2025,nan,True,True,True,True,True,False,False,0,nan,1.0,False,0.0307,0.7804,False,sin verificar
+5,23.1209,-82.357,361040.0,2557550.0,False,86.0233,0.7039,0.075,6,80,5,2017 2018 2021 2022 2024,nan,True,True,True,True,False,False,False,96,0.006,0.0103,True,0.1252,0.2534,False,sin verificar
+6,23.1263,-82.3536,361400.0,2558150.0,True,14.1421,0.5103,0.0641,5,78,4,2017 2020 2022 2024,nan,True,True,True,False,False,False,False,302,0.0,0.0033,True,0.0014,0.9898,False,sin verificar
+7,23.1374,-82.3298,363840.0,2559350.0,True,63.2456,0.2841,0.0602,5,83,4,2018 2020 2023 2025,18.0,True,True,True,False,False,False,False,178,0.0,0.0056,True,0.0569,0.6047,False,sin verificar
+8,23.1322,-82.3427,362520.0,2558790.0,True,430.1163,0.0186,0.0595,5,84,4,2019 2020 2022 2023,nan,True,True,True,True,True,True,False,703,0.0,0.0014,True,0.0794,0.4703,False,sin verificar
+9,23.2023,-82.2961,367360.0,2566510.0,False,3503.8264,0.0,0.058,4,69,3,2018 2024 2025,nan,True,True,True,True,True,True,True,601,0.0,0.0017,True,0.1148,0.2954,False,sin verificar
+10,23.1421,-82.3705,359680.0,2559910.0,False,22.3607,0.4997,0.0571,4,70,4,2018 2019 2020 2025,nan,True,True,True,True,False,False,False,413,0.0,0.0024,True,0.17,0.1199,False,sin verificar
+11,23.168,-82.2942,367520.0,2562710.0,False,58.3095,0.4139,0.0548,4,73,4,2018 2019 2024 2025,nan,True,True,True,True,False,False,False,790,0.012,0.0013,True,0.0949,0.3874,False,sin verificar
+12,23.1219,-82.3582,360920.0,2557670.0,False,10.0,0.7383,0.0513,4,78,3,2018 2019 2021,nan,True,True,True,False,False,False,False,53,0.0,0.0185,True,-0.1014,0.3559,False,sin verificar
+13,23.1402,-82.3291,363920.0,2559670.0,True,72.111,0.524,0.0506,4,79,4,2018 2019 2023 2024,nan,True,False,False,False,False,False,False,211,0.0,0.0047,True,-0.0256,0.8162,False,sin verificar
+14,23.1192,-82.3426,362520.0,2557350.0,True,117.047,0.4228,0.0506,4,79,3,2019 2022 2025,nan,True,True,False,False,True,False,False,396,0.012,0.0025,True,-0.0254,0.8172,False,sin verificar

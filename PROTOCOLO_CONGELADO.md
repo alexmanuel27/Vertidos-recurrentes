@@ -450,6 +450,8 @@ aquí:
 | 2026-11-13 | **Diagnósticos de sitio pendientes** (`scripts/15_diagnosticos_sitios.py`), definidos antes de calcularlos y solo descriptivos. Anisotropía (11.3d): razón de extensión paralela/perpendicular a la costa de los grupos de detección a ≤ 80 m del sitio (mediana sobre escenas), y Spearman entre z_t y `f_tierra(500 m)` sobre esos píxeles; se marca «escala con f_tierra» si ρ > 0 y p < 0,05. Atracaderos (secc. 9): OpenStreetMap `man_made=pier/quay/breakwater`, `waterway=dock` y `seamark:type=berth/mooring` a ≤ 80 m; `landuse=port` aparte. Fuentes publicadas (20.5): `resultados/campo/fuentes_publicadas.md` | Cerrar los pendientes de la secc. 18 | **Sí**, después de ver las secc. 18 y 19 |
 | 2026-11-13 | **Prueba a 10 m con dos escenas y comprobación del rojo (paso 4 de 20.7)**, con los dos L1C del piloto que seguían en disco y están en la lista de 186 (2020-01-19 y 2020-11-29), por el bucle normal (`VERTIDOS_PIXEL_M=10`, salida en `datos/productos_10m`). (a) Rojo: el 0,04 % y el 0,01 % del agua válida de la bahía tienen ρ(665) ≥ 0,05, por debajo del 1 %, así que **se queda el «blended»**, como fija 20.2. (b) La rejilla real a 10 m es de **1241 × 1229** píxeles (bordes E 356 620–369 030 y N 2 555 160–2 567 450), no 1242 × 1228 como dice 20.2: ACOLITE alinea el recorte a su propia rejilla. No cambia nada, porque todo se calcula sobre las `x`, `y` de cada escena. (c) Hallazgo, sin cambio de método: el AOT de DSF cambia con la resolución (2020-11-29: 0,0045 a 20 m y 0,028 a 10 m), porque los píxeles más oscuros no son los mismos. La repetición a 10 m cambia también la corrección atmosférica, no solo el tamaño del píxel, y así se dirá. (d) ACOLITE tarda unos 4 min por producto a 10 m y cada `.npz` ocupa 31 MB (unos 5,8 GB para las 186 fechas) | Comprobar la cadena a 10 m de extremo a extremo antes del bucle | No a 10 m: no se calculó ninguna anomalía |
 | 2026-11-13 | **Comprobación de robustez entre productos (secc. 4)**, que no se había hecho (`scripts/16_robustez_productos.py`, salida en `resultados/robustez_productos.json`). Para la turbidez y el SPM de Nechad se calcula una climatología propia sobre las mismas 113 escenas y la misma validez por píxel, y se repite la detección. Un candidato preregistrado «aparece» en un producto si en ese producto hay un sitio recurrente a ≤ 80 m. De los focos exploratorios se informan la frecuencia E1 y el z_c (bandas de la bahía) a ≤ 80 m. Autocomprobación superada: con Dogliotti salen la climatología y los sitios congelados. Figuras del artículo en inglés con `scripts/17_figuras_articulo.py` | Cumplir la secc. 4, que el manuscrito prometía | **Sí**, después de ver las secc. 18 y 19 |
+| 2026-11-15 | **Registro de la salida de campo del 13/11 (20.5)**. (a) Se visitaron P02, P03, P04, P09 y P10 con la ficha anterior: la ampliación del 26/10 no llegó a usarse, así que no hay «Dónde estoy» ni «basura que tapa el agua» en ninguna ficha. (b) `scripts/12_registro_campo.py` rellena ahora el número de punto con cero (las carpetas nuevas se llaman «Punto 2»); se registra desde un zip de `datos/trabajo de campo/bahia`, que reúne los dos envíos. Las filas de P05, P06 y P08 salen idénticas a las anteriores. (c) Aclaraciones del observador, literales y con sus preguntas, en `resultados/campo/visita2_relato_recibido_2026-11-14.md`: P09 y P10 se visitaron por separado; 45 de sus 52 fotos llevan la misma posición GPS (mala señal), que no sirve para situar al observador; P03 solo se vio desde unos 550 m, tras una cerca, y no se evaluó a ≤ 150 m; P06 fue su visita 1, aunque la ficha dice 2. (d) P01 y P07 no se han visitado por la distancia (Alex, 14/11). (e) Lluvia del 12–13/11: el observador la describe intensa y larga; cuatro modelos de Open-Meteo dan 6–11 mm entre las 12:00 del 12/11 y las 15:00 del 13/11 (hora local). Si la salida cuenta como visita tras ≥ 20 mm se decide con ERA5 cuando esté disponible. Queda por decidir, con la regla de 20.5 y sin mirar resultados, qué se hace con P01, P03 y P07 (no visitado, o sustitución por reserva si es un control). Al preparar este registro se vieron por error las tres primeras líneas de `reservas.csv` (cabecera y dos reservas); no se abrió `clave.csv` | Registrar la visita y lo que falta antes de evaluar | No: no se evaluó nada ni se cruzaron fichas con la clave |
+| 2026-11-15 | **Cierre de la verificación de campo sin más visitas (20.5)**, aprobado por Alex el 15/11 antes de cruzar fichas con la clave. (a) **Una sola visita por punto.** P-infraestructura se evalúa con ella («basta observarla una vez»); P-actividad pasa a ser solo descriptivo, porque no hay tres visitas. No se hace la visita tras lluvia. (b) **Evaluable:** un punto con ficha cuya pregunta 1 diga «sí» o «no». «No se puede ver» o sin visita = excluido y se dice. Se toma la respuesta del observador tal cual, también en P08 (tubos vistos de lejos) y P06 (visto a 100–150 m). (c) **Sin sustituciones:** P01 y P07 quedan como no visitados y P03 como no evaluable; `reservas.csv` no se usa. (d) Fisher exacto unilateral sobre P-infraestructura, sitios frente a controles, p < 0,05, como en 20.5, con `scripts/18_evaluar_campo.py`. (e) **Verificación con imagen, exploratoria y adicional (no sustituye al campo):** para los diez puntos, recorte de 400 × 400 m en UTM 17N centrado en el punto, 800 × 800 píxeles, de Esri World Imagery (consultado el 15/11/2026; fecha, sensor y resolución de cada recorte con el servicio `identify`), con un círculo de 150 m. Los recortes se etiquetan A–J con una permutación de semilla 20261115 y los codifica un subagente que solo ve las imágenes, sin coordenadas, repositorio ni clave, con la pregunta: «¿Hay dentro del círculo una estructura que vierta al agua: tubo, colector, alcantarilla, canal o desembocadura de cauce? sí / no / no se puede ver». Se informa el mismo Fisher y la concordancia con el campo en los puntos evaluables. Imagen: WorldView-3 de 27/01/2024 a 0,31 m en la zona probada | Cerrar el artículo sin volver al campo | **En parte.** Se fija antes de abrir `clave.csv`, pero las fichas ya se habían leído y las coordenadas de los sitios son públicas en 20.5, así que el resultado podía deducirse; la regla no se eligió por él: sigue la letra de 20.5 (no visitados y no evaluables fuera, sin otra condición). La imagen es nueva y exploratoria |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
@@ -837,3 +839,74 @@ exploratorios de la bahía los tres productos dan la misma frecuencia E1 y z_c c
 de 0,3 como mucho. Pero eso prueba poco: dentro de la bahía Dogliotti usa solo el rojo, y los
 dos productos de Nechad salen de esa misma banda. La comprobación solo discrimina donde
 Dogliotti pasa al infrarrojo cercano.
+
+## 22. Verificación de campo y con imagen (15/11/2026)
+
+Regla de la fila del 15/11/2026 en la secc. 14. Ficheros: `resultados/campo/evaluacion_campo.json`
+(`scripts/18_evaluar_campo.py`), `resultados/campo/imagen_codificacion.csv` e `imagen_etiquetas.csv`
+(`scripts/19_imagen_ciega.py`). Visitas: 23/10/2026 (P05, P06, P08) y 13/11/2026 (P02, P03, P04, P09, P10).
+
+| Punto | Rol | Par | Campo: estructura a ≤ 150 m | Imagen (a ciegas) |
+|---|---|---|---|---|
+| P07 | sitio | S1 | no visitado | sí (laguna costera abierta al mar, la respuesta menos segura) |
+| P09 | sitio | S2 | no | no |
+| P05 | sitio | S3 | no | no |
+| P06 | sitio | S4 | sí (tubo y río) | no |
+| P08 | sitio | S5 | sí (tubo) | sí (río o canal con pluma) |
+| P01 | control | S1 | no visitado | no |
+| P10 | control | S2 | sí (tubo) | no |
+| P04 | control | S3 | sí (tubo) | sí (canal estrecho) |
+| P03 | control | S4 | no se puede ver | no |
+| P02 | control | S5 | sí (tubo) | no |
+
+**Campo (P-infraestructura, criterio principal).** Sitios 2 de 4, controles 3 de 3; Fisher
+unilateral p = 1,0. **El campo no apoya el método.** Las tres estructuras de los controles son tubos
+vistos desde tierra: en esta bahía urbana, a 150 m casi siempre hay alguna salida, así que el
+criterio discrimina poco. Con 4 frente a 3 solo 4/4 frente a 0/3 habría dado p < 0,05.
+
+**P-actividad (descriptivo).** Flujo saliendo solo en P06 (S4: tubos y desembocadura del Luyanó),
+que también tiene mancha y espuma. Película o aceite en P05, P06 y P08 (los tres sitios del sur) y en
+ningún control. Agua gris o negra en P05, P06 y P08; marrón o turbia en P02, P03 y P04; normal en P09 y
+P10. **Fecha y rol están confundidos:** tres de los cuatro sitios visitados se vieron el 23/10 y todos
+los controles el 13/11, tras el frente frío, así que estas diferencias no se pueden atribuir al rol.
+
+**Imagen (exploratorio).** WorldView-3 del 27/01/2024, 0,31 m, la misma en los diez puntos. Sitios 2
+de 5, controles 1 de 5; Fisher unilateral p = 0,50. Concordancia con el campo 4 de 7: la imagen no ve
+tres de los cinco tubos que vio el observador (P02, P06, P10), que desde arriba pueden quedar bajo muelles o
+ser demasiado pequeños. En esta prueba la imagen solo detectó salidas grandes (cauces, canales).
+
+**Lectura.** Ni el campo ni la imagen separan los sitios de los controles. Coincide con el fracaso
+preregistrado (secc. 18): a 20 m el método no localiza puntos de vertido. La repetición a 10 m (20.2)
+sigue en marcha y no cambia esta sección.
+
+## 23. Resultados a 10 m (16/11/2026) e inventario exploratorio
+
+Bucle completo: 186 de 186 fechas (cinco fallos de descarga recuperados por el vigilante). Ficheros en
+`resultados_10m/`. La climatología se calculó antes de la detección; su sha256 está en
+`climatologia.json` (`f8374f00…5c95`), pero el commit previo que pide 20.7 no se hizo (lo hace Alex).
+
+**Climatología.** 85 escenas aceptadas de 186 (seca 44, lluviosa 41), frente a 113 a 20 m; 75 fechas
+son comunes. Adyacencia (ajustes con r² > 0,85): L mediana 28 m a 10 m frente a 45 m a 20 m.
+
+**Detección preregistrada (`--v2`).** Un candidato recurrente (costa al este, junto a S1), que solo
+sobrevive al margen de 0 m: **el método fracasa también a 10 m por 12.2.** El análisis secundario
+(persistencia ≥ 0,05 y ≥ 3 años, fuera del veredicto) da 14 candidatos, 12 a 40 m.
+
+**Lluvia a 10 m (20.4).** Ningún sitio ligado a la lluvia (S4 tenía p = 0,027 a 20 m y aquí 0,64). La
+costa entera responde a la lluvia en las dos resoluciones (ρ mediana de los controles 0,14–0,24).
+
+**Inventario exploratorio** (`scripts/20_inventario.py`, `resultados_10m/inventario.json`; definido
+después de ver los resultados). Robustez = repetir a la otra resolución, que cambia la corrección
+atmosférica (el AOT de DSF) y parte de las escenas, no los datos L1C.
+
+| Señal | 20 m | 10 m | ¿Robusta? |
+|---|---|---|---|
+| Focos S1–S5 como **anomalía permanente (z_c)** | definidos así S3–S5 | los cinco a 12–57 m de un grupo permanente; los cinco controles de campo, a ≥ 423 m. Al azar, un píxel de agua a ≤ 60 m de costa queda a ≤ 80 m de un grupo el 4,3 % de las veces | **Sí**, como turbidez crónica, no como vertido intermitente |
+| Gradiente (FNU, mediana; seca / lluviosa) | Atarés 2,48 / 2,64; Guasabacoa 2,39 / 2,72; Marimelena 2,00 / 2,59; centro y canal 1,99 / 2,49; mar 1,26 / 1,81 | 2,52 / 2,90; 2,41 / 3,10; 2,01 / 2,88; 2,00 / 2,73; 1,11 / 1,94 | **Sí**: brazos del sur > Marimelena ≈ centro > mar, en las dos estaciones y sin los 100 m de costa |
+| Lluvia en toda la costa | ρ controles 0,18–0,24 | 0,14–0,24 | **Sí** |
+| S4 ligado a la lluvia | p = 0,027 | p = 0,64 | No |
+| Escala de adyacencia | 2,3 píxeles | 2,8 píxeles | Escala con el píxel: apunta a píxeles mezcla más que a la atmósfera (interpretación por confirmar) |
+
+Límite: S3–S5 se eligieron a 20 m por ser permanentes, y 75 de las 85 fechas son las mismas; la
+reaparición a 10 m demuestra que la señal no depende de la resolución ni de la corrección
+atmosférica, no que venga de datos independientes.

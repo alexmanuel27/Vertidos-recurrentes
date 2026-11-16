@@ -1,0 +1,200 @@
+{
+ "regla": "PROTOCOLO_CONGELADO.md secc. 14, fila del 2026-11-15",
+ "puntos": [
+  {
+   "punto": "P01",
+   "rol": "control",
+   "sitio": "S1",
+   "visitado": false,
+   "infraestructura": "",
+   "tipo_salida": "",
+   "actividad": {
+    "flujo_activo": "",
+    "mancha": "",
+    "espuma": "",
+    "pelicula": "",
+    "color": ""
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P02",
+   "rol": "control",
+   "sitio": "S5",
+   "visitado": true,
+   "infraestructura": "sí",
+   "tipo_salida": "tubo",
+   "actividad": {
+    "flujo_activo": "no",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "no",
+    "color": "marrón o turbia"
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P03",
+   "rol": "control",
+   "sitio": "S4",
+   "visitado": true,
+   "infraestructura": "no se puede ver",
+   "tipo_salida": "",
+   "actividad": {
+    "flujo_activo": "",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "no",
+    "color": "marrón o turbia"
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P04",
+   "rol": "control",
+   "sitio": "S3",
+   "visitado": true,
+   "infraestructura": "sí",
+   "tipo_salida": "tubo",
+   "actividad": {
+    "flujo_activo": "no",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "no",
+    "color": "marrón o turbia"
+   },
+   "imagen": "sí"
+  },
+  {
+   "punto": "P05",
+   "rol": "sitio",
+   "sitio": "S3",
+   "visitado": true,
+   "infraestructura": "no",
+   "tipo_salida": "",
+   "actividad": {
+    "flujo_activo": "no",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "sí",
+    "color": "gris o negra"
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P06",
+   "rol": "sitio",
+   "sitio": "S4",
+   "visitado": true,
+   "infraestructura": "sí",
+   "tipo_salida": "tubo y rio",
+   "actividad": {
+    "flujo_activo": "sí",
+    "mancha": "sí",
+    "espuma": "sí",
+    "pelicula": "sí",
+    "color": "gris o negra"
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P07",
+   "rol": "sitio",
+   "sitio": "S1",
+   "visitado": false,
+   "infraestructura": "",
+   "tipo_salida": "",
+   "actividad": {
+    "flujo_activo": "",
+    "mancha": "",
+    "espuma": "",
+    "pelicula": "",
+    "color": ""
+   },
+   "imagen": "sí"
+  },
+  {
+   "punto": "P08",
+   "rol": "sitio",
+   "sitio": "S5",
+   "visitado": true,
+   "infraestructura": "sí",
+   "tipo_salida": "tubo",
+   "actividad": {
+    "flujo_activo": "no",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "sí",
+    "color": "gris o negra"
+   },
+   "imagen": "sí"
+  },
+  {
+   "punto": "P09",
+   "rol": "sitio",
+   "sitio": "S2",
+   "visitado": true,
+   "infraestructura": "no",
+   "tipo_salida": "",
+   "actividad": {
+    "flujo_activo": "",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "no",
+    "color": "normal"
+   },
+   "imagen": "no"
+  },
+  {
+   "punto": "P10",
+   "rol": "control",
+   "sitio": "S2",
+   "visitado": true,
+   "infraestructura": "sí",
+   "tipo_salida": "tubo",
+   "actividad": {
+    "flujo_activo": "no",
+    "mancha": "no",
+    "espuma": "no",
+    "pelicula": "no",
+    "color": "normal"
+   },
+   "imagen": "no"
+  }
+ ],
+ "P_infraestructura": {
+  "tabla_si_no": {
+   "sitios": [
+    2,
+    2
+   ],
+   "controles": [
+    3,
+    0
+   ]
+  },
+  "n_evaluables": 7,
+  "excluidos": [
+   "P01",
+   "P03",
+   "P07"
+  ],
+  "p_unilateral": 1.0
+ },
+ "imagen_exploratorio": {
+  "tabla_si_no": {
+   "sitios": [
+    2,
+    3
+   ],
+   "controles": [
+    1,
+    4
+   ]
+  },
+  "n_evaluables": 10,
+  "excluidos": [],
+  "p_unilateral": 0.5,
+  "concordancia_con_campo": "4/7"
+ }
+}
