@@ -1,0 +1,807 @@
+{
+ "resolucion_m": 10.0,
+ "n_bootstrap": 2000,
+ "bloque_m": 200,
+ "min_bloques_para_ic": 5,
+ "marca_muelles": "327 tramos muelle/espigon y 0 poligonos portuarios de OSM (a <= 40 m o dentro); no es informacion de dragados",
+ "estaciones": {
+  "seca": {
+   "n_pixeles_bahia_con_profundidad_y_z_c": 39890,
+   "B1": [
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1441,
+     "mediana_clim_FNU": 2.197,
+     "mediana_z_c": 0.345,
+     "n_bloques": 72,
+     "ic95_mediana_clim": [
+      2.045,
+      2.405
+     ],
+     "ic95_mediana_z_c": [
+      0.12,
+      0.632
+     ]
+    },
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 1381,
+     "mediana_clim_FNU": 1.941,
+     "mediana_z_c": -0.138,
+     "n_bloques": 84,
+     "ic95_mediana_clim": [
+      1.828,
+      2.08
+     ],
+     "ic95_mediana_z_c": [
+      -0.315,
+      0.125
+     ]
+    },
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": ">5",
+     "n_pixeles": 773,
+     "mediana_clim_FNU": 1.728,
+     "mediana_z_c": -0.456,
+     "n_bloques": 56,
+     "ic95_mediana_clim": [
+      1.55,
+      1.891
+     ],
+     "ic95_mediana_z_c": [
+      -0.694,
+      -0.178
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": "<2",
+     "n_pixeles": 2180,
+     "mediana_clim_FNU": 2.258,
+     "mediana_z_c": 0.617,
+     "n_bloques": 55,
+     "ic95_mediana_clim": [
+      2.064,
+      2.576
+     ],
+     "ic95_mediana_z_c": [
+      0.249,
+      1.1
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 2939,
+     "mediana_clim_FNU": 2.152,
+     "mediana_z_c": 0.128,
+     "n_bloques": 80,
+     "ic95_mediana_clim": [
+      2.022,
+      2.289
+     ],
+     "ic95_mediana_z_c": [
+      -0.106,
+      0.391
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": ">5",
+     "n_pixeles": 3417,
+     "mediana_clim_FNU": 1.839,
+     "mediana_z_c": -0.428,
+     "n_bloques": 74,
+     "ic95_mediana_clim": [
+      1.705,
+      1.974
+     ],
+     "ic95_mediana_z_c": [
+      -0.554,
+      -0.215
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1911,
+     "mediana_clim_FNU": 2.404,
+     "mediana_z_c": 0.472,
+     "n_bloques": 34,
+     "ic95_mediana_clim": [
+      2.155,
+      2.648
+     ],
+     "ic95_mediana_z_c": [
+      -0.1,
+      0.83
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 3772,
+     "mediana_clim_FNU": 2.381,
+     "mediana_z_c": 0.275,
+     "n_bloques": 65,
+     "ic95_mediana_clim": [
+      2.2,
+      2.638
+     ],
+     "ic95_mediana_z_c": [
+      -0.007,
+      0.782
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": ">5",
+     "n_pixeles": 7251,
+     "mediana_clim_FNU": 2.009,
+     "mediana_z_c": -0.258,
+     "n_bloques": 74,
+     "ic95_mediana_clim": [
+      1.912,
+      2.14
+     ],
+     "ic95_mediana_z_c": [
+      -0.444,
+      -0.028
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": "<2",
+     "n_pixeles": 880,
+     "mediana_clim_FNU": 2.228,
+     "mediana_z_c": -0.324,
+     "n_bloques": 8,
+     "ic95_mediana_clim": [
+      2.184,
+      2.339
+     ],
+     "ic95_mediana_z_c": [
+      -0.468,
+      -0.043
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 1532,
+     "mediana_clim_FNU": 2.452,
+     "mediana_z_c": 0.446,
+     "n_bloques": 24,
+     "ic95_mediana_clim": [
+      2.282,
+      2.638
+     ],
+     "ic95_mediana_z_c": [
+      0.098,
+      0.712
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": ">5",
+     "n_pixeles": 9395,
+     "mediana_clim_FNU": 2.176,
+     "mediana_z_c": -0.033,
+     "n_bloques": 59,
+     "ic95_mediana_clim": [
+      2.108,
+      2.251
+     ],
+     "ic95_mediana_z_c": [
+      -0.29,
+      0.286
+     ]
+    }
+   ],
+   "B2": {
+    "n": 39890,
+    "n_bloques": 164,
+    "coef_estandarizados": {
+     "rango_prof": -0.244,
+     "rango_dist": 0.016,
+     "rango_f_tierra_500": -0.093
+    },
+    "ic95": {
+     "rango_prof": [
+      -0.367,
+      -0.117
+     ],
+     "rango_dist": [
+      -0.141,
+      0.189
+     ],
+     "rango_f_tierra_500": [
+      -0.25,
+      0.074
+     ]
+    },
+    "spearman_prof_dist": 0.432,
+    "ic95_spearman_prof_dist": [
+     0.328,
+     0.529
+    ]
+   },
+   "B3": [
+    {
+     "banda_m": "0-20",
+     "clase_prof_m": "<2",
+     "n_pixeles": 226,
+     "zonas": {
+      "atares": 21,
+      "bahia_centro_y_canal": 11,
+      "guasabacoa": 96,
+      "marimelena": 98
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.72,
+      -0.3,
+      0.26,
+      1.11,
+      5.11
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.137,
+     "profundidad_mediana_m": 0.67,
+     "ic95_mediana_z_c": [
+      -0.022,
+      0.758
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.327
+    },
+    {
+     "banda_m": "0-20",
+     "clase_prof_m": ">5",
+     "n_pixeles": 48,
+     "zonas": {
+      "atares": 7,
+      "bahia_centro_y_canal": 34,
+      "guasabacoa": 2,
+      "marimelena": 5
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.28,
+      -0.97,
+      -0.4,
+      0.57,
+      1.89
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.042,
+     "profundidad_mediana_m": 6.44,
+     "ic95_mediana_z_c": [
+      -0.883,
+      0.513
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.479
+    },
+    {
+     "banda_m": "20-40",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1215,
+     "zonas": {
+      "atares": 191,
+      "bahia_centro_y_canal": 157,
+      "guasabacoa": 419,
+      "marimelena": 448
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.68,
+      -0.18,
+      0.36,
+      1.34,
+      2.7
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.07,
+     "profundidad_mediana_m": 0.89,
+     "ic95_mediana_z_c": [
+      0.122,
+      0.652
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.295
+    },
+    {
+     "banda_m": "20-40",
+     "clase_prof_m": ">5",
+     "n_pixeles": 725,
+     "zonas": {
+      "atares": 90,
+      "bahia_centro_y_canal": 580,
+      "guasabacoa": 35,
+      "marimelena": 20
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.3,
+      -0.95,
+      -0.46,
+      0.27,
+      1.06
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.003,
+     "profundidad_mediana_m": 6.52,
+     "ic95_mediana_z_c": [
+      -0.702,
+      -0.181
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.257
+    },
+    {
+     "banda_m": "40-60",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1308,
+     "zonas": {
+      "atares": 168,
+      "bahia_centro_y_canal": 166,
+      "guasabacoa": 589,
+      "marimelena": 385
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.71,
+      -0.15,
+      0.51,
+      1.58,
+      3.19
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.086,
+     "profundidad_mediana_m": 1.04,
+     "ic95_mediana_z_c": [
+      0.183,
+      0.962
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.053
+    },
+    {
+     "banda_m": "40-60",
+     "clase_prof_m": ">5",
+     "n_pixeles": 1672,
+     "zonas": {
+      "atares": 266,
+      "bahia_centro_y_canal": 1276,
+      "guasabacoa": 95,
+      "marimelena": 35
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.22,
+      -0.83,
+      -0.41,
+      0.2,
+      0.89
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.0,
+     "profundidad_mediana_m": 7.06,
+     "ic95_mediana_z_c": [
+      -0.563,
+      -0.205
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.071
+    }
+   ],
+   "B2b_mediana_climatologica": {
+    "n": 39890,
+    "coef_estandarizados": {
+     "rango_prof": -0.373,
+     "rango_dist": 0.215,
+     "rango_f_tierra_500": -0.149
+    },
+    "ic95": {
+     "rango_prof": [
+      -0.49,
+      -0.234
+     ],
+     "rango_dist": [
+      0.061,
+      0.38
+     ],
+     "rango_f_tierra_500": [
+      -0.315,
+      0.026
+     ]
+    }
+   }
+  },
+  "lluviosa": {
+   "n_pixeles_bahia_con_profundidad_y_z_c": 40469,
+   "B1": [
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1642,
+     "mediana_clim_FNU": 2.927,
+     "mediana_z_c": 0.368,
+     "n_bloques": 78,
+     "ic95_mediana_clim": [
+      2.758,
+      3.12
+     ],
+     "ic95_mediana_z_c": [
+      0.116,
+      0.638
+     ]
+    },
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 1606,
+     "mediana_clim_FNU": 2.605,
+     "mediana_z_c": -0.141,
+     "n_bloques": 87,
+     "ic95_mediana_clim": [
+      2.511,
+      2.717
+     ],
+     "ic95_mediana_z_c": [
+      -0.34,
+      0.039
+     ]
+    },
+    {
+     "banda_m": "0-40",
+     "clase_prof_m": ">5",
+     "n_pixeles": 859,
+     "mediana_clim_FNU": 2.488,
+     "mediana_z_c": -0.287,
+     "n_bloques": 56,
+     "ic95_mediana_clim": [
+      2.297,
+      2.653
+     ],
+     "ic95_mediana_z_c": [
+      -0.546,
+      -0.023
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": "<2",
+     "n_pixeles": 2172,
+     "mediana_clim_FNU": 3.104,
+     "mediana_z_c": 0.849,
+     "n_bloques": 54,
+     "ic95_mediana_clim": [
+      2.815,
+      3.559
+     ],
+     "ic95_mediana_z_c": [
+      0.229,
+      1.702
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 2990,
+     "mediana_clim_FNU": 2.794,
+     "mediana_z_c": 0.053,
+     "n_bloques": 80,
+     "ic95_mediana_clim": [
+      2.707,
+      2.892
+     ],
+     "ic95_mediana_z_c": [
+      -0.162,
+      0.319
+     ]
+    },
+    {
+     "banda_m": "40-80",
+     "clase_prof_m": ">5",
+     "n_pixeles": 3426,
+     "mediana_clim_FNU": 2.61,
+     "mediana_z_c": -0.297,
+     "n_bloques": 74,
+     "ic95_mediana_clim": [
+      2.536,
+      2.696
+     ],
+     "ic95_mediana_z_c": [
+      -0.451,
+      -0.124
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1911,
+     "mediana_clim_FNU": 3.379,
+     "mediana_z_c": 1.125,
+     "n_bloques": 34,
+     "ic95_mediana_clim": [
+      2.997,
+      3.631
+     ],
+     "ic95_mediana_z_c": [
+      0.169,
+      1.736
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 3787,
+     "mediana_clim_FNU": 2.996,
+     "mediana_z_c": 0.219,
+     "n_bloques": 65,
+     "ic95_mediana_clim": [
+      2.894,
+      3.126
+     ],
+     "ic95_mediana_z_c": [
+      -0.059,
+      0.548
+     ]
+    },
+    {
+     "banda_m": "80-160",
+     "clase_prof_m": ">5",
+     "n_pixeles": 7251,
+     "mediana_clim_FNU": 2.803,
+     "mediana_z_c": -0.224,
+     "n_bloques": 74,
+     "ic95_mediana_clim": [
+      2.743,
+      2.857
+     ],
+     "ic95_mediana_z_c": [
+      -0.374,
+      -0.057
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": "<2",
+     "n_pixeles": 880,
+     "mediana_clim_FNU": 3.33,
+     "mediana_z_c": 0.088,
+     "n_bloques": 8,
+     "ic95_mediana_clim": [
+      3.222,
+      3.494
+     ],
+     "ic95_mediana_z_c": [
+      -0.039,
+      0.422
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": "2-5",
+     "n_pixeles": 1532,
+     "mediana_clim_FNU": 3.059,
+     "mediana_z_c": -0.04,
+     "n_bloques": 24,
+     "ic95_mediana_clim": [
+      2.825,
+      3.268
+     ],
+     "ic95_mediana_z_c": [
+      -0.414,
+      0.28
+     ]
+    },
+    {
+     "banda_m": "160-320",
+     "clase_prof_m": ">5",
+     "n_pixeles": 9395,
+     "mediana_clim_FNU": 2.861,
+     "mediana_z_c": -0.013,
+     "n_bloques": 59,
+     "ic95_mediana_clim": [
+      2.823,
+      2.904
+     ],
+     "ic95_mediana_z_c": [
+      -0.186,
+      0.164
+     ]
+    }
+   ],
+   "B2": {
+    "n": 40469,
+    "n_bloques": 164,
+    "coef_estandarizados": {
+     "rango_prof": -0.27,
+     "rango_dist": 0.102,
+     "rango_f_tierra_500": 0.015
+    },
+    "ic95": {
+     "rango_prof": [
+      -0.375,
+      -0.167
+     ],
+     "rango_dist": [
+      -0.016,
+      0.223
+     ],
+     "rango_f_tierra_500": [
+      -0.112,
+      0.137
+     ]
+    },
+    "spearman_prof_dist": 0.442,
+    "ic95_spearman_prof_dist": [
+     0.336,
+     0.536
+    ]
+   },
+   "B3": [
+    {
+     "banda_m": "0-20",
+     "clase_prof_m": "<2",
+     "n_pixeles": 297,
+     "zonas": {
+      "atares": 25,
+      "bahia_centro_y_canal": 31,
+      "guasabacoa": 74,
+      "marimelena": 167
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.9,
+      -0.44,
+      0.07,
+      0.92,
+      2.27
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.03,
+     "profundidad_mediana_m": 0.8,
+     "ic95_mediana_z_c": [
+      -0.049,
+      0.388
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.232
+    },
+    {
+     "banda_m": "0-20",
+     "clase_prof_m": ">5",
+     "n_pixeles": 53,
+     "zonas": {
+      "atares": 7,
+      "bahia_centro_y_canal": 39,
+      "guasabacoa": 2,
+      "marimelena": 5
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.45,
+      -0.77,
+      -0.06,
+      0.64,
+      1.69
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.075,
+     "profundidad_mediana_m": 6.37,
+     "ic95_mediana_z_c": [
+      -0.693,
+      0.541
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.491
+    },
+    {
+     "banda_m": "20-40",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1345,
+     "zonas": {
+      "atares": 225,
+      "bahia_centro_y_canal": 187,
+      "guasabacoa": 359,
+      "marimelena": 574
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.71,
+      -0.23,
+      0.45,
+      1.42,
+      2.44
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.041,
+     "profundidad_mediana_m": 0.97,
+     "ic95_mediana_z_c": [
+      0.166,
+      0.714
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.296
+    },
+    {
+     "banda_m": "20-40",
+     "clase_prof_m": ">5",
+     "n_pixeles": 806,
+     "zonas": {
+      "atares": 97,
+      "bahia_centro_y_canal": 652,
+      "guasabacoa": 37,
+      "marimelena": 20
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.32,
+      -0.89,
+      -0.31,
+      0.29,
+      0.93
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.0,
+     "profundidad_mediana_m": 6.34,
+     "ic95_mediana_z_c": [
+      -0.552,
+      -0.043
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.279
+    },
+    {
+     "banda_m": "40-60",
+     "clase_prof_m": "<2",
+     "n_pixeles": 1303,
+     "zonas": {
+      "atares": 168,
+      "bahia_centro_y_canal": 166,
+      "guasabacoa": 563,
+      "marimelena": 406
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -0.68,
+      -0.16,
+      0.73,
+      2.35,
+      3.44
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.094,
+     "profundidad_mediana_m": 1.07,
+     "ic95_mediana_z_c": [
+      0.231,
+      1.43
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.054
+    },
+    {
+     "banda_m": "40-60",
+     "clase_prof_m": ">5",
+     "n_pixeles": 1681,
+     "zonas": {
+      "atares": 267,
+      "bahia_centro_y_canal": 1287,
+      "guasabacoa": 92,
+      "marimelena": 35
+     },
+     "z_c_percentiles_10_25_50_75_90": [
+      -1.37,
+      -0.83,
+      -0.31,
+      0.27,
+      0.75
+     ],
+     "fraccion_caliente_z_c>=3.5": 0.0,
+     "profundidad_mediana_m": 7.08,
+     "ic95_mediana_z_c": [
+      -0.479,
+      -0.128
+     ],
+     "fraccion_en_muelle_o_zona_portuaria_OSM": 0.074
+    }
+   ],
+   "B2b_mediana_climatologica": {
+    "n": 40469,
+    "coef_estandarizados": {
+     "rango_prof": -0.383,
+     "rango_dist": 0.379,
+     "rango_f_tierra_500": 0.104
+    },
+    "ic95": {
+     "rango_prof": [
+      -0.482,
+      -0.269
+     ],
+     "rango_dist": [
+      0.259,
+      0.493
+     ],
+     "rango_f_tierra_500": [
+      -0.026,
+      0.221
+     ]
+    }
+   }
+  }
+ }
+}

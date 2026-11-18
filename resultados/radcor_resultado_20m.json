@@ -1,0 +1,10 @@
+{
+ "fecha": "2026-11-18",
+ "estado": "no evaluable con los ajustes congelados",
+ "escenas_procesadas_con_radcor": 10,
+ "escenas_con_focos_validos_ge_20": 0,
+ "motivo": "RAdCor deja como NaN todo pixel a menos de radcor_kernel_radius (5 km por defecto) del borde de la ventana: externo/acolite/acolite/adjacency/radcor/radcor.py lineas 1771-1772 y 281 (scene_edge_mask, solo si radcor_edge_extend=False). La ventana congelada mide 614x621 px a 20 m (~12,3 km), asi que solo sobreviven filas 249-364 y columnas 249-371 (116x123 px, el 3,7 % de la ventana; 188 de 11287 px de agua de la bahia, 1,7 %). Ningun foco de la orilla entra.",
+ "no_se_hizo": "no se cambio radcor_kernel_radius, radcor_edge_extend, la ventana ni ningun otro ajuste; cualquiera de ellos seria un cambio de metodo que exige fila fechada en la secc. 14 y decision de Alex",
+ "registro_acolite": "resultados/radcor_registro_20m.json",
+ "tabla_contraste": "resultados/contraste_escenas_20m_radcor.csv"
+}

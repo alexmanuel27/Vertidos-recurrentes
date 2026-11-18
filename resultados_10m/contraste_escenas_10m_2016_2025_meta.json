@@ -1,0 +1,15 @@
+{
+ "n_focos_por_estacion": {
+  "seca": {
+   "focos": 676,
+   "grupos13": 1259
+  },
+  "lluviosa": {
+   "focos": 544,
+   "grupos13": 352
+  }
+ },
+ "n_escenas": 85,
+ "semilla": 20261118,
+ "n_placebo": 500
+}
