@@ -1,0 +1,87 @@
+{
+ "resolucion_m": 10.0,
+ "pixeles_bahia_con_profundidad": 49036,
+ "pixeles_bahia": 240380,
+ "estaciones": {
+  "seca": {
+   "calientes": {
+    "n_calientes_con_profundidad": 676,
+    "n_con_referencia": 676,
+    "rango_percentil_mediano": 0.139,
+    "profundidad_mediana_calientes_m": 1.39,
+    "profundidad_mediana_referencia_m": 6.28,
+    "frac_calientes_menos_2m": 0.682,
+    "frac_referencia_menos_2m": 0.131,
+    "n_referencia": 35817
+   },
+   "sitios": {
+    "S1": {
+     "prof_mediana_80m": null,
+     "n_px_con_profundidad": 0
+    },
+    "S2": {
+     "prof_mediana_80m": 2.13,
+     "n_px_con_profundidad": 203
+    },
+    "S3": {
+     "prof_mediana_80m": 0.46,
+     "n_px_con_profundidad": 199
+    },
+    "S4": {
+     "prof_mediana_80m": 1.65,
+     "n_px_con_profundidad": 188
+    },
+    "S5": {
+     "prof_mediana_80m": 1.41,
+     "n_px_con_profundidad": 201
+    }
+   }
+  },
+  "lluviosa": {
+   "calientes": {
+    "n_calientes_con_profundidad": 544,
+    "n_con_referencia": 544,
+    "rango_percentil_mediano": 0.115,
+    "profundidad_mediana_calientes_m": 1.59,
+    "profundidad_mediana_referencia_m": 6.13,
+    "frac_calientes_menos_2m": 0.642,
+    "frac_referencia_menos_2m": 0.117,
+    "n_referencia": 32771
+   },
+   "sitios": {
+    "S1": {
+     "prof_mediana_80m": null,
+     "n_px_con_profundidad": 0
+    },
+    "S2": {
+     "prof_mediana_80m": 2.13,
+     "n_px_con_profundidad": 203
+    },
+    "S3": {
+     "prof_mediana_80m": 0.46,
+     "n_px_con_profundidad": 199
+    },
+    "S4": {
+     "prof_mediana_80m": 1.65,
+     "n_px_con_profundidad": 188
+    },
+    "S5": {
+     "prof_mediana_80m": 1.41,
+     "n_px_con_profundidad": 201
+    }
+   }
+  }
+ },
+ "ambas_estaciones": {
+  "calientes": {
+   "n_calientes_con_profundidad": 235,
+   "n_con_referencia": 235,
+   "rango_percentil_mediano": 0.144,
+   "profundidad_mediana_calientes_m": 1.42,
+   "profundidad_mediana_referencia_m": 6.17,
+   "frac_calientes_menos_2m": 0.826,
+   "frac_referencia_menos_2m": 0.135,
+   "n_referencia": 37790
+  }
+ }
+}

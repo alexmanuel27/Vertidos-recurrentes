@@ -1,0 +1,442 @@
+{
+ "resolucion_m": 10.0,
+ "tam_min_grupo_px": 16,
+ "z_c_min": 3.5,
+ "caja_fig_c": [
+  360000.0,
+  365000.0,
+  2555900.0,
+  2561900.0
+ ],
+ "bahia_mascara": {
+  "definicion": "rectangulo E [ESTE_MIN, ESTE_MAX] x N [NORTE_MIN, NORTE_MAX] de src/geo.py (src/escenas.mascara_bahia), sin recortar al agua",
+  "pixeles_rectangulo": 240380,
+  "pixeles_rectangulo_con_agua": 45172
+ },
+ "grupos": {
+  "seca": {
+   "n_componentes_sin_filtro": 957,
+   "n_con_filtro_minimo": 22,
+   "n_en_caja_fig_c": 7,
+   "n_primer_pixel_en_bahia": 4,
+   "n_centroide_en_bahia": 4,
+   "n_con_algun_pixel_en_bahia": 5,
+   "n_grupos_de_hot_y_bahia": 5,
+   "n_en_caja_y_primer_pixel_en_bahia": 4,
+   "grupos": [
+    {
+     "id": 0,
+     "tam_px": 25,
+     "E": 363492,
+     "N": 2565739,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 1,
+     "tam_px": 19,
+     "E": 363416,
+     "N": 2565689,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 2,
+     "tam_px": 22,
+     "E": 362023,
+     "N": 2564416,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 3,
+     "tam_px": 20,
+     "E": 359122,
+     "N": 2564330,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 4,
+     "tam_px": 82,
+     "E": 358135,
+     "N": 2564304,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 5,
+     "tam_px": 29,
+     "E": 357979,
+     "N": 2564238,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 6,
+     "tam_px": 37,
+     "E": 360419,
+     "N": 2563856,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 7,
+     "tam_px": 24,
+     "E": 368802,
+     "N": 2563328,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 8,
+     "tam_px": 31,
+     "E": 368678,
+     "N": 2563269,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 9,
+     "tam_px": 18,
+     "E": 368361,
+     "N": 2563104,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 10,
+     "tam_px": 39,
+     "E": 367498,
+     "N": 2562723,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 11,
+     "tam_px": 60,
+     "E": 359799,
+     "N": 2562239,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 12,
+     "tam_px": 27,
+     "E": 359212,
+     "N": 2561669,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 13,
+     "tam_px": 28,
+     "E": 359366,
+     "N": 2561673,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 14,
+     "tam_px": 18,
+     "E": 359167,
+     "N": 2561558,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 15,
+     "tam_px": 99,
+     "E": 361803,
+     "N": 2561408,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 28
+    },
+    {
+     "id": 16,
+     "tam_px": 665,
+     "E": 360663,
+     "N": 2560757,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 17,
+     "tam_px": 47,
+     "E": 360939,
+     "N": 2560612,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 18,
+     "tam_px": 27,
+     "E": 362316,
+     "N": 2557982,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 27
+    },
+    {
+     "id": 19,
+     "tam_px": 238,
+     "E": 362258,
+     "N": 2557684,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 238
+    },
+    {
+     "id": 20,
+     "tam_px": 153,
+     "E": 361176,
+     "N": 2557747,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 144
+    },
+    {
+     "id": 21,
+     "tam_px": 156,
+     "E": 362812,
+     "N": 2556726,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 156
+    }
+   ],
+   "pixeles_calientes": 3511
+  },
+  "lluviosa": {
+   "n_componentes_sin_filtro": 1100,
+   "n_con_filtro_minimo": 8,
+   "n_en_caja_fig_c": 6,
+   "n_primer_pixel_en_bahia": 4,
+   "n_centroide_en_bahia": 5,
+   "n_con_algun_pixel_en_bahia": 5,
+   "n_grupos_de_hot_y_bahia": 5,
+   "n_en_caja_y_primer_pixel_en_bahia": 4,
+   "grupos": [
+    {
+     "id": 0,
+     "tam_px": 86,
+     "E": 368706,
+     "N": 2563292,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 1,
+     "tam_px": 20,
+     "E": 367495,
+     "N": 2562733,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 2,
+     "tam_px": 18,
+     "E": 361787,
+     "N": 2561372,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 17
+    },
+    {
+     "id": 3,
+     "tam_px": 21,
+     "E": 360876,
+     "N": 2560705,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 4,
+     "tam_px": 25,
+     "E": 364021,
+     "N": 2559663,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 25
+    },
+    {
+     "id": 5,
+     "tam_px": 194,
+     "E": 362261,
+     "N": 2557655,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 194
+    },
+    {
+     "id": 6,
+     "tam_px": 43,
+     "E": 361165,
+     "N": 2557711,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 43
+    },
+    {
+     "id": 7,
+     "tam_px": 51,
+     "E": 362648,
+     "N": 2556952,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 51
+    }
+   ],
+   "pixeles_calientes": 1942
+  }
+ },
+ "zonas": {
+  "ventana_bahia_UTM17N": {
+   "E_min": 361139.0,
+   "E_max": 365896.0,
+   "N_min": 2556342.0,
+   "N_max": 2561392.0
+  },
+  "zonas": {
+   "mar": {
+    "pixeles_agua": 723363,
+    "area_km2": 72.336,
+    "E_min": 356625.0,
+    "E_max": 369025.0,
+    "N_min": 2557325.0,
+    "N_max": 2567445.0
+   },
+   "bahia_centro_y_canal": {
+    "pixeles_agua": 20088,
+    "area_km2": 2.009,
+    "E_min": 361145.0,
+    "E_max": 363595.0,
+    "N_min": 2558575.0,
+    "N_max": 2561385.0
+   },
+   "marimelena": {
+    "pixeles_agua": 5521,
+    "area_km2": 0.552,
+    "E_min": 363605.0,
+    "E_max": 364345.0,
+    "N_min": 2558525.0,
+    "N_max": 2560025.0
+   },
+   "atares": {
+    "pixeles_agua": 6539,
+    "area_km2": 0.654,
+    "E_min": 361145.0,
+    "E_max": 362345.0,
+    "N_min": 2557375.0,
+    "N_max": 2558795.0
+   },
+   "guasabacoa": {
+    "pixeles_agua": 13024,
+    "area_km2": 1.302,
+    "E_min": 362105.0,
+    "E_max": 363155.0,
+    "N_min": 2556615.0,
+    "N_max": 2558795.0
+   }
+  },
+  "vertices_[E,N,lat,lon]": {
+   "A_linea_en_N=2558800": [
+    362350.0,
+    2558800.0,
+    23.1323,
+    -82.3444
+   ],
+   "B_linea_en_N=NORTE_MIN": [
+    361735.5,
+    2556342.0,
+    23.11005,
+    -82.35018
+   ],
+   "C_sur_E=363300_en_N_min": [
+    363300.0,
+    2556342.0,
+    23.11018,
+    -82.3349
+   ],
+   "D_sur_E=363300_en_N=2558800": [
+    363300.0,
+    2558800.0,
+    23.13238,
+    -82.33512
+   ],
+   "E_ventana_SO": [
+    361139.0,
+    2556342.0,
+    23.11,
+    -82.356
+   ],
+   "F_ventana_NO_del_brazo": [
+    361139.0,
+    2558800.0,
+    23.1322,
+    -82.35622
+   ]
+  }
+ },
+ "profundidad": {
+  "ruta": "/Users/alex/Nube /repos/Vertidos-recurrentes/productos_publicos/profundidad_carta1887_10m.tif",
+  "filas": 505,
+  "columnas": 476,
+  "pixeles_con_dato": 49036,
+  "min_m": 0.3,
+  "max_m": 17.33,
+  "x_primer_centro": 361145.0,
+  "y_primer_centro_norte": 2561385.0
+ }
+}

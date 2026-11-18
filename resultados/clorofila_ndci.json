@@ -1,0 +1,93 @@
+{
+ "n_escenas": 32,
+ "fechas": [
+  "2020-11-29",
+  "2020-01-19",
+  "2017-03-10",
+  "2017-10-16",
+  "2018-09-21",
+  "2018-10-11",
+  "2019-01-19",
+  "2019-09-06",
+  "2019-09-26",
+  "2019-11-25",
+  "2019-12-15",
+  "2020-02-03",
+  "2020-03-14",
+  "2021-09-25",
+  "2022-06-12",
+  "2022-09-20",
+  "2022-12-09",
+  "2023-09-15",
+  "2024-03-13",
+  "2018-01-29",
+  "2018-03-30",
+  "2019-02-23",
+  "2019-10-11",
+  "2020-08-26",
+  "2021-01-03",
+  "2021-02-22",
+  "2021-12-19",
+  "2022-02-07",
+  "2023-01-13",
+  "2023-02-22",
+  "2023-11-09",
+  "2024-11-13"
+ ],
+ "zonas_mediana_de_escenas": {
+  "atares": {
+   "ndci": -0.017,
+   "turbidez_FNU": 2.44,
+   "n_escenas": 32
+  },
+  "guasabacoa": {
+   "ndci": -0.015,
+   "turbidez_FNU": 2.42,
+   "n_escenas": 32
+  },
+  "marimelena": {
+   "ndci": -0.002,
+   "turbidez_FNU": 2.37,
+   "n_escenas": 32
+  },
+  "centro_y_canal": {
+   "ndci": -0.026,
+   "turbidez_FNU": 2.11,
+   "n_escenas": 32
+  },
+  "mar": {
+   "ndci": -0.146,
+   "turbidez_FNU": 1.34,
+   "n_escenas": 32
+  }
+ },
+ "spearman_ndci_turbidez_bahia_mediana": -0.086,
+ "spearman_ndci_turbidez_bahia_a_100m_mediana": -0.107,
+ "sitios_ndci_mediana_frente_referencia": {
+  "S1": {
+   "sitio": 0.225,
+   "referencia": -0.081,
+   "n_escenas": 18
+  },
+  "S2": {
+   "sitio": 0.119,
+   "referencia": -0.108,
+   "n_escenas": 29
+  },
+  "S3": {
+   "sitio": 0.084,
+   "referencia": -0.006,
+   "n_escenas": 27
+  },
+  "S4": {
+   "sitio": -0.019,
+   "referencia": -0.01,
+   "n_escenas": 29
+  },
+  "S5": {
+   "sitio": 0.041,
+   "referencia": -0.006,
+   "n_escenas": 32
+  }
+ }
+}

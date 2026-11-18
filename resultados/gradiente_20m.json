@@ -1,0 +1,506 @@
+{
+ "resolucion_m": 20.0,
+ "n_escenas": 113,
+ "n_min_px_por_zona_y_escena": 50,
+ "n_bootstrap": 2000,
+ "estaciones": {
+  "seca": {
+   "n_escenas": 71,
+   "anios": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "variantes": {
+    "todos": {
+     "zonas": {
+      "atares": {
+       "mediana_FNU": 2.448,
+       "ic95": [
+        2.252,
+        2.718
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 1413
+      },
+      "guasabacoa": {
+       "mediana_FNU": 2.355,
+       "ic95": [
+        2.079,
+        2.619
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 3092
+      },
+      "marimelena": {
+       "mediana_FNU": 2.05,
+       "ic95": [
+        1.736,
+        2.272
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 1216
+      },
+      "bahia_centro_y_canal": {
+       "mediana_FNU": 2.049,
+       "ic95": [
+        1.841,
+        2.169
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 4603
+      },
+      "mar": {
+       "mediana_FNU": 1.316,
+       "ic95": [
+        1.192,
+        1.421
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 179831
+      }
+     },
+     "orden": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.305,
+      "margen_medio_menos_mar": 0.734
+     },
+     "anios_en_que_se_mantiene_el_orden": "9/9"
+    },
+    "a100m": {
+     "zonas": {
+      "atares": {
+       "mediana_FNU": 2.481,
+       "ic95": [
+        2.306,
+        2.72
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 1413
+      },
+      "guasabacoa": {
+       "mediana_FNU": 2.376,
+       "ic95": [
+        2.093,
+        2.71
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 3092
+      },
+      "marimelena": {
+       "mediana_FNU": 2.036,
+       "ic95": [
+        1.728,
+        2.252
+       ],
+       "n_escenas": 69,
+       "n_px_climatologia": 1216
+      },
+      "bahia_centro_y_canal": {
+       "mediana_FNU": 2.108,
+       "ic95": [
+        1.894,
+        2.272
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 4603
+      },
+      "mar": {
+       "mediana_FNU": 1.317,
+       "ic95": [
+        1.189,
+        1.41
+       ],
+       "n_escenas": 71,
+       "n_px_climatologia": 179831
+      }
+     },
+     "orden": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.268,
+      "margen_medio_menos_mar": 0.791
+     },
+     "anios_en_que_se_mantiene_el_orden": "9/9"
+    }
+   },
+   "dejar_un_anio": {
+    "todos": {
+     "2017": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.307,
+      "margen_medio_menos_mar": 0.79
+     },
+     "2018": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.306,
+      "margen_medio_menos_mar": 0.774
+     },
+     "2019": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.235,
+      "margen_medio_menos_mar": 0.762
+     },
+     "2020": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.258,
+      "margen_medio_menos_mar": 0.8
+     },
+     "2021": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.285,
+      "margen_medio_menos_mar": 0.69
+     },
+     "2022": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.381,
+      "margen_medio_menos_mar": 0.716
+     },
+     "2023": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.306,
+      "margen_medio_menos_mar": 0.774
+     },
+     "2024": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.302,
+      "margen_medio_menos_mar": 0.801
+     },
+     "2025": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.29,
+      "margen_medio_menos_mar": 0.694
+     }
+    },
+    "a100m": {
+     "2017": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.322,
+      "margen_medio_menos_mar": 0.825
+     },
+     "2018": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.268,
+      "margen_medio_menos_mar": 0.834
+     },
+     "2019": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.222,
+      "margen_medio_menos_mar": 0.816
+     },
+     "2020": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.266,
+      "margen_medio_menos_mar": 0.834
+     },
+     "2021": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.282,
+      "margen_medio_menos_mar": 0.725
+     },
+     "2022": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.369,
+      "margen_medio_menos_mar": 0.778
+     },
+     "2023": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.249,
+      "margen_medio_menos_mar": 0.834
+     },
+     "2024": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.351,
+      "margen_medio_menos_mar": 0.786
+     },
+     "2025": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.27,
+      "margen_medio_menos_mar": 0.745
+     }
+    }
+   },
+   "climatologia_pixel_secc23": {
+    "atares": {
+     "todos": 2.48,
+     "a100m": 2.48,
+     "n_px": 1413
+    },
+    "guasabacoa": {
+     "todos": 2.39,
+     "a100m": 2.4,
+     "n_px": 3092
+    },
+    "marimelena": {
+     "todos": 2.0,
+     "a100m": 2.03,
+     "n_px": 1216
+    },
+    "bahia_centro_y_canal": {
+     "todos": 1.99,
+     "a100m": 2.06,
+     "n_px": 4603
+    },
+    "mar": {
+     "todos": 1.26,
+     "a100m": 1.26,
+     "n_px": 179831
+    }
+   }
+  },
+  "lluviosa": {
+   "n_escenas": 42,
+   "anios": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "variantes": {
+    "todos": {
+     "zonas": {
+      "atares": {
+       "mediana_FNU": 2.56,
+       "ic95": [
+        2.311,
+        2.745
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 1379
+      },
+      "guasabacoa": {
+       "mediana_FNU": 2.838,
+       "ic95": [
+        2.599,
+        2.979
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 3029
+      },
+      "marimelena": {
+       "mediana_FNU": 2.551,
+       "ic95": [
+        2.219,
+        2.872
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 1201
+      },
+      "bahia_centro_y_canal": {
+       "mediana_FNU": 2.359,
+       "ic95": [
+        2.147,
+        2.85
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 4545
+      },
+      "mar": {
+       "mediana_FNU": 2.165,
+       "ic95": [
+        1.717,
+        2.62
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 177739
+      }
+     },
+     "orden": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.009,
+      "margen_medio_menos_mar": 0.386
+     },
+     "anios_en_que_se_mantiene_el_orden": "5/9"
+    },
+    "a100m": {
+     "zonas": {
+      "atares": {
+       "mediana_FNU": 2.662,
+       "ic95": [
+        2.532,
+        2.841
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 1379
+      },
+      "guasabacoa": {
+       "mediana_FNU": 2.847,
+       "ic95": [
+        2.639,
+        2.989
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 3029
+      },
+      "marimelena": {
+       "mediana_FNU": 2.657,
+       "ic95": [
+        2.173,
+        3.012
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 1201
+      },
+      "bahia_centro_y_canal": {
+       "mediana_FNU": 2.482,
+       "ic95": [
+        2.233,
+        2.905
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 4545
+      },
+      "mar": {
+       "mediana_FNU": 2.162,
+       "ic95": [
+        1.711,
+        2.589
+       ],
+       "n_escenas": 42,
+       "n_px_climatologia": 177739
+      }
+     },
+     "orden": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.005,
+      "margen_medio_menos_mar": 0.495
+     },
+     "anios_en_que_se_mantiene_el_orden": "5/9"
+    }
+   },
+   "dejar_un_anio": {
+    "todos": {
+     "2017": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.003,
+      "margen_medio_menos_mar": 0.318
+     },
+     "2018": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.022,
+      "margen_medio_menos_mar": 0.318
+     },
+     "2019": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.06,
+      "margen_medio_menos_mar": 0.503
+     },
+     "2020": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.003,
+      "margen_medio_menos_mar": 0.454
+     },
+     "2021": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.021,
+      "margen_medio_menos_mar": 0.318
+     },
+     "2022": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.042,
+      "margen_medio_menos_mar": 0.273
+     },
+     "2023": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.044,
+      "margen_medio_menos_mar": 0.535
+     },
+     "2024": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.032,
+      "margen_medio_menos_mar": 0.363
+     },
+     "2025": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.015,
+      "margen_medio_menos_mar": 0.607
+     }
+    },
+    "a100m": {
+     "2017": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.01,
+      "margen_medio_menos_mar": 0.417
+     },
+     "2018": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.038,
+      "margen_medio_menos_mar": 0.417
+     },
+     "2019": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.075,
+      "margen_medio_menos_mar": 0.586
+     },
+     "2020": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.027,
+      "margen_medio_menos_mar": 0.567
+     },
+     "2021": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.046,
+      "margen_medio_menos_mar": 0.453
+     },
+     "2022": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.034,
+      "margen_medio_menos_mar": 0.379
+     },
+     "2023": {
+      "cumple": false,
+      "margen_brazos_menos_medio": -0.013,
+      "margen_medio_menos_mar": 0.637
+     },
+     "2024": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.036,
+      "margen_medio_menos_mar": 0.464
+     },
+     "2025": {
+      "cumple": true,
+      "margen_brazos_menos_medio": 0.005,
+      "margen_medio_menos_mar": 0.694
+     }
+    }
+   },
+   "climatologia_pixel_secc23": {
+    "atares": {
+     "todos": 2.64,
+     "a100m": 2.72,
+     "n_px": 1379
+    },
+    "guasabacoa": {
+     "todos": 2.72,
+     "a100m": 2.73,
+     "n_px": 3029
+    },
+    "marimelena": {
+     "todos": 2.59,
+     "a100m": 2.6,
+     "n_px": 1201
+    },
+    "bahia_centro_y_canal": {
+     "todos": 2.49,
+     "a100m": 2.54,
+     "n_px": 4545
+    },
+    "mar": {
+     "todos": 1.81,
+     "a100m": 1.81,
+     "n_px": 177739
+    }
+   }
+  }
+ }
+}

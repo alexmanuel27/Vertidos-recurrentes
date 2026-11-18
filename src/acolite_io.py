@@ -26,6 +26,7 @@ PATRONES = {
     "verde":              [r"^rhos_5[56]\d$"],                        # B3
     "nir":                [r"^rhos_83\d$"],                           # B8
     "rojo":               [r"^rhos_66\d$"],                           # B4: comprobacion del rojo (20.2)
+    "borde":              [r"^rhos_70\d$"],                           # B5 (~704 nm): NDCI, clorofila frente a sedimento (17/11)
     "banderas":           [r"^l2_flags$"],
 }
 

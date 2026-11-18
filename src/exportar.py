@@ -24,7 +24,7 @@ import numpy as np
 import acolite_io
 
 CLAVES = ("turbidez_dogliotti", "turbidez_nechad", "spm", "swir", "swir2",
-          "verde", "nir", "banderas", "rojo")
+          "verde", "nir", "banderas", "rojo", "borde")
 IMPRESCINDIBLES = {"turbidez_dogliotti", "swir", "swir2"}
 
 

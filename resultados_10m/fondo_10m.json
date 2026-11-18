@@ -1,0 +1,582 @@
+{
+ "resolucion_m": 10.0,
+ "escenas_usadas": {
+  "seca": 44,
+  "lluviosa": 41
+ },
+ "escenas_sin_la_banda": 0,
+ "n_obs_minimo": 10,
+ "bandas": [
+  "verde",
+  "rojo",
+  "nir"
+ ],
+ "estaciones": {
+  "seca": {
+   "n_calientes_0.5_3m": 417,
+   "n_referencia_0.5_3m": 6739,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 417,
+     "spearman_bruto": -0.212,
+     "ic95_bruto": [
+      -0.591,
+      0.098
+     ],
+     "spearman_tras_restar_banda": -0.294,
+     "ic95_tras_restar_banda": [
+      -0.641,
+      0.064
+     ],
+     "rojo_mediana": 0.0181,
+     "profundidad_mediana_m": 1.59
+    },
+    "referencia": {
+     "n": 6739,
+     "spearman_bruto": -0.001,
+     "ic95_bruto": [
+      -0.145,
+      0.146
+     ],
+     "spearman_tras_restar_banda": 0.016,
+     "ic95_tras_restar_banda": [
+      -0.124,
+      0.15
+     ],
+     "rojo_mediana": 0.009,
+     "profundidad_mediana_m": 1.76
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 0,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 277,
+     "dif_log_razon_mediana": -0.279,
+     "ic95": [
+      -0.422,
+      -0.235
+     ],
+     "razon_foco_sobre_referencia": 0.757
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 277,
+     "dif_log_razon_mediana": -0.237,
+     "ic95": [
+      -0.332,
+      -0.165
+     ],
+     "razon_foco_sobre_referencia": 0.789
+    },
+    "0.5_2m_rojo/1": {
+     "n": 277,
+     "dif_log_razon_mediana": 0.779,
+     "ic95": [
+      0.67,
+      0.923
+     ],
+     "razon_foco_sobre_referencia": 2.178
+    },
+    "2_3m_verde/rojo": {
+     "n": 140,
+     "dif_log_razon_mediana": -0.11,
+     "ic95": [
+      -0.204,
+      -0.079
+     ],
+     "razon_foco_sobre_referencia": 0.896
+    },
+    "2_3m_nir/rojo": {
+     "n": 140,
+     "dif_log_razon_mediana": -0.349,
+     "ic95": [
+      -0.398,
+      -0.183
+     ],
+     "razon_foco_sobre_referencia": 0.705
+    },
+    "2_3m_rojo/1": {
+     "n": 140,
+     "dif_log_razon_mediana": 0.704,
+     "ic95": [
+      0.514,
+      0.763
+     ],
+     "razon_foco_sobre_referencia": 2.023
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  },
+  "lluviosa": {
+   "n_calientes_0.5_3m": 381,
+   "n_referencia_0.5_3m": 5765,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 381,
+     "spearman_bruto": -0.041,
+     "ic95_bruto": [
+      -0.316,
+      0.255
+     ],
+     "spearman_tras_restar_banda": -0.073,
+     "ic95_tras_restar_banda": [
+      -0.39,
+      0.263
+     ],
+     "rojo_mediana": 0.0183,
+     "profundidad_mediana_m": 1.49
+    },
+    "referencia": {
+     "n": 5765,
+     "spearman_bruto": -0.032,
+     "ic95_bruto": [
+      -0.177,
+      0.112
+     ],
+     "spearman_tras_restar_banda": -0.036,
+     "ic95_tras_restar_banda": [
+      -0.144,
+      0.074
+     ],
+     "rojo_mediana": 0.0117,
+     "profundidad_mediana_m": 1.83
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 2,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 296,
+     "dif_log_razon_mediana": -0.206,
+     "ic95": [
+      -0.256,
+      -0.162
+     ],
+     "razon_foco_sobre_referencia": 0.814
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 296,
+     "dif_log_razon_mediana": -0.192,
+     "ic95": [
+      -0.239,
+      -0.105
+     ],
+     "razon_foco_sobre_referencia": 0.825
+    },
+    "0.5_2m_rojo/1": {
+     "n": 296,
+     "dif_log_razon_mediana": 0.54,
+     "ic95": [
+      0.472,
+      0.597
+     ],
+     "razon_foco_sobre_referencia": 1.717
+    },
+    "2_3m_verde/rojo": {
+     "n": 83,
+     "dif_log_razon_mediana": -0.018,
+     "ic95": [
+      -0.156,
+      0.026
+     ],
+     "razon_foco_sobre_referencia": 0.983
+    },
+    "2_3m_nir/rojo": {
+     "n": 83,
+     "dif_log_razon_mediana": -0.026,
+     "ic95": [
+      -0.141,
+      0.207
+     ],
+     "razon_foco_sobre_referencia": 0.974
+    },
+    "2_3m_rojo/1": {
+     "n": 83,
+     "dif_log_razon_mediana": 0.43,
+     "ic95": [
+      0.395,
+      0.501
+     ],
+     "razon_foco_sobre_referencia": 1.537
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  }
+ },
+ "cruzada": {
+  "seca_focos_de_A_espectros_de_B": {
+   "n_calientes_0.5_3m": 258,
+   "n_referencia_0.5_3m": 6271,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 258,
+     "spearman_bruto": -0.037,
+     "ic95_bruto": [
+      -0.391,
+      0.262
+     ],
+     "spearman_tras_restar_banda": -0.077,
+     "ic95_tras_restar_banda": [
+      -0.433,
+      0.24
+     ],
+     "rojo_mediana": 0.0175,
+     "profundidad_mediana_m": 1.5
+    },
+    "referencia": {
+     "n": 6271,
+     "spearman_bruto": -0.023,
+     "ic95_bruto": [
+      -0.146,
+      0.117
+     ],
+     "spearman_tras_restar_banda": -0.044,
+     "ic95_tras_restar_banda": [
+      -0.163,
+      0.085
+     ],
+     "rojo_mediana": 0.0093,
+     "profundidad_mediana_m": 1.76
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 0,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 189,
+     "dif_log_razon_mediana": -0.228,
+     "ic95": [
+      -0.399,
+      -0.171
+     ],
+     "razon_foco_sobre_referencia": 0.796
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 189,
+     "dif_log_razon_mediana": -0.19,
+     "ic95": [
+      -0.308,
+      -0.057
+     ],
+     "razon_foco_sobre_referencia": 0.827
+    },
+    "0.5_2m_rojo/1": {
+     "n": 189,
+     "dif_log_razon_mediana": 0.699,
+     "ic95": [
+      0.531,
+      0.893
+     ],
+     "razon_foco_sobre_referencia": 2.011
+    },
+    "2_3m_verde/rojo": {
+     "n": 69,
+     "dif_log_razon_mediana": -0.092,
+     "ic95": [
+      -0.487,
+      -0.047
+     ],
+     "razon_foco_sobre_referencia": 0.912
+    },
+    "2_3m_nir/rojo": {
+     "n": 69,
+     "dif_log_razon_mediana": -0.3,
+     "ic95": [
+      -0.336,
+      0.457
+     ],
+     "razon_foco_sobre_referencia": 0.741
+    },
+    "2_3m_rojo/1": {
+     "n": 69,
+     "dif_log_razon_mediana": 0.655,
+     "ic95": [
+      0.37,
+      0.881
+     ],
+     "razon_foco_sobre_referencia": 1.925
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  },
+  "seca_focos_de_B_espectros_de_A": {
+   "n_calientes_0.5_3m": 334,
+   "n_referencia_0.5_3m": 6642,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 334,
+     "spearman_bruto": -0.362,
+     "ic95_bruto": [
+      -0.576,
+      0.044
+     ],
+     "spearman_tras_restar_banda": -0.415,
+     "ic95_tras_restar_banda": [
+      -0.639,
+      0.073
+     ],
+     "rojo_mediana": 0.0192,
+     "profundidad_mediana_m": 1.74
+    },
+    "referencia": {
+     "n": 6642,
+     "spearman_bruto": 0.033,
+     "ic95_bruto": [
+      -0.109,
+      0.174
+     ],
+     "spearman_tras_restar_banda": 0.052,
+     "ic95_tras_restar_banda": [
+      -0.094,
+      0.193
+     ],
+     "rojo_mediana": 0.0089,
+     "profundidad_mediana_m": 1.75
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 0,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 203,
+     "dif_log_razon_mediana": -0.355,
+     "ic95": [
+      -0.448,
+      -0.261
+     ],
+     "razon_foco_sobre_referencia": 0.701
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 203,
+     "dif_log_razon_mediana": -0.173,
+     "ic95": [
+      -0.26,
+      -0.073
+     ],
+     "razon_foco_sobre_referencia": 0.841
+    },
+    "0.5_2m_rojo/1": {
+     "n": 203,
+     "dif_log_razon_mediana": 0.857,
+     "ic95": [
+      0.749,
+      1.021
+     ],
+     "razon_foco_sobre_referencia": 2.356
+    },
+    "2_3m_verde/rojo": {
+     "n": 131,
+     "dif_log_razon_mediana": -0.144,
+     "ic95": [
+      -0.25,
+      -0.115
+     ],
+     "razon_foco_sobre_referencia": 0.866
+    },
+    "2_3m_nir/rojo": {
+     "n": 131,
+     "dif_log_razon_mediana": -0.407,
+     "ic95": [
+      -0.414,
+      0.2
+     ],
+     "razon_foco_sobre_referencia": 0.666
+    },
+    "2_3m_rojo/1": {
+     "n": 131,
+     "dif_log_razon_mediana": 0.757,
+     "ic95": [
+      0.508,
+      0.809
+     ],
+     "razon_foco_sobre_referencia": 2.132
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  },
+  "lluviosa_focos_de_A_espectros_de_B": {
+   "n_calientes_0.5_3m": 395,
+   "n_referencia_0.5_3m": 5383,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 395,
+     "spearman_bruto": -0.455,
+     "ic95_bruto": [
+      -0.65,
+      -0.111
+     ],
+     "spearman_tras_restar_banda": -0.5,
+     "ic95_tras_restar_banda": [
+      -0.682,
+      -0.143
+     ],
+     "rojo_mediana": 0.0169,
+     "profundidad_mediana_m": 1.57
+    },
+    "referencia": {
+     "n": 5383,
+     "spearman_bruto": -0.115,
+     "ic95_bruto": [
+      -0.275,
+      0.051
+     ],
+     "spearman_tras_restar_banda": -0.117,
+     "ic95_tras_restar_banda": [
+      -0.258,
+      0.024
+     ],
+     "rojo_mediana": 0.0129,
+     "profundidad_mediana_m": 1.83
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 0,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 301,
+     "dif_log_razon_mediana": -0.116,
+     "ic95": [
+      -0.167,
+      -0.076
+     ],
+     "razon_foco_sobre_referencia": 0.891
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 301,
+     "dif_log_razon_mediana": -0.165,
+     "ic95": [
+      -0.199,
+      -0.042
+     ],
+     "razon_foco_sobre_referencia": 0.848
+    },
+    "0.5_2m_rojo/1": {
+     "n": 301,
+     "dif_log_razon_mediana": 0.362,
+     "ic95": [
+      0.303,
+      0.424
+     ],
+     "razon_foco_sobre_referencia": 1.436
+    },
+    "2_3m_verde/rojo": {
+     "n": 94,
+     "dif_log_razon_mediana": 0.025,
+     "ic95": [
+      -0.029,
+      0.041
+     ],
+     "razon_foco_sobre_referencia": 1.025
+    },
+    "2_3m_nir/rojo": {
+     "n": 94,
+     "dif_log_razon_mediana": 0.304,
+     "ic95": [
+      -0.055,
+      0.361
+     ],
+     "razon_foco_sobre_referencia": 1.355
+    },
+    "2_3m_rojo/1": {
+     "n": 94,
+     "dif_log_razon_mediana": 0.186,
+     "ic95": [
+      0.165,
+      0.222
+     ],
+     "razon_foco_sobre_referencia": 1.204
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  },
+  "lluviosa_focos_de_B_espectros_de_A": {
+   "n_calientes_0.5_3m": 214,
+   "n_referencia_0.5_3m": 5850,
+   "rojo_frente_a_profundidad": {
+    "calientes": {
+     "n": 214,
+     "spearman_bruto": -0.204,
+     "ic95_bruto": [
+      -0.527,
+      0.427
+     ],
+     "spearman_tras_restar_banda": -0.219,
+     "ic95_tras_restar_banda": [
+      -0.536,
+      0.445
+     ],
+     "rojo_mediana": 0.0144,
+     "profundidad_mediana_m": 1.74
+    },
+    "referencia": {
+     "n": 5850,
+     "spearman_bruto": 0.056,
+     "ic95_bruto": [
+      -0.09,
+      0.182
+     ],
+     "spearman_tras_restar_banda": 0.023,
+     "ic95_tras_restar_banda": [
+      -0.099,
+      0.142
+     ],
+     "rojo_mediana": 0.0111,
+     "profundidad_mediana_m": 1.86
+    }
+   },
+   "pixeles_calientes_sin_referencia_emparejada": 15,
+   "forma_espectral_foco_menos_referencia_log": {
+    "0.5_2m_verde/rojo": {
+     "n": 114,
+     "dif_log_razon_mediana": -0.262,
+     "ic95": [
+      -0.338,
+      -0.083
+     ],
+     "razon_foco_sobre_referencia": 0.769
+    },
+    "0.5_2m_nir/rojo": {
+     "n": 114,
+     "dif_log_razon_mediana": -0.119,
+     "ic95": [
+      -0.272,
+      -0.037
+     ],
+     "razon_foco_sobre_referencia": 0.888
+    },
+    "0.5_2m_rojo/1": {
+     "n": 114,
+     "dif_log_razon_mediana": 0.551,
+     "ic95": [
+      0.317,
+      0.742
+     ],
+     "razon_foco_sobre_referencia": 1.735
+    },
+    "2_3m_verde/rojo": {
+     "n": 85,
+     "dif_log_razon_mediana": 0.195,
+     "ic95": [
+      -0.324,
+      0.219
+     ],
+     "razon_foco_sobre_referencia": 1.216
+    },
+    "2_3m_nir/rojo": {
+     "n": 85,
+     "dif_log_razon_mediana": -0.066,
+     "ic95": [
+      -0.12,
+      0.148
+     ],
+     "razon_foco_sobre_referencia": 0.936
+    },
+    "2_3m_rojo/1": {
+     "n": 85,
+     "dif_log_razon_mediana": 0.177,
+     "ic95": [
+      0.163,
+      0.78
+     ],
+     "razon_foco_sobre_referencia": 1.193
+    }
+   },
+   "referencia_informativa_sobre_fondo": false
+  }
+ }
+}

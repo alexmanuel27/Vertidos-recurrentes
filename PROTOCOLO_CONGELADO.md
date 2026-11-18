@@ -452,6 +452,11 @@ aquí:
 | 2026-11-13 | **Comprobación de robustez entre productos (secc. 4)**, que no se había hecho (`scripts/16_robustez_productos.py`, salida en `resultados/robustez_productos.json`). Para la turbidez y el SPM de Nechad se calcula una climatología propia sobre las mismas 113 escenas y la misma validez por píxel, y se repite la detección. Un candidato preregistrado «aparece» en un producto si en ese producto hay un sitio recurrente a ≤ 80 m. De los focos exploratorios se informan la frecuencia E1 y el z_c (bandas de la bahía) a ≤ 80 m. Autocomprobación superada: con Dogliotti salen la climatología y los sitios congelados. Figuras del artículo en inglés con `scripts/17_figuras_articulo.py` | Cumplir la secc. 4, que el manuscrito prometía | **Sí**, después de ver las secc. 18 y 19 |
 | 2026-11-15 | **Registro de la salida de campo del 13/11 (20.5)**. (a) Se visitaron P02, P03, P04, P09 y P10 con la ficha anterior: la ampliación del 26/10 no llegó a usarse, así que no hay «Dónde estoy» ni «basura que tapa el agua» en ninguna ficha. (b) `scripts/12_registro_campo.py` rellena ahora el número de punto con cero (las carpetas nuevas se llaman «Punto 2»); se registra desde un zip de `datos/trabajo de campo/bahia`, que reúne los dos envíos. Las filas de P05, P06 y P08 salen idénticas a las anteriores. (c) Aclaraciones del observador, literales y con sus preguntas, en `resultados/campo/visita2_relato_recibido_2026-11-14.md`: P09 y P10 se visitaron por separado; 45 de sus 52 fotos llevan la misma posición GPS (mala señal), que no sirve para situar al observador; P03 solo se vio desde unos 550 m, tras una cerca, y no se evaluó a ≤ 150 m; P06 fue su visita 1, aunque la ficha dice 2. (d) P01 y P07 no se han visitado por la distancia (Alex, 14/11). (e) Lluvia del 12–13/11: el observador la describe intensa y larga; cuatro modelos de Open-Meteo dan 6–11 mm entre las 12:00 del 12/11 y las 15:00 del 13/11 (hora local). Si la salida cuenta como visita tras ≥ 20 mm se decide con ERA5 cuando esté disponible. Queda por decidir, con la regla de 20.5 y sin mirar resultados, qué se hace con P01, P03 y P07 (no visitado, o sustitución por reserva si es un control). Al preparar este registro se vieron por error las tres primeras líneas de `reservas.csv` (cabecera y dos reservas); no se abrió `clave.csv` | Registrar la visita y lo que falta antes de evaluar | No: no se evaluó nada ni se cruzaron fichas con la clave |
 | 2026-11-15 | **Cierre de la verificación de campo sin más visitas (20.5)**, aprobado por Alex el 15/11 antes de cruzar fichas con la clave. (a) **Una sola visita por punto.** P-infraestructura se evalúa con ella («basta observarla una vez»); P-actividad pasa a ser solo descriptivo, porque no hay tres visitas. No se hace la visita tras lluvia. (b) **Evaluable:** un punto con ficha cuya pregunta 1 diga «sí» o «no». «No se puede ver» o sin visita = excluido y se dice. Se toma la respuesta del observador tal cual, también en P08 (tubos vistos de lejos) y P06 (visto a 100–150 m). (c) **Sin sustituciones:** P01 y P07 quedan como no visitados y P03 como no evaluable; `reservas.csv` no se usa. (d) Fisher exacto unilateral sobre P-infraestructura, sitios frente a controles, p < 0,05, como en 20.5, con `scripts/18_evaluar_campo.py`. (e) **Verificación con imagen, exploratoria y adicional (no sustituye al campo):** para los diez puntos, recorte de 400 × 400 m en UTM 17N centrado en el punto, 800 × 800 píxeles, de Esri World Imagery (consultado el 15/11/2026; fecha, sensor y resolución de cada recorte con el servicio `identify`), con un círculo de 150 m. Los recortes se etiquetan A–J con una permutación de semilla 20261115 y los codifica un subagente que solo ve las imágenes, sin coordenadas, repositorio ni clave, con la pregunta: «¿Hay dentro del círculo una estructura que vierta al agua: tubo, colector, alcantarilla, canal o desembocadura de cauce? sí / no / no se puede ver». Se informa el mismo Fisher y la concordancia con el campo en los puntos evaluables. Imagen: WorldView-3 de 27/01/2024 a 0,31 m en la zona probada | Cerrar el artículo sin volver al campo | **En parte.** Se fija antes de abrir `clave.csv`, pero las fichas ya se habían leído y las coordenadas de los sitios son públicas en 20.5, así que el resultado podía deducirse; la regla no se eligió por él: sigue la letra de 20.5 (no visitados y no evaluables fuera, sin otra condición). La imagen es nueva y exploratoria |
+| 2026-11-17 | **Dos pruebas exploratorias de robustez de los focos de turbidez crónica**, definidas antes de calcularlas (`scripts/21_replicacion.py`, `scripts/22_clorofila.py`). **(1) Replicación en mitades independientes.** Con las escenas aceptadas de cada resolución (113 a 20 m, 85 a 10 m) se parten por año de adquisición: A = 2016–2020, B = 2021–2025. En cada mitad y estación se calcula la climatología (mediana y MAD) y la z_c como en `--v2` (bandas de la bahía y del mar por separado); un píxel es «caliente» si z_c ≥ 3,5. Como cada mitad tiene unas 20 escenas por estación, se pide n_obs ≥ 10 y no 20 (desviación fijada aquí, antes de ver nada). Para cada dirección (A→B y B→A) se informa la **tasa de replicación**: fracción de los grupos calientes de una mitad (conectados, como en 8.1) que tienen algún píxel caliente de la otra a ≤ 80 m, frente a la **cobertura base**: fracción de los píxeles de agua evaluables en las dos mitades, de la bahía y a ≤ 250 m de la costa, que quedan a ≤ 80 m de un píxel caliente de la otra mitad. Se informa también ρ de Spearman entre las z_c de las dos mitades. Regla de lectura: los focos «se replican» si, en las dos direcciones, la tasa es ≥ 3 veces la cobertura base y ≥ 0,30. Además, z_c máxima a ≤ 80 m de S1–S5 en cada mitad. **(2) Clorofila frente a sedimento.** Con las escenas piloto de las que se conserva el L2R a 20 m (13) y que están aceptadas en `resultados/escenas_qc.csv`, se calcula NDCI = (ρ704 − ρ665) / (ρ704 + ρ665) en los píxeles de agua válidos. Se informa: mediana de NDCI y de turbidez por zona del modelo (secc. 14, 21/10/2026); ρ de Spearman píxel a píxel entre NDCI y turbidez en la bahía, en total y a ≥ 100 m de costa; y NDCI en S1–S5 (mediana a ≤ 80 m) frente a los píxeles de su misma zona y banda de distancia a costa. Un NDCI alto donde la turbidez es alta (ρ > 0,5 y gradiente de zonas igual) indica que la señal de turbidez puede ser clorofila; si no, apunta a material no algal. Solo descriptivo; el NDCI no se calibra con clorofila medida | Responder a las dudas de la investigación bibliográfica del 16/11 (replicación independiente y confusión con clorofila) | **Sí**, después de ver las secc. 21–23: se definen con los resultados a la vista, y se dice así en el artículo |
+| 2026-11-17 | **Exportación de `rhos_704` (`borde`)** en `src/acolite_io.py` y `src/exportar.py`, para la prueba de NDCI (fila anterior): el .npz guarda ahora también esa banda. Los productos ya exportados no la tienen. Subconjunto de la prueba: 30 escenas aceptadas a 20 m (`resultados/ndci_productos_20m.txt`), elegidas a intervalos regulares por fecha y sin mirar su contenido, sin las del piloto. Comprobado con un L2W piloto: sale `borde` junto a `rojo` y `tests/test_resolucion.py` pasa | Responder a la duda de clorofila | No: ninguna anomalía se recalcula |
+| 2026-11-17 | **Prueba exploratoria 3: ¿los focos coinciden con agua somera?** (`scripts/23_batimetria.py`), definida antes de calcularla. Profundidad: la malla del modelo SCHISM (`Modelo-hidrodin-mico/datos/malla/hgrid.gr3`, UTM 17N), interpolada linealmente a la rejilla de Sentinel-2 en los píxeles de la bahía que caen dentro de la malla; viene de las cartas de 1879–1889, así que es una pista y no la profundidad actual (dragados, relleno). Focos: píxeles con z_c ≥ 3,5 de la climatología completa de cada estación (bandas de la bahía, como `--v2`), a 20 y 10 m. Para cada píxel caliente se toma su rango percentil de profundidad entre los píxeles de referencia de la bahía a la misma distancia a costa (± 20 m) y a más de 80 m de cualquier píxel caliente; 0,5 es «sin relación», < 0,5 es «más somero que su referencia». Se informa la mediana de ese rango, la fracción de píxeles calientes a menos de 2 m (profundidad óptica en agua turbia, donde el fondo puede subir la reflectancia) frente a la de la referencia, y lo mismo en S1–S5 (mediana a ≤ 80 m). Regla de lectura: los focos «no se explican por el fondo somero» si la mediana del rango es ≥ 0,35 y la fracción a < 2 m no supera el doble de la de la referencia | Responder a la alternativa de fondo somero (investigación del 16/11) | **Sí**, después de ver las secc. 21–24 |
+| 2026-11-17 | **Cálculos pedidos por el chat del artículo** (`docs/PETICION_CHAT_TECNICO.md` del repo del artículo), todos EXPLORATORIOS y definidos después de ver las secc. 21–26, antes de calcularlos. **(1) `scripts/24_gradiente.py`**: para cada escena aceptada (20 m: 113; 10 m: 85) se toma la mediana de la turbidez de Dogliotti en cada zona del modelo (definición de la secc. 14, 21/10; con y sin los píxeles a < 100 m de costa) y por estación (seca/lluviosa); el estadístico es la mediana entre escenas de esas medianas, con IC 95 % por bootstrap de ESCENAS (2000 remuestreos, semilla fija), N de escenas y de píxeles. Se compara con la mediana de la climatología por píxel de la secc. 23. Dejar un año fuera cada vez; se informa si se mantiene el orden min(Atarés, Guasabacoa) > max(Marimelena, centro y canal) > mar. **(2) `scripts/25_umbrales.py`**: umbrales z_c ≥ 2,5; 3,0; 3,5 (el fijado); 4,0; 5,0 a 20 y 10 m, climatología completa por estación (grupos calientes como la secc. 24) y mitades A/B como en `21_replicacion.py` (misma regla: ≥ 3× la base y ≥ 0,30 en ambos sentidos); por umbral: número de grupos, distancia de S1–S5 al píxel caliente más cercano, tasa de replicación A↔B, rango percentil de profundidad y fracción < 2 m (misma definición de la secc. 25) y, para cada sitio, la probabilidad al azar de quedar a ≤ 80 m de un píxel caliente (fracción de píxeles de su zona y banda de distancia a costa ± 20 m que lo cumplen). **(3) RAdCor**: solo `grep` del clon de ACOLITE (sin ejecutar). **(4) Turbidez in situ**: búsqueda bibliográfica con referencias comprobadas. **(5) `scripts/26_figuras.py`**: panel a (climatología 10 m por estación), b (perfil brazo→mar con bootstrap de escenas), c (focos con replicación y profundidad de la carta de 1887), con los CSV en `productos_publicos/` | Responder a lo que necesita el artículo reformulado (turbidez crónica) | **Sí**, después de ver las secc. 21–26; no se cambia ningún umbral fijado |
+| 2026-11-18 | **Segunda ronda de cálculos pedidos por el chat del artículo** (`docs/PETICION_CHAT_TECNICO.md`, ítems 6–9), todos EXPLORATORIOS, definidos antes de calcularlos, sin cambiar ningún umbral. **(9) `scripts/27_aclaraciones.py`**: reconciliar los 13 grupos de la fig. c con la tabla 27.2 (todos los grupos de la rejilla frente a los de la caja y de la bahía, con y sin el tamaño mínimo `MIN_PX_GRUPO`), límites exactos de las cinco zonas del gradiente y exportación de la rejilla de profundidad de la carta de 1887 (20 y 10 m; decidido el 18/11, tras definirla, que va a `datos/no_publicar_carta1887/` y no al depósito). **(6) `scripts/28_fondo.py`, ¿se ve el fondo en los focos?** Reflectancias de superficie (ρ_s) de ACOLITE en verde (B3), rojo (B4) y NIR (B8) —y borde (B5, ~704 nm) en el subconjunto de 30 escenas a 20 m de la secc. 26— tomadas como mediana por píxel de las escenas aceptadas de cada estación y válidas (como en la climatología). 10 m: las 85 escenas aceptadas (las que tengan `rojo`); focos = z_c ≥ 3,5 por estación (secc. 23). Profundidad = carta de 1887 (secc. 25), sin cambios. Referencia = píxeles de la bahía a la misma distancia a costa (± 20 m), a > 80 m de cualquier píxel caliente y con profundidad ± 0,25 m de la del píxel caliente (≥ 30 píxeles; si no, se omite el píxel y se cuenta). **(a) Relación ρ_rojo–profundidad** (Spearman) entre 0,5 y 3 m, por separado para los píxeles calientes y para todos los no calientes de la bahía, y también tras restar a cada ρ_rojo la mediana de su banda de distancia a costa (± 20 m); IC 95 % por bootstrap de bloques de 100 m (2000 remuestreos, semilla fija). Si el fondo se viera, ρ_rojo bajaría al aumentar la profundidad (ρ < 0). **(b) Forma espectral**: razón verde/rojo y NIR/rojo (y borde/rojo a 20 m) de cada píxel caliente frente a la mediana de su referencia emparejada (diferencia de log-razones), mediana sobre los píxeles calientes con profundidad 0,5–2 m y 2–3 m, con IC por bootstrap de bloques. Expectativa fijada antes de ver nada: el fondo claro y somero sube verde más que rojo (razón verde/rojo mayor que la de agua turbia de la misma profundidad); el sedimento en suspensión sube el rojo más que el verde (razón menor). Regla de lectura: la prueba **solo informa** sobre el fondo si la referencia muestra ρ ≤ −0,2 con IC que excluye 0 entre 0,5 y 3 m (si no, o el fondo no se ve en este rango o el error de la carta, σ 0,9 m, lo borra, y se dice que no se puede concluir). Si informa, «el fondo explica los focos» solo si los calientes tienen también ρ ≤ −0,2 y razón verde/rojo ≥ la de la referencia. Precisiones fijadas antes de calcular: mediana por píxel solo con n_obs ≥ 10 (10 m, 85 escenas) o ≥ 5 (subconjunto de 30 escenas a 20 m); solo píxeles con las bandas > 0; focos y referencia dentro de la ventana de la bahía; el criterio de «referencia informativa» se evalúa en las dos variantes (en bruto y tras restar la banda de distancia) y se exige en ambas. Limitaciones que se declaran: los píxeles calientes se eligen por ρ_rojo alto (la turbidez de Dogliotti es una función de ρ_rojo), así que un exceso de ρ_rojo sobre la referencia **no** es resultado (es de construcción) y no se usa como prueba; carta de 1887, no la profundidad actual; sin medida in situ de la reflectancia del fondo. **Añadido el 18/11 tras ver la primera ejecución del ítem 6** (y declarado en la secc. 28.2): variante cruzada, con los focos elegidos en una mitad (A o B) y las reflectancias medidas en la otra, n_obs ≥ 8 por mitad y estación, para quitar el sesgo de selección de las razones espectrales | Responder a lo que necesita el artículo (¿fondo somero o turbidez cronica?) | **Sí**, después de ver las secc. 21–27; no se cambia ningún umbral fijado |
 
 ## 16. Lo que midió el piloto (16/09/2026, 13 escenas)
 
@@ -910,3 +915,462 @@ atmosférica (el AOT de DSF) y parte de las escenas, no los datos L1C.
 Límite: S3–S5 se eligieron a 20 m por ser permanentes, y 75 de las 85 fechas son las mismas; la
 reaparición a 10 m demuestra que la señal no depende de la resolución ni de la corrección
 atmosférica, no que venga de datos independientes.
+
+## 24. Pruebas de robustez de los focos de turbidez crónica (17/11/2026)
+
+Exploratorias, definidas en la fila del 17/11/2026 de la secc. 14 (después de ver las secc. 21–23).
+Ficheros: `resultados/replicacion_20m.json`, `resultados_10m/replicacion_10m.json`
+(`scripts/21_replicacion.py`) y `resultados/clorofila_ndci.json` (`scripts/22_clorofila.py`).
+
+**1. Replicación en mitades independientes (A = 2016–2020, B = 2021–2025).** Escenas aceptadas:
+51 y 62 a 20 m; 38 y 47 a 10 m. Tasa de replicación (grupos calientes de una mitad con algún píxel
+caliente de la otra a ≤ 80 m) frente a la cobertura base (píxeles de la bahía a ≤ 250 m de costa
+que quedan a ≤ 80 m de un píxel caliente de la otra mitad):
+
+| Resolución | Estación | A→B | B→A | Cobertura base | ρ(z_c) bahía |
+|---|---|---|---|---|---|
+| 20 m | seca | 0,92 (33/36) | 0,88 (30/34) | 0,13 | 0,77 |
+| 20 m | lluviosa | 0,71 (10/14) | 0,54 (7/13) | 0,17 / 0,09 | 0,20 |
+| 10 m | seca | 0,89 (8/9) | 1,00 (18/18) | 0,17 | 0,65 |
+| 10 m | lluviosa | 0,73 (8/11) | 1,00 (3/3) | 0,18 / 0,19 | 0,33 |
+
+La regla fijada (tasa ≥ 3 veces la base y ≥ 0,30 en las dos direcciones) **se cumple en las cuatro
+combinaciones**; en lluviosa a 10 m B→A son solo 3 grupos. Los cinco sitios S1–S5 tienen z_c ≥ 3,5
+a ≤ 80 m en las dos mitades en la estación seca, a 20 y a 10 m. En lluviosa S3 no llega a 3,5 a 20 m
+(2,5 y 2,9) y a 10 m solo en B (4,2); S1 en lluviosa pasa de 10,7 a 66,4 a 20 m, un valor extremo que
+indica una zona pequeña y variable. La replicación en el tiempo no descarta que el patrón sea fijo
+por una causa distinta de un vertido (fondo somero, adyacencia de una orilla permanente): la
+climatología describe dónde, no por qué.
+
+**2. Clorofila frente a sedimento: no concluyente.** De los 13 L2R piloto solo 2 están aceptados en
+`escenas_qc.csv` (2020-01-19 y 2020-11-29). Con ellos: NDCI mediano más alto en Atarés (0,12) que en
+Guasabacoa (−0,08), Marimelena (−0,02) y el mar (−0,05), con turbidez parecida en las tres ensenadas
+(1,7–1,9 FNU); ρ píxel a píxel entre NDCI y turbidez en la bahía 0,07 (0,11 a ≥ 100 m de costa). Con dos
+escenas no se puede afirmar nada. `rhos_704` no se exportaba (secc. 14, 17/11): el exportador lo guarda ya
+como `borde`. Para la prueba hacen falta 30 escenas aceptadas más a 20 m
+(`resultados/ndci_productos_20m.txt`), a procesar con las credenciales de Copernicus de Alex en
+`datos/productos_ndci`.
+
+## 25. Prueba 3 exploratoria: focos frente a profundidad de la carta (17/11/2026)
+
+Definida en la secc. 14 antes de calcularla (`scripts/23_batimetria.py`; `resultados/batimetria_20m.json`,
+`resultados_10m/batimetria_10m.json`). Profundidad de la malla SCHISM (cartas de 1879–1889) en los píxeles de la
+bahía que caen dentro de la malla (20 m: 12 237 de 60 214; 10 m: 49 036 de 240 380). Rango percentil de cada píxel
+caliente (z_c ≥ 3,5) entre píxeles de la bahía a su misma distancia de costa (± 20 m) y a > 80 m de otro caliente.
+
+| Resolución | Estación | Calientes con profundidad | Rango percentil mediano | Prof. mediana calientes / referencia (m) | Fracción < 2 m: calientes / referencia |
+|---|---|---|---|---|---|
+| 20 m | seca | 221 | 0,19 | 1,72 / 6,10 | 0,57 / 0,15 |
+| 20 m | lluviosa | 163 | 0,13 | 1,48 / 6,19 | 0,72 / 0,12 |
+| 20 m | ambas | 90 | 0,19 | 1,54 / 6,03 | 0,77 / 0,16 |
+| 10 m | seca | 676 | 0,14 | 1,39 / 6,28 | 0,68 / 0,13 |
+| 10 m | lluviosa | 544 | 0,12 | 1,59 / 6,13 | 0,64 / 0,12 |
+| 10 m | ambas | 235 | 0,14 | 1,42 / 6,17 | 0,83 / 0,14 |
+
+Profundidad mediana a ≤ 80 m de los sitios: S2 2,1 m, S3 0,5 m, S4 1,7 m, S5 1,4 m (S1 fuera de la malla).
+
+**Lectura.** La regla (rango ≥ 0,35 y fracción < 2 m no mayor que el doble de la de referencia) NO se cumple en
+ningún caso: los focos de turbidez crónica están en agua somera de la carta, 4–6 veces más de lo esperado a igual
+distancia de costa. No se puede decir que los focos sean descargas: son coherentes con fondo somero visible o
+resuspendido, con sedimentación junto a las desembocaduras (que también sería señal de aporte) o con ambas cosas.
+Limitaciones: cartas de hace siglo y medio (dragados y relleno posteriores), solo cubre la parte interior de la
+bahía, y cercanía a costa y profundidad no son independientes. Para la pregunta del artículo: la turbidez crónica
+se concentra en los brazos someros del sur; la causa (aporte, resuspensión o fondo) no queda separada con estos datos.
+
+**Nota del 17/11 (tras comparar con el repo del modelo).** La malla `hgrid.gr3` coincide con la superficie de la carta de
+1887 (`batimetria_1887.nc`: diferencia mediana 0,0 m en 3623 nodos de la bahía; con la de 1879, 0,6 m), sin dragado. La
+carta tiene un error de campo declarado de σ = 0,9 m (L = 150 m) y un datum incierto de 0 a +0,5 m, que son del orden de
+la profundidad de los focos (1,4–1,7 m); aun así el contraste con la referencia (≈ 6 m) es mucho mayor que ese error.
+
+## 26. Prueba 2 exploratoria: NDCI frente a turbidez (17/11/2026, 30 escenas a 20 m)
+
+Definida en la secc. 14 el 17/11 (`scripts/22_clorofila.py`). Resultados en `resultados/clorofila_ndci.json` y
+`datos/clorofila_30.log`. Escenas: 30 nuevas con `rhos_704` (banda «borde») más 2 del piloto, 32 en total.
+NDCI = (ρ704 − ρ665) / (ρ704 + ρ665).
+
+| Zona (mediana de escenas) | NDCI | Turbidez (FNU) |
+|---|---|---|
+| Atarés | −0,017 | 2,44 |
+| Guasabacoa | −0,015 | 2,42 |
+| Marimelena | −0,002 | 2,37 |
+| Centro y canal | −0,026 | 2,11 |
+| Mar | −0,146 | 1,34 |
+
+Correlación de Spearman NDCI–turbidez en la bahía: −0,086 (mediana de escenas); −0,107 a ≥ 100 m de costa.
+
+Sitios frente a su referencia (NDCI mediano; escenas con dato entre paréntesis):
+
+| Sitio | Sitio | Referencia |
+|---|---|---|
+| S1 | 0,225 (18) | −0,081 |
+| S2 | 0,119 (29) | −0,108 |
+| S3 | 0,084 (27) | −0,006 |
+| S4 | −0,019 (29) | −0,010 |
+| S5 | 0,041 (32) | −0,006 |
+
+**Lectura.** En la bahía el NDCI no sube con la turbidez (correlación ligeramente negativa), así que los focos de
+turbidez crónica no son un gradiente general de clorofila. En cuatro de los cinco sitios el NDCI mediano es mayor que
+en su referencia (S1 y S2 con más diferencia); en S4 no. Eso deja abierto que algunos focos tengan además clorofila
+elevada, o materia orgánica que el NDCI no separa, pero con valores cercanos a cero, sin validación con clorofila
+medida y sin corrección de adyacencia, no se puede separar del ruido atmosférico. Veredicto: prueba inconclusa para
+separar clorofila de sedimento. Lo que sí queda: la turbidez crónica de la bahía no sigue a la clorofila.
+
+
+## 27. Cálculos pedidos por el chat del artículo (17/11/2026)
+
+Respuesta a `docs/PETICION_CHAT_TECNICO.md` (repo del artículo). Todo EXPLORATORIO y definido después de ver las
+secc. 21–26 (fila del 17/11 de la secc. 14). Scripts `24_gradiente.py`, `25_umbrales.py`, `26_figuras.py`; registros
+en `datos/gradiente_*.log`, `datos/umbrales_*.log`, `datos/figuras_10m.log`. No se cambió ningún umbral fijado. Las
+tablas están generadas desde los JSON, sin redondeo a mano.
+
+### 27.1 Gradiente por zona y estación con todas las escenas aceptadas
+
+**20 m** (113 escenas; mediana entre escenas de la mediana por escena de cada zona, IC 95 % por bootstrap de escenas, 2000 remuestreos; zona-escena con ≥ 50 píxeles válidos). Fuente: `resultados/gradiente_20m.json`.
+
+| Estación (escenas) | Variante | Atarés | Guasabacoa | Marimelena | Centro y canal | Mar | Orden brazos > centro > mar (margen brazos−centro; centro−mar, FNU) | Orden al dejar un año fuera |
+|---|---|---|---|---|---|---|---|---|
+| seca (71) | todos los píxeles | 2,45 [2,25–2,72] | 2,35 [2,08–2,62] | 2,05 [1,74–2,27] | 2,05 [1,84–2,17] | 1,32 [1,19–1,42] | sí (0,305; 0,734) | 9/9 años |
+| seca (71) | ≥ 100 m de costa | 2,48 [2,31–2,72] | 2,38 [2,09–2,71] | 2,04 [1,73–2,25] | 2,11 [1,89–2,27] | 1,32 [1,19–1,41] | sí (0,268; 0,791) | 9/9 años |
+| seca | mediana de la climatología por píxel (secc. 23) | 2,48 | 2,39 | 2,00 | 1,99 | 1,26 | — | — |
+| lluviosa (42) | todos los píxeles | 2,56 [2,31–2,75] | 2,84 [2,60–2,98] | 2,55 [2,22–2,87] | 2,36 [2,15–2,85] | 2,17 [1,72–2,62] | sí (0,009; 0,386) | 5/9 años |
+| lluviosa (42) | ≥ 100 m de costa | 2,66 [2,53–2,84] | 2,85 [2,64–2,99] | 2,66 [2,17–3,01] | 2,48 [2,23–2,90] | 2,16 [1,71–2,59] | sí (0,005; 0,495) | 5/9 años |
+| lluviosa | mediana de la climatología por píxel (secc. 23) | 2,64 | 2,72 | 2,59 | 2,49 | 1,81 | — | — |
+
+**10 m** (85 escenas; mediana entre escenas de la mediana por escena de cada zona, IC 95 % por bootstrap de escenas, 2000 remuestreos; zona-escena con ≥ 50 píxeles válidos). Fuente: `resultados_10m/gradiente_10m.json`.
+
+| Estación (escenas) | Variante | Atarés | Guasabacoa | Marimelena | Centro y canal | Mar | Orden brazos > centro > mar (margen brazos−centro; centro−mar, FNU) | Orden al dejar un año fuera |
+|---|---|---|---|---|---|---|---|---|
+| seca (44) | todos los píxeles | 2,54 [2,33–2,87] | 2,40 [2,10–2,71] | 2,06 [1,82–2,29] | 2,03 [1,82–2,27] | 1,18 [1,00–1,43] | sí (0,342; 0,882) | 9/9 años |
+| seca (44) | ≥ 100 m de costa | 2,63 [2,40–3,01] | 2,39 [2,22–2,80] | 2,05 [1,77–2,27] | 2,19 [1,90–2,32] | 1,18 [1,01–1,41] | sí (0,199; 1,009) | 9/9 años |
+| seca | mediana de la climatología por píxel (secc. 23) | 2,52 | 2,41 | 2,01 | 2,00 | 1,11 | — | — |
+| lluviosa (41) | todos los píxeles | 2,69 [2,53–3,48] | 3,09 [2,78–3,81] | 2,93 [2,41–3,16] | 2,44 [2,32–3,12] | 2,31 [1,97–2,65] | no (-0,233; 0,618) | 0/9 años |
+| lluviosa (41) | ≥ 100 m de costa | 2,78 [2,60–3,76] | 3,18 [2,85–3,67] | 2,76 [2,41–3,24] | 2,53 [2,41–3,14] | 2,30 [1,96–2,63] | sí (0,021; 0,464) | 3/9 años |
+| lluviosa | mediana de la climatología por píxel (secc. 23) | 2,90 | 3,10 | 2,88 | 2,73 | 1,94 | — | — |
+
+
+**Aclaración.** La tabla del gradiente de la secc. 23 usa todas las escenas aceptadas (mediana de la climatología
+por píxel: 113 escenas a 20 m, 85 a 10 m). Las cifras 2,44 / 2,42 / 2,37 / 2,11 / 1,34 FNU de la secc. 26 son medianas
+entre 32 escenas de la prueba de clorofila y no deben citarse como gradiente. La afirmación «igual en las dos
+estaciones» que se dio en el chat era incorrecta y se retira.
+
+**Lectura.** En la estación seca el orden min(Atarés, Guasabacoa) > max(Marimelena, centro y canal) > mar se cumple a
+20 y 10 m y al dejar fuera cada año (9/9); el margen brazos − centro es 0,20–0,34 FNU. El IC de Atarés a 20 m
+([2,25–2,72]) no se solapa con el del centro ([1,84–2,17]), pero el de Guasabacoa ([2,08–2,62]) sí se solapa algo.
+En la estación lluviosa el margen brazos − centro es casi nulo (0,009 FNU a 20 m; −0,233 a 10 m con todos los píxeles)
+y el orden solo se mantiene en 5/9 años a 20 m y 0/9 (3/9 a ≥ 100 m) a 10 m: Guasabacoa es la mayor y Marimelena
+iguala o supera a Atarés. Es decir, la jerarquía «brazos del sur > Marimelena ≈ centro > mar» es de la estación seca;
+en la lluviosa solo se sostiene que la bahía es más turbia que el mar (centro − mar de 0,39 a 0,62 FNU).
+
+### 27.2 Sensibilidad de los focos al umbral de z_c
+
+**20 m** (mitades A/B: 51 y 62 escenas). Fuente: `resultados/umbrales_20m.json`.
+
+| z_c ≥ | Estación | Grupos (en bahía) | S1–S5 a ≤ 80 m: observados / esperados por azar (p) | Controles pareados a ≤ 80 m: obs. / esp. | Rango percentil de profundidad (mediano) | Fracción < 2 m: focos / referencia | Replicación A→B (base) | B→A (base) | Regla (≥ 3× base y ≥ 0,30) |
+|---|---|---|---|---|---|---|---|---|---|
+| 2,5 | seca | 99 (8) | 5/5 / 1,47 (p = 0,0016) | 1/5 / 1,33 | 0,229 | 0,394 / 0,143 | 0,852 (0,217) | 0,855 (0,213) | se cumple |
+| 2,5 | lluviosa | 82 (12) | 5/5 / 1,60 (p = 0,0030) | 0/5 / 1,49 | 0,107 | 0,619 / 0,113 | 0,843 (0,341) | 0,762 (0,255) | NO se cumple |
+| 3,0 | seca | 67 (9) | 5/5 / 1,20 (p = 0,0005) | 0/5 / 1,10 | 0,198 | 0,486 / 0,151 | 0,837 (0,178) | 0,907 (0,162) | se cumple |
+| 3,0 | lluviosa | 37 (10) | 5/5 / 1,36 (p = 0,0013) | 0/5 / 1,26 | 0,120 | 0,680 / 0,116 | 0,769 (0,233) | 0,552 (0,135) | se cumple |
+| 3,5 | seca | 46 (7) | 5/5 / 1,06 (p = 0,0002) | 0/5 / 0,91 | 0,191 | 0,570 / 0,151 | 0,917 (0,132) | 0,882 (0,129) | se cumple |
+| 3,5 | lluviosa | 14 (6) | 5/5 / 1,14 (p = 0,0004) | 0/5 / 1,00 | 0,133 | 0,724 / 0,124 | 0,714 (0,171) | 0,538 (0,089) | se cumple |
+| 4,0 | seca | 34 (5) | 5/5 / 0,91 (p = 0,0001) | 0/5 / 0,77 | 0,189 | 0,652 / 0,152 | 0,895 (0,105) | 0,905 (0,100) | se cumple |
+| 4,0 | lluviosa | 10 (4) | 5/5 / 0,92 (p = 0,0001) | 0/5 / 0,74 | 0,155 | 0,804 / 0,141 | 0,875 (0,141) | 0,500 (0,053) | se cumple |
+| 5,0 | seca | 16 (4) | 5/5 / 0,71 (p = 0,0000) | 0/5 / 0,61 | 0,190 | 0,765 / 0,156 | 1,000 (0,075) | 1,000 (0,055) | se cumple |
+| 5,0 | lluviosa | 4 (2) | 4/5 / 0,70 (p = 0,0004) | 0/5 / 0,47 | 0,184 | 0,846 / 0,160 | 0,600 (0,082) | 0,400 (0,020) | se cumple |
+
+**10 m** (mitades A/B: 38 y 47 escenas). Fuente: `resultados_10m/umbrales_10m.json`.
+
+| z_c ≥ | Estación | Grupos (en bahía) | S1–S5 a ≤ 80 m: observados / esperados por azar (p) | Controles pareados a ≤ 80 m: obs. / esp. | Rango percentil de profundidad (mediano) | Fracción < 2 m: focos / referencia | Replicación A→B (base) | B→A (base) | Regla (≥ 3× base y ≥ 0,30) |
+|---|---|---|---|---|---|---|---|---|---|
+| 2,5 | seca | 82 (8) | 5/5 / 1,55 (p = 0,0025) | 1/5 / 1,63 | 0,188 | 0,445 / 0,127 | 0,864 (0,273) | 0,988 (0,282) | se cumple |
+| 2,5 | lluviosa | 43 (13) | 5/5 / 1,83 (p = 0,0064) | 1/5 / 1,91 | 0,080 | 0,569 / 0,093 | 0,943 (0,402) | 0,950 (0,400) | NO se cumple |
+| 3,0 | seca | 52 (5) | 5/5 / 1,22 (p = 0,0007) | 1/5 / 1,30 | 0,145 | 0,580 / 0,131 | 0,917 (0,218) | 0,956 (0,236) | se cumple |
+| 3,0 | lluviosa | 20 (12) | 5/5 / 1,39 (p = 0,0015) | 1/5 / 1,42 | 0,090 | 0,614 / 0,099 | 0,875 (0,277) | 0,875 (0,305) | NO se cumple |
+| 3,5 | seca | 22 (5) | 5/5 / 1,06 (p = 0,0003) | 1/5 / 1,08 | 0,139 | 0,682 / 0,131 | 0,889 (0,168) | 1,000 (0,170) | se cumple |
+| 3,5 | lluviosa | 8 (5) | 5/5 / 1,12 (p = 0,0005) | 1/5 / 1,14 | 0,115 | 0,642 / 0,117 | 0,727 (0,182) | 1,000 (0,188) | se cumple |
+| 4,0 | seca | 14 (6) | 5/5 / 0,90 (p = 0,0001) | 1/5 / 0,91 | 0,144 | 0,716 / 0,131 | 1,000 (0,122) | 0,900 (0,137) | se cumple |
+| 4,0 | lluviosa | 2 (1) | 5/5 / 0,87 (p = 0,0001) | 1/5 / 0,88 | 0,130 | 0,724 / 0,130 | 0,750 (0,147) | 0,667 (0,120) | se cumple |
+| 5,0 | seca | 5 (2) | 5/5 / 0,63 (p = 0,0000) | 1/5 / 0,62 | 0,168 | 0,791 / 0,142 | 0,667 (0,080) | 0,800 (0,078) | se cumple |
+| 5,0 | lluviosa | 2 (1) | 4/5 / 0,52 (p = 0,0003) | 1/5 / 0,49 | 0,177 | 0,792 / 0,150 | 1,000 (0,082) | 1,000 (0,063) | se cumple |
+
+
+**Lectura.** (i) Profundidad: el rango percentil mediano es 0,08–0,23 y la fracción < 2 m es 0,39–0,85 frente a
+0,09–0,16 en la referencia, a todos los umbrales y en las dos resoluciones: la conclusión de agua somera no depende
+del 3,5. (ii) S1–S5 quedan a ≤ 80 m de un píxel caliente en todos los umbrales salvo S3 (lluviosa, z_c ≥ 5,0, 20 m:
+995 m) y S2 (lluviosa, z_c ≥ 5,0, 10 m: 81 m), con 0,5–1,8 sitios esperados por azar. Cautela: S1–S5 salieron de la
+detección preregistrada con las mismas escenas, así que no es una prueba independiente; los controles pareados quedan
+lejos (0–1 de 5, como se espera por azar). (iii) Replicación: la regla (≥ 3× la base y ≥ 0,30) se cumple en todos los
+umbrales salvo la estación lluviosa a z_c ≥ 2,5 (20 y 10 m) y a ≥ 3,0 (10 m); allí la cobertura base es 0,26–0,40,
+3× la base ronda o supera 0,8–1,2 y la regla es casi imposible de cumplir con tasas de replicación de 0,76–0,95: es un
+límite de la regla con umbrales bajos, no una caída de la replicación. (iv) Número de grupos: a 20 m en seca baja de
+99 (z_c ≥ 2,5) a 16 (≥ 5,0), de 8 a 4 en la bahía; a umbrales altos quedan 1–6 grupos en la bahía. Conclusión: «los
+focos están en los brazos someros del sur» no depende del umbral entre 2,5 y 5,0.
+
+### 27.3 ¿Permite el ACOLITE instalado (clon d61c8de, 9/9/2026) la corrección de adyacencia RAdCor?
+
+**Sí, sin ejecutarla.** (1) `config/defaults.txt:383–405`: bloque `radcor_*` (`radcor_kernel_radius=5.0`,
+`radcor_max_vza=15`, `radcor_aot_estimate=tsdsf`, …). (2) `acolite/acolite/acolite_run.py:216–217`:
+`atmospheric_correction_method == 'radcor'` → `ac.adjacency.radcor.radcor(l1r)`. (3)
+`acolite/adjacency/radcor/radcor.py:453–457`: `S2A_MSI`, `S2B_MSI`, `S2C_MSI` con resolución 10 por defecto o la de
+`s2_target_res` (10, 20 o 60 m). (4) Los ajustes PSF/SAF de S2 están en `data/Shared/RAdCor/psf/fit/` (117 ficheros cuyo
+nombre contiene S2 o MSI). **Ojo:** el parámetro `adjacency_correction=True` solo activa GLAD
+(`acolite_run.py:225–226`, `adjacency_correction_method == 'glad'`, solo con DSF); RAdCor no se añade al DSF, lo
+sustituye (`atmospheric_correction_method=radcor`). Usarlo cambiaría el método congelado: requeriría una fila nueva en
+la secc. 14 y reprocesar las 113 / 85 escenas. No se ha ejecutado.
+
+### 27.4 Turbidez in situ publicada para la bahía de La Habana
+
+**No he encontrado ninguna.** Búsquedas (17/11/2026): OpenAlex mediante la herramienta de referencias, 7 consultas de búsqueda
+(«Havana Bay turbidity suspended solids water quality», «bahía de La Habana calidad del agua transparencia sólidos
+suspendidos», «Secchi disk Havana Bay Cuba», «bahía de La Habana», «Havana Bay Cuba pollution sediments water
+chlorophyll», «Martínez Varona clorofila bahía de La Habana», «Cuban bays remote sensing turbidity Sentinel-2 Landsat
+suspended particulate matter Cuba») más la comprobación de un registro, y 3 búsquedas web (turbidez / sólidos suspendidos / Secchi /
+REDCAM / CIMAB). Hallazgos: (a) Valle-Pombrol, Ávila-Alonso, Muñoz-Caravaca, Cárdenas-Ortiz y Castro-Rodríguez (2017),
+*Variación espacio-temporal del coeficiente de atenuación de la luz en la bahía de Cienfuegos, Cuba*, Revista de
+Investigaciones Marinas 37(1): 40–51, sin DOI (https://iris.polito.it/handle/11583/2869974, acceso 17/11/2026): Secchi,
+sólidos suspendidos y clorofila en 16 estaciones, 2009–2014, **solo Cienfuegos**, no La Habana; sirve como comparador
+regional. (b) Vega, Capetillo Piñar, Lopeztegui Castillo y Martínez-Daranas (2013), *Variación espacio-temporal de la
+turbidez y calidad en cuerpos de agua marina de uso pesquero, región norcentral de Cuba, 2008–2010*
+(http://hdl.handle.net/1834/12675; título y autores comprobados en OpenAlex): **no pude abrir el registro** (la página de
+AquaDocs devolvió una página vacía), así que no sé si incluye La Habana ni qué variables ni cuántas muestras; Alex
+puede descargarlo y comprobarlo. (c) Candidata no leída para el argumento de agua somera: Castro, Pereira, Dias y Lopes
+(2026), *Assessing the Reliability of Sentinel-2 for Turbidity Estimation in a Shallow Coastal Lagoon*, Remote Sensing
+18(13): 2176, doi:10.3390/rs18132176 (solo vi el título). Los estudios in situ ya conocidos de la bahía (secc. 21 y la
+revisión del 16/11) son por estación y de clorofila, bacterias o sedimentos; no se ha confirmado que den turbidez,
+Secchi o sólidos suspendidos. Consecuencia: el artículo no puede decir nada sobre valores absolutos de turbidez.
+
+### 27.5 Figuras (10 m, caja del área de estudio)
+
+Archivos en `productos_publicos/figuras/` (PDF con las capas ráster incrustadas y el resto en vectores; paleta viridis y
+Okabe-Ito, seguras para daltonismo; inglés; sin fronteras administrativas; la nota de límites para el pie está en
+`NOTA_pies_de_figura.txt`): **a** `fig_a_climatologia_10m.pdf` y `.csv.gz` (mediana por píxel, seca y lluviosa, escala
+común 2–98 percentil); **b** `fig_b_perfil_brazos.pdf` y `.csv` (perfil por el eje de cada brazo: camino más corto por el
+agua desde la entrada del canal (361 000 E, 2 560 900 N) hasta el píxel más lejano de la zona, corredor de ± 150 m, bins
+de 250 m, mediana entre escenas con banda de IC 95 % por bootstrap de escenas); **c** `fig_c_focos_10m.pdf` y `.csv`
+(grupos con z_c ≥ 3,5, color = nº de mitades A/B en que replican, forma = profundidad de la carta de 1887 a ≤ 80 m,
+isóbata de 2 m, S1–S5 y los puntos de control P01–P04 y P10). Cifras de la figura b:
+
+| Brazo | Estación | Bin (m) | Mediana (FNU) | IC 95 % | Escenas |
+|---|---|---|---|---|---|
+| atares | seca | 125 | 1,26 | [1,12–1,46] | 42 |
+| atares | seca | 1125 | 1,51 | [1,22–1,64] | 40 |
+| atares | seca | 2125 | 2,37 | [2,09–2,55] | 44 |
+| atares | seca | 3125 | 2,60 | [2,32–2,99] | 44 |
+| atares | seca | 4375 | 4,60 | [3,87–5,35] | 39 |
+| atares | lluviosa | 125 | 2,77 | [2,52–3,12] | 36 |
+| atares | lluviosa | 1125 | 2,59 | [1,93–3,02] | 37 |
+| atares | lluviosa | 2125 | 2,98 | [2,42–3,51] | 39 |
+| atares | lluviosa | 3125 | 2,73 | [2,60–3,26] | 40 |
+| atares | lluviosa | 4375 | 4,16 | [3,10–5,47] | 39 |
+| guasabacoa | seca | 125 | 1,26 | [1,12–1,46] | 42 |
+| guasabacoa | seca | 1125 | 1,51 | [1,22–1,64] | 40 |
+| guasabacoa | seca | 2125 | 2,37 | [2,09–2,56] | 44 |
+| guasabacoa | seca | 3125 | 2,61 | [2,44–2,95] | 44 |
+| guasabacoa | seca | 5125 | 2,66 | [2,44–3,23] | 39 |
+| guasabacoa | lluviosa | 125 | 2,77 | [2,52–3,12] | 36 |
+| guasabacoa | lluviosa | 1125 | 2,59 | [1,93–3,02] | 37 |
+| guasabacoa | lluviosa | 2125 | 2,98 | [2,42–3,51] | 39 |
+| guasabacoa | lluviosa | 3125 | 3,02 | [2,75–3,84] | 39 |
+| guasabacoa | lluviosa | 5125 | 3,94 | [2,70–5,09] | 31 |
+
+Grupos de la figura c (10 m, caja del área de estudio): 13 ; en la bahía: 8 ; replican en 2 de 2 mitades: 12 ; en 1: 1 ; en 0: 0
+En la bahía: 8 grupos; profundidad mediana a ≤ 80 m (m): [0.46, 0.61, 1.54, 1.55, 2.14, 2.16, 2.61, 3.35]
+
+**Lectura.** Los dos corredores comparten los primeros ~3 km (canal y bahía central), por eso las curvas coinciden
+hasta ahí; el contraste entre brazos está solo en los últimos 1,5–2 km. En seca la mediana sube de 1,26 FNU a 125 m de
+la entrada hasta 2,60 FNU a 3,1 km, y llega a 4,60 [3,87–5,35] en el último bin de Atarés (4,4 km) y a 2,66 [2,44–3,23]
+en el de Guasabacoa (5,1 km). En lluviosa la serie es más ruidosa (2,77 en el primer bin; 4,16 en Atarés y 3,94 en
+Guasabacoa al final, con IC amplios). Figura c: 13 grupos en la caja, 8 en la bahía; 12 replican en 2 de 2 mitades y 1
+en una; los 8 de la bahía tienen una profundidad mediana de la carta de 0,46–3,35 m (4 por debajo de 2 m, 6 por debajo
+de 2,2 m), frente a ≈ 6 m de la referencia. Los otros 5 están fuera de la bahía, junto a la boca del canal.
+
+
+## 28. Aclaraciones y pruebas pedidas por el chat del artículo, ítems 6–9 (18/11/2026)
+
+Definidas en la secc. 14 el 18/11, antes de calcularlas (todo EXPLORATORIO; no se cambia ningún umbral). Scripts:
+`scripts/27_aclaraciones.py` (ítem 9) y `scripts/28_fondo.py` (ítem 6). Salidas: `resultados_10m/aclaraciones_10m.json`,
+`resultados/aclaraciones_20m.json`, `datos/aclaraciones_10m.log`, `datos/aclaraciones_20m.log`,
+`resultados_10m/fondo_10m.json`, `resultados/fondo_20m.json`, `datos/fondo_10m.log`, `datos/fondo_20m.log`.
+
+### 28.1 Ítem 9. Aclaraciones sobre la secc. 27
+
+**(a) Los 13 grupos de la fig. c frente a los 22 y 8 de la tabla 27.2** (z_c ≥ 3,5, 10 m). Son contadores distintos de la
+misma lista de grupos (conectividad 8, tamaño mínimo `MIN_PX_GRUPO` = 1600 m² = 16 px a 10 m, heredado de
+`persistencia.grupos`; la fig. c no añade ningún filtro de tamaño):
+
+| Contador | seca | lluviosa |
+|---|---|---|
+| Componentes conexas sin tamaño mínimo (solo para ver el efecto del filtro) | 957 | 1100 |
+| Grupos con el tamaño mínimo, en **toda la rejilla** (mar abierto incluido): columna «grupos» de la tabla 27.2 | 22 | 8 |
+| … de ellos con el centroide dentro de la caja de la figura (E 360000–365000, N 2555900–2561900): **fig. c** | 7 | 6 |
+| … de ellos con el primer píxel en la ventana de la bahía (columna `in_bay` del CSV de la fig. c) | 4 | 4 |
+| … de ellos con algún píxel en la ventana de la bahía | 5 | 5 |
+| Grupos de `grupos(hot & bahia)`, es decir, recalculados tras recortar a la ventana: columna «grupos_bahia» de la tabla 27.2 | 5 | 5 |
+
+Por tanto 13 = 7 + 6 son los 30 grupos de la rejilla (22 + 8) menos los 17 que quedan fuera de la caja (15 + 2, todos en
+mar abierto: N > 2 561 900, E < 360 000 o E > 365 000). De los 13, 8 (4 + 4) tienen su primer píxel en la ventana de
+la bahía; los otros 5 (seca 15, 16, 17; lluviosa 2, 3) están en el canal exterior junto a la boca, fuera de la ventana
+(E < 361139 o N > 2561392). La diferencia entre 8 (fig. c) y 5 + 5 = 10 (tabla 27.2) viene de que `grupos_bahia`
+recorta primero y cuenta después: los grupos seca 15 (28 px dentro) y lluviosa 2 (17 px dentro) cruzan el borde norte de la
+ventana y, ya recortados, superan los 16 px; en la fig. c se asignan por su primer píxel y quedan «fuera». Lista completa
+de los 30 grupos (id, tamaño, E, N, banderas) en `datos/aclaraciones_10m.log`.
+
+**(b) Límites exactos de las cinco zonas** (UTM 17N, EPSG:32617; `zonas()` de `scripts/24_gradiente.py`; la ventana de la
+bahía es el rectángulo E 361139–365896, N 2556342–2561392 de `src/geo.py`, que `escenas.mascara_bahia` aplica **sin
+recortar al agua**; después se usa solo el agua):
+
+| Zona | Definición (en este orden de asignación) | Píxeles de agua (10 m) | Área | Caja del agua (E; N) |
+|---|---|---|---|---|
+| mar | fuera de la ventana y agua (incluye el canal exterior; ventana ampliada de la climatología E 356630–369030, N 2555170–2567430 a 20 m) | 723 363 | 72,34 km² | 356625–369025; 2557325–2567445 |
+| marimelena | en la ventana y E > 363 600 | 5 521 | 0,552 km² | 363605–364345; 2558525–2560025 |
+| atares | en la ventana, N < 2 558 800, E < 363 300 y E < 362 350 − 0,25·(2 558 800 − N) | 6 539 | 0,654 km² | 361145–362345; 2557375–2558795 |
+| guasabacoa | en la ventana, N < 2 558 800, E < 363 300 y E ≥ 362 350 − 0,25·(2 558 800 − N) | 13 024 | 1,302 km² | 362105–363155; 2556615–2558795 |
+| bahia_centro_y_canal | el resto de la ventana (N ≥ 2 558 800 con E ≤ 363 600, y la franja 363 300 ≤ E ≤ 363 600 al sur de 2 558 800) | 20 088 | 2,009 km² | 361145–363595; 2558575–2561385 |
+
+Suma de las cuatro zonas de la bahía: 45 172 px = **4,517 km²** a 10 m (11 287 px a 20 m = 4,515 km²). La recta que separa
+Atarés de Guasabacoa va de (E 362 350, N 2 558 800) [lat 23,1323, lon −82,3444] a (E 361 735,5, N 2 556 342) [lat 23,11005,
+lon −82,35018]; el corte sur de los brazos es E = 363 300 [lat 23,13238, lon −82,33512 en N 2 558 800]. Coordenadas
+geográficas de los vértices en `resultados_10m/aclaraciones_10m.json`. Las zonas son rectángulos y una recta, no polígonos
+dibujados sobre la costa: sus límites no siguen ninguna isobata ni accidente.
+
+**(c) Fig. b: la banda gris.** Sí: cada curva lleva su IC 95 % como banda semitransparente (alfa 0,25; naranja Atarés, azul
+Guasabacoa); donde las dos bandas se solapan los colores se mezclan y se ve gris; donde solo hay una, queda naranja o azul.
+No es una magnitud aparte. Precisión que no estaba en la sec. 27: en el tramo común (hasta ~2,6 km) las **medianas son
+idénticas** (mismos píxeles; `fig_b_perfil_brazos.csv`), pero cada brazo remuestrea por separado, así que los IC no coinciden
+del todo, solo casi. Los IC de los dos brazos no se solapan en cuatro bines: lluviosa 3 625 y 3 875 m (Guasabacoa mayor) y
+seca 4 125 y 4 375 m (Atarés mayor); en los demás se solapan. Ruta: `productos_publicos/figuras/fig_b_perfil_brazos.pdf/.csv`.
+
+**(d) Rejilla de profundidad de la carta de 1887: NO va al depósito (decisión de Alex, 18/11).** La rejilla se generó (GeoTIFF
+float32 a 20 m, 238 × 253, y a 10 m, 476 × 505; nodata −9999; 12 237 y 49 036 píxeles con dato; 0,3–17,3 m) pero se guarda en
+`datos/no_publicar_carta1887/` (carpeta ignorada por git, fuera de `productos_publicos/`), junto con su README y
+`SHA256SUMS_profundidad`; `scripts/27_aclaraciones.py` escribe ahí. Motivo: la superficie es derivada y sus condicionantes son
+los de la procedencia del repo del modelo (`Modelo-hidrodin-mico`, commit `72095a8`, `docs/procedencia_datos.md`; `batimetria_1887.nc`,
+md5 `b2872f94fe9486a20a39e6d8c565f86c`): las posiciones de los 1514 sondeos dependen de la georreferenciación de la carta de 1889 de
+Harvard, cuyo FGDC dice «For educational, non-commercial use only»; la costa viene de OSM (ODbL); GEBCO es de dominio público con
+cita; la carta de 1898 figura como «No known copyright restrictions». La decisión de licencia de esa superficie sigue pendiente en el
+repo del modelo. Si algún texto o tabla del depósito usa la profundidad de la carta, debe citar ese repo y ese commit y no
+redistribuir la rejilla. Los ficheros que siguen en `productos_publicos/figuras/` y derivan de ella se tratan en la secc. 28.5.
+
+### 28.2 Ítem 6. ¿Se ve el fondo en los focos?
+
+Escenas: 10 m, 85 aceptadas (44 seca, 41 lluviosa; todas con `rojo`), mediana por píxel con n_obs ≥ 10; 20 m, las 30 escenas de
+la secc. 26 (19 seca, 11 lluviosa), n_obs ≥ 5, con la banda del borde. Focos z_c ≥ 3,5 dentro de la ventana de la bahía;
+profundidad 0,5–3 m de la carta de 1887; referencia emparejada por distancia a costa (± 20 m), > 80 m de cualquier foco y
+profundidad ± 0,25 m. IC 95 % por bootstrap de bloques de 100 m (pocos bloques en los focos: los IC son aproximados).
+
+**10 m, medianas de todas las escenas de cada estación** (definición de la secc. 14; la primera ejecución, `datos/fondo_10m_primera_pasada.log`, dio lo mismo salvo ≤ 0,01 en los IC de lluviosa, por el remuestreo):
+
+| Estación | ρ(rojo, prof.) focos [IC] | ρ(rojo, prof.) referencia [IC] | Referencia informativa |
+|---|---|---|---|
+| seca (417 focos, 6 739 ref.) | −0,21 [−0,59; 0,10] | −0,00 [−0,15; 0,15] | no |
+| lluviosa (381 focos, 5 765 ref.) | −0,04 [−0,32; 0,26] | −0,03 [−0,18; 0,11] | no |
+
+Regla prefijada: la prueba solo informa sobre el fondo si la referencia da ρ ≤ −0,2 con IC que excluye 0 (en bruto y tras
+restar la banda de distancia). **No se cumple en ningún caso**, a 10 ni a 20 m (referencia: ρ entre −0,12 y +0,10, IC siempre
+incluye 0). Es decir, con esta carta y estas reflectancias no se detecta relación rojo–profundidad en el agua somera de la bahía:
+o el fondo no se ve en 0,5–3 m, o el error de la carta (σ 0,9 m, mayor que la mitad del rango) la borra. **La prueba no puede
+afirmar ni descartar que se vea el fondo.**
+
+**Forma espectral de los focos frente a su referencia emparejada** (razón focos/referencia; < 1 = el foco tiene menor
+razón). Profundidad 0,5–2 m; entre paréntesis el IC 95 % de la diferencia de log-razones:
+
+| Caso | verde/rojo | NIR/rojo | borde/rojo | rojo (exceso) |
+|---|---|---|---|---|
+| 10 m seca, todas las escenas (n = 277) | 0,76 (−0,42; −0,24) | 0,79 (−0,33; −0,17) | — | 2,18 |
+| 10 m lluviosa, todas las escenas (n = 296) | 0,81 (−0,26; −0,16) | 0,83 (−0,24; −0,11) | — | 1,72 |
+| 20 m seca (n = 85) | 0,72 (−0,44; −0,27) | 0,83 (−0,28; −0,13) | 0,97 (−0,08; 0,08) | 2,41 |
+| 20 m lluviosa (n = 97) | 0,83 (−0,25; −0,15) | 0,81 (−0,27; −0,12) | 0,88 (−0,17; −0,08) | 1,76 |
+
+El exceso de ρ_rojo **no es un resultado**: los focos se eligen por ρ_rojo alto (declarado en la secc. 14). Y la razón verde/rojo
+y NIR/rojo también están sesgadas a la baja por la misma selección (el rojo está en el denominador), de modo que esa comparación no basta.
+
+**Variante cruzada (añadida el 18/11 DESPUÉS de ver la primera ejecución, para quitar ese sesgo):** focos elegidos en una mitad
+(A = 2016–2020, B = 2021–2025; `resultados_10m/zc_mitades.npz`) y reflectancias medidas en las escenas de la otra, con n_obs ≥ 8
+por mitad y estación (`NMIN_MITAD` en el script; se fijó al añadirla). Solo a 10 m (a 20 m no hay mitades calculadas). Profundidad
+0,5–2 m:
+
+| Focos de → espectros de | verde/rojo | NIR/rojo | rojo (exceso, razón) | ρ(rojo, prof.) focos [IC 95 %] | ρ referencia |
+|---|---|---|---|---|---|
+| seca, A → B (n = 189) | 0,80 | 0,83 | 2,01 | −0,04 [−0,39; 0,26] | −0,02 |
+| seca, B → A (n = 203) | 0,70 | 0,84 | 2,36 | −0,36 [−0,58; 0,04] | 0,03 |
+| lluviosa, A → B (n = 301) | 0,89 | 0,85 | 1,44 | −0,46 [−0,65; −0,11] | −0,12 |
+| lluviosa, B → A (n = 114) | 0,77 | 0,89 | 1,74 | −0,20 [−0,53; 0,43] | 0,06 |
+
+(La columna de ρ usa 0,5–3 m. Todos los IC de verde/rojo y de NIR/rojo en 0,5–2 m excluyen 0; los de 2–3 m, no siempre; cifras
+completas en `resultados_10m/fondo_10m.json`.)
+
+**Lectura.** (i) Con los focos y los espectros tomados de datos independientes, el exceso de rojo sobre la referencia a igual
+distancia de costa y profundidad **se mantiene** (razón 1,4–2,4, IC que excluye 1 en los cuatro casos): los focos no se
+explican por «estar a esa profundidad», dentro de la precisión de la carta. (ii) La razón verde/rojo de los focos es menor que la
+de la referencia (0,70–0,89 a 0,5–2 m; también en datos independientes). Un fondo claro y somero subiría el verde más que el rojo,
+es decir, **lo contrario** de lo observado; sí encaja con agua con sedimento en suspensión. A 20 m la razón borde/rojo es ≈ 1
+en seca y 0,88 en lluviosa (el NDCI ya salió no concluyente, secc. 26). (iii) Los focos muestran una tendencia negativa de
+ρ_rojo con la profundidad (−0,04 a −0,46; solo un IC excluye 0 a 10 m; a 20 m, seca da −0,34 [−0,58; −0,14] pero lluviosa +0,11 [−0,14; 0,37]), mientras que la
+referencia está en torno a 0. Eso es compatible con el fondo asomando en los focos, pero igual de compatible con que haya más
+resuspensión donde hay menos agua; la prueba no separa las dos cosas. **Conclusión para el artículo:** no se puede demostrar
+que el fondo no contribuye, pero el único indicio espectral que habría delatado un fondo brillante (razón verde/rojo mayor) va en
+sentido contrario, y el exceso de rojo se replica con profundidad emparejada. Debe decirse como «no hay indicio espectral de
+fondo, la prueba tiene poca potencia con una carta de 1887», no como «descartado». Límites: carta de 1887 con σ 0,9 m (el
+emparejamiento por ± 0,25 m es nominal); profundidad actual desconocida; sin reflectancia de fondo medida; sin tipo de fondo
+(arena, fango, vegetación) ni material en suspensión medido; no se ha aplicado ninguna corrección de adyacencia más que la ya
+descrita en las secc. 6–11.
+
+### 28.3 Ítem 7. Informe JICA y área de la bahía
+
+- La ficha `https://openjicareport.jica.go.jp/619/619/619_606.html` (consultada el 18/11/2026) es un listado de la serie
+  «Cuba – Pollution / Environmental engineering», no un solo informe. El informe final es de **marzo de 2004**: «The
+  development study on the improvement of sewerage and drainage system for the Havana Bay in the Republic of Cuba: final report»,
+  JICA y Nihon Suido Consultants Co., Ltd.; Vol. 1 Executive summary
+  (`https://openjicareport.jica.go.jp/619/619/619_606_11767191.html`, PDF `https://openjicareport.jica.go.jp/pdf/11767191_03.pdf`),
+  Vol. 2 Main report (`.../619_606_11767209.html`), y versión en español, Vols. 4 y 5. En la misma ficha hay también un informe
+  previo («キューバ国 ハバナ湾汚染源対策調査事前調査報告書及び予備調査報告書», 国際協力事業団, 2002.4); si el artículo cita «el informe JICA», el
+  año es 2004 (final) salvo que se cite el de 2002.
+- Cifra publicada (Vol. 1, resumen y p. S-1, §1.1.1; leída el 18/11/2026): «Havana Bay has an area of 5.0 km2, an average water
+  depth of 9 meters, and a capacity of 47 million m3» y, en p. S-6 (§1.3.1), «The average and maximum water depth of the bay is 9
+  and 17 meters respectively». El texto llega a través de una lectura automática del PDF; las dos frases se obtuvieron literales
+  y coinciden. 5,0 km² × 9 m = 45 millones de m³, no 47: el informe da ambas cifras y no se concilian. No es un área de ventana ni de
+  máscara de agua; el informe no dice cómo se midió.
+- Comparación: nuestra máscara de agua (ventana de la bahía, 20 y 10 m) = **4,52 km²** (≈ 90 % de 5,0 km²); la malla del modelo
+  (cartas + OSM), 4,91 km² (repo del modelo, `docs/articulo/cifras.md`; ≈ 98 %). **No se pudo confirmar de dónde sale el «~5,2 km²»
+  del borrador del modelo**; no aparece en JICA. Por qué faltan ~0,5 km² frente a JICA no está comprobado: hipótesis (no
+  comprobadas) son píxeles de borde mezclados con tierra, muelles y astilleros que la máscara de agua excluye, y el recorte de la
+  ventana en el canal exterior; la profundidad media de 9 m de JICA es mayor que los ≈ 6 m de la
+  referencia de la malla en nuestros píxeles, pero no están medidas sobre la misma zona (la malla cubre solo la bahía interior).
+- Frase prudente para el artículo: «The bay covers about 5 km² (JICA & Nihon Suido Consultants, 2004); the Sentinel-2 water mask
+  used here covers 4.5 km².» Referencia: Japan International Cooperation Agency and Nihon Suido Consultants Co., Ltd. (2004). The
+  development study on the improvement of sewerage and drainage system for the Havana Bay in the Republic of Cuba. Final report,
+  Vol. 1 Executive summary. https://openjicareport.jica.go.jp/619/619/619_606_11767191.html (accessed 2026-11-18). No tiene DOI.
+
+### 28.4 Ítem 8. Los productos del modelo no han cambiado desde `69728b5`
+
+Salida de la comprobación (18/11/2026, repo `Vertidos-recurrentes`):
+
+```
+git diff --stat 69728b5 HEAD -- productos_publicos            (vacío)
+shasum -a 256 -c SHA256SUMS : anomalias.nc, costa.geojson, escenas.csv, focos.csv, mascara_agua.tif,
+                              persistencia_anomalias.tif, pixeles_comparacion_modelo.csv, rejilla.npz: OK (8 de 8)
+rejilla.npz                        69728b5=de762c763672365b ahora=de762c763672365b IGUAL
+persistencia_anomalias.tif         69728b5=df51486d0cebef10 ahora=df51486d0cebef10 IGUAL
+pixeles_comparacion_modelo.csv     69728b5=ece325c48db0fb4e ahora=ece325c48db0fb4e IGUAL
+README.md                          69728b5=aa95d70b60c721b3 ahora=aa95d70b60c721b3 IGUAL
+repo del modelo datos/sentinel2/   rejilla.npz de762c763672365b y persistencia_anomalias.tif df51486d0cebef10: idénticos a los de aquí
+```
+
+El mapa de frecuencia a 20 m (`rejilla.npz` y `persistencia_anomalias.tif`) y `pixeles_comparacion_modelo.csv` (8908 píxeles, 145
+bloques) son idénticos byte a byte a los de `69728b5`; los dos primeros también a las copias de `Modelo-hidrodin-mico/datos/sentinel2/`
+(última entrega del repo del modelo: `8772c85`, que solo corrigió la nomenclatura de `focos.csv`). El CSV de píxeles no tiene copia
+en el repo del modelo (la búsqueda por nombre no encontró ninguna): allí se reconstruye con `pixeles()` de
+`scripts/comparacion_s2.py`, así que no se ha podido comparar ese fichero con una copia. Desde `69728b5` solo se han añadido ficheros
+(`productos_publicos/figuras/`); ninguno modifica los entregados. (Las rejillas de profundidad se han sacado de `productos_publicos/`, secc. 28.1 d.)
+
+### 28.5 Qué del depósito deriva de la carta de 1887 (18/11/2026)
+
+Comprobación por búsqueda de «profundidad», «1887», «depth», «chart», «batimetr» y «bathym» en `productos_publicos/` (README,
+CSV, notas), `README.md` y `LICENSE*`. Quedan tres elementos que dependen de la carta, todos en `productos_publicos/figuras/`:
+`fig_c_focos_10m.csv` (columna `median_chart_depth_80m_m`, 13 filas), `fig_c_focos_10m.pdf` (isóbata de 2 m y forma del símbolo según
+la profundidad) y `NOTA_pies_de_figura.txt` (pie de la fig. c). Ningún README ni CSV del depósito menciona la rejilla de profundidad;
+el CSV no puede llevar la referencia en la propia tabla; el pie sí la llevaba sin apuntar al repo del modelo y se ha corregido
+(`scripts/26_figuras.py` y el fichero): ahora cita `Modelo-hidrodin-mico`, commit `72095a8`, `docs/procedencia_datos.md`, y dice que la
+rejilla no se redistribuye. `escenas.csv` salió en la búsqueda solo por una cadena de un identificador, no por la carta. Además, los
+JSON de `resultados/` y `resultados_10m/` (`batimetria_*`, `umbrales_*`, `fondo_*`, `aclaraciones_*`) llevan estadísticos de profundidad
+agregados; no están en `productos_publicos/`, pero quedan en el repo y habría que decidir si se publican con él.

@@ -1,0 +1,742 @@
+{
+ "resolucion_m": 20.0,
+ "tam_min_grupo_px": 4,
+ "z_c_min": 3.5,
+ "caja_fig_c": [
+  360000.0,
+  365000.0,
+  2555900.0,
+  2561900.0
+ ],
+ "bahia_mascara": {
+  "definicion": "rectangulo E [ESTE_MIN, ESTE_MAX] x N [NORTE_MIN, NORTE_MAX] de src/geo.py (src/escenas.mascara_bahia), sin recortar al agua",
+  "pixeles_rectangulo": 60214,
+  "pixeles_rectangulo_con_agua": 11287
+ },
+ "grupos": {
+  "seca": {
+   "n_componentes_sin_filtro": 236,
+   "n_con_filtro_minimo": 46,
+   "n_en_caja_fig_c": 12,
+   "n_primer_pixel_en_bahia": 4,
+   "n_centroide_en_bahia": 4,
+   "n_con_algun_pixel_en_bahia": 5,
+   "n_grupos_de_hot_y_bahia": 7,
+   "n_en_caja_y_primer_pixel_en_bahia": 4,
+   "grupos": [
+    {
+     "id": 0,
+     "tam_px": 4,
+     "E": 364245,
+     "N": 2566085,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 1,
+     "tam_px": 5,
+     "E": 364110,
+     "N": 2566010,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 2,
+     "tam_px": 4,
+     "E": 363960,
+     "N": 2565940,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 3,
+     "tam_px": 10,
+     "E": 363664,
+     "N": 2565816,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 4,
+     "tam_px": 22,
+     "E": 363469,
+     "N": 2565720,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 5,
+     "tam_px": 7,
+     "E": 363210,
+     "N": 2565599,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 6,
+     "tam_px": 7,
+     "E": 362196,
+     "N": 2565010,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 7,
+     "tam_px": 10,
+     "E": 362086,
+     "N": 2564898,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 8,
+     "tam_px": 23,
+     "E": 362005,
+     "N": 2564400,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 9,
+     "tam_px": 30,
+     "E": 358247,
+     "N": 2564341,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 10,
+     "tam_px": 22,
+     "E": 359080,
+     "N": 2564341,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 11,
+     "tam_px": 10,
+     "E": 359222,
+     "N": 2564312,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 12,
+     "tam_px": 6,
+     "E": 362187,
+     "N": 2564317,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 13,
+     "tam_px": 17,
+     "E": 358044,
+     "N": 2564270,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 14,
+     "tam_px": 5,
+     "E": 359426,
+     "N": 2564278,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 15,
+     "tam_px": 10,
+     "E": 359644,
+     "N": 2564240,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 16,
+     "tam_px": 10,
+     "E": 359764,
+     "N": 2564202,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 17,
+     "tam_px": 5,
+     "E": 362294,
+     "N": 2564222,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 18,
+     "tam_px": 4,
+     "E": 359840,
+     "N": 2564135,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 19,
+     "tam_px": 4,
+     "E": 357875,
+     "N": 2564115,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 20,
+     "tam_px": 6,
+     "E": 362607,
+     "N": 2564003,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 21,
+     "tam_px": 5,
+     "E": 360174,
+     "N": 2563954,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 22,
+     "tam_px": 64,
+     "E": 360465,
+     "N": 2563880,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 23,
+     "tam_px": 6,
+     "E": 362810,
+     "N": 2563863,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 24,
+     "tam_px": 8,
+     "E": 363120,
+     "N": 2563458,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 25,
+     "tam_px": 4,
+     "E": 368925,
+     "N": 2563350,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 26,
+     "tam_px": 16,
+     "E": 368786,
+     "N": 2563306,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 27,
+     "tam_px": 4,
+     "E": 368635,
+     "N": 2563230,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 28,
+     "tam_px": 7,
+     "E": 368353,
+     "N": 2563099,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 29,
+     "tam_px": 20,
+     "E": 367484,
+     "N": 2562745,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 30,
+     "tam_px": 4,
+     "E": 367550,
+     "N": 2562595,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 31,
+     "tam_px": 19,
+     "E": 367707,
+     "N": 2562341,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 32,
+     "tam_px": 18,
+     "E": 359806,
+     "N": 2562243,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 33,
+     "tam_px": 11,
+     "E": 359341,
+     "N": 2561697,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 34,
+     "tam_px": 4,
+     "E": 361980,
+     "N": 2561580,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 35,
+     "tam_px": 24,
+     "E": 361812,
+     "N": 2561403,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 10
+    },
+    {
+     "id": 36,
+     "tam_px": 17,
+     "E": 360523,
+     "N": 2561106,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 37,
+     "tam_px": 6,
+     "E": 360390,
+     "N": 2561107,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 38,
+     "tam_px": 328,
+     "E": 360668,
+     "N": 2560781,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 39,
+     "tam_px": 4,
+     "E": 360560,
+     "N": 2560970,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 40,
+     "tam_px": 4,
+     "E": 360175,
+     "N": 2560855,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 41,
+     "tam_px": 8,
+     "E": 360408,
+     "N": 2560652,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 42,
+     "tam_px": 105,
+     "E": 362272,
+     "N": 2557759,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 105
+    },
+    {
+     "id": 43,
+     "tam_px": 5,
+     "E": 362426,
+     "N": 2557930,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 5
+    },
+    {
+     "id": 44,
+     "tam_px": 66,
+     "E": 361167,
+     "N": 2557769,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 48
+    },
+    {
+     "id": 45,
+     "tam_px": 31,
+     "E": 362829,
+     "N": 2556731,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 31
+    }
+   ],
+   "pixeles_calientes": 1256
+  },
+  "lluviosa": {
+   "n_componentes_sin_filtro": 334,
+   "n_con_filtro_minimo": 14,
+   "n_en_caja_fig_c": 9,
+   "n_primer_pixel_en_bahia": 5,
+   "n_centroide_en_bahia": 5,
+   "n_con_algun_pixel_en_bahia": 6,
+   "n_grupos_de_hot_y_bahia": 6,
+   "n_en_caja_y_primer_pixel_en_bahia": 5,
+   "grupos": [
+    {
+     "id": 0,
+     "tam_px": 38,
+     "E": 368741,
+     "N": 2563299,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 1,
+     "tam_px": 5,
+     "E": 367206,
+     "N": 2562878,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 2,
+     "tam_px": 16,
+     "E": 367465,
+     "N": 2562761,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 3,
+     "tam_px": 19,
+     "E": 367707,
+     "N": 2562341,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 4,
+     "tam_px": 9,
+     "E": 361790,
+     "N": 2561368,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 9
+    },
+    {
+     "id": 5,
+     "tam_px": 5,
+     "E": 360094,
+     "N": 2560950,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 6,
+     "tam_px": 5,
+     "E": 359826,
+     "N": 2560886,
+     "en_caja": false,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 7,
+     "tam_px": 4,
+     "E": 360490,
+     "N": 2560780,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 8,
+     "tam_px": 4,
+     "E": 360780,
+     "N": 2560650,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 0
+    },
+    {
+     "id": 9,
+     "tam_px": 80,
+     "E": 362267,
+     "N": 2557690,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 80
+    },
+    {
+     "id": 10,
+     "tam_px": 31,
+     "E": 361136,
+     "N": 2557742,
+     "en_caja": true,
+     "primer_pixel_en_bahia": false,
+     "centroide_en_bahia": false,
+     "pixeles_en_bahia": 17
+    },
+    {
+     "id": 11,
+     "tam_px": 7,
+     "E": 362544,
+     "N": 2557150,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 7
+    },
+    {
+     "id": 12,
+     "tam_px": 8,
+     "E": 362650,
+     "N": 2557022,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 8
+    },
+    {
+     "id": 13,
+     "tam_px": 6,
+     "E": 363090,
+     "N": 2556700,
+     "en_caja": true,
+     "primer_pixel_en_bahia": true,
+     "centroide_en_bahia": true,
+     "pixeles_en_bahia": 6
+    }
+   ],
+   "pixeles_calientes": 604
+  }
+ },
+ "zonas": {
+  "ventana_bahia_UTM17N": {
+   "E_min": 361139.0,
+   "E_max": 365896.0,
+   "N_min": 2556342.0,
+   "N_max": 2561392.0
+  },
+  "zonas": {
+   "mar": {
+    "pixeles_agua": 180756,
+    "area_km2": 72.302,
+    "E_min": 356630.0,
+    "E_max": 369030.0,
+    "N_min": 2557370.0,
+    "N_max": 2567430.0
+   },
+   "bahia_centro_y_canal": {
+    "pixeles_agua": 5029,
+    "area_km2": 2.012,
+    "E_min": 361150.0,
+    "E_max": 363590.0,
+    "N_min": 2558570.0,
+    "N_max": 2561390.0
+   },
+   "marimelena": {
+    "pixeles_agua": 1375,
+    "area_km2": 0.55,
+    "E_min": 363610.0,
+    "E_max": 364350.0,
+    "N_min": 2558550.0,
+    "N_max": 2560010.0
+   },
+   "atares": {
+    "pixeles_agua": 1613,
+    "area_km2": 0.645,
+    "E_min": 361150.0,
+    "E_max": 362330.0,
+    "N_min": 2557370.0,
+    "N_max": 2558790.0
+   },
+   "guasabacoa": {
+    "pixeles_agua": 3270,
+    "area_km2": 1.308,
+    "E_min": 362130.0,
+    "E_max": 363150.0,
+    "N_min": 2556630.0,
+    "N_max": 2558790.0
+   }
+  },
+  "vertices_[E,N,lat,lon]": {
+   "A_linea_en_N=2558800": [
+    362350.0,
+    2558800.0,
+    23.1323,
+    -82.3444
+   ],
+   "B_linea_en_N=NORTE_MIN": [
+    361735.5,
+    2556342.0,
+    23.11005,
+    -82.35018
+   ],
+   "C_sur_E=363300_en_N_min": [
+    363300.0,
+    2556342.0,
+    23.11018,
+    -82.3349
+   ],
+   "D_sur_E=363300_en_N=2558800": [
+    363300.0,
+    2558800.0,
+    23.13238,
+    -82.33512
+   ],
+   "E_ventana_SO": [
+    361139.0,
+    2556342.0,
+    23.11,
+    -82.356
+   ],
+   "F_ventana_NO_del_brazo": [
+    361139.0,
+    2558800.0,
+    23.1322,
+    -82.35622
+   ]
+  }
+ },
+ "profundidad": {
+  "ruta": "/Users/alex/Nube /repos/Vertidos-recurrentes/productos_publicos/profundidad_carta1887_20m.tif",
+  "filas": 253,
+  "columnas": 238,
+  "pixeles_con_dato": 12237,
+  "min_m": 0.3,
+  "max_m": 17.34,
+  "x_primer_centro": 361150.0,
+  "y_primer_centro_norte": 2561390.0
+ }
+}
