@@ -1383,7 +1383,19 @@ Reglas congeladas en la fila de 2026-11-18 de la secc. 14 (`PETICION_CHAT_TECNIC
 
 ### 29.1 Bloque A. Prueba confirmatoria con escenas de 2026
 
-PENDIENTE. Se rellenará cuando Alex confirme el commit y se fije la fecha de corte. La tabla de contraste por escena ya está lista para 2016–2025 (`resultados/contraste_escenas_20m_2016_2025.csv`, `resultados_10m/contraste_escenas_10m_2016_2025.csv`; script `scripts/30_contraste_escenas.py`), que es la referencia, no la prueba.
+**Estado: 20 m calculado; 10 m en proceso (se añade abajo cuando termine).** Corte: commit `c4d1ea7` (2026-11-18 14:02 +01:00, fila de la secc. 14 con las reglas). Catálogo CDSE T17QLF, órbita R097, adquisiciones del 2026-01-02 al 2026-11-13 (`datos/crudo_2026/catalogo.json`, 79 productos, 57 GB). Mismos ajustes congelados y mismo ACOLITE (d61c8de), mismas reglas de QC de la secc. 6, y mismos focos, climatología, agua y distancia a costa del archivo 2016–2025 (no se recalcula nada con 2026). Scripts: `35_bucle_2026.py` (descarga y proceso), `36_qc_2026.py`, `30_contraste_escenas.py --etiqueta 2026`, `37_prueba_A.py`. Salidas: `resultados/escenas_qc_2026.csv`, `resultados/contraste_escenas_20m_2026.csv`, `resultados/contraste_placebo_20m_2026.npz`, `resultados/prueba_A_20m.json`.
+
+Procesado a 20 m: 79 productos, 75 con producto y 4 sin él. Los 4 fallos son segundas versiones del mismo paso (22 ene, 16 feb, 27 abr) o recorte 100 % sin datos (29 oct); la otra versión de cada fecha sí dio producto. Quedan 75 escenas únicas; **13 aceptadas** (8 secas, 5 lluviosas), 17,3 %, frente al 17,7 % del archivo (113 de 637). Aceptadas: 2026-01-04, 01-17, 02-11, 02-16, 02-21, 03-15, 03-28, 09-11, 09-14, 10-09, 10-14, 10-29, 11-03.
+
+Resultados a 20 m (reglas de la secc. 14; no se ha cambiado ningún umbral):
+
+- **A1 (contraste de focos).** Todas las escenas (n=13): d>0 en 13/13, p del signo 0,00012, d mediana 1,088 FNU, p95 de la mediana de los 500 placebos 0,038; **cumple**. Seca (n=8, justo el mínimo): 8/8, p=0,0039, d mediana 1,080, p95 placebo 0,045; **cumple**. Lluviosa: 5 escenas usables, **insuficiente** (mínimo 8). Referencia 2016–2025: d mediana 1,93 (todas), 2,03 (seca), 1,69 (lluviosa). La d de 2026 es aproximadamente la mitad de la del archivo en seca; no es parte de la regla, pero se declara.
+- **A2 (jerarquía seca, `orden()`).** 8 escenas secas (≥5): variante «todos» **cumple** (brazos−medio +0,224; medio−mar +1,407), variante «a100m» **cumple** (+0,161; +1,485). 2 de 2 a 20 m; la regla de ≥3 de 4 necesita también los dos de 10 m.
+- **A3 (bahía>mar por estación, ≥5 escenas).** Seca (n=8): max(Marimelena, centro)−mar = +1,407 (todos) y +1,485 (a100m); centro−mar igual. Lluviosa (n=5, justo el mínimo): +0,972 y +1,110. Positivo en las 4 combinaciones de esta resolución.
+
+Límites: 13 escenas son pocas (seca 8 y lluviosa 5, justo en el mínimo de A3 y por debajo del de A1 en lluviosa); tres de las 13 son de febrero (11, 16, 21) y tres de octubre (09, 14, 29). Las escenas de 2026 no entran ni en los focos ni en la climatología, que salen del archivo 2016–2025 (diseño confirmatorio). La d de 2026 es del orden de la mitad de la del archivo; la regla no lo pide, pero se declara.
+
+*A 10 m: pendiente (el bucle sigue en curso). Se rellenará aquí, junto con los 13 grupos de la secc. 28 y el veredicto A2 de 3 de 4.*
 
 ### 29.2 Bloque B. Profundidad frente a distancia a la costa (exploratorio)
 
@@ -1428,7 +1440,7 @@ Límites: modelo de marea grueso (0,125°; nodos válidos más cercanos a ~15 km
 
 | Ítem | n | Cifra | JSON | Estado |
 |---|---|---|---|---|
-| A (2026) | – | – | – | pendiente del commit |
+| A 20 m (2026) | 13 (8 secas, 5 lluviosas) | A1 cumple (todas y seca; lluviosa insuficiente); A2 2/2; A3 +; d mediana 1,09 FNU | `prueba_A_20m.json` | confirmatorio; 10 m pendiente |
 | B2 prof. (rangos) | 10 126–40 469 px | −0,21 a −0,27, IC sin 0 | `prof_dist_*.json` | exploratorio |
 | B2b (post hoc) | ídem | prof. −0,35 a −0,38 | ídem | exploratorio, post hoc |
 | B3 | ver JSON | >5 m cerca de costa = canal/muelles | ídem | exploratorio |

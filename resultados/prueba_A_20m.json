@@ -1,0 +1,163 @@
+{
+ "resolucion_m": 20,
+ "reglas": "secc. 14, fila 2026-11-18 (commit c4d1ea7)",
+ "2026": {
+  "n_escenas": 13,
+  "A1": {
+   "focos": {
+    "todas": {
+     "n_escenas_usables": 13,
+     "n_d_mayor_0": 13,
+     "p_signo_una_cola": 0.00012,
+     "d_mediana": 1.088,
+     "p95_mediana_placebo": 0.038,
+     "mediana_placebo_mediana": -0.002,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "seca": {
+     "n_escenas_usables": 8,
+     "n_d_mayor_0": 8,
+     "p_signo_una_cola": 0.00391,
+     "d_mediana": 1.08,
+     "p95_mediana_placebo": 0.045,
+     "mediana_placebo_mediana": -0.003,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "lluviosa": {
+     "veredicto": "insuficiente",
+     "n_escenas_usables": 5,
+     "minimo": 8
+    }
+   }
+  },
+  "A2": {
+   "n_secas": 8,
+   "variantes": {
+    "todos": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.224,
+     "margen_medio_menos_mar": 1.407
+    },
+    "a100m": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.161,
+     "margen_medio_menos_mar": 1.485
+    }
+   },
+   "cumple_variantes": 2
+  },
+  "A3": {
+   "seca": {
+    "n_escenas": 8,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 1.407,
+     "centro_menos_mar": 1.407
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 1.485,
+     "centro_menos_mar": 1.485
+    }
+   },
+   "lluviosa": {
+    "n_escenas": 5,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.972,
+     "centro_menos_mar": 0.972
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 1.11,
+     "centro_menos_mar": 1.11
+    }
+   }
+  }
+ },
+ "2016_2025": {
+  "n_escenas": 113,
+  "A1": {
+   "focos": {
+    "todas": {
+     "n_escenas_usables": 113,
+     "n_d_mayor_0": 111,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.932,
+     "p95_mediana_placebo": 0.038,
+     "mediana_placebo_mediana": 0.0,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "seca": {
+     "n_escenas_usables": 71,
+     "n_d_mayor_0": 71,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 2.029,
+     "p95_mediana_placebo": 0.047,
+     "mediana_placebo_mediana": 0.0,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "lluviosa": {
+     "n_escenas_usables": 42,
+     "n_d_mayor_0": 40,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.694,
+     "p95_mediana_placebo": 0.045,
+     "mediana_placebo_mediana": -0.0,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    }
+   }
+  },
+  "A2": {
+   "n_secas": 71,
+   "variantes": {
+    "todos": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.306,
+     "margen_medio_menos_mar": 0.734
+    },
+    "a100m": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.268,
+     "margen_medio_menos_mar": 0.791
+    }
+   },
+   "cumple_variantes": 2
+  },
+  "A3": {
+   "seca": {
+    "n_escenas": 71,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.734,
+     "centro_menos_mar": 0.733
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 0.791,
+     "centro_menos_mar": 0.791
+    }
+   },
+   "lluviosa": {
+    "n_escenas": 42,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.386,
+     "centro_menos_mar": 0.195
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 0.495,
+     "centro_menos_mar": 0.32
+    }
+   }
+  }
+ }
+}
