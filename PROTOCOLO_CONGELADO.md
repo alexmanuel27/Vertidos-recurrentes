@@ -1383,7 +1383,7 @@ Reglas congeladas en la fila de 2026-11-18 de la secc. 14 (`PETICION_CHAT_TECNIC
 
 ### 29.1 Bloque A. Prueba confirmatoria con escenas de 2026
 
-**Estado: 20 m calculado; 10 m en proceso (se añade abajo cuando termine).** Corte: commit `c4d1ea7` (2026-11-18 14:02 +01:00, fila de la secc. 14 con las reglas). Catálogo CDSE T17QLF, órbita R097, adquisiciones del 2026-01-02 al 2026-11-13 (`datos/crudo_2026/catalogo.json`, 79 productos, 57 GB). Mismos ajustes congelados y mismo ACOLITE (d61c8de), mismas reglas de QC de la secc. 6, y mismos focos, climatología, agua y distancia a costa del archivo 2016–2025 (no se recalcula nada con 2026). Scripts: `35_bucle_2026.py` (descarga y proceso), `36_qc_2026.py`, `30_contraste_escenas.py --etiqueta 2026`, `37_prueba_A.py`. Salidas: `resultados/escenas_qc_2026.csv`, `resultados/contraste_escenas_20m_2026.csv`, `resultados/contraste_placebo_20m_2026.npz`, `resultados/prueba_A_20m.json`.
+**Estado: calculado a 20 y 10 m.** Corte: commit `c4d1ea7` (2026-11-18 14:02 +01:00, fila de la secc. 14 con las reglas). Catálogo CDSE T17QLF, órbita R097, adquisiciones del 2026-01-02 al 2026-11-13 (`datos/crudo_2026/catalogo.json`, 79 productos, 57 GB). Mismos ajustes congelados y mismo ACOLITE (d61c8de), mismas reglas de QC de la secc. 6, y mismos focos, climatología, agua y distancia a costa del archivo 2016–2025 (no se recalcula nada con 2026). Scripts: `35_bucle_2026.py` (descarga y proceso), `36_qc_2026.py`, `30_contraste_escenas.py --etiqueta 2026`, `37_prueba_A.py`. Salidas: `resultados/escenas_qc_2026.csv`, `resultados/contraste_escenas_20m_2026.csv`, `resultados/contraste_placebo_20m_2026.npz`, `resultados/prueba_A_20m.json`.
 
 Procesado a 20 m: 79 productos, 75 con producto y 4 sin él. Los 4 fallos son segundas versiones del mismo paso (22 ene, 16 feb, 27 abr) o recorte 100 % sin datos (29 oct); la otra versión de cada fecha sí dio producto. Quedan 75 escenas únicas; **13 aceptadas** (8 secas, 5 lluviosas), 17,3 %, frente al 17,7 % del archivo (113 de 637). Aceptadas: 2026-01-04, 01-17, 02-11, 02-16, 02-21, 03-15, 03-28, 09-11, 09-14, 10-09, 10-14, 10-29, 11-03.
 
@@ -1395,7 +1395,16 @@ Resultados a 20 m (reglas de la secc. 14; no se ha cambiado ningún umbral):
 
 Límites: 13 escenas son pocas (seca 8 y lluviosa 5, justo en el mínimo de A3 y por debajo del de A1 en lluviosa); tres de las 13 son de febrero (11, 16, 21) y tres de octubre (09, 14, 29). Las escenas de 2026 no entran ni en los focos ni en la climatología, que salen del archivo 2016–2025 (diseño confirmatorio). La d de 2026 es del orden de la mitad de la del archivo; la regla no lo pide, pero se declara.
 
-*A 10 m: pendiente (el bucle sigue en curso). Se rellenará aquí, junto con los 13 grupos de la secc. 28 y el veredicto A2 de 3 de 4.*
+**A 10 m (calculado el 2026-11-19).** Mismo catálogo y mismo procesado a 10 m (`datos/bucle_2026_10m.log`: 75 escenas, 4 fallos iguales que a 20 m). Aceptadas a 10 m: **11** (6 secas, 5 lluviosas), las mismas que a 20 m salvo 2026-02-21 y 2026-11-03, que a 10 m no llegan al 60 % de agua válida. Salidas: `resultados_10m/escenas_qc_2026.csv`, `resultados_10m/contraste_escenas_10m_2026.csv`, `resultados_10m/contraste_placebo_10m_2026.npz`, `resultados_10m/prueba_A_10m.json`.
+
+- **A1, focos de 10 m.** Todas (n=11): d>0 en 11/11, p del signo 0,00049, d mediana 1,046 FNU frente a 0,021 del p95 de los placebos; **cumple**. Seca (n=6) y lluviosa (n=5): **insuficiente** (mínimo 8), así que a 10 m A1 no se puede evaluar por estación. Referencia 2016–2025 a 10 m: d mediana 1,87 (todas), 2,15 (seca), 1,51 (lluviosa).
+- **A1, 13 grupos de la secc. 28 (a 10 m).** Todas (n=11): d>0 en solo 6/11, p del signo 0,5, d mediana 0,56 FNU (el p95 del placebo, 0,018, sí se supera); **no cumple** porque falla el test del signo. Por estación, insuficiente. Es coherente con la referencia 2016–2025, donde los 13 grupos en seca tampoco pasan el signo (26/44, p=0,146; d mediana 0,19), mientras que en lluviosa sí (37/41). Se declara tal cual: los focos agregados confirman; los 13 grupos por separado no.
+- **A2 a 10 m (6 secas, ≥5).** «todos» **cumple** (brazos−medio +0,181; medio−mar +1,208); «a100m» **cumple** (+0,133; +1,288). **Con los de 20 m, A2 cumple en 4 de 4 variantes** (regla: ≥3 de 4): **confirmada**.
+- **A3 a 10 m.** Seca (n=6): max(Marimelena, centro)−mar = +1,208 («todos») y +1,288 («a100m»); lluviosa (n=5): +0,506 y +0,625; centro−mar idéntico. Positivo en las 4 combinaciones de 10 m y en las 4 de 20 m: **bahía>mar confirmada en las dos estaciones, a las dos resoluciones** (con n=5 en lluviosa, justo el mínimo).
+
+**Veredicto de A (fijado por las reglas congeladas).** A1 con focos: cumple a 20 m (todas y seca) y a 10 m (todas); la estación lluviosa a las dos resoluciones y la seca a 10 m quedan «insuficiente». A1 con los 13 grupos a 10 m: no cumple. A2: cumple (4/4). A3: cumple (8/8 combinaciones positivas). No se ha cambiado ningún umbral ni se ha descartado ninguna escena de 2026 por otra razón que el QC de la secc. 6.
+
+Límites declarados: pocas escenas (11–13), con la lluviosa y la seca de 10 m por debajo del mínimo de A1; la d de 2026 es del orden de la mitad de la del archivo (1,05–1,09 frente a 1,9–2,0 FNU); los 13 grupos no se confirman. Las escenas de 2026 no intervienen en los focos ni en la climatología.
 
 ### 29.2 Bloque B. Profundidad frente a distancia a la costa (exploratorio)
 
@@ -1440,7 +1449,8 @@ Límites: modelo de marea grueso (0,125°; nodos válidos más cercanos a ~15 km
 
 | Ítem | n | Cifra | JSON | Estado |
 |---|---|---|---|---|
-| A 20 m (2026) | 13 (8 secas, 5 lluviosas) | A1 cumple (todas y seca; lluviosa insuficiente); A2 2/2; A3 +; d mediana 1,09 FNU | `prueba_A_20m.json` | confirmatorio; 10 m pendiente |
+| A 20 m (2026) | 13 (8 s, 5 ll) | A1 focos cumple (todas y seca; lluviosa insuficiente); A2 2/2; A3 +; d mediana 1,09 FNU | `resultados/prueba_A_20m.json` | confirmatorio |
+| A 10 m (2026) | 11 (6 s, 5 ll) | A1 focos cumple (todas, d 1,05); estaciones insuficientes; 13 grupos NO cumple (6/11, p=0,5); A2 2/2 (4/4 con 20 m); A3 + | `resultados_10m/prueba_A_10m.json` | confirmatorio |
 | B2 prof. (rangos) | 10 126–40 469 px | −0,21 a −0,27, IC sin 0 | `prof_dist_*.json` | exploratorio |
 | B2b (post hoc) | ídem | prof. −0,35 a −0,38 | ídem | exploratorio, post hoc |
 | B3 | ver JSON | >5 m cerca de costa = canal/muelles | ídem | exploratorio |

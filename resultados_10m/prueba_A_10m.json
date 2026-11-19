@@ -1,0 +1,218 @@
+{
+ "resolucion_m": 10,
+ "reglas": "secc. 14, fila 2026-11-18 (commit c4d1ea7)",
+ "2026": {
+  "n_escenas": 11,
+  "A1": {
+   "focos": {
+    "todas": {
+     "n_escenas_usables": 11,
+     "n_d_mayor_0": 11,
+     "p_signo_una_cola": 0.00049,
+     "d_mediana": 1.046,
+     "p95_mediana_placebo": 0.021,
+     "mediana_placebo_mediana": -0.002,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "seca": {
+     "veredicto": "insuficiente",
+     "n_escenas_usables": 6,
+     "minimo": 8
+    },
+    "lluviosa": {
+     "veredicto": "insuficiente",
+     "n_escenas_usables": 5,
+     "minimo": 8
+    }
+   },
+   "grupos13": {
+    "todas": {
+     "n_escenas_usables": 11,
+     "n_d_mayor_0": 6,
+     "p_signo_una_cola": 0.5,
+     "d_mediana": 0.56,
+     "p95_mediana_placebo": 0.018,
+     "mediana_placebo_mediana": 0.0,
+     "cumple_mitad": true,
+     "cumple_signo": false,
+     "cumple_placebo": true,
+     "veredicto": "no cumple"
+    },
+    "seca": {
+     "veredicto": "insuficiente",
+     "n_escenas_usables": 6,
+     "minimo": 8
+    },
+    "lluviosa": {
+     "veredicto": "insuficiente",
+     "n_escenas_usables": 5,
+     "minimo": 8
+    }
+   }
+  },
+  "A2": {
+   "n_secas": 6,
+   "variantes": {
+    "todos": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.181,
+     "margen_medio_menos_mar": 1.208
+    },
+    "a100m": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.133,
+     "margen_medio_menos_mar": 1.288
+    }
+   },
+   "cumple_variantes": 2
+  },
+  "A3": {
+   "seca": {
+    "n_escenas": 6,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 1.208,
+     "centro_menos_mar": 1.208
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 1.288,
+     "centro_menos_mar": 1.288
+    }
+   },
+   "lluviosa": {
+    "n_escenas": 5,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.506,
+     "centro_menos_mar": 0.506
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 0.625,
+     "centro_menos_mar": 0.625
+    }
+   }
+  }
+ },
+ "2016_2025": {
+  "n_escenas": 85,
+  "A1": {
+   "focos": {
+    "todas": {
+     "n_escenas_usables": 85,
+     "n_d_mayor_0": 82,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.874,
+     "p95_mediana_placebo": 0.016,
+     "mediana_placebo_mediana": -0.001,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "seca": {
+     "n_escenas_usables": 44,
+     "n_d_mayor_0": 43,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 2.145,
+     "p95_mediana_placebo": 0.025,
+     "mediana_placebo_mediana": -0.001,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "lluviosa": {
+     "n_escenas_usables": 41,
+     "n_d_mayor_0": 39,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.513,
+     "p95_mediana_placebo": 0.023,
+     "mediana_placebo_mediana": -0.001,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    }
+   },
+   "grupos13": {
+    "todas": {
+     "n_escenas_usables": 85,
+     "n_d_mayor_0": 63,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.049,
+     "p95_mediana_placebo": 0.013,
+     "mediana_placebo_mediana": 0.0,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    },
+    "seca": {
+     "n_escenas_usables": 44,
+     "n_d_mayor_0": 26,
+     "p_signo_una_cola": 0.14561,
+     "d_mediana": 0.189,
+     "p95_mediana_placebo": 0.014,
+     "mediana_placebo_mediana": 0.0,
+     "cumple_mitad": true,
+     "cumple_signo": false,
+     "cumple_placebo": true,
+     "veredicto": "no cumple"
+    },
+    "lluviosa": {
+     "n_escenas_usables": 41,
+     "n_d_mayor_0": 37,
+     "p_signo_una_cola": 0.0,
+     "d_mediana": 1.855,
+     "p95_mediana_placebo": 0.034,
+     "mediana_placebo_mediana": -0.0,
+     "cumple_mitad": true,
+     "cumple_signo": true,
+     "cumple_placebo": true,
+     "veredicto": "cumple"
+    }
+   }
+  },
+  "A2": {
+   "n_secas": 44,
+   "variantes": {
+    "todos": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.342,
+     "margen_medio_menos_mar": 0.882
+    },
+    "a100m": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.199,
+     "margen_medio_menos_mar": 1.009
+    }
+   },
+   "cumple_variantes": 2
+  },
+  "A3": {
+   "seca": {
+    "n_escenas": 44,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.882,
+     "centro_menos_mar": 0.855
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 1.009,
+     "centro_menos_mar": 1.009
+    }
+   },
+   "lluviosa": {
+    "n_escenas": 41,
+    "todos": {
+     "max_marimelena_centro_menos_mar": 0.618,
+     "centro_menos_mar": 0.132
+    },
+    "a100m": {
+     "max_marimelena_centro_menos_mar": 0.463,
+     "centro_menos_mar": 0.231
+    }
+   }
+  }
+ }
+}
