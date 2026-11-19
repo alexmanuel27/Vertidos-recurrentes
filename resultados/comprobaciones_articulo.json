@@ -1,0 +1,669 @@
+{
+ "nota": "Solo lectura de datos y resultados; ningun analisis recalculado, ningun umbral cambiado. Generado por scripts/39_comprobaciones_articulo.py",
+ "4_coordenadas_bahia": {
+  "fuente": "resultados/climatologia.npz, campos bahia y agua (booleanos); centroide de x, y, UTM 17N -> WGS84",
+  "agua_de_la_bahia_(bahia_y_agua)": {
+   "n_pixeles": 11287,
+   "lat": 23.1326,
+   "lon": -82.3418
+  },
+  "poligono_bahia_(bahia, incluye tierra)": {
+   "n_pixeles": 60214,
+   "lat": 23.133,
+   "lon": -82.333
+  }
+ },
+ "1_ventana": {
+  "20m": {
+   "fuente": "resultados/climatologia.npz (campos x, y)",
+   "n_x": 621,
+   "n_y": 614,
+   "pixel_m": 20.0,
+   "extension_E_O_km": 12.42,
+   "extension_N_S_km": 12.28,
+   "x_min_centro": 356630.0,
+   "x_max_centro": 369030.0,
+   "y_min_centro": 2555170.0,
+   "y_max_centro": 2567430.0
+  },
+  "caja_nominal_lat_lon": {
+   "limites": "23.100-23.210 N, 82.400-82.280 O",
+   "E_O_km_en_UTM17N": 12.4,
+   "N_S_km_en_UTM17N": 12.07
+  },
+  "10m": {
+   "fuente": "resultados_10m/climatologia.npz (campos x, y)",
+   "n_x": 1241,
+   "n_y": 1229,
+   "pixel_m": 10.0,
+   "extension_E_O_km": 12.41,
+   "extension_N_S_km": 12.29,
+   "x_min_centro": 356625.0,
+   "x_max_centro": 369025.0,
+   "y_min_centro": 2555165.0,
+   "y_max_centro": 2567445.0
+  }
+ },
+ "2_escenas_por_ano": {
+  "fuentes": {
+   "catalogo": "datos/crudo/catalogo.json (campo Name, caracteres 11-14 = ano)",
+   "qc": "resultados/escenas_qc.csv (columna fecha; aceptada)"
+  },
+  "n_productos_catalogo": 664,
+  "n_filas_qc": 637,
+  "n_aceptadas_qc": 113,
+  "por_ano": {
+   "2016": {
+    "productos_catalogo": 19,
+    "fechas_distintas_catalogo": 17,
+    "filas_qc": 17,
+    "aceptadas_qc": 0
+   },
+   "2017": {
+    "productos_catalogo": 31,
+    "fechas_distintas_catalogo": 30,
+    "filas_qc": 30,
+    "aceptadas_qc": 6
+   },
+   "2018": {
+    "productos_catalogo": 70,
+    "fechas_distintas_catalogo": 70,
+    "filas_qc": 70,
+    "aceptadas_qc": 13
+   },
+   "2019": {
+    "productos_catalogo": 75,
+    "fechas_distintas_catalogo": 73,
+    "filas_qc": 73,
+    "aceptadas_qc": 20
+   },
+   "2020": {
+    "productos_catalogo": 74,
+    "fechas_distintas_catalogo": 69,
+    "filas_qc": 69,
+    "aceptadas_qc": 12
+   },
+   "2021": {
+    "productos_catalogo": 80,
+    "fechas_distintas_catalogo": 73,
+    "filas_qc": 73,
+    "aceptadas_qc": 11
+   },
+   "2022": {
+    "productos_catalogo": 75,
+    "fechas_distintas_catalogo": 73,
+    "filas_qc": 73,
+    "aceptadas_qc": 14
+   },
+   "2023": {
+    "productos_catalogo": 73,
+    "fechas_distintas_catalogo": 72,
+    "filas_qc": 72,
+    "aceptadas_qc": 12
+   },
+   "2024": {
+    "productos_catalogo": 79,
+    "fechas_distintas_catalogo": 73,
+    "filas_qc": 75,
+    "aceptadas_qc": 8
+   },
+   "2025": {
+    "productos_catalogo": 88,
+    "fechas_distintas_catalogo": 85,
+    "filas_qc": 85,
+    "aceptadas_qc": 17
+   }
+  }
+ },
+ "3_aot_2020_11_29": {
+  "20m": {
+   "fuente": "datos/productos/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2W.npz (campo aot_550)",
+   "aot_550": 0.004494347143918276
+  },
+  "10m": {
+   "fuente": "datos/productos_10m/S2A_MSI_2020_11_29_16_16_59_T17QLF_L2W.npz (campo aot_550)",
+   "aot_550": 0.027706192806363106
+  },
+  "protocolo": "PROTOCOLO_CONGELADO.md sec. 14, fila 2026-11-13 (c): 2020-11-29, 0,0045 a 20 m y 0,028 a 10 m"
+ },
+ "5_fig_b": {
+  "fuente": "productos_publicos/figuras/fig_b_perfil_brazos.csv (arm, season, bin_center_m, median_FNU, ci95_*)",
+  "por_estacion": {
+   "seca": [
+    {
+     "bin_m": 125,
+     "medianas": {
+      "atares": 1.26,
+      "guasabacoa": 1.26
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 375,
+     "medianas": {
+      "atares": 1.504,
+      "guasabacoa": 1.504
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 625,
+     "medianas": {
+      "atares": 1.496,
+      "guasabacoa": 1.496
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 875,
+     "medianas": {
+      "atares": 1.411,
+      "guasabacoa": 1.411
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1125,
+     "medianas": {
+      "atares": 1.509,
+      "guasabacoa": 1.509
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1375,
+     "medianas": {
+      "atares": 1.617,
+      "guasabacoa": 1.617
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1625,
+     "medianas": {
+      "atares": 1.895,
+      "guasabacoa": 1.895
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1875,
+     "medianas": {
+      "atares": 1.954,
+      "guasabacoa": 1.954
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2125,
+     "medianas": {
+      "atares": 2.372,
+      "guasabacoa": 2.372
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2375,
+     "medianas": {
+      "atares": 2.493,
+      "guasabacoa": 2.493
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2625,
+     "medianas": {
+      "atares": 2.597,
+      "guasabacoa": 2.597
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2875,
+     "medianas": {
+      "atares": 2.611,
+      "guasabacoa": 2.583
+     },
+     "rango_medianas": 0.028,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3125,
+     "medianas": {
+      "atares": 2.598,
+      "guasabacoa": 2.61
+     },
+     "rango_medianas": 0.012,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3375,
+     "medianas": {
+      "atares": 2.325,
+      "guasabacoa": 2.916
+     },
+     "rango_medianas": 0.591,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3625,
+     "medianas": {
+      "atares": 2.526,
+      "guasabacoa": 3.161
+     },
+     "rango_medianas": 0.635,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3875,
+     "medianas": {
+      "atares": 2.75,
+      "guasabacoa": 3.298
+     },
+     "rango_medianas": 0.548,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 4125,
+     "medianas": {
+      "atares": 3.517,
+      "guasabacoa": 2.809
+     },
+     "rango_medianas": 0.708,
+     "pares_con_IC_disjuntos": [
+      [
+       "atares",
+       "guasabacoa"
+      ]
+     ]
+    },
+    {
+     "bin_m": 4375,
+     "medianas": {
+      "atares": 4.601,
+      "guasabacoa": 2.577
+     },
+     "rango_medianas": 2.024,
+     "pares_con_IC_disjuntos": [
+      [
+       "atares",
+       "guasabacoa"
+      ]
+     ]
+    },
+    {
+     "bin_m": 4625,
+     "medianas": {
+      "guasabacoa": 2.346
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 4875,
+     "medianas": {
+      "guasabacoa": 2.45
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 5125,
+     "medianas": {
+      "guasabacoa": 2.662
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    }
+   ],
+   "lluviosa": [
+    {
+     "bin_m": 125,
+     "medianas": {
+      "atares": 2.774,
+      "guasabacoa": 2.774
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 375,
+     "medianas": {
+      "atares": 2.874,
+      "guasabacoa": 2.874
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 625,
+     "medianas": {
+      "atares": 2.719,
+      "guasabacoa": 2.719
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 875,
+     "medianas": {
+      "atares": 2.114,
+      "guasabacoa": 2.114
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1125,
+     "medianas": {
+      "atares": 2.589,
+      "guasabacoa": 2.589
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1375,
+     "medianas": {
+      "atares": 2.367,
+      "guasabacoa": 2.367
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1625,
+     "medianas": {
+      "atares": 2.603,
+      "guasabacoa": 2.603
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 1875,
+     "medianas": {
+      "atares": 2.923,
+      "guasabacoa": 2.923
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2125,
+     "medianas": {
+      "atares": 2.981,
+      "guasabacoa": 2.981
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2375,
+     "medianas": {
+      "atares": 2.668,
+      "guasabacoa": 2.668
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2625,
+     "medianas": {
+      "atares": 3.309,
+      "guasabacoa": 3.309
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 2875,
+     "medianas": {
+      "atares": 2.995,
+      "guasabacoa": 3.053
+     },
+     "rango_medianas": 0.058,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3125,
+     "medianas": {
+      "atares": 2.735,
+      "guasabacoa": 3.016
+     },
+     "rango_medianas": 0.281,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3375,
+     "medianas": {
+      "atares": 2.763,
+      "guasabacoa": 3.115
+     },
+     "rango_medianas": 0.352,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 3625,
+     "medianas": {
+      "atares": 2.654,
+      "guasabacoa": 3.805
+     },
+     "rango_medianas": 1.151,
+     "pares_con_IC_disjuntos": [
+      [
+       "atares",
+       "guasabacoa"
+      ]
+     ]
+    },
+    {
+     "bin_m": 3875,
+     "medianas": {
+      "atares": 2.951,
+      "guasabacoa": 3.965
+     },
+     "rango_medianas": 1.014,
+     "pares_con_IC_disjuntos": [
+      [
+       "atares",
+       "guasabacoa"
+      ]
+     ]
+    },
+    {
+     "bin_m": 4125,
+     "medianas": {
+      "atares": 3.316,
+      "guasabacoa": 3.322
+     },
+     "rango_medianas": 0.006,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 4375,
+     "medianas": {
+      "atares": 4.156,
+      "guasabacoa": 3.471
+     },
+     "rango_medianas": 0.685,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 4625,
+     "medianas": {
+      "guasabacoa": 3.744
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 4875,
+     "medianas": {
+      "guasabacoa": 3.76
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    },
+    {
+     "bin_m": 5125,
+     "medianas": {
+      "guasabacoa": 3.935
+     },
+     "rango_medianas": 0.0,
+     "pares_con_IC_disjuntos": []
+    }
+   ]
+  }
+ },
+ "6_B3_profundo_cerca_de_costa": {
+  "20m": {
+   "fuente": "resultados/prof_dist_20m.json (estaciones.*.B3[clase_prof_m='>5'])",
+   "celdas": [
+    {
+     "estacion": "seca",
+     "banda_m": "20-40",
+     "n": 127,
+     "fraccion_caliente": 0.031,
+     "z_c_mediana": -0.29
+    },
+    {
+     "estacion": "seca",
+     "banda_m": "40-60",
+     "n": 433,
+     "fraccion_caliente": 0.0,
+     "z_c_mediana": -0.37
+    },
+    {
+     "estacion": "lluviosa",
+     "banda_m": "20-40",
+     "n": 109,
+     "fraccion_caliente": 0.009,
+     "z_c_mediana": -0.42
+    },
+    {
+     "estacion": "lluviosa",
+     "banda_m": "40-60",
+     "n": 422,
+     "fraccion_caliente": 0.002,
+     "z_c_mediana": -0.35
+    }
+   ],
+   "rango_fraccion_caliente": [
+    0.0,
+    0.031
+   ],
+   "z_c_mediana_max": -0.29
+  },
+  "10m": {
+   "fuente": "resultados_10m/prof_dist_10m.json (estaciones.*.B3[clase_prof_m='>5'])",
+   "celdas": [
+    {
+     "estacion": "seca",
+     "banda_m": "0-20",
+     "n": 48,
+     "fraccion_caliente": 0.042,
+     "z_c_mediana": -0.4
+    },
+    {
+     "estacion": "seca",
+     "banda_m": "20-40",
+     "n": 725,
+     "fraccion_caliente": 0.003,
+     "z_c_mediana": -0.46
+    },
+    {
+     "estacion": "seca",
+     "banda_m": "40-60",
+     "n": 1672,
+     "fraccion_caliente": 0.0,
+     "z_c_mediana": -0.41
+    },
+    {
+     "estacion": "lluviosa",
+     "banda_m": "0-20",
+     "n": 53,
+     "fraccion_caliente": 0.075,
+     "z_c_mediana": -0.06
+    },
+    {
+     "estacion": "lluviosa",
+     "banda_m": "20-40",
+     "n": 806,
+     "fraccion_caliente": 0.0,
+     "z_c_mediana": -0.31
+    },
+    {
+     "estacion": "lluviosa",
+     "banda_m": "40-60",
+     "n": 1681,
+     "fraccion_caliente": 0.0,
+     "z_c_mediana": -0.31
+    }
+   ],
+   "rango_fraccion_caliente": [
+    0.0,
+    0.075
+   ],
+   "z_c_mediana_max": -0.06
+  }
+ },
+ "7_suplemento_secc_1_a_5": {
+  "fuente_texto": "series-Sentinel-2/manuscript/supplement.tex",
+  "coinciden": [
+   {
+    "cifra": "Tabla 2, cuatro filas (n, verde/rojo, NIR/rojo, exceso de rojo, rho focos con IC, rho ref.)",
+    "fuente": "resultados_10m/fondo_10m.json, cruzada.*"
+   },
+   {
+    "cifra": "z_t medio 0,08 (fuente permanente ciega)",
+    "fuente": "PROTOCOLO_CONGELADO.md, tabla de validacion sintetica, fila 'Fuente permanente ciega para z_t'"
+   },
+   {
+    "cifra": "43 grupos secos y 17 lluviosos (familia climatologica)",
+    "fuente": "PROTOCOLO_CONGELADO.md, resultados de deteccion, 'Familia climatologica (8.1)'"
+   },
+   {
+    "cifra": "85 escenas a 10 m (44 secas, 41 lluviosas)",
+    "fuente": "resultados_10m/fondo_10m.json, escenas_usadas"
+   },
+   {
+    "cifra": "Tabla 1, tabla de zonas, cifras de lluvia y campo",
+    "fuente": "resultados/batimetria_*.json, resultados/lluvia_20m.json, protocolo secc. de campo (revisadas en la sesion)"
+   }
+  ],
+  "no_coinciden_o_dudosas": [
+   {
+    "cifra": "10 m: candidato preinscrito 'sobrevivio solo con margen cero'",
+    "fuente": "resultados_10m/deteccion.json, recurrentes_por_margen_m = {0: 1, 60: 1}",
+    "comentario": "hay un sitio recurrente tambien con margen 60 m; revisar la frase"
+   },
+   {
+    "cifra": "canal de entrada 'siete anos'",
+    "fuente": "PROTOCOLO_CONGELADO.md, 'seis-siete anos' (6-7)",
+    "comentario": "ajustar a 6-7 anos"
+   },
+   {
+    "cifra": "85-99 % de pixeles de agua sobre el umbral de 2,2 um y 0,7-43 % perdidos (piloto de 13 escenas)",
+    "fuente": "sin fuente localizada (protocolo, resultados/piloto.json)",
+    "comentario": "no estimado; localizar log del piloto o quitar la cifra"
+   },
+   {
+    "cifra": "75 escenas de 10 m en comun con el conjunto de 20 m",
+    "fuente": "no comprobado"
+   }
+  ],
+  "secc_6_comprobadas_12_cifras": "todas coinciden con resultados/prof_dist_*.json, resultados/radcor_resultado_ampliada_20m.json, resultados*/marea_viento_*.json"
+ }
+}
