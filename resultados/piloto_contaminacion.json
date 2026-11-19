@@ -1,0 +1,115 @@
+{
+ "fuente": "datos/productos/*.npz (13 productos de resultados/piloto_productos.txt), campos swir2, banderas, turbidez_dogliotti; logica de scripts/figura_piloto.py",
+ "escenas": [
+  {
+   "fecha": "2020-11-29",
+   "producto_l1c": "S2A_MSIL1C_20201129T160621_N0500_R097_T17QLF_20230304T055459.SAFE",
+   "pct_agua_swir_sobre_0_010": 0.7,
+   "pct_agua_valida": 98.2,
+   "aceptada_frac_ge_0_40": true
+  },
+  {
+   "fecha": "2021-10-15",
+   "producto_l1c": "S2A_MSIL1C_20211015T160241_N0500_R097_T17QLF_20230109T013930.SAFE",
+   "pct_agua_swir_sobre_0_010": 0.8,
+   "pct_agua_valida": 98.6,
+   "aceptada_frac_ge_0_40": true
+  },
+  {
+   "fecha": "2022-08-21",
+   "producto_l1c": "S2A_MSIL1C_20220821T155921_N0510_R097_T17QLF_20240704T020446.SAFE",
+   "pct_agua_swir_sobre_0_010": 99.4,
+   "pct_agua_valida": 0.3,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2022-08-31",
+   "producto_l1c": "S2A_MSIL1C_20220831T155831_N0510_R097_T17QLF_20240710T125429.SAFE",
+   "pct_agua_swir_sobre_0_010": 85.5,
+   "pct_agua_valida": 9.9,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2018-04-09",
+   "producto_l1c": "S2B_MSIL1C_20180409T155859_N0500_R097_T17QLF_20230724T034819.SAFE",
+   "pct_agua_swir_sobre_0_010": 97.7,
+   "pct_agua_valida": 1.5,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2019-03-05",
+   "producto_l1c": "S2B_MSIL1C_20190305T160229_N0500_R097_T17QLF_20221123T110550.SAFE",
+   "pct_agua_swir_sobre_0_010": 38.4,
+   "pct_agua_valida": 56.8,
+   "aceptada_frac_ge_0_40": true
+  },
+  {
+   "fecha": "2020-01-19",
+   "producto_l1c": "S2B_MSIL1C_20200119T160559_N0500_R097_T17QLF_20230424T052034.SAFE",
+   "pct_agua_swir_sobre_0_010": 0.5,
+   "pct_agua_valida": 37.3,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2021-09-30",
+   "producto_l1c": "S2B_MSIL1C_20210930T155959_N0500_R097_T17QLF_20230114T214445.SAFE",
+   "pct_agua_swir_sobre_0_010": 23.4,
+   "pct_agua_valida": 72.5,
+   "aceptada_frac_ge_0_40": true
+  },
+  {
+   "fecha": "2023-07-12",
+   "producto_l1c": "S2B_MSIL1C_20230712T155829_N0510_R097_T17QLF_20241017T013359.SAFE",
+   "pct_agua_swir_sobre_0_010": 99.1,
+   "pct_agua_valida": 0.9,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2023-07-22",
+   "producto_l1c": "S2B_MSIL1C_20230722T155829_N0510_R097_T17QLF_20240927T195905.SAFE",
+   "pct_agua_swir_sobre_0_010": 98.9,
+   "pct_agua_valida": 1.1,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2024-05-27",
+   "producto_l1c": "S2B_MSIL1C_20240527T155819_N0510_R097_T17QLF_20240527T205026.SAFE",
+   "pct_agua_swir_sobre_0_010": 91.5,
+   "pct_agua_valida": 5.4,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2024-06-06",
+   "producto_l1c": "S2B_MSIL1C_20240606T155819_N0510_R097_T17QLF_20240606T193837.SAFE",
+   "pct_agua_swir_sobre_0_010": 96.1,
+   "pct_agua_valida": 3.3,
+   "aceptada_frac_ge_0_40": false
+  },
+  {
+   "fecha": "2025-04-02",
+   "producto_l1c": "S2B_MSIL1C_20250402T155819_N0511_R097_T17QLF_20250402T211222.SAFE",
+   "pct_agua_swir_sobre_0_010": 42.6,
+   "pct_agua_valida": 47.2,
+   "aceptada_frac_ge_0_40": true
+  }
+ ],
+ "n_aceptadas": 5,
+ "n_rechazadas": 8,
+ "rechazadas_pct_swir_sobre_umbral": [
+  0.5,
+  85.5,
+  91.5,
+  96.1,
+  97.7,
+  98.9,
+  99.1,
+  99.4
+ ],
+ "aceptadas_pct_swir_sobre_umbral": [
+  0.7,
+  0.8,
+  23.4,
+  38.4,
+  42.6
+ ]
+}

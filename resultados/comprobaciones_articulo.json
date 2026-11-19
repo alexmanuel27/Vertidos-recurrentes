@@ -643,27 +643,30 @@
     "fuente": "resultados/batimetria_*.json, resultados/lluvia_20m.json, protocolo secc. de campo (revisadas en la sesion)"
    }
   ],
-  "no_coinciden_o_dudosas": [
+  "secc_6_comprobadas_12_cifras": "todas coinciden con resultados/prof_dist_*.json, resultados/radcor_resultado_ampliada_20m.json, resultados*/marea_viento_*.json",
+  "resueltos_despues": [
    {
-    "cifra": "10 m: candidato preinscrito 'sobrevivio solo con margen cero'",
-    "fuente": "resultados_10m/deteccion.json, recurrentes_por_margen_m = {0: 1, 60: 1}",
-    "comentario": "hay un sitio recurrente tambien con margen 60 m; revisar la frase"
+    "cifra": "10 m: candidato 'sobrevivio solo con margen cero'",
+    "estado": "coincide",
+    "fuente": "resultados_10m/sitios.csv, sobrevive_0m=True, sobrevive_20m..400m=False",
+    "comentario": "el 1 en recurrentes_por_margen_m['60'] es otro sitio recurrente, no el candidato"
    },
    {
     "cifra": "canal de entrada 'siete anos'",
-    "fuente": "PROTOCOLO_CONGELADO.md, 'seis-siete anos' (6-7)",
-    "comentario": "ajustar a 6-7 anos"
+    "estado": "coincide",
+    "fuente": "resultados/sitios.csv, rango 2, n_anios=7 (rango 3 = celda duplicada, 6 anos)"
    },
    {
-    "cifra": "85-99 % de pixeles de agua sobre el umbral de 2,2 um y 0,7-43 % perdidos (piloto de 13 escenas)",
-    "fuente": "sin fuente localizada (protocolo, resultados/piloto.json)",
-    "comentario": "no estimado; localizar log del piloto o quitar la cifra"
+    "cifra": "85-99 % y 0,7-43 % (piloto)",
+    "estado": "reconstruido",
+    "fuente": "resultados/piloto_contaminacion.json (scripts/40_piloto_contaminacion.py)",
+    "valores": "rechazadas: 7 de 8 con 85,5-99,4 %; aceptadas: 0,7, 0,8, 23,4, 38,4, 42,6 %"
    },
    {
-    "cifra": "75 escenas de 10 m en comun con el conjunto de 20 m",
-    "fuente": "no comprobado"
+    "cifra": "75 escenas en comun a 10 m",
+    "estado": "coincide",
+    "fuente": "resultados/escenas_qc.csv y resultados_10m/escenas_qc.csv, aceptada=1: 75 fechas comunes, 85 a 10 m, 113 a 20 m"
    }
-  ],
-  "secc_6_comprobadas_12_cifras": "todas coinciden con resultados/prof_dist_*.json, resultados/radcor_resultado_ampliada_20m.json, resultados*/marea_viento_*.json"
+  ]
  }
 }
