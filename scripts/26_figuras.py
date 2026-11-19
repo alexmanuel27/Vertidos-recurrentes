@@ -202,7 +202,7 @@ def main():
     fig.savefig(f"{SALIDA}/fig_c_focos_10m.pdf", bbox_inches="tight"); plt.close(fig)
     with open(f"{SALIDA}/fig_c_focos_10m.csv", "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["season", "group_id", "easting_m", "northing_m", "size_px", "zc_max", "replicates_half_A", "replicates_half_B",
-                                         "halves_replicating", "median_chart_depth_80m_m", "in_bay"]); w.writerows(salida_c)
+                                         "halves_replicating", "in_bay"]); w.writerows([r[:9] + r[10:] for r in salida_c])   # sin profundidad de la carta: no se redistribuye (secc. 29.6)
     open(f"{SALIDA}/NOTA_pies_de_figura.txt", "w").write(
         "Maps are limited to the study-area box (UTM 17N, E 360.0-365.0 km, N 2555.9-2561.9 km). No administrative boundaries are drawn. "
         "The boundaries shown are for reference only (coastline derived from the water mask of the Sentinel-2 scenes).\n"
@@ -210,7 +210,7 @@ def main():
         "b: median across scenes of the per-scene median in 250 m bins along the arm axis (+-150 m corridor); band = 95 % bootstrap over scenes.\n"
         "c: groups of pixels with climatological z_c >= 3.5; colour = number of independent halves (2016-2020, 2021-2025) with a hot pixel within 80 m; "
         "depth = median of the 1887 chart (no dredging) within 80 m; chart error sigma 0.9 m, datum uncertainty 0 to +0.5 m."
-        " The chart depth comes from the SCHISM mesh of the repository Modelo-hidrodin-mico (commit 72095a8, docs/procedencia_datos.md, where its source conditions are listed); the depth grid itself is not redistributed here.\n")
+        " The chart depths are not included in the CSV or redistributed here; to reproduce panel c, obtain the chart and read the soundings: U.S. Hydrographic Office, chart no. 307, \"West Indies, Cuba, harbor of Havana: from the most recent Spanish surveys to 1887\", ed. 1898, Boston Public Library, Leventhal Map & Education Center (call no. G9096.P5 svar .U55 no. 307 1898; https://collections.leventhalmap.org/search/commonwealth:g445ht01p, as recorded on 2 Oct 2026 in the model repository; not re-verified on 19 Nov 2026). Sounding positions were georeferenced on the 1889 edition of the Harbor of Havana chart (Harvard Geospatial Library, https://hgl.harvard.edu/catalog/harvard-g4924-h3-1889-u5; check its terms of use). The procedure and its parameters are in the repository Modelo-hidrodin-mico (commit 72095a8, docs/procedencia_datos.md).\n")
     print("c hecho; grupos", len(salida_c), flush=True)
 
 

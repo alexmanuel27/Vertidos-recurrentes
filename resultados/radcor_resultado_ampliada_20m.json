@@ -1,0 +1,157 @@
+{
+ "escenas": [
+  {
+   "fecha": "2018-03-10",
+   "n_focos_validos_dsf": 216,
+   "n_focos_validos_radcor": 206,
+   "d_dsf": 3.9557719230651855,
+   "d_radcor": 4.617529392242432,
+   "cociente": 1.1672890859350844
+  },
+  {
+   "fecha": "2019-01-19",
+   "n_focos_validos_dsf": 214,
+   "n_focos_validos_radcor": 183,
+   "d_dsf": 4.603655457496643,
+   "d_radcor": 3.532320499420166,
+   "cociente": 0.7672860256447073
+  },
+  {
+   "fecha": "2021-01-03",
+   "n_focos_validos_dsf": 182,
+   "n_focos_validos_radcor": 123,
+   "d_dsf": 1.1608725190162659,
+   "d_radcor": 0.8094770908355713,
+   "cociente": 0.6973005886309805
+  },
+  {
+   "fecha": "2021-02-22",
+   "n_focos_validos_dsf": 204,
+   "n_focos_validos_radcor": 194,
+   "d_dsf": 1.5205936431884766,
+   "d_radcor": 1.2564812898635864,
+   "cociente": 0.8263097083773921
+  },
+  {
+   "fecha": "2022-03-19",
+   "n_focos_validos_dsf": 211,
+   "n_focos_validos_radcor": 187,
+   "d_dsf": 1.4089126586914062,
+   "d_radcor": 0.9731063842773438,
+   "cociente": 0.6906789986408114
+  },
+  {
+   "fecha": "2022-11-04",
+   "n_focos_validos_dsf": 205,
+   "n_focos_validos_radcor": 127,
+   "d_dsf": 0.9607757329940796,
+   "d_radcor": 1.2580792903900146,
+   "cociente": 1.3094411600815974
+  },
+  {
+   "fecha": "2023-04-03",
+   "n_focos_validos_dsf": 205,
+   "n_focos_validos_radcor": 106,
+   "d_dsf": 2.2034668922424316,
+   "d_radcor": -0.05646944046020508,
+   "cociente": -0.025627542060655636
+  },
+  {
+   "fecha": "2024-02-17",
+   "n_focos_validos_dsf": 188,
+   "n_focos_validos_radcor": 184,
+   "d_dsf": 0.7943735122680664,
+   "d_radcor": 0.6261367201805115,
+   "cociente": 0.7882144992382597
+  },
+  {
+   "fecha": "2025-02-01",
+   "n_focos_validos_dsf": 176,
+   "n_focos_validos_radcor": 181,
+   "d_dsf": 1.9807838201522827,
+   "d_radcor": 1.9352035522460938,
+   "cociente": 0.9769887720999838
+  },
+  {
+   "fecha": "2025-12-08",
+   "n_focos_validos_dsf": 178,
+   "n_focos_validos_radcor": 165,
+   "d_dsf": 0.8146489858627319,
+   "d_radcor": 0.6330618858337402,
+   "cociente": 0.777097740032553
+  }
+ ],
+ "n_d_radcor_evaluable": 10,
+ "n_d_radcor_mayor_0": 9,
+ "mediana_cociente": 0.7826561196354064,
+ "regla": "d_RAdCor>0 en >=8/10 y mediana(d_RAdCor/d_DSF)>=0,5",
+ "cumple": true,
+ "orden_zonas_10_escenas": {
+  "dsf": {
+   "todos": {
+    "medianas_zona": {
+     "atares": 2.458,
+     "guasabacoa": 2.627,
+     "marimelena": 2.292,
+     "bahia_centro_y_canal": 2.195,
+     "mar": 1.384
+    },
+    "orden": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.166,
+     "margen_medio_menos_mar": 0.908
+    }
+   },
+   "a100m": {
+    "medianas_zona": {
+     "atares": 2.459,
+     "guasabacoa": 2.668,
+     "marimelena": 2.297,
+     "bahia_centro_y_canal": 2.276,
+     "mar": 1.385
+    },
+    "orden": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.162,
+     "margen_medio_menos_mar": 0.911
+    }
+   }
+  },
+  "radcor": {
+   "todos": {
+    "medianas_zona": {
+     "atares": 2.899,
+     "guasabacoa": 2.572,
+     "marimelena": 2.321,
+     "bahia_centro_y_canal": 1.859,
+     "mar": 1.281
+    },
+    "orden": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.251,
+     "margen_medio_menos_mar": 1.04
+    }
+   },
+   "a100m": {
+    "medianas_zona": {
+     "atares": 2.908,
+     "guasabacoa": 2.529,
+     "marimelena": 2.115,
+     "bahia_centro_y_canal": 1.926,
+     "mar": 1.282
+    },
+    "orden": {
+     "cumple": true,
+     "margen_brazos_menos_medio": 0.414,
+     "margen_medio_menos_mar": 0.833
+    }
+   }
+  }
+ },
+ "ventana_ampliada_limit_SONE": [
+  23.05,
+  -82.45,
+  23.26,
+  -82.23
+ ]
+}

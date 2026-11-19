@@ -22,12 +22,14 @@ def main():
     ap.add_argument("--logs", default="datos/acolite_logs_radcor_20m")
     ap.add_argument("--acolite-src", default="externo/acolite")
     ap.add_argument("--registro", default="resultados/radcor_registro_20m.json")
+    ap.add_argument("--limite", type=float, nargs=4, default=None, metavar=("S", "O", "N", "E"),
+                    help="ventana de ACOLITE; por defecto la congelada (acolite_io.limite_bahia)")
     a = ap.parse_args()
     sys.path.insert(0, a.acolite_src)
     import acolite as ac
     os.makedirs(a.productos, exist_ok=True)
     zips = sorted(glob.glob(os.path.join(a.crudo, "*.zip")))
-    limite = acolite_io.limite_bahia()
+    limite = tuple(a.limite) if a.limite else acolite_io.limite_bahia()
     ajustes0 = dict(acolite_io.AJUSTES)
     ajustes0["atmospheric_correction_method"] = "radcor"
     print(f"{len(zips)} productos | ajustes:", ajustes0, flush=True)
