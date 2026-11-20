@@ -1,0 +1,195 @@
+{
+ "resolucion_m": 20,
+ "bloque_m": 200,
+ "n_bootstrap": 2000,
+ "semilla": 20261120,
+ "tolerancia_distancia_m": 20.0,
+ "tolerancia_f_tierra_500m": 0.1,
+ "min_referencias_por_caliente": 30,
+ "distancia_lejos_m": 80,
+ "pixeles_bahia_con_profundidad": 12237,
+ "estaciones": {
+  "seca": {
+   "n_calientes_con_profundidad": 221,
+   "n_calientes_emparejados": 221,
+   "n_calientes_sin_referencias_suficientes": 0,
+   "n_referencias_unicas": 6823,
+   "n_bloques_calientes": 27,
+   "n_bloques_referencias_unicas": 159,
+   "profundidades_negativas_calientes": 0,
+   "profundidades_negativas_referencias_peso": 0.0,
+   "e5_emparejado": {
+    "mediana_calientes_m": 1.723,
+    "mediana_referencias_m": 4.11,
+    "fraccion_menos_2m_calientes": 0.5701,
+    "fraccion_menos_2m_referencias": 0.2939,
+    "ic95_mediana_calientes_m": [
+     0.886,
+     2.767
+    ],
+    "ic95_mediana_referencias_m": [
+     3.213,
+     5.038
+    ],
+    "ic95_diferencia_medianas_ref_menos_cal_m": [
+     1.0,
+     3.958
+    ],
+    "ic95_fraccion_menos_2m_calientes": [
+     0.328,
+     0.764
+    ],
+    "ic95_fraccion_menos_2m_referencias": [
+     0.225,
+     0.364
+    ]
+   },
+   "secc25_recalculada_con_ic": {
+    "mediana_calientes_m": 1.723,
+    "mediana_referencias_m": 6.098,
+    "fraccion_menos_2m_calientes": 0.5701,
+    "fraccion_menos_2m_referencias": 0.1513,
+    "n_calientes": 221,
+    "n_referencias": 9281,
+    "n_bloques_calientes": 27,
+    "n_bloques_referencias": 159,
+    "ic95_mediana_calientes_m": [
+     0.938,
+     2.776
+    ],
+    "ic95_fraccion_menos_2m_calientes": [
+     0.333,
+     0.766
+    ],
+    "ic95_mediana_referencias_m": [
+     5.379,
+     6.73
+    ],
+    "ic95_fraccion_menos_2m_referencias": [
+     0.104,
+     0.207
+    ]
+   },
+   "secc25_comparar": {
+    "n_calientes_con_profundidad": 221,
+    "n_con_referencia": 221,
+    "rango_percentil_mediano": 0.191,
+    "profundidad_mediana_calientes_m": 1.72,
+    "profundidad_mediana_referencia_m": 6.1,
+    "frac_calientes_menos_2m": 0.57,
+    "frac_referencia_menos_2m": 0.151,
+    "n_referencia": 9281
+   },
+   "secc25_publicada_json": {
+    "n_calientes_con_profundidad": 221,
+    "n_con_referencia": 221,
+    "rango_percentil_mediano": 0.191,
+    "profundidad_mediana_calientes_m": 1.72,
+    "profundidad_mediana_referencia_m": 6.1,
+    "frac_calientes_menos_2m": 0.57,
+    "frac_referencia_menos_2m": 0.151,
+    "n_referencia": 9281
+   },
+   "secc25_diferencia_maxima_con_el_json_publicado": 0,
+   "prediccion": {
+    "mediana_calientes_menor": true,
+    "ecdf_calientes_mayor_o_igual_en_todos_los_bordes_0p5m": true,
+    "ecdf_dif_min_cal_menos_ref": 0.1202,
+    "ecdf_dif_max_cal_menos_ref": 0.4248,
+    "bordes_donde_falla_m": [],
+    "cumple": true
+   }
+  },
+  "lluviosa": {
+   "n_calientes_con_profundidad": 163,
+   "n_calientes_emparejados": 162,
+   "n_calientes_sin_referencias_suficientes": 1,
+   "n_referencias_unicas": 6569,
+   "n_bloques_calientes": 32,
+   "n_bloques_referencias_unicas": 155,
+   "profundidades_negativas_calientes": 0,
+   "profundidades_negativas_referencias_peso": 0.0,
+   "e5_emparejado": {
+    "mediana_calientes_m": 1.479,
+    "mediana_referencias_m": 4.032,
+    "fraccion_menos_2m_calientes": 0.7222,
+    "fraccion_menos_2m_referencias": 0.2618,
+    "ic95_mediana_calientes_m": [
+     0.982,
+     1.82
+    ],
+    "ic95_mediana_referencias_m": [
+     3.735,
+     4.504
+    ],
+    "ic95_diferencia_medianas_ref_menos_cal_m": [
+     2.219,
+     3.269
+    ],
+    "ic95_fraccion_menos_2m_calientes": [
+     0.548,
+     0.841
+    ],
+    "ic95_fraccion_menos_2m_referencias": [
+     0.219,
+     0.301
+    ]
+   },
+   "secc25_recalculada_con_ic": {
+    "mediana_calientes_m": 1.478,
+    "mediana_referencias_m": 6.188,
+    "fraccion_menos_2m_calientes": 0.7239,
+    "fraccion_menos_2m_referencias": 0.1241,
+    "n_calientes": 163,
+    "n_referencias": 8869,
+    "n_bloques_calientes": 33,
+    "n_bloques_referencias": 155,
+    "ic95_mediana_calientes_m": [
+     0.982,
+     1.81
+    ],
+    "ic95_fraccion_menos_2m_calientes": [
+     0.553,
+     0.842
+    ],
+    "ic95_mediana_referencias_m": [
+     5.491,
+     6.793
+    ],
+    "ic95_fraccion_menos_2m_referencias": [
+     0.083,
+     0.169
+    ]
+   },
+   "secc25_comparar": {
+    "n_calientes_con_profundidad": 163,
+    "n_con_referencia": 163,
+    "rango_percentil_mediano": 0.133,
+    "profundidad_mediana_calientes_m": 1.48,
+    "profundidad_mediana_referencia_m": 6.19,
+    "frac_calientes_menos_2m": 0.724,
+    "frac_referencia_menos_2m": 0.124,
+    "n_referencia": 8869
+   },
+   "secc25_publicada_json": {
+    "n_calientes_con_profundidad": 163,
+    "n_con_referencia": 163,
+    "rango_percentil_mediano": 0.133,
+    "profundidad_mediana_calientes_m": 1.48,
+    "profundidad_mediana_referencia_m": 6.19,
+    "frac_calientes_menos_2m": 0.724,
+    "frac_referencia_menos_2m": 0.124,
+    "n_referencia": 8869
+   },
+   "secc25_diferencia_maxima_con_el_json_publicado": 0,
+   "prediccion": {
+    "mediana_calientes_menor": true,
+    "ecdf_calientes_mayor_o_igual_en_todos_los_bordes_0p5m": true,
+    "ecdf_dif_min_cal_menos_ref": 0.0495,
+    "ecdf_dif_max_cal_menos_ref": 0.5312,
+    "bordes_donde_falla_m": [],
+    "cumple": true
+   }
+  }
+ }
+}

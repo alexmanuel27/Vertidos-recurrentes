@@ -1,0 +1,21 @@
+resolution_m,season,zone,zone_code,zone_rank_by_median,median_FNU,ci95_low_FNU,ci95_high_FNU,n_scenes,n_pixels_climatology,median_pixel_climatology_FNU,order_holds,margin_arms_minus_middle_FNU,margin_middle_minus_sea_FNU
+20,dry,Atarés,atares,1,2.448,2.252,2.718,71,1413,2.48,True,0.305,0.734
+20,dry,Guasabacoa,guasabacoa,2,2.355,2.079,2.619,71,3092,2.39,True,0.305,0.734
+20,dry,Marimelena,marimelena,3,2.05,1.736,2.272,71,1216,2.0,True,0.305,0.734
+20,dry,Centre and channel,bahia_centro_y_canal,4,2.049,1.841,2.169,71,4603,1.99,True,0.305,0.734
+20,dry,Open sea,mar,5,1.316,1.192,1.421,71,179831,1.26,True,0.305,0.734
+20,wet,Atarés,atares,2,2.56,2.311,2.745,42,1379,2.64,True,0.009,0.386
+20,wet,Guasabacoa,guasabacoa,1,2.838,2.599,2.979,42,3029,2.72,True,0.009,0.386
+20,wet,Marimelena,marimelena,3,2.551,2.219,2.872,42,1201,2.59,True,0.009,0.386
+20,wet,Centre and channel,bahia_centro_y_canal,4,2.359,2.147,2.85,42,4545,2.49,True,0.009,0.386
+20,wet,Open sea,mar,5,2.165,1.717,2.62,42,177739,1.81,True,0.009,0.386
+10,dry,Atarés,atares,1,2.537,2.334,2.87,44,5441,2.52,True,0.342,0.882
+10,dry,Guasabacoa,guasabacoa,2,2.403,2.1,2.713,44,12000,2.41,True,0.342,0.882
+10,dry,Marimelena,marimelena,3,2.061,1.817,2.293,44,4516,2.01,True,0.342,0.882
+10,dry,Centre and channel,bahia_centro_y_canal,4,2.033,1.824,2.266,44,17947,2.0,True,0.342,0.882
+10,dry,Open sea,mar,5,1.179,1.004,1.427,44,718267,1.11,True,0.342,0.882
+10,wet,Atarés,atares,3,2.693,2.528,3.479,41,5603,2.9,False,-0.233,0.618
+10,wet,Guasabacoa,guasabacoa,1,3.094,2.784,3.809,41,11901,3.1,False,-0.233,0.618
+10,wet,Marimelena,marimelena,2,2.926,2.41,3.164,41,4841,2.88,False,-0.233,0.618
+10,wet,Centre and channel,bahia_centro_y_canal,4,2.44,2.322,3.116,41,18160,2.73,False,-0.233,0.618
+10,wet,Open sea,mar,5,2.308,1.973,2.652,41,676094,1.94,False,-0.233,0.618

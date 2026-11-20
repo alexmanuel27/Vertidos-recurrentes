@@ -1,0 +1,171 @@
+{
+ "resolucion_m": 20,
+ "fuente": "resultados/gradiente_20m.json, estaciones.<est>.variantes.todos.zonas.<zona> y climatologia_pixel_secc23",
+ "tabla1": "/Users/alex/Nube /repos/publication plan/series-Sentinel-2/manuscript/main.tex",
+ "tolerancia_FNU": 0.0051,
+ "n_celdas": 10,
+ "n_coinciden": 10,
+ "diferencia_maxima_FNU": 0.005,
+ "celdas": [
+  {
+   "zona": "atares",
+   "estacion": "seca",
+   "json_mediana_ic_lo_ic_hi": [
+    2.448,
+    2.252,
+    2.718
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.45,
+    2.25,
+    2.72
+   ],
+   "diferencia_maxima_FNU": 0.002,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "guasabacoa",
+   "estacion": "seca",
+   "json_mediana_ic_lo_ic_hi": [
+    2.355,
+    2.079,
+    2.619
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.35,
+    2.08,
+    2.62
+   ],
+   "diferencia_maxima_FNU": 0.005,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "marimelena",
+   "estacion": "seca",
+   "json_mediana_ic_lo_ic_hi": [
+    2.05,
+    1.736,
+    2.272
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.05,
+    1.74,
+    2.27
+   ],
+   "diferencia_maxima_FNU": 0.004,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "bahia_centro_y_canal",
+   "estacion": "seca",
+   "json_mediana_ic_lo_ic_hi": [
+    2.049,
+    1.841,
+    2.169
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.05,
+    1.84,
+    2.17
+   ],
+   "diferencia_maxima_FNU": 0.001,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "mar",
+   "estacion": "seca",
+   "json_mediana_ic_lo_ic_hi": [
+    1.316,
+    1.192,
+    1.421
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    1.32,
+    1.19,
+    1.42
+   ],
+   "diferencia_maxima_FNU": 0.004,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "atares",
+   "estacion": "lluviosa",
+   "json_mediana_ic_lo_ic_hi": [
+    2.56,
+    2.311,
+    2.745
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.56,
+    2.31,
+    2.75
+   ],
+   "diferencia_maxima_FNU": 0.005,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "guasabacoa",
+   "estacion": "lluviosa",
+   "json_mediana_ic_lo_ic_hi": [
+    2.838,
+    2.599,
+    2.979
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.84,
+    2.6,
+    2.98
+   ],
+   "diferencia_maxima_FNU": 0.002,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "marimelena",
+   "estacion": "lluviosa",
+   "json_mediana_ic_lo_ic_hi": [
+    2.551,
+    2.219,
+    2.872
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.55,
+    2.22,
+    2.87
+   ],
+   "diferencia_maxima_FNU": 0.002,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "bahia_centro_y_canal",
+   "estacion": "lluviosa",
+   "json_mediana_ic_lo_ic_hi": [
+    2.359,
+    2.147,
+    2.85
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.36,
+    2.15,
+    2.85
+   ],
+   "diferencia_maxima_FNU": 0.003,
+   "coincide_a_2_decimales": true
+  },
+  {
+   "zona": "mar",
+   "estacion": "lluviosa",
+   "json_mediana_ic_lo_ic_hi": [
+    2.165,
+    1.717,
+    2.62
+   ],
+   "tabla1_mediana_ic_lo_ic_hi": [
+    2.17,
+    1.72,
+    2.62
+   ],
+   "diferencia_maxima_FNU": 0.005,
+   "coincide_a_2_decimales": true
+  }
+ ]
+}

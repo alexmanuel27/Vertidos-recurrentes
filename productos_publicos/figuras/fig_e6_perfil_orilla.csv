@@ -1,0 +1,281 @@
+resolution_m,season,version,correction,bin_center_m,n_scenes,median_FNU,q25_FNU,q75_FNU
+20,seca,i_todos,DSF,10.0,0,,,
+20,seca,i_todos,DSF,30.0,71,1.7748,1.5399,2.106
+20,seca,i_todos,DSF,50.0,71,1.6918,1.3647,2.0787
+20,seca,i_todos,DSF,70.0,71,1.7506,1.388,2.118
+20,seca,i_todos,DSF,90.0,71,1.7388,1.3321,2.0637
+20,seca,i_todos,DSF,110.0,71,1.711,1.3486,2.039
+20,seca,i_todos,DSF,130.0,71,1.6721,1.3638,1.9986
+20,seca,i_todos,DSF,150.0,71,1.6092,1.3108,2.0117
+20,seca,i_todos,DSF,170.0,71,1.476,1.1492,1.952
+20,seca,i_todos,DSF,190.0,71,1.4703,1.1538,1.9692
+20,seca,i_todos,DSF,210.0,71,1.4358,1.1,1.891
+20,seca,i_todos,DSF,230.0,71,1.3533,1.0571,1.8463
+20,seca,i_todos,DSF,250.0,71,1.3266,1.0395,1.7884
+20,seca,i_todos,DSF,270.0,71,1.2862,1.0157,1.7933
+20,seca,i_todos,DSF,290.0,71,1.3138,1.0202,1.8128
+20,seca,i_todos,DSF,310.0,71,1.305,1.0215,1.7896
+20,seca,i_todos,DSF,330.0,71,1.2982,1.0446,1.7866
+20,seca,i_todos,DSF,350.0,71,1.2696,1.0239,1.7636
+20,seca,i_todos,DSF,370.0,71,1.2234,0.9455,1.6711
+20,seca,i_todos,DSF,390.0,71,1.2429,0.9515,1.6083
+20,seca,ii_sin_focos_80m,DSF,10.0,0,,,
+20,seca,ii_sin_focos_80m,DSF,30.0,71,1.6564,1.3782,2.0142
+20,seca,ii_sin_focos_80m,DSF,50.0,71,1.5856,1.2577,2.0087
+20,seca,ii_sin_focos_80m,DSF,70.0,71,1.6966,1.3489,2.0711
+20,seca,ii_sin_focos_80m,DSF,90.0,71,1.6744,1.2982,2.042
+20,seca,ii_sin_focos_80m,DSF,110.0,71,1.6893,1.3222,2.0444
+20,seca,ii_sin_focos_80m,DSF,130.0,71,1.6239,1.2939,1.9914
+20,seca,ii_sin_focos_80m,DSF,150.0,71,1.5543,1.2425,1.9976
+20,seca,ii_sin_focos_80m,DSF,170.0,71,1.4367,1.1125,1.8825
+20,seca,ii_sin_focos_80m,DSF,190.0,71,1.4336,1.1222,1.9187
+20,seca,ii_sin_focos_80m,DSF,210.0,71,1.4105,1.0815,1.8526
+20,seca,ii_sin_focos_80m,DSF,230.0,71,1.3443,1.0439,1.8064
+20,seca,ii_sin_focos_80m,DSF,250.0,71,1.3041,1.0336,1.756
+20,seca,ii_sin_focos_80m,DSF,270.0,71,1.2687,1.002,1.7516
+20,seca,ii_sin_focos_80m,DSF,290.0,71,1.2978,1.0144,1.796
+20,seca,ii_sin_focos_80m,DSF,310.0,71,1.2806,1.0162,1.7795
+20,seca,ii_sin_focos_80m,DSF,330.0,71,1.2876,1.0402,1.7569
+20,seca,ii_sin_focos_80m,DSF,350.0,71,1.2519,1.0139,1.723
+20,seca,ii_sin_focos_80m,DSF,370.0,71,1.2141,0.9595,1.6316
+20,seca,ii_sin_focos_80m,DSF,390.0,71,1.226,0.9454,1.6041
+20,lluviosa,i_todos,DSF,10.0,0,,,
+20,lluviosa,i_todos,DSF,30.0,42,2.5211,1.9205,2.9799
+20,lluviosa,i_todos,DSF,50.0,42,2.453,1.8792,3.1134
+20,lluviosa,i_todos,DSF,70.0,42,2.4284,1.969,3.1821
+20,lluviosa,i_todos,DSF,90.0,42,2.4203,2.0183,3.2783
+20,lluviosa,i_todos,DSF,110.0,42,2.4322,2.037,3.1848
+20,lluviosa,i_todos,DSF,130.0,42,2.4448,1.9299,3.2545
+20,lluviosa,i_todos,DSF,150.0,42,2.4116,1.9084,3.2101
+20,lluviosa,i_todos,DSF,170.0,42,2.3747,1.8791,3.2282
+20,lluviosa,i_todos,DSF,190.0,42,2.3688,1.8083,3.2131
+20,lluviosa,i_todos,DSF,210.0,42,2.3794,1.8185,3.1601
+20,lluviosa,i_todos,DSF,230.0,42,2.3802,1.7483,3.1205
+20,lluviosa,i_todos,DSF,250.0,42,2.3729,1.7624,3.1647
+20,lluviosa,i_todos,DSF,270.0,42,2.3638,1.7281,3.2345
+20,lluviosa,i_todos,DSF,290.0,42,2.3305,1.7328,3.1445
+20,lluviosa,i_todos,DSF,310.0,42,2.3805,1.7405,3.1565
+20,lluviosa,i_todos,DSF,330.0,42,2.3608,1.7294,3.1124
+20,lluviosa,i_todos,DSF,350.0,42,2.31,1.6812,3.1179
+20,lluviosa,i_todos,DSF,370.0,42,2.3309,1.7097,3.1892
+20,lluviosa,i_todos,DSF,390.0,42,2.3142,1.7088,2.9658
+20,lluviosa,ii_sin_focos_80m,DSF,10.0,0,,,
+20,lluviosa,ii_sin_focos_80m,DSF,30.0,42,2.2995,1.7937,2.9051
+20,lluviosa,ii_sin_focos_80m,DSF,50.0,42,2.3799,1.7675,3.0214
+20,lluviosa,ii_sin_focos_80m,DSF,70.0,42,2.3661,1.8869,3.0625
+20,lluviosa,ii_sin_focos_80m,DSF,90.0,42,2.3568,1.884,3.0822
+20,lluviosa,ii_sin_focos_80m,DSF,110.0,42,2.3727,1.8782,3.1346
+20,lluviosa,ii_sin_focos_80m,DSF,130.0,42,2.4059,1.8725,3.1998
+20,lluviosa,ii_sin_focos_80m,DSF,150.0,42,2.3987,1.8497,3.1817
+20,lluviosa,ii_sin_focos_80m,DSF,170.0,42,2.3743,1.8268,3.1422
+20,lluviosa,ii_sin_focos_80m,DSF,190.0,42,2.3725,1.7836,3.1476
+20,lluviosa,ii_sin_focos_80m,DSF,210.0,42,2.3628,1.7969,3.1602
+20,lluviosa,ii_sin_focos_80m,DSF,230.0,42,2.3855,1.7431,3.1383
+20,lluviosa,ii_sin_focos_80m,DSF,250.0,42,2.3538,1.7479,3.1505
+20,lluviosa,ii_sin_focos_80m,DSF,270.0,42,2.3442,1.7174,3.1646
+20,lluviosa,ii_sin_focos_80m,DSF,290.0,42,2.3178,1.7271,3.1005
+20,lluviosa,ii_sin_focos_80m,DSF,310.0,42,2.373,1.7456,3.0948
+20,lluviosa,ii_sin_focos_80m,DSF,330.0,42,2.3456,1.7138,3.0707
+20,lluviosa,ii_sin_focos_80m,DSF,350.0,42,2.2985,1.6709,3.0817
+20,lluviosa,ii_sin_focos_80m,DSF,370.0,42,2.3003,1.693,3.1438
+20,lluviosa,ii_sin_focos_80m,DSF,390.0,42,2.2832,1.6908,2.9541
+10,seca,i_todos,DSF,5.0,0,,,
+10,seca,i_todos,DSF,15.0,44,2.1429,1.6363,2.5215
+10,seca,i_todos,DSF,25.0,44,1.8866,1.4408,2.3526
+10,seca,i_todos,DSF,35.0,44,1.8948,1.4083,2.3276
+10,seca,i_todos,DSF,45.0,44,1.8335,1.3385,2.2855
+10,seca,i_todos,DSF,55.0,44,1.9072,1.3789,2.2181
+10,seca,i_todos,DSF,65.0,44,1.9,1.3867,2.1821
+10,seca,i_todos,DSF,75.0,44,1.88,1.438,2.2634
+10,seca,i_todos,DSF,85.0,44,1.8194,1.3821,2.2302
+10,seca,i_todos,DSF,95.0,44,1.8277,1.4234,2.2458
+10,seca,i_todos,DSF,105.0,44,1.7985,1.4048,2.2101
+10,seca,i_todos,DSF,115.0,44,1.7244,1.3661,2.1321
+10,seca,i_todos,DSF,125.0,44,1.7228,1.3645,2.1574
+10,seca,i_todos,DSF,135.0,44,1.6201,1.2933,2.0822
+10,seca,i_todos,DSF,145.0,44,1.6284,1.302,2.1238
+10,seca,i_todos,DSF,155.0,44,1.6026,1.2432,2.0919
+10,seca,i_todos,DSF,165.0,44,1.563,1.2241,2.0739
+10,seca,i_todos,DSF,175.0,44,1.4805,1.1774,2.0672
+10,seca,i_todos,DSF,185.0,44,1.417,1.164,2.0054
+10,seca,i_todos,DSF,195.0,44,1.4327,1.1693,2.0329
+10,seca,i_todos,DSF,205.0,44,1.3634,1.1115,1.9907
+10,seca,i_todos,DSF,215.0,44,1.3371,1.0627,1.9312
+10,seca,i_todos,DSF,225.0,44,1.3109,1.0486,1.8943
+10,seca,i_todos,DSF,235.0,44,1.2895,1.0021,1.8785
+10,seca,i_todos,DSF,245.0,44,1.2915,1.0129,1.8757
+10,seca,i_todos,DSF,255.0,44,1.2556,0.9638,1.8235
+10,seca,i_todos,DSF,265.0,44,1.2608,0.9798,1.8683
+10,seca,i_todos,DSF,275.0,44,1.2492,0.9492,1.8792
+10,seca,i_todos,DSF,285.0,44,1.2449,0.9395,1.86
+10,seca,i_todos,DSF,295.0,44,1.2582,0.952,1.8731
+10,seca,i_todos,DSF,305.0,44,1.2291,0.9349,1.827
+10,seca,i_todos,DSF,315.0,44,1.2348,0.926,1.8559
+10,seca,i_todos,DSF,325.0,44,1.2145,0.907,1.8741
+10,seca,i_todos,DSF,335.0,44,1.2296,0.9114,1.8922
+10,seca,i_todos,DSF,345.0,44,1.202,0.8779,1.8543
+10,seca,i_todos,DSF,355.0,44,1.1769,0.8747,1.8402
+10,seca,i_todos,DSF,365.0,44,1.1639,0.8517,1.8655
+10,seca,i_todos,DSF,375.0,44,1.1368,0.8039,1.8778
+10,seca,i_todos,DSF,385.0,44,1.1341,0.797,1.8369
+10,seca,i_todos,DSF,395.0,44,1.1229,0.7732,1.7722
+10,seca,ii_sin_focos_80m,DSF,5.0,0,,,
+10,seca,ii_sin_focos_80m,DSF,15.0,44,1.9097,1.5092,2.3234
+10,seca,ii_sin_focos_80m,DSF,25.0,44,1.786,1.3504,2.2263
+10,seca,ii_sin_focos_80m,DSF,35.0,44,1.7929,1.3182,2.214
+10,seca,ii_sin_focos_80m,DSF,45.0,44,1.7252,1.2703,2.1395
+10,seca,ii_sin_focos_80m,DSF,55.0,44,1.793,1.2828,2.1509
+10,seca,ii_sin_focos_80m,DSF,65.0,44,1.7454,1.317,2.0686
+10,seca,ii_sin_focos_80m,DSF,75.0,44,1.8152,1.3571,2.1387
+10,seca,ii_sin_focos_80m,DSF,85.0,44,1.7028,1.2906,2.123
+10,seca,ii_sin_focos_80m,DSF,95.0,44,1.797,1.3563,2.2296
+10,seca,ii_sin_focos_80m,DSF,105.0,44,1.7228,1.3265,2.2191
+10,seca,ii_sin_focos_80m,DSF,115.0,44,1.6627,1.3349,2.1368
+10,seca,ii_sin_focos_80m,DSF,125.0,44,1.6922,1.3413,2.1929
+10,seca,ii_sin_focos_80m,DSF,135.0,44,1.5844,1.2296,2.0601
+10,seca,ii_sin_focos_80m,DSF,145.0,44,1.6192,1.2547,2.0597
+10,seca,ii_sin_focos_80m,DSF,155.0,44,1.5394,1.1787,2.0964
+10,seca,ii_sin_focos_80m,DSF,165.0,44,1.5211,1.1703,2.0474
+10,seca,ii_sin_focos_80m,DSF,175.0,44,1.4426,1.147,2.0418
+10,seca,ii_sin_focos_80m,DSF,185.0,44,1.3833,1.1328,2.0068
+10,seca,ii_sin_focos_80m,DSF,195.0,44,1.3838,1.1519,2.0348
+10,seca,ii_sin_focos_80m,DSF,205.0,44,1.3581,1.0874,1.993
+10,seca,ii_sin_focos_80m,DSF,215.0,44,1.2945,1.052,1.9208
+10,seca,ii_sin_focos_80m,DSF,225.0,44,1.262,1.0463,1.8721
+10,seca,ii_sin_focos_80m,DSF,235.0,44,1.2524,0.9963,1.8508
+10,seca,ii_sin_focos_80m,DSF,245.0,44,1.2475,0.9914,1.8507
+10,seca,ii_sin_focos_80m,DSF,255.0,44,1.2041,0.9422,1.8176
+10,seca,ii_sin_focos_80m,DSF,265.0,44,1.2188,0.9629,1.8644
+10,seca,ii_sin_focos_80m,DSF,275.0,44,1.2166,0.9268,1.8835
+10,seca,ii_sin_focos_80m,DSF,285.0,44,1.2271,0.905,1.867
+10,seca,ii_sin_focos_80m,DSF,295.0,44,1.2394,0.9328,1.8622
+10,seca,ii_sin_focos_80m,DSF,305.0,44,1.2068,0.9053,1.8123
+10,seca,ii_sin_focos_80m,DSF,315.0,44,1.2166,0.8969,1.855
+10,seca,ii_sin_focos_80m,DSF,325.0,44,1.1875,0.8908,1.8725
+10,seca,ii_sin_focos_80m,DSF,335.0,44,1.208,0.8984,1.8947
+10,seca,ii_sin_focos_80m,DSF,345.0,44,1.1865,0.8599,1.8741
+10,seca,ii_sin_focos_80m,DSF,355.0,44,1.1601,0.8739,1.8546
+10,seca,ii_sin_focos_80m,DSF,365.0,44,1.1472,0.8216,1.8653
+10,seca,ii_sin_focos_80m,DSF,375.0,44,1.1219,0.7848,1.8783
+10,seca,ii_sin_focos_80m,DSF,385.0,44,1.1192,0.7713,1.8337
+10,seca,ii_sin_focos_80m,DSF,395.0,44,1.1038,0.7627,1.7656
+10,lluviosa,i_todos,DSF,5.0,0,,,
+10,lluviosa,i_todos,DSF,15.0,41,3.0807,2.5958,3.4822
+10,lluviosa,i_todos,DSF,25.0,41,3.0103,2.3053,3.398
+10,lluviosa,i_todos,DSF,35.0,41,2.9554,2.1983,3.4467
+10,lluviosa,i_todos,DSF,45.0,41,2.9386,2.1582,3.3796
+10,lluviosa,i_todos,DSF,55.0,41,3.0015,2.1879,3.374
+10,lluviosa,i_todos,DSF,65.0,41,2.9602,2.163,3.3613
+10,lluviosa,i_todos,DSF,75.0,41,2.9147,2.2134,3.4663
+10,lluviosa,i_todos,DSF,85.0,41,2.9023,2.1858,3.371
+10,lluviosa,i_todos,DSF,95.0,41,2.8531,2.2225,3.327
+10,lluviosa,i_todos,DSF,105.0,41,2.8442,2.1935,3.345
+10,lluviosa,i_todos,DSF,115.0,41,2.8371,2.2108,3.3227
+10,lluviosa,i_todos,DSF,125.0,41,2.8018,2.1881,3.3528
+10,lluviosa,i_todos,DSF,135.0,41,2.6861,2.1454,3.3251
+10,lluviosa,i_todos,DSF,145.0,41,2.7141,2.1548,3.379
+10,lluviosa,i_todos,DSF,155.0,41,2.713,2.1405,3.3744
+10,lluviosa,i_todos,DSF,165.0,41,2.6819,2.1574,3.3741
+10,lluviosa,i_todos,DSF,175.0,41,2.6339,2.1136,3.3588
+10,lluviosa,i_todos,DSF,185.0,41,2.645,2.0866,3.3839
+10,lluviosa,i_todos,DSF,195.0,41,2.6603,2.0879,3.4817
+10,lluviosa,i_todos,DSF,205.0,41,2.6516,2.0743,3.4345
+10,lluviosa,i_todos,DSF,215.0,41,2.6048,2.0436,3.4095
+10,lluviosa,i_todos,DSF,225.0,41,2.5964,2.0028,3.3719
+10,lluviosa,i_todos,DSF,235.0,41,2.5651,1.9482,3.3044
+10,lluviosa,i_todos,DSF,245.0,41,2.5771,1.9844,3.325
+10,lluviosa,i_todos,DSF,255.0,41,2.5371,1.9435,3.2648
+10,lluviosa,i_todos,DSF,265.0,41,2.526,1.9439,3.2961
+10,lluviosa,i_todos,DSF,275.0,41,2.5247,1.9118,3.2782
+10,lluviosa,i_todos,DSF,285.0,41,2.5774,1.9186,3.2554
+10,lluviosa,i_todos,DSF,295.0,41,2.5428,1.9102,3.2827
+10,lluviosa,i_todos,DSF,305.0,41,2.5548,1.9685,3.2316
+10,lluviosa,i_todos,DSF,315.0,41,2.5561,1.9395,3.2862
+10,lluviosa,i_todos,DSF,325.0,41,2.5701,1.9423,3.1643
+10,lluviosa,i_todos,DSF,335.0,41,2.6099,1.9128,3.1887
+10,lluviosa,i_todos,DSF,345.0,41,2.6059,1.8965,3.1532
+10,lluviosa,i_todos,DSF,355.0,41,2.6021,1.8848,3.1455
+10,lluviosa,i_todos,DSF,365.0,41,2.6307,1.8822,3.151
+10,lluviosa,i_todos,DSF,375.0,41,2.6135,1.8275,3.203
+10,lluviosa,i_todos,DSF,385.0,41,2.5973,1.8637,3.1491
+10,lluviosa,i_todos,DSF,395.0,41,2.5419,1.8172,3.184
+10,lluviosa,ii_sin_focos_80m,DSF,5.0,0,,,
+10,lluviosa,ii_sin_focos_80m,DSF,15.0,41,2.8241,2.4011,3.334
+10,lluviosa,ii_sin_focos_80m,DSF,25.0,41,2.8152,2.1478,3.2637
+10,lluviosa,ii_sin_focos_80m,DSF,35.0,41,2.8495,2.0653,3.3235
+10,lluviosa,ii_sin_focos_80m,DSF,45.0,41,2.823,2.0821,3.2472
+10,lluviosa,ii_sin_focos_80m,DSF,55.0,41,2.836,2.0749,3.2786
+10,lluviosa,ii_sin_focos_80m,DSF,65.0,41,2.8912,2.0424,3.233
+10,lluviosa,ii_sin_focos_80m,DSF,75.0,41,2.8446,2.0997,3.2946
+10,lluviosa,ii_sin_focos_80m,DSF,85.0,41,2.7821,2.108,3.3024
+10,lluviosa,ii_sin_focos_80m,DSF,95.0,41,2.716,2.0979,3.2689
+10,lluviosa,ii_sin_focos_80m,DSF,105.0,41,2.7685,2.0944,3.2788
+10,lluviosa,ii_sin_focos_80m,DSF,115.0,41,2.7259,2.099,3.2956
+10,lluviosa,ii_sin_focos_80m,DSF,125.0,41,2.7201,2.1186,3.2512
+10,lluviosa,ii_sin_focos_80m,DSF,135.0,41,2.6416,2.0939,3.3054
+10,lluviosa,ii_sin_focos_80m,DSF,145.0,41,2.6439,2.0967,3.3365
+10,lluviosa,ii_sin_focos_80m,DSF,155.0,41,2.6453,2.0922,3.3516
+10,lluviosa,ii_sin_focos_80m,DSF,165.0,41,2.6231,2.0925,3.3451
+10,lluviosa,ii_sin_focos_80m,DSF,175.0,41,2.5407,2.0798,3.3209
+10,lluviosa,ii_sin_focos_80m,DSF,185.0,41,2.5716,2.0603,3.3212
+10,lluviosa,ii_sin_focos_80m,DSF,195.0,41,2.6039,2.0441,3.4293
+10,lluviosa,ii_sin_focos_80m,DSF,205.0,41,2.574,2.0045,3.3415
+10,lluviosa,ii_sin_focos_80m,DSF,215.0,41,2.5431,1.9712,3.2865
+10,lluviosa,ii_sin_focos_80m,DSF,225.0,41,2.5285,1.9583,3.2422
+10,lluviosa,ii_sin_focos_80m,DSF,235.0,41,2.5007,1.9582,3.2177
+10,lluviosa,ii_sin_focos_80m,DSF,245.0,41,2.5292,1.9188,3.2754
+10,lluviosa,ii_sin_focos_80m,DSF,255.0,41,2.463,1.8943,3.1753
+10,lluviosa,ii_sin_focos_80m,DSF,265.0,41,2.4853,1.894,3.2131
+10,lluviosa,ii_sin_focos_80m,DSF,275.0,41,2.4712,1.8717,3.17
+10,lluviosa,ii_sin_focos_80m,DSF,285.0,41,2.5311,1.8572,3.1815
+10,lluviosa,ii_sin_focos_80m,DSF,295.0,41,2.4824,1.89,3.1735
+10,lluviosa,ii_sin_focos_80m,DSF,305.0,41,2.5144,1.9471,3.1914
+10,lluviosa,ii_sin_focos_80m,DSF,315.0,41,2.5158,1.9262,3.1745
+10,lluviosa,ii_sin_focos_80m,DSF,325.0,41,2.5167,1.9322,3.1165
+10,lluviosa,ii_sin_focos_80m,DSF,335.0,41,2.5572,1.9101,3.1458
+10,lluviosa,ii_sin_focos_80m,DSF,345.0,41,2.5487,1.9003,3.1242
+10,lluviosa,ii_sin_focos_80m,DSF,355.0,41,2.5827,1.8684,3.0887
+10,lluviosa,ii_sin_focos_80m,DSF,365.0,41,2.5572,1.8137,3.051
+10,lluviosa,ii_sin_focos_80m,DSF,375.0,41,2.5375,1.7667,3.1426
+10,lluviosa,ii_sin_focos_80m,DSF,385.0,41,2.4557,1.814,3.0874
+10,lluviosa,ii_sin_focos_80m,DSF,395.0,41,2.4145,1.8125,3.1364
+20,dry (10 scenes),i_todos,DSF,10.0,0,,,
+20,dry (10 scenes),i_todos,DSF,30.0,10,1.8031,1.6964,2.0209
+20,dry (10 scenes),i_todos,DSF,50.0,10,1.7075,1.5111,2.142
+20,dry (10 scenes),i_todos,DSF,70.0,10,1.754,1.5497,2.1938
+20,dry (10 scenes),i_todos,DSF,90.0,10,1.7479,1.5621,2.195
+20,dry (10 scenes),i_todos,DSF,110.0,10,1.7387,1.5735,2.1466
+20,dry (10 scenes),i_todos,DSF,130.0,10,1.6716,1.6066,2.1454
+20,dry (10 scenes),i_todos,DSF,150.0,10,1.6003,1.5839,2.0671
+20,dry (10 scenes),i_todos,DSF,170.0,10,1.4833,1.3611,1.8994
+20,dry (10 scenes),i_todos,DSF,190.0,10,1.4784,1.3847,1.911
+20,dry (10 scenes),i_todos,DSF,210.0,10,1.4373,1.299,1.8852
+20,dry (10 scenes),i_todos,DSF,230.0,10,1.379,1.2211,1.7941
+20,dry (10 scenes),i_todos,DSF,250.0,10,1.3609,1.2024,1.7373
+20,dry (10 scenes),i_todos,DSF,270.0,10,1.36,1.1593,1.7186
+20,dry (10 scenes),i_todos,DSF,290.0,10,1.3814,1.2,1.748
+20,dry (10 scenes),i_todos,DSF,310.0,10,1.3832,1.1785,1.7289
+20,dry (10 scenes),i_todos,DSF,330.0,10,1.3949,1.2228,1.719
+20,dry (10 scenes),i_todos,DSF,350.0,10,1.3553,1.1532,1.711
+20,dry (10 scenes),i_todos,DSF,370.0,10,1.3355,1.1122,1.6581
+20,dry (10 scenes),i_todos,DSF,390.0,10,1.3383,1.0897,1.614
+20,dry (10 scenes),i_todos,RAdCor,10.0,0,,,
+20,dry (10 scenes),i_todos,RAdCor,30.0,10,2.1354,1.8755,3.3822
+20,dry (10 scenes),i_todos,RAdCor,50.0,10,1.9827,1.4303,3.1737
+20,dry (10 scenes),i_todos,RAdCor,70.0,10,2.0952,1.4338,3.0768
+20,dry (10 scenes),i_todos,RAdCor,90.0,10,2.0537,1.4329,2.6055
+20,dry (10 scenes),i_todos,RAdCor,110.0,10,1.9441,1.4038,2.634
+20,dry (10 scenes),i_todos,RAdCor,130.0,10,1.9293,1.3678,2.5623
+20,dry (10 scenes),i_todos,RAdCor,150.0,10,1.8996,1.2693,2.5932
+20,dry (10 scenes),i_todos,RAdCor,170.0,10,1.7713,1.1382,2.5962
+20,dry (10 scenes),i_todos,RAdCor,190.0,10,1.7428,1.1353,2.6056
+20,dry (10 scenes),i_todos,RAdCor,210.0,10,1.6595,1.096,2.5161
+20,dry (10 scenes),i_todos,RAdCor,230.0,10,1.3712,1.0716,2.5361
+20,dry (10 scenes),i_todos,RAdCor,250.0,10,1.3176,1.0231,2.4738
+20,dry (10 scenes),i_todos,RAdCor,270.0,10,1.2343,0.8955,2.4199
+20,dry (10 scenes),i_todos,RAdCor,290.0,10,1.2513,0.9132,2.4948
+20,dry (10 scenes),i_todos,RAdCor,310.0,10,1.2236,0.9154,2.3651
+20,dry (10 scenes),i_todos,RAdCor,330.0,10,1.1539,0.9145,2.4695
+20,dry (10 scenes),i_todos,RAdCor,350.0,10,1.0831,0.8834,2.5055
+20,dry (10 scenes),i_todos,RAdCor,370.0,10,1.0313,0.737,2.4301
+20,dry (10 scenes),i_todos,RAdCor,390.0,10,1.0178,0.7395,2.425
