@@ -1,0 +1,11 @@
+{
+ "nota": "E4 (peticion 3): L1C de las escenas (ii) y (iii) para el color real; la (i) ya esta en datos/crudo_radcor",
+ "escenas": [
+  {
+   "producto_l1c": "S2A_MSIL1C_20240222T160251_N0510_R097_T17QLF_20240222T193942.SAFE"
+  },
+  {
+   "producto_l1c": "S2B_MSIL1C_20170921T155929_N0500_R097_T17QLF_20231019T050441.SAFE"
+  }
+ ]
+}

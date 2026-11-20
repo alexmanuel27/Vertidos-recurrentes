@@ -1,0 +1,258 @@
+{
+ "resolucion_m": 10,
+ "n_bootstrap": 2000,
+ "semilla": 20261120,
+ "bloque_m": 200,
+ "min_bloques": 5,
+ "n_min_referencias": 30,
+ "estaciones": {
+  "seca": {
+   "n_focos": 676,
+   "n_referencias": 35807,
+   "zonas_cvr_mediana_todos_los_pixeles": {
+    "atares": {
+     "n": 5441,
+     "cvr_mediana": 0.3762
+    },
+    "guasabacoa": {
+     "n": 12000,
+     "cvr_mediana": 0.4366
+    },
+    "marimelena": {
+     "n": 4516,
+     "cvr_mediana": 0.4392
+    },
+    "bahia_centro_y_canal": {
+     "n": 17947,
+     "cvr_mediana": 0.4066
+    },
+    "mar": {
+     "n": 718267,
+     "cvr_mediana": 0.5676
+    }
+   },
+   "n_pixeles_evaluables_con_cvr": 758171,
+   "todas": {
+    "n_focos": 676,
+    "n_focos_con_referencia": 676,
+    "n_bloques": 32,
+    "cvr_mediana_focos": 0.4231,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4493,
+    "dif_cvr_mediana": -0.0221,
+    "dif_cvr_ic95": [
+     -0.0566,
+     0.0219
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.401,
+    "mad_escalada_mediana_focos_FNU": 1.8345,
+    "dif_mad_escalada_mediana_FNU": 0.952,
+    "dif_mad_ic95": [
+     0.712,
+     1.0979
+    ]
+   },
+   "atares": {
+    "n_focos": 169,
+    "n_focos_con_referencia": 169,
+    "n_bloques": 8,
+    "cvr_mediana_focos": 0.4106,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4347,
+    "dif_cvr_mediana": -0.0242,
+    "dif_cvr_ic95": [
+     -0.0568,
+     -0.0059
+    ],
+    "declaracion": "menor",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.367,
+    "mad_escalada_mediana_focos_FNU": 1.8248,
+    "dif_mad_escalada_mediana_FNU": 0.9494,
+    "dif_mad_ic95": [
+     0.6845,
+     1.0901
+    ]
+   },
+   "guasabacoa": {
+    "n_focos": 455,
+    "n_focos_con_referencia": 455,
+    "n_bloques": 15,
+    "cvr_mediana_focos": 0.4299,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4541,
+    "dif_cvr_mediana": -0.0162,
+    "dif_cvr_ic95": [
+     -0.0704,
+     0.0605
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.422,
+    "mad_escalada_mediana_focos_FNU": 1.7991,
+    "dif_mad_escalada_mediana_FNU": 0.9085,
+    "dif_mad_ic95": [
+     0.5872,
+     1.1334
+    ]
+   },
+   "marimelena": {
+    "n_focos": 18,
+    "n_focos_con_referencia": 18,
+    "n_bloques": 6,
+    "cvr_mediana_focos": 0.449,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4804,
+    "dif_cvr_mediana": -0.0321,
+    "dif_cvr_ic95": [
+     -0.09,
+     0.1629
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.444,
+    "mad_escalada_mediana_focos_FNU": 2.6901,
+    "dif_mad_escalada_mediana_FNU": 1.7923,
+    "dif_mad_ic95": [
+     0.1459,
+     2.559
+    ]
+   },
+   "bahia_centro_y_canal": {
+    "n_focos": 34,
+    "n_focos_con_referencia": 34,
+    "n_bloques": 3,
+    "cvr_mediana_focos": 0.4192,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.473,
+    "dif_cvr_mediana": -0.0498,
+    "dif_cvr_ic95": null,
+    "declaracion": "sin IC (< 5 bloques)",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.265,
+    "mad_escalada_mediana_focos_FNU": 2.0689,
+    "dif_mad_escalada_mediana_FNU": 1.1778,
+    "dif_mad_ic95": null
+   }
+  },
+  "lluviosa": {
+   "n_focos": 544,
+   "n_referencias": 32783,
+   "zonas_cvr_mediana_todos_los_pixeles": {
+    "atares": {
+     "n": 5603,
+     "cvr_mediana": 0.4438
+    },
+    "guasabacoa": {
+     "n": 11901,
+     "cvr_mediana": 0.4772
+    },
+    "marimelena": {
+     "n": 4841,
+     "cvr_mediana": 0.4497
+    },
+    "bahia_centro_y_canal": {
+     "n": 18160,
+     "cvr_mediana": 0.4513
+    },
+    "mar": {
+     "n": 676094,
+     "cvr_mediana": 0.4708
+    }
+   },
+   "n_pixeles_evaluables_con_cvr": 716599,
+   "todas": {
+    "n_focos": 544,
+    "n_focos_con_referencia": 544,
+    "n_bloques": 44,
+    "cvr_mediana_focos": 0.4238,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4884,
+    "dif_cvr_mediana": -0.0584,
+    "dif_cvr_ic95": [
+     -0.0962,
+     0.033
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.34,
+    "mad_escalada_mediana_focos_FNU": 1.9645,
+    "dif_mad_escalada_mediana_FNU": 0.679,
+    "dif_mad_ic95": [
+     0.6012,
+     0.922
+    ]
+   },
+   "atares": {
+    "n_focos": 55,
+    "n_focos_con_referencia": 55,
+    "n_bloques": 5,
+    "cvr_mediana_focos": 0.5696,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4846,
+    "dif_cvr_mediana": 0.0764,
+    "dif_cvr_ic95": [
+     -0.1087,
+     0.1733
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.764,
+    "mad_escalada_mediana_focos_FNU": 2.6974,
+    "dif_mad_escalada_mediana_FNU": 1.3871,
+    "dif_mad_ic95": [
+     0.2558,
+     1.611
+    ]
+   },
+   "guasabacoa": {
+    "n_focos": 374,
+    "n_focos_con_referencia": 374,
+    "n_bloques": 22,
+    "cvr_mediana_focos": 0.3995,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4846,
+    "dif_cvr_mediana": -0.0782,
+    "dif_cvr_ic95": [
+     -0.1031,
+     0.033
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.243,
+    "mad_escalada_mediana_focos_FNU": 1.8749,
+    "dif_mad_escalada_mediana_FNU": 0.6006,
+    "dif_mad_ic95": [
+     0.493,
+     0.6891
+    ]
+   },
+   "marimelena": {
+    "n_focos": 84,
+    "n_focos_con_referencia": 84,
+    "n_bloques": 10,
+    "cvr_mediana_focos": 0.483,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4954,
+    "dif_cvr_mediana": -0.0088,
+    "dif_cvr_ic95": [
+     -0.0944,
+     0.02
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.464,
+    "mad_escalada_mediana_focos_FNU": 2.1706,
+    "dif_mad_escalada_mediana_FNU": 0.8624,
+    "dif_mad_ic95": [
+     0.6012,
+     1.1793
+    ]
+   },
+   "bahia_centro_y_canal": {
+    "n_focos": 31,
+    "n_focos_con_referencia": 31,
+    "n_bloques": 7,
+    "cvr_mediana_focos": 0.4269,
+    "cvr_mediana_de_las_referencias_emparejadas": 0.4886,
+    "dif_cvr_mediana": -0.0751,
+    "dif_cvr_ic95": [
+     -0.1441,
+     0.1588
+    ],
+    "declaracion": "no distinguible",
+    "frac_focos_con_cvr_mayor_que_su_referencia": 0.419,
+    "mad_escalada_mediana_focos_FNU": 1.9659,
+    "dif_mad_escalada_mediana_FNU": 0.6989,
+    "dif_mad_ic95": [
+     0.607,
+     1.1613
+    ]
+   }
+  }
+ }
+}

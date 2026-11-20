@@ -1,0 +1,163 @@
+{
+ "resolucion_m": 20,
+ "n_bootstrap": 2000,
+ "semilla": 20261120,
+ "n_min_por_clase": 8,
+ "punto_era5_lat_lon": [
+  23.25,
+  -82.25
+ ],
+ "n_escenas_seca": 71,
+ "clases": {
+  "paso": {
+   "n_norte": 7,
+   "n_resto": 64,
+   "variantes": {},
+   "procedencia_mediana_circular_grados": null,
+   "estado": "insuficiente"
+  },
+  "24h": {
+   "n_norte": 11,
+   "n_resto": 60,
+   "variantes": {
+    "todos": {
+     "norte": {
+      "n_escenas": 11,
+      "orden_cumple": true,
+      "margen_ensenadas": 0.014,
+      "margen_ensenadas_ic95": [
+       -0.561,
+       0.516
+      ],
+      "margen_bahia_mar": 0.895,
+      "margen_bahia_mar_ic95": [
+       0.454,
+       1.491
+      ],
+      "d_mediana": 1.719,
+      "d_ic95": [
+       1.053,
+       2.358
+      ],
+      "frac_boot_orden_cumple": 0.584
+     },
+     "resto": {
+      "n_escenas": 60,
+      "orden_cumple": true,
+      "margen_ensenadas": 0.244,
+      "margen_ensenadas_ic95": [
+       -0.03,
+       0.479
+      ],
+      "margen_bahia_mar": 0.752,
+      "margen_bahia_mar_ic95": [
+       0.521,
+       1.037
+      ],
+      "d_mediana": 2.036,
+      "d_ic95": [
+       1.787,
+       2.313
+      ],
+      "frac_boot_orden_cumple": 0.963
+     },
+     "diferencia_norte_menos_resto": {
+      "margen_ensenadas": {
+       "norte_menos_resto": -0.23,
+       "ic95": [
+        -0.834,
+        0.343
+       ],
+       "declaracion": "no distinguible"
+      },
+      "margen_bahia_mar": {
+       "norte_menos_resto": 0.143,
+       "ic95": [
+        -0.346,
+        0.868
+       ],
+       "declaracion": "no distinguible"
+      },
+      "d": {
+       "norte_menos_resto": -0.317,
+       "ic95": [
+        -1.091,
+        0.453
+       ],
+       "declaracion": "no distinguible"
+      }
+     }
+    },
+    "a100m": {
+     "norte": {
+      "n_escenas": 11,
+      "orden_cumple": false,
+      "margen_ensenadas": -0.078,
+      "margen_ensenadas_ic95": [
+       -0.288,
+       0.459
+      ],
+      "margen_bahia_mar": 1.038,
+      "margen_bahia_mar_ic95": [
+       0.511,
+       1.499
+      ],
+      "d_mediana": 1.719,
+      "d_ic95": [
+       1.053,
+       2.358
+      ],
+      "frac_boot_orden_cumple": 0.593
+     },
+     "resto": {
+      "n_escenas": 60,
+      "orden_cumple": true,
+      "margen_ensenadas": 0.233,
+      "margen_ensenadas_ic95": [
+       0.041,
+       0.495
+      ],
+      "margen_bahia_mar": 0.805,
+      "margen_bahia_mar_ic95": [
+       0.563,
+       0.994
+      ],
+      "d_mediana": 2.036,
+      "d_ic95": [
+       1.787,
+       2.29
+      ],
+      "frac_boot_orden_cumple": 0.994
+     },
+     "diferencia_norte_menos_resto": {
+      "margen_ensenadas": {
+       "norte_menos_resto": -0.312,
+       "ic95": [
+        -0.676,
+        0.309
+       ],
+       "declaracion": "no distinguible"
+      },
+      "margen_bahia_mar": {
+       "norte_menos_resto": 0.234,
+       "ic95": [
+        -0.267,
+        0.762
+       ],
+       "declaracion": "no distinguible"
+      },
+      "d": {
+       "norte_menos_resto": -0.317,
+       "ic95": [
+        -1.106,
+        0.463
+       ],
+       "declaracion": "no distinguible"
+      }
+     }
+    }
+   },
+   "procedencia_mediana_circular_grados": null
+  }
+ }
+}

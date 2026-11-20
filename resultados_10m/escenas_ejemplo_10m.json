@@ -1,0 +1,44 @@
+{
+ "escala_turbidez_fnu_p2_p98": [
+  0.669,
+  7.884
+ ],
+ "escenas": [
+  {
+   "codigo": "i",
+   "regla": "seca, viento 24 h resto",
+   "fecha": "2018-03-10",
+   "producto_l1c": "S2B_MSIL1C_20180310T160039_N0500_R097_T17QLF_20230727T061259.SAFE",
+   "estacion": "seca",
+   "frac_valida_bahia": 0.9211,
+   "viento_24h_procedencia_grados": 89.9,
+   "viento_24h_vel_media_vectorial_ms": 5.16,
+   "color": "ok",
+   "n_focos_de_la_estacion_en_el_encuadre": 676
+  },
+  {
+   "codigo": "ii",
+   "regla": "seca, viento 24 h norte",
+   "fecha": "2024-02-22",
+   "producto_l1c": "S2A_MSIL1C_20240222T160251_N0510_R097_T17QLF_20240222T193942.SAFE",
+   "estacion": "seca",
+   "frac_valida_bahia": 0.8367,
+   "viento_24h_procedencia_grados": 30.3,
+   "viento_24h_vel_media_vectorial_ms": 3.49,
+   "color": "ok",
+   "n_focos_de_la_estacion_en_el_encuadre": 676
+  },
+  {
+   "codigo": "iii",
+   "regla": "lluviosa",
+   "fecha": "2017-09-21",
+   "producto_l1c": "S2B_MSIL1C_20170921T155929_N0500_R097_T17QLF_20231019T050441.SAFE",
+   "estacion": "lluviosa",
+   "frac_valida_bahia": 0.8958,
+   "viento_24h_procedencia_grados": null,
+   "viento_24h_vel_media_vectorial_ms": null,
+   "color": "ok",
+   "n_focos_de_la_estacion_en_el_encuadre": 544
+  }
+ ]
+}

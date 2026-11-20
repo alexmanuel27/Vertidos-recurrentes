@@ -1,0 +1,27 @@
+{
+ "resolucion_m": 10,
+ "n_bootstrap": 2000,
+ "semilla": 20261120,
+ "n_min_por_clase": 8,
+ "punto_era5_lat_lon": [
+  23.25,
+  -82.25
+ ],
+ "n_escenas_seca": 44,
+ "clases": {
+  "paso": {
+   "n_norte": 2,
+   "n_resto": 42,
+   "variantes": {},
+   "procedencia_mediana_circular_grados": null,
+   "estado": "insuficiente"
+  },
+  "24h": {
+   "n_norte": 7,
+   "n_resto": 37,
+   "variantes": {},
+   "procedencia_mediana_circular_grados": null,
+   "estado": "insuficiente"
+  }
+ }
+}
